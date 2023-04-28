@@ -1,0 +1,48 @@
+/*
+	100% containers
+*/
+@mixin full-parent-width-container {
+	width: 100%;
+}
+
+@mixin full-parent-height-container {
+	height: 100%;
+}
+
+@mixin full-parent-container {
+	@include full-width-container;
+	@include full-height-container;
+}
+
+/*
+    Flex containers
+*/
+@mixin flex-container {
+	display: flex;
+}
+
+@mixin flex-vertical-container {
+	@include flex-container;
+	flex-direction: column;
+}
+
+@mixin flex-horizontal-container {
+	@include flex-container;
+	flex-direction: row;
+}
+
+/*
+    Viewport containers
+*/
+@mixin full-viewport-width-container {
+	width: 100vw;
+}
+
+@mixin full-viewport-height-container {
+	height: 100vh;
+}
+
+@mixin full-viewport-container {
+	@include full-viewport-width-container;
+	@include full-viewport-height-container;
+}
