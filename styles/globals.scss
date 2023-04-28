@@ -1,0 +1,15 @@
+@use './containers/containers.module.scss';
+@use './typography/typography.module.scss';
+
+html {
+	@include containers.full-viewport-container;
+}
+
+body {
+	margin: 0px;
+}
+
+#__next {
+	@include containers.flex-container;
+	@include containers.full-viewport-container;
+}
