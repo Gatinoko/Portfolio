@@ -3,9 +3,10 @@
 
 @use '_font-weights.scss' as fw;
 @use '_font-sizes.scss' as fs;
+@use 'fonts' as fo;
 
 $title-text: (
-	title-font-family: 'Syne',
+	title-font-family: fo.$SYNE,
 	title-FONT-SIZES: (
 		1xl: (
 			size: (
@@ -61,7 +62,7 @@ $title-text: (
 );
 
 $body-text: (
-	body-font-family: 'Open Sans',
+	body-font-family: fo.$OPEN-SANS,
 	body-FONT-SIZES: (
 		xs: (
 			size: (
