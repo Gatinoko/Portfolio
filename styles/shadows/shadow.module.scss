@@ -1,0 +1,10 @@
+@use 'shadow-size' as sh;
+
+$shadow-size-map: sh.$SHADOW-SIZE;
+
+/*
+	Shadow mixins
+*/
+@mixin shadow-black-8 {
+	box-shadow: map-get($shadow-size-map, shadow-black-8);
+}
