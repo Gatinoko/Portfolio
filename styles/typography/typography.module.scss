@@ -1,0 +1,143 @@
+@use 'sass:map';
+@use 'sass:list';
+
+@use '_font-weights.scss' as fw;
+@use '_font-sizes.scss' as fs;
+
+$title-text: (
+	title-font-family: 'Syne',
+	title-FONT-SIZES: (
+		1xl: (
+			size: (
+				name: map-get(fs.$FONT-SIZES, 1xl, name),
+				value: map-get(fs.$FONT-SIZES, 1xl, value),
+			),
+			weight: (
+				name: map-get(fw.$FONT-WEIGHTS, semibold, name),
+				value: map-get(fw.$FONT-WEIGHTS, semibold, weight),
+			),
+		),
+		2xl: (
+			size: (
+				name: map-get(fs.$FONT-SIZES, 2xl, name),
+				value: map-get(fs.$FONT-SIZES, 2xl, value),
+			),
+			weight: (
+				name: map-get(fw.$FONT-WEIGHTS, semibold, name),
+				value: map-get(fw.$FONT-WEIGHTS, semibold, weight),
+			),
+		),
+		3xl: (
+			size: (
+				name: map-get(fs.$FONT-SIZES, 3xl, name),
+				value: map-get(fs.$FONT-SIZES, 3xl, value),
+			),
+			weight: (
+				name: map-get(fw.$FONT-WEIGHTS, semibold, name),
+				value: map-get(fw.$FONT-WEIGHTS, semibold, weight),
+			),
+		),
+		4xl: (
+			size: (
+				name: map-get(fs.$FONT-SIZES, 4xl, name),
+				value: map-get(fs.$FONT-SIZES, 4xl, value),
+			),
+			weight: (
+				name: map-get(fw.$FONT-WEIGHTS, semibold, name),
+				value: map-get(fw.$FONT-WEIGHTS, semibold, weight),
+			),
+		),
+		5xl: (
+			size: (
+				name: map-get(fs.$FONT-SIZES, 5xl, name),
+				value: map-get(fs.$FONT-SIZES, 5xl, value),
+			),
+			weight: (
+				name: map-get(fw.$FONT-WEIGHTS, semibold, name),
+				value: map-get(fw.$FONT-WEIGHTS, semibold, weight),
+			),
+		),
+	),
+);
+
+$body-text: (
+	body-font-family: 'Open Sans',
+	body-FONT-SIZES: (
+		xs: (
+			size: (
+				name: map-get(fs.$FONT-SIZES, xs, name),
+				value: map-get(fs.$FONT-SIZES, xs, value),
+			),
+			weight: (
+				name: map-get(fw.$FONT-WEIGHTS, light, name),
+				value: map-get(fw.$FONT-WEIGHTS, light, weight),
+			),
+		),
+		s: (
+			size: (
+				name: map-get(fs.$FONT-SIZES, s, name),
+				value: map-get(fs.$FONT-SIZES, s, value),
+			),
+			weight: (
+				name: map-get(fw.$FONT-WEIGHTS, light, name),
+				value: map-get(fw.$FONT-WEIGHTS, light, weight),
+			),
+		),
+		m: (
+			size: (
+				name: map-get(fs.$FONT-SIZES, m, name),
+				value: map-get(fs.$FONT-SIZES, m, value),
+			),
+			weight: (
+				name: map-get(fw.$FONT-WEIGHTS, light, name),
+				value: map-get(fw.$FONT-WEIGHTS, light, weight),
+			),
+		),
+		r: (
+			size: (
+				name: map-get(fs.$FONT-SIZES, r, name),
+				value: map-get(fs.$FONT-SIZES, r, value),
+			),
+			weight: (
+				name: map-get(fw.$FONT-WEIGHTS, regular, name),
+				value: map-get(fw.$FONT-WEIGHTS, regular, weight),
+			),
+		),
+		l: (
+			size: (
+				name: map-get(fs.$FONT-SIZES, l, name),
+				value: map-get(fs.$FONT-SIZES, l, value),
+			),
+			weight: (
+				name: map-get(fw.$FONT-WEIGHTS, semibold, name),
+				value: map-get(fw.$FONT-WEIGHTS, semibold, weight),
+			),
+		),
+	),
+);
+
+@each $size in map-get($title-text, title-FONT-SIZES) {
+	$font-name: map-get($title-text, title-font-family);
+	$size-name: map-get(list.nth($size, 2), size, name);
+	$size-value: map-get(list.nth($size, 2), size, value);
+	$weight-name: map-get(list.nth($size, 2), weight, name);
+	$weight-value: map-get(list.nth($size, 2), weight, value);
+	.typography-title-#{$size-name}-#{$size-value}-#{$weight-name} {
+		font-family: $font-name;
+		font-size: $size-value;
+		font-weight: $weight-value;
+	}
+}
+
+@each $size in map-get($body-text, body-FONT-SIZES) {
+	$font-name: map-get($title-text, title-font-family);
+	$size-name: map-get(list.nth($size, 2), size, name);
+	$size-value: map-get(list.nth($size, 2), size, value);
+	$weight-name: map-get(list.nth($size, 2), weight, name);
+	$weight-value: map-get(list.nth($size, 2), weight, value);
+	.typography-body-#{$size-name}-#{$size-value}-#{$weight-name} {
+		font-family: $font-name;
+		font-size: $size-value;
+		font-weight: $weight-value;
+	}
+}
