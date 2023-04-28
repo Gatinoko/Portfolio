@@ -124,7 +124,7 @@ $body-text: (
 	$weight-value: map-get(list.nth($size, 2), weight, value);
 	.typography-title-#{$size-name}-#{$size-value}-#{$weight-name} {
 		font-family: $font-name;
-		font-size: $size-value;
+		font-size: #{$size-value}px;
 		font-weight: $weight-value;
 	}
 }
@@ -137,7 +137,7 @@ $body-text: (
 	$weight-value: map-get(list.nth($size, 2), weight, value);
 	.typography-body-#{$size-name}-#{$size-value}-#{$weight-name} {
 		font-family: $font-name;
-		font-size: $size-value;
+		font-size: #{$size-value}px;
 		font-weight: $weight-value;
 	}
 }
