@@ -3,7 +3,7 @@
 
 @use '_font-weights.scss' as fw;
 @use '_font-sizes.scss' as fs;
-@use 'fonts' as fo;
+@use 'fonts.scss' as fo;
 
 $title-text: (
 	title-font-family: fo.$SYNE,
