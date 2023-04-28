@@ -1,9 +1,5 @@
-$color-palette-black-000000: #000000;
-$color-palette-white-ffffff: #ffffff;
-$color-palette-transparent-ffffff00: #ffffff00;
+@use './component-color-palette' as cc;
+@use './color-palette' as cp;
 
-$color-palette-black-131313: #131313;
-$color-palette-black-232323: #232323;
-$color-palette-black-242424: #242424;
-$color-palette-black-262626: #262626;
-$color-palette-black-282828: #282828;
+$color-palette-map: cp.$COLOR-PALETTE;
+$component-color-palette-map: cc.$COMPONENT-COLOR-PALETTE;
