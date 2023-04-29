@@ -40,3 +40,17 @@
 	@include full-viewport-width-container;
 	@include full-viewport-height-container;
 }
+
+/*
+	Container interations mixins
+*/
+@mixin clickable-container {
+	cursor: pointer;
+}
+@mixin unselectable-container {
+	user-select: none;
+}
+@mixin clickable-unselectable-container {
+	@include clickable-container;
+	@include unselectable-container;
+}

@@ -7,9 +7,8 @@
 
 .nav-button {
 	@include ct.flex-horizontal-container;
+	@include ct.clickable-unselectable-container;
 
-	cursor: pointer;
-	user-select: none;
 	position: relative;
 	z-index: 1;
 
