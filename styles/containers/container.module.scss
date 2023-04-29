@@ -8,8 +8,8 @@
 	height: 100%;
 }
 @mixin full-parent-container {
-	@include full-width-container;
-	@include full-height-container;
+	@include full-parent-width-container;
+	@include full-parent-height-container;
 }
 
 /*
