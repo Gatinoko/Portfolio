@@ -1,15 +1,41 @@
-@use './containers/container.module.scss' as containers;
-@use './typography/typography.module.scss';
+@use './containers/container.module.scss' as ct;
+@use './spacing/spacing.module.scss' as sp;
 
 html {
-	@include containers.full-viewport-container;
-}
+	@include ct.full-viewport-container;
 
-body {
-	margin: 0px;
-}
+	body {
+		@include ct.flex-horizontal-container;
+		@include ct.full-parent-container;
 
-#__next {
-	@include containers.flex-container;
-	@include containers.full-viewport-container;
+		margin: 0px;
+
+		#__next {
+			@include ct.flex-horizontal-container;
+			@include ct.full-parent-width-container;
+
+			gap: map-get(sp.$spacing-size-map, spacing-48);
+			padding: map-get(sp.$spacing-size-map, spacing-64)
+				map-get(sp.$spacing-size-map, spacing-48)
+				map-get(sp.$spacing-size-map, spacing-64)
+				map-get(sp.$spacing-size-map, spacing-48);
+
+			background-color: springgreen;
+
+			nav {
+				@include ct.flex-vertical-container;
+
+				gap: map-get(sp.$spacing-size-map, spacing-64);
+				width: 30%;
+
+				background-color: aqua;
+			}
+
+			main {
+				width: 70%;
+
+				background-color: bisque;
+			}
+		}
+	}
 }
