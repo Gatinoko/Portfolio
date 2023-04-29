@@ -1,0 +1,84 @@
+@use 'font-weight' as fw;
+@use 'font-size' as fs;
+@use 'fonts' as fo;
+
+/*
+	Font family mixins
+*/
+@mixin typography-font-syne {
+	font-family: fo.$SYNE;
+}
+@mixin typography-font-opensans {
+	font-family: fo.$OPEN-SANS;
+}
+@mixin typography-font-majormono {
+	font-family: fo.$MAJOR-MONO;
+}
+
+/*
+	Title text mixins
+*/
+@mixin typography-title-5xl-128-semibold {
+	@include typography-font-syne;
+
+	font-size: map-get(fs.$FONT-SIZE, 5xl);
+	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
+}
+@mixin typography-title-4xl-96-semibold {
+	@include typography-font-syne;
+
+	font-size: map-get(fs.$FONT-SIZE, 4xl);
+	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
+}
+@mixin typography-title-3xl-64-semibold {
+	@include typography-font-syne;
+
+	font-size: map-get(fs.$FONT-SIZE, 3xl);
+	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
+}
+@mixin typography-title-2xl-48-semibold {
+	@include typography-font-syne;
+
+	font-size: map-get(fs.$FONT-SIZE, 2xl);
+	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
+}
+@mixin typography-title-1xl-36-semibold {
+	@include typography-font-syne;
+
+	font-size: map-get(fs.$FONT-SIZE, 1xl);
+	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
+}
+
+/*
+	Body text mixins
+*/
+@mixin typography-body-l-24-semibold {
+	@include typography-font-opensans;
+
+	font-size: map-get(fs.$FONT-SIZE, l);
+	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
+}
+@mixin typography-body-r-20-semibold {
+	@include typography-font-opensans;
+
+	font-size: map-get(fs.$FONT-SIZE, r);
+	font-weight: map-get(fw.$FONT-WEIGHT, regular);
+}
+@mixin typography-body-m-16-semibold {
+	@include typography-font-opensans;
+
+	font-size: map-get(fs.$FONT-SIZE, m);
+	font-weight: map-get(fw.$FONT-WEIGHT, regular);
+}
+@mixin typography-body-s-14-semibold {
+	@include typography-font-opensans;
+
+	font-size: map-get(fs.$FONT-SIZE, s);
+	font-weight: map-get(fw.$FONT-WEIGHT, regular);
+}
+@mixin typography-body-xs-12-semibold {
+	@include typography-font-opensans;
+
+	font-size: map-get(fs.$FONT-SIZE, xs);
+	font-weight: map-get(fw.$FONT-WEIGHT, light);
+}

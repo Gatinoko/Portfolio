@@ -1,3 +1,4 @@
+@use '../styles/typography/typography.module.scss' as ty;
 @use './containers/container.module.scss' as ct;
 @use './spacing/spacing.module.scss' as sp;
 
@@ -14,28 +15,60 @@ html {
 			@include ct.flex-horizontal-container;
 			@include ct.full-parent-width-container;
 
-			gap: map-get(sp.$spacing-size-map, spacing-48);
-			padding: map-get(sp.$spacing-size-map, spacing-64)
-				map-get(sp.$spacing-size-map, spacing-48)
-				map-get(sp.$spacing-size-map, spacing-64)
-				map-get(sp.$spacing-size-map, spacing-48);
+			gap: map-get(sp.$SPACING-SIZE, spacing-48);
+			padding: map-get(sp.$SPACING-SIZE, spacing-64)
+				map-get(sp.$SPACING-SIZE, spacing-48)
+				map-get(sp.$SPACING-SIZE, spacing-64)
+				map-get(sp.$SPACING-SIZE, spacing-48);
 
 			background-color: springgreen;
 
 			nav {
 				@include ct.flex-vertical-container;
 
-				gap: map-get(sp.$spacing-size-map, spacing-64);
+				gap: map-get(sp.$SPACING-SIZE, spacing-64);
 				width: 30%;
 
-				background-color: aqua;
+				background-color: rgba(0, 255, 255, 0);
 			}
 
 			main {
+				@include ct.flex-vertical-container;
+				gap: map-get(sp.$SPACING-SIZE, spacing-32);
 				width: 70%;
 
 				background-color: bisque;
 			}
 		}
 	}
+}
+
+h1 {
+	@include ty.typography-title-5xl-128-semibold;
+	margin: 0px;
+}
+
+h2 {
+	@include ty.typography-title-4xl-96-semibold;
+	margin: 0px;
+}
+
+h3 {
+	@include ty.typography-title-3xl-64-semibold;
+	margin: 0px;
+}
+
+h4 {
+	@include ty.typography-title-2xl-48-semibold;
+	margin: 0px;
+}
+
+h5 {
+	@include ty.typography-title-1xl-36-semibold;
+	margin: 0px;
+}
+
+p {
+	@include ty.typography-body-r-20-semibold;
+	margin: 0px;
 }

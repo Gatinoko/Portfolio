@@ -1,3 +1,1 @@
-@use './spacing-size' as sp;
-
-$spacing-size-map: sp.$SPACING-SIZE;
+@forward 'spacing-size';

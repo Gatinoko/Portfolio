@@ -1,5 +1,2 @@
-@use './component-color-palette' as cc;
-@use './color-palette' as cp;
-
-$color-palette-map: cp.$COLOR-PALETTE;
-$component-color-palette-map: cc.$COMPONENT-COLOR-PALETTE;
+@forward 'component-color-palette';
+@forward 'color-palette';

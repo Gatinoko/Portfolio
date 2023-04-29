@@ -1,0 +1,20 @@
+@use 'radius-size' as ra;
+
+/*
+    Radius size mixins
+*/
+@mixin radius-3 {
+	border-radius: map-get(ra.$RADIUS-SIZE, radius-3);
+}
+@mixin radius-5 {
+	border-radius: map-get(ra.$RADIUS-SIZE, radius-5);
+}
+@mixin radius-7 {
+	border-radius: map-get(ra.$RADIUS-SIZE, radius-7);
+}
+@mixin radius-9 {
+	border-radius: map-get(ra.$RADIUS-SIZE, radius-9);
+}
+@mixin radius-13 {
+	border-radius: map-get(ra.$RADIUS-SIZE, radius-13);
+}
