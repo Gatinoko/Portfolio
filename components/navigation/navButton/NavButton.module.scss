@@ -1,0 +1,131 @@
+@use 'sass:map';
+@use '../../../styles/containers/container.module.scss' as ct;
+@use '../../../styles/colors/color.module.scss' as cl;
+@use '../../../styles/typography/typography.module.scss' as ty;
+@use '../../../styles/spacing/spacing.module.scss' as sp;
+@use '../../../styles/shadows/shadow.module.scss' as sh;
+
+.nav-button {
+	@include ct.flex-horizontal-container;
+
+	cursor: pointer;
+	user-select: none;
+	position: relative;
+	z-index: 1;
+
+	justify-content: flex-end;
+	align-items: center;
+
+	padding: map-get(sp.$spacing-size-map, spacing-32)
+		map-get(sp.$spacing-size-map, spacing-64)
+		map-get(sp.$spacing-size-map, spacing-32)
+		map-get(sp.$spacing-size-map, spacing-64);
+
+	.nav-button-text {
+		@include ct.flex-horizontal-container;
+		@include ty.typography-title-1xl-36-semibold;
+		@include sh.text-shadow-black-8;
+
+		color: map-get(cl.$component-color-palette-map, b-color-disabled);
+
+		// CSS transition properties
+		transition: color 150ms, padding 150ms;
+		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+	}
+
+	/*
+		CSS selectors
+	*/
+	&:hover {
+		.nav-button-text {
+			color: map-get(cl.$color-palette-map, color-palette-white-ffffff);
+			padding-right: map-get(sp.$spacing-size-map, spacing-32);
+
+			// CSS transition properties
+			transition: color 150ms, padding-right 150ms;
+			transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+		}
+
+		&::before {
+			opacity: 1;
+		}
+	}
+	&:active {
+		.nav-button-text {
+			color: map-get(cl.$color-palette-map, color-palette-white-ffffff);
+			padding-right: map-get(sp.$spacing-size-map, spacing-16);
+
+			// CSS transition properties
+			transition: color 150ms, padding-right 150ms;
+			transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+		}
+
+		&::after {
+			opacity: 1;
+		}
+	}
+}
+
+/*
+	Pseudo-element mixin
+*/
+@mixin gradient-pseudo-element {
+	position: absolute;
+	z-index: -1;
+
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	content: '';
+
+	opacity: 0;
+
+	border: 4px solid transparent;
+	border-radius: 16px;
+
+	background-clip: padding-box, border-box;
+	background-origin: border-box;
+
+	// CSS transition properties
+	transition: opacity 150ms;
+	transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+}
+
+/*
+	Pseudo-elements
+*/
+.nav-button::before {
+	@include gradient-pseudo-element;
+
+	background-image: linear-gradient(
+			90deg,
+			map-get(cl.$color-palette-map, color-palette-transparent-ffffff00) 17.19%,
+			map-get(cl.$color-palette-map, color-palette-black-131313) 44.79%,
+			map-get(cl.$color-palette-map, color-palette-black-000000) 100%
+		),
+		linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0) 0%,
+			rgba(255, 255, 255, 0.1) 50%,
+			map-get(cl.$color-palette-map, color-palette-white-ffffff) 100%
+		);
+}
+.nav-button::after {
+	@include gradient-pseudo-element;
+
+	background-image: linear-gradient(
+			270deg,
+			map-get(cl.$color-palette-map, color-palette-black-000000) 13.02%,
+			map-get(cl.$color-palette-map, color-palette-black-131313) 40.1%,
+			rgba(28, 28, 28, 0.556522) 66.67%,
+			rgba(32, 32, 32, 0.391304) 76.56%,
+			rgba(40, 40, 40, 0) 100%
+		),
+		linear-gradient(
+			90deg,
+			map-get(cl.$color-palette-map, color-palette-transparent-ffffff00) 0%,
+			rgba(255, 255, 255, 0.1) 50%,
+			map-get(cl.$color-palette-map, color-palette-white-ffffff) 100%
+		);
+}
