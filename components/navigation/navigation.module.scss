@@ -1,0 +1,22 @@
+@use '../../styles/typography/typography.module.scss' as ty;
+@use '../../styles/containers/container.module.scss' as ct;
+@use '../../styles/spacing/spacing.module.scss' as sp;
+
+.nav-logo {
+	@include ct.flex-horizontal-container;
+	@include ct.full-parent-width-container;
+	@include ty.font-majormono;
+
+	justify-content: center;
+
+	background-color: aquamarine;
+}
+
+.nav-list {
+	@include ct.flex-vertical-container;
+	@include ct.full-parent-container;
+
+	gap: map-get(sp.$spacing-size-map, spacing-16);
+
+	background-color: rebeccapurple;
+}
