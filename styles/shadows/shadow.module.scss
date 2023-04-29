@@ -5,6 +5,10 @@ $shadow-size-map: sh.$SHADOW-SIZE;
 /*
 	Shadow mixins
 */
-@mixin shadow-black-8 {
+@mixin container-shadow-black-8 {
 	box-shadow: map-get($shadow-size-map, shadow-black-8);
+}
+
+@mixin text-shadow-black-8 {
+	text-shadow: map-get($shadow-size-map, shadow-black-8);
 }
