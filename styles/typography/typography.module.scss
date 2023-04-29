@@ -5,63 +5,83 @@
 @use 'font-size' as fs;
 @use 'fonts' as fo;
 
-$title-text-font: fo.$SYNE;
-$body-text-font: fo.$OPEN-SANS;
+/*
+	Font family mixins
+*/
+@mixin font-syne {
+	font-family: fo.$SYNE;
+}
+@mixin font-opensans {
+	font-family: fo.$OPEN-SANS;
+}
+@mixin font-majormono {
+	font-family: fo.$MAJOR-MONO;
+}
 
 /*
 	Title text mixins
 */
 @mixin typography-title-5xl-128-semibold {
+	@include font-syne;
+
 	font-size: map-get(fs.$FONT-SIZE, 5xl);
 	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
-	font-family: $title-text-font;
 }
 @mixin typography-title-4xl-96-semibold {
+	@include font-syne;
+
 	font-size: map-get(fs.$FONT-SIZE, 4xl);
 	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
-	font-family: $title-text-font;
 }
 @mixin typography-title-3xl-64-semibold {
+	@include font-syne;
+
 	font-size: map-get(fs.$FONT-SIZE, 3xl);
 	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
-	font-family: $title-text-font;
 }
 @mixin typography-title-2xl-48-semibold {
+	@include font-syne;
+
 	font-size: map-get(fs.$FONT-SIZE, 2xl);
 	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
-	font-family: $title-text-font;
 }
 @mixin typography-title-1xl-36-semibold {
+	@include font-syne;
+
 	font-size: map-get(fs.$FONT-SIZE, 1xl);
 	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
-	font-family: $title-text-font;
 }
 
 /*
 	Body text mixins
 */
 @mixin typography-body-l-24-semibold {
+	@include font-opensans;
+
 	font-size: map-get(fs.$FONT-SIZE, l);
 	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
-	font-family: $body-text-font;
 }
 @mixin typography-body-r-20-semibold {
+	@include font-opensans;
+
 	font-size: map-get(fs.$FONT-SIZE, r);
 	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
-	font-family: $body-text-font;
 }
 @mixin typography-body-m-16-semibold {
+	@include font-opensans;
+
 	font-size: map-get(fs.$FONT-SIZE, m);
 	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
-	font-family: $body-text-font;
 }
 @mixin typography-body-s-14-semibold {
+	@include font-opensans;
+
 	font-size: map-get(fs.$FONT-SIZE, s);
 	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
-	font-family: $body-text-font;
 }
 @mixin typography-body-xs-12-semibold {
+	@include font-opensans;
+
 	font-size: map-get(fs.$FONT-SIZE, xs);
 	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
-	font-family: $body-text-font;
 }
