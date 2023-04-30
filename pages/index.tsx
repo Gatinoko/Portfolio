@@ -1,15 +1,11 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
-import styles from '@/styles/Home.module.scss';
+import styles from './index.module.scss';
 
-const inter = Inter({ subsets: ['latin'] });
-
-export default function Home() {
+export default function Index() {
 	return (
 		<>
-			<main className={`${styles.main} ${inter.className}`}>
-				<h1>Main</h1>
+			<main>
+				<h1 className={styles['typography-title-2xl-48-semibold']}>Main</h1>
+				<p>sdfsdfsdfdskfdkjjk</p>
 			</main>
 		</>
 	);
