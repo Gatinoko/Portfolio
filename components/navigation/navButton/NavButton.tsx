@@ -1,12 +1,18 @@
-import { Syne } from 'next/font/google';
 import styles from './NavButton.module.scss';
 
-export default function NavButton() {
+type Props = {
+	text: string;
+	href: string;
+};
+
+export default function NavButton({ text, href }: Props) {
 	return (
 		<>
-			<div className={styles['nav-button']}>
-				<span className={styles['nav-button-text']}>button</span>
-			</div>
+			<a
+				className={styles['nav-button']}
+				href={href}>
+				<span className={styles['nav-button-text']}>{text}</span>
+			</a>
 		</>
 	);
 }
