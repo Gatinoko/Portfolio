@@ -1,7 +1,10 @@
-@use '../styles/typography/typography.module.scss' as ty;
 @use './containers/container.module.scss' as ct;
 @use './spacing/spacing.module.scss' as sp;
+@use './typography/typography.module.scss' as ty;
 
+/*
+	Root HTML page styling
+*/
 html {
 	@include ct.full-viewport-container;
 
@@ -43,31 +46,33 @@ html {
 	}
 }
 
+/*
+	Global title text styling
+*/
 h1 {
 	@include ty.typography-title-5xl-128-semibold;
 	margin: 0px;
 }
-
 h2 {
 	@include ty.typography-title-4xl-96-semibold;
 	margin: 0px;
 }
-
 h3 {
 	@include ty.typography-title-3xl-64-semibold;
 	margin: 0px;
 }
-
 h4 {
 	@include ty.typography-title-2xl-48-semibold;
 	margin: 0px;
 }
-
 h5 {
 	@include ty.typography-title-1xl-36-semibold;
 	margin: 0px;
 }
 
+/*
+	Global body text styling
+*/
 p {
 	@include ty.typography-body-r-20-semibold;
 	margin: 0px;
