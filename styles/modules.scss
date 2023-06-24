@@ -1,6 +1,4 @@
-@use './colors/color.module.scss';
-@use './containers/container.module.scss';
-@use './radius/radius.module.scss';
-@use './shadows/shadow.module.scss';
-@use './spacing/spacing.module.scss';
-@use './typography/typography.module.scss';
+@use './colors/index.scss';
+@use './layout/index.scss';
+@use './spacing/index.scss';
+@use './typography/index.scss';

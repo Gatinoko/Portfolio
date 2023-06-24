@@ -1,18 +1,16 @@
-@use 'font-weight' as fw;
-@use 'font-size' as fs;
-@use 'fonts' as fo;
+@use 'variables' as va;
 
 /*
 	Font family mixins
 */
 @mixin typography-font-syne {
-	font-family: fo.$SYNE;
+	font-family: va.$SYNE;
 }
 @mixin typography-font-opensans {
-	font-family: fo.$OPEN-SANS;
+	font-family: va.$OPEN-SANS;
 }
 @mixin typography-font-majormono {
-	font-family: fo.$MAJOR-MONO;
+	font-family: va.$MAJOR-MONO;
 }
 
 /*
@@ -21,32 +19,32 @@
 @mixin typography-title-5xl-128-semibold {
 	@include typography-font-syne;
 
-	font-size: map-get(fs.$FONT-SIZE, 5xl);
-	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
+	font-size: map-get(va.$FONT-SIZE, 5xl);
+	font-weight: map-get(va.$FONT-WEIGHT, semibold);
 }
 @mixin typography-title-4xl-96-semibold {
 	@include typography-font-syne;
 
-	font-size: map-get(fs.$FONT-SIZE, 4xl);
-	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
+	font-size: map-get(va.$FONT-SIZE, 4xl);
+	font-weight: map-get(va.$FONT-WEIGHT, semibold);
 }
 @mixin typography-title-3xl-64-semibold {
 	@include typography-font-syne;
 
-	font-size: map-get(fs.$FONT-SIZE, 3xl);
-	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
+	font-size: map-get(va.$FONT-SIZE, 3xl);
+	font-weight: map-get(va.$FONT-WEIGHT, semibold);
 }
 @mixin typography-title-2xl-48-semibold {
 	@include typography-font-syne;
 
-	font-size: map-get(fs.$FONT-SIZE, 2xl);
-	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
+	font-size: map-get(va.$FONT-SIZE, 2xl);
+	font-weight: map-get(va.$FONT-WEIGHT, semibold);
 }
 @mixin typography-title-1xl-36-semibold {
 	@include typography-font-syne;
 
-	font-size: map-get(fs.$FONT-SIZE, 1xl);
-	font-weight: map-get(fw.$FONT-WEIGHT, semibold);
+	font-size: map-get(va.$FONT-SIZE, 1xl);
+	font-weight: map-get(va.$FONT-WEIGHT, semibold);
 }
 
 /*

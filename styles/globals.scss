@@ -1,22 +1,24 @@
-@use './containers/container.module.scss' as ct;
-@use './spacing/spacing.module.scss' as sp;
-@use './typography/typography.module.scss' as ty;
+@use './layout/index.scss' as lo;
+@use './spacing/index.scss' as sp;
+@use './typography/index.scss' as ty;
+
+@use 'global-elements';
 
 /*
-	Root HTML page styling
+	Global root HTML page styling
 */
 html {
-	@include ct.full-viewport-container;
+	@include lo.full-viewport-container;
 
 	body {
-		@include ct.flex-horizontal-container;
-		@include ct.full-parent-container;
+		@include lo.flex-horizontal-container;
+		@include lo.full-parent-container;
 
 		margin: 0px;
 
 		#__next {
-			@include ct.flex-horizontal-container;
-			@include ct.full-parent-width-container;
+			@include lo.flex-horizontal-container;
+			@include lo.full-parent-width-container;
 
 			gap: map-get(sp.$SPACING-SIZE, spacing-48);
 			padding: map-get(sp.$SPACING-SIZE, spacing-64)
@@ -27,8 +29,9 @@ html {
 			background-color: springgreen;
 
 			nav {
-				@include ct.flex-vertical-container;
+				@include lo.flex-vertical-container;
 
+				align-items: center;
 				gap: map-get(sp.$SPACING-SIZE, spacing-64);
 				width: 30%;
 
@@ -36,7 +39,7 @@ html {
 			}
 
 			main {
-				@include ct.flex-vertical-container;
+				@include lo.flex-vertical-container;
 				gap: map-get(sp.$SPACING-SIZE, spacing-32);
 				width: 70%;
 
@@ -44,36 +47,4 @@ html {
 			}
 		}
 	}
-}
-
-/*
-	Global title text styling
-*/
-h1 {
-	@include ty.typography-title-5xl-128-semibold;
-	margin: 0px;
-}
-h2 {
-	@include ty.typography-title-4xl-96-semibold;
-	margin: 0px;
-}
-h3 {
-	@include ty.typography-title-3xl-64-semibold;
-	margin: 0px;
-}
-h4 {
-	@include ty.typography-title-2xl-48-semibold;
-	margin: 0px;
-}
-h5 {
-	@include ty.typography-title-1xl-36-semibold;
-	margin: 0px;
-}
-
-/*
-	Global body text styling
-*/
-p {
-	@include ty.typography-body-r-20-semibold;
-	margin: 0px;
 }
