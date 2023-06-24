@@ -1,46 +1,43 @@
-@use './layout/index.scss' as lo;
-@use './spacing/index.scss' as sp;
-@use './typography/index.scss' as ty;
+@use './modules.scss' as *;
 
-@use 'global-elements';
+@use 'elements';
 
 /*
 	Global root HTML page styling
 */
 html {
-	@include lo.full-viewport-container;
+	@include full-viewport-layout;
 
 	body {
-		@include lo.flex-horizontal-container;
-		@include lo.full-parent-container;
+		@include flex-horizontal-layout;
+		@include full-parent-layout;
 
 		margin: 0px;
 
 		#__next {
-			@include lo.flex-horizontal-container;
-			@include lo.full-parent-width-container;
+			@include flex-horizontal-layout;
+			@include full-parent-width-layout;
 
-			gap: map-get(sp.$SPACING-SIZE, spacing-48);
-			padding: map-get(sp.$SPACING-SIZE, spacing-64)
-				map-get(sp.$SPACING-SIZE, spacing-48)
-				map-get(sp.$SPACING-SIZE, spacing-64)
-				map-get(sp.$SPACING-SIZE, spacing-48);
+			gap: map-get($SPACING-SIZE, spacing-48);
+			padding: map-get($SPACING-SIZE, spacing-64)
+				map-get($SPACING-SIZE, spacing-48) map-get($SPACING-SIZE, spacing-64)
+				map-get($SPACING-SIZE, spacing-48);
 
 			background-color: springgreen;
 
 			nav {
-				@include lo.flex-vertical-container;
+				@include flex-vertical-layout;
 
 				align-items: center;
-				gap: map-get(sp.$SPACING-SIZE, spacing-64);
+				gap: map-get($SPACING-SIZE, spacing-64);
 				width: 30%;
 
 				background-color: rgba(0, 255, 255, 0);
 			}
 
 			main {
-				@include lo.flex-vertical-container;
-				gap: map-get(sp.$SPACING-SIZE, spacing-32);
+				@include flex-vertical-layout;
+				gap: map-get($SPACING-SIZE, spacing-32);
 				width: 70%;
 
 				background-color: bisque;

@@ -1,22 +1,23 @@
-@use '../../styles/typography/typography.module.scss' as ty;
-@use '../../styles/containers/container.module.scss' as ct;
-@use '../../styles/spacing/spacing.module.scss' as sp;
+@use '../../styles/modules.scss' as *;
 
 .nav-logo {
-	@include ct.flex-horizontal-container;
-	@include ct.full-parent-width-container;
-	@include ty.typography-font-majormono;
+	@include flex-horizontal-layout;
+	@include full-parent-width-layout;
+	@include typography-font-majormono;
 
 	justify-content: center;
+	font-size: map-get($FONT-SIZE, 5xl);
+	color: white;
+	text-decoration: none;
 
 	background-color: aquamarine;
 }
 
 .nav-list {
-	@include ct.flex-vertical-container;
-	@include ct.full-parent-container;
+	@include flex-vertical-layout;
+	@include full-parent-layout;
 
-	gap: map-get(sp.$SPACING-SIZE, spacing-16);
+	gap: map-get($SPACING-SIZE, spacing-16);
 
 	background-color: rebeccapurple;
 }

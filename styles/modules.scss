@@ -1,4 +1,4 @@
-@use './colors/index.scss';
-@use './layout/index.scss';
-@use './spacing/index.scss';
-@use './typography/index.scss';
+@forward './colors/colors.module.scss';
+@forward './layout/layout.module.scss';
+@forward './spacing/spacing.module.scss';
+@forward './typography/typography.module.scss';
