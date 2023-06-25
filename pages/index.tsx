@@ -3,9 +3,11 @@ import styles from './index.module.scss';
 export default function Index() {
 	return (
 		<>
-			<main>
-				<h1 className={styles['typography-title-2xl-48-semibold']}>Main</h1>
-				<p>sdfsdfsdfdskfdkjjk</p>
+			<main className={`${styles['index-main']}`}>
+				<div className={`${styles['index-title']}`}>
+					<h1>Hi, I'm Gabriel.</h1>
+					<h4>Developer & designer.</h4>
+				</div>
 			</main>
 		</>
 	);
