@@ -3,80 +3,74 @@
 /*
 	Font family mixins
 */
-@mixin typography-font-syne {
+@mixin font-syne {
 	font-family: va.$SYNE;
 }
-@mixin typography-font-opensans {
+@mixin font-opensans {
 	font-family: va.$OPEN-SANS;
 }
-@mixin typography-font-majormono {
+@mixin font-majormono {
 	font-family: va.$MAJOR-MONO;
 }
 
 /*
 	Title text mixins
 */
-@mixin typography-title-5xl-128-semibold {
-	@include typography-font-syne;
+@mixin heading-xl {
+	@include font-syne;
 
-	font-size: map-get(va.$FONT-SIZE, 5xl);
+	font-size: map-get(va.$HEADING-TEXT-FONT, xl);
 	font-weight: map-get(va.$FONT-WEIGHT, semibold);
 }
-@mixin typography-title-4xl-96-semibold {
-	@include typography-font-syne;
+@mixin heading-l {
+	@include font-syne;
 
-	font-size: map-get(va.$FONT-SIZE, 4xl);
+	font-size: map-get(va.$HEADING-TEXT-FONT, l);
 	font-weight: map-get(va.$FONT-WEIGHT, semibold);
 }
-@mixin typography-title-3xl-64-semibold {
-	@include typography-font-syne;
+@mixin heading-r {
+	@include font-syne;
 
-	font-size: map-get(va.$FONT-SIZE, 3xl);
+	font-size: map-get(va.$HEADING-TEXT-FONT, r);
 	font-weight: map-get(va.$FONT-WEIGHT, semibold);
 }
-@mixin typography-title-2xl-48-semibold {
-	@include typography-font-syne;
+@mixin heading-m {
+	@include font-syne;
 
-	font-size: map-get(va.$FONT-SIZE, 2xl);
+	font-size: map-get(va.$HEADING-TEXT-FONT, m);
 	font-weight: map-get(va.$FONT-WEIGHT, semibold);
 }
-@mixin typography-title-1xl-36-semibold {
-	@include typography-font-syne;
+@mixin heading-s {
+	@include font-syne;
 
-	font-size: map-get(va.$FONT-SIZE, 1xl);
+	font-size: map-get(va.$HEADING-TEXT-FONT, s);
+	font-weight: map-get(va.$FONT-WEIGHT, semibold);
+}
+@mixin heading-xs {
+	@include font-syne;
+
+	font-size: map-get(va.$HEADING-TEXT-FONT, xs);
 	font-weight: map-get(va.$FONT-WEIGHT, semibold);
 }
 
 /*
 	Body text mixins
 */
-@mixin typography-body-l-24-semibold {
-	@include typography-font-opensans;
+@mixin body-l {
+	@include font-opensans;
 
-	font-size: map-get(va.$FONT-SIZE, l);
+	font-size: map-get(va.$BODY-TEXT-FONT, l);
 	font-weight: map-get(va.$FONT-WEIGHT, semibold);
 }
-@mixin typography-body-r-20-semibold {
-	@include typography-font-opensans;
+@mixin body-r {
+	@include font-opensans;
 
-	font-size: map-get(va.$FONT-SIZE, r);
+	font-size: map-get(va.$BODY-TEXT-FONT, r);
 	font-weight: map-get(va.$FONT-WEIGHT, regular);
 }
-@mixin typography-body-m-16-semibold {
-	@include typography-font-opensans;
+@mixin body-m {
+	@include font-opensans;
 
-	font-size: map-get(va.$FONT-SIZE, m);
+	font-size: map-get(va.$BODY-TEXT-FONT, m);
 	font-weight: map-get(va.$FONT-WEIGHT, regular);
-}
-@mixin typography-body-s-14-semibold {
-	@include typography-font-opensans;
-
-	font-size: map-get(va.$FONT-SIZE, s);
-	font-weight: map-get(va.$FONT-WEIGHT, regular);
-}
-@mixin typography-body-xs-12-semibold {
-	@include typography-font-opensans;
-
-	font-size: map-get(va.$FONT-SIZE, xs);
-	font-weight: map-get(va.$FONT-WEIGHT, light);
 }

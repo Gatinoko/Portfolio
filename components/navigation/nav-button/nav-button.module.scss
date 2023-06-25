@@ -16,7 +16,7 @@
 
 	.nav-button-text {
 		@include flex-horizontal-layout;
-		@include typography-title-1xl-36-semibold;
+		@include heading-xs;
 
 		color: map-get($COMPONENT-COLOR-PALETTE, b-color-disabled);
 

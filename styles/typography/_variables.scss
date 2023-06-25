@@ -6,17 +6,19 @@ $SYNE: 'Syne', sans-serif;
 $OPEN-SANS: 'Open Sans', sans-serif;
 $MAJOR-MONO: 'Major Mono Display', monospace;
 
-$FONT-SIZE: (
-	xs: 12px,
-	s: 14px,
+$HEADING-TEXT-FONT: (
+	xs: 36px,
+	s: 48px,
+	m: 64px,
+	r: 96px,
+	l: 128px,
+	xl: 128px,
+);
+
+$BODY-TEXT-FONT: (
 	m: 16px,
 	r: 20px,
 	l: 24px,
-	1xl: 36px,
-	2xl: 48px,
-	3xl: 64px,
-	4xl: 96px,
-	5xl: 128px,
 );
 
 $FONT-WEIGHT: (

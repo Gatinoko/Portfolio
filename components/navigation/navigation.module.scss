@@ -3,10 +3,10 @@
 .nav-logo {
 	@include flex-horizontal-layout;
 	@include full-parent-width-layout;
-	@include typography-font-majormono;
+	@include font-majormono;
 
 	justify-content: center;
-	font-size: map-get($FONT-SIZE, 5xl);
+	font-size: map-get($HEADING-TEXT-FONT, xl);
 	color: white;
 	text-decoration: none;
 
