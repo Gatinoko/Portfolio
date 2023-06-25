@@ -11,8 +11,8 @@
 	justify-content: flex-end;
 	align-items: center;
 
-	padding: map-get($SPACING-SIZE, spacing-24) map-get($SPACING-SIZE, spacing-64)
-		map-get($SPACING-SIZE, spacing-24) map-get($SPACING-SIZE, spacing-64);
+	padding: map-get($SPACING-SIZE, spacing-24) map-get($SPACING-SIZE, spacing-40)
+		map-get($SPACING-SIZE, spacing-24) map-get($SPACING-SIZE, spacing-40);
 
 	.nav-button-text {
 		@include flex-horizontal-layout;
