@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
-import styles from './Navigation.module.scss';
+import styles from './navigation.module.scss';
 import { ReactNode } from 'react';
 
 type Props = {
