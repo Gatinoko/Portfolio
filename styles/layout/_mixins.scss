@@ -26,6 +26,16 @@
 	@include flex-layout;
 	flex-direction: row;
 }
+@mixin flex-layout-center-justified {
+	justify-content: center;
+}
+@mixin flex-layout-center-aligned {
+	align-items: center;
+}
+@mixin flex-layout-perfectly-centered {
+	@include flex-layout-center-justified;
+	@include flex-layout-center-aligned;
+}
 
 /*
     Viewport layout mixins

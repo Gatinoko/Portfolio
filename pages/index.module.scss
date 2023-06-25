@@ -1,1 +1,11 @@
-@use '../styles/modules.scss';
+@use '../styles/modules.scss' as *;
+
+.index-main {
+	@include flex-layout;
+	@include flex-layout-perfectly-centered;
+}
+
+.index-title {
+	@include flex-vertical-layout;
+	@include flex-layout-perfectly-centered;
+}
