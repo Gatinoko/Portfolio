@@ -1,4 +1,4 @@
-import styles from './NavButton.module.scss';
+import styles from './navButton.module.scss';
 
 type Props = {
 	text: string;

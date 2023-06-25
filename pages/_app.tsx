@@ -2,7 +2,7 @@
 import '@/styles/globals.scss';
 import type { AppProps } from 'next/app';
 import Navigation from '@/components/navigation/Navigation';
-import NavButton from '@/components/navigation/navButton/NavButton';
+import NavButton from '@/components/navigation/nav-button/NavButton';
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
