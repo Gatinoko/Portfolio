@@ -11,11 +11,11 @@ export default function App({ Component, pageProps }: AppProps) {
 				navButtons={[
 					<NavButton
 						text='About Me'
-						href='/about-me'
+						href='#AboutMeSession'
 					/>,
 					<NavButton
 						text='Projects'
-						href='/projects'
+						href='#ProjectsSection'
 					/>,
 				]}
 			/>
