@@ -1,0 +1,9 @@
+{
+	"conventionalCommits.scopes": [
+		"structure",
+		"stylesheets",
+		"components",
+		"pages",
+		"utilities"
+	]
+}
