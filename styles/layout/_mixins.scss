@@ -1,3 +1,5 @@
+@use 'variables';
+
 /*
 	100% layout mixins
 */
@@ -63,4 +65,33 @@
 @mixin clickable-unselectable-layout {
 	@include clickable-layout;
 	@include unselectable-layout;
+}
+
+/*
+	Media queries mixins
+*/
+@mixin screen-breakpoint-extra-large {
+	@media (min-width: #{$EXTRA-LARGE-SCREEN-BREAKPOINT}) {
+		@content;
+	}
+}
+@mixin screen-breakpoint-large {
+	@media (min-width: #{$LARGE-SCREEN-BREAKPOINT}) {
+		@content;
+	}
+}
+@mixin screen-breakpoint-small {
+	@media (min-width: #{$SMALL-SCREEN-BREAKPOINT}) {
+		@content;
+	}
+}
+@mixin screen-breakpoint-tablet {
+	@media (min-width: #{$TABLET-SCREEN-BREAKPOINT}) {
+		@content;
+	}
+}
+@mixin screen-breakpoint-mobile {
+	@media (min-width: #{$MOBILE-SCREEN-BREAKPOINT}) {
+		@content;
+	}
 }
