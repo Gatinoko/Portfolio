@@ -5,6 +5,7 @@ import ContentSection from '@/components/content-section/content-section';
 export default function Index(props: any, rootMainRef: any) {
 	return (
 		<main id='root-main'>
+			{/* Intro section */}
 			<ContentSection id='IntroSection'>
 				<div className={`${styles['index-title']}`}>
 					<RevealAnimation>
@@ -13,6 +14,8 @@ export default function Index(props: any, rootMainRef: any) {
 					</RevealAnimation>
 				</div>
 			</ContentSection>
+
+			{/* About me section */}
 			<ContentSection id='AboutMeSession'>
 				<div className={`${styles['index-title']}`}>
 					<RevealAnimation>
@@ -21,6 +24,8 @@ export default function Index(props: any, rootMainRef: any) {
 					</RevealAnimation>
 				</div>
 			</ContentSection>
+
+			{/* Projects section */}
 			<ContentSection id='ProjectsSection'>
 				<div className={`${styles['index-title']}`}>
 					<RevealAnimation>
