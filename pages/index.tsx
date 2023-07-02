@@ -1,6 +1,6 @@
 import RevealAnimation from '@/utilities/reveal-animation';
 import styles from './index.module.scss';
-import ContentSection from '@/components/navigation/content-section/content-section';
+import ContentSection from '@/components/content-section/content-section';
 
 export default function Index(props: any, rootMainRef: any) {
 	return (
