@@ -1,6 +1,7 @@
 @use '../styles/modules.scss' as *;
 
 .index-title {
+	@include full-parent-layout;
 	@include flex-vertical-layout;
 	@include flex-layout-perfectly-centered;
 }
