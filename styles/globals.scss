@@ -44,9 +44,6 @@ html {
 				background-color: bisque;
 
 				.index-section {
-					@include flex-layout;
-					@include flex-layout-perfectly-centered;
-
 					height: calc(100vh - 128px);
 					width: 100%;
 				}
