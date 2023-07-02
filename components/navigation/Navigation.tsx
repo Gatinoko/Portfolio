@@ -13,7 +13,7 @@ export default function Navigation({ navButtons }: Props) {
 				{/* Logo */}
 				<a
 					className={`${styles['nav-logo']}`}
-					href='/'>
+					href='#IntroSection'>
 					GBRL
 					<br />
 					TNco
