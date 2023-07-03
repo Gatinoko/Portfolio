@@ -1,4 +1,5 @@
 /* eslint-disable react/display-name */
+import styles from './content-section.module.scss';
 
 import React, { LegacyRef, ReactNode, forwardRef } from 'react';
 
@@ -16,7 +17,7 @@ export default function ContentSection({
 	return (
 		<div
 			id={id}
-			className={`index-section ${classNames}`}>
+			className={`${styles['content-section']} ${classNames}`}>
 			{children}
 		</div>
 	);
