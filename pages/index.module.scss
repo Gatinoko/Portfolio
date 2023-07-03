@@ -1,7 +1,42 @@
 @use '../styles/modules.scss' as *;
 
+/*
+	Non-responsive styles
+*/
 .index-title {
 	@include full-parent-layout;
 	@include flex-vertical-layout;
 	@include flex-layout-perfectly-centered;
+}
+
+.information-page {
+	@include flex-vertical-layout;
+}
+
+/*
+	Screen size responsive styles
+*/
+@include screen-breakpoint-extra-large {
+	.main {
+		gap: map-get($SPACING-SIZE, spacing-32);
+		width: 70%;
+		overflow: auto;
+		background-color: rgb(255, 192, 116);
+	}
+}
+@include screen-breakpoint-large {
+	.main {
+		gap: map-get($SPACING-SIZE, spacing-32);
+		width: 65%;
+		overflow: auto;
+		background-color: bisque;
+	}
+}
+@include screen-breakpoint-small {
+	.main {
+		gap: map-get($SPACING-SIZE, spacing-32);
+		width: 60%;
+		overflow: auto;
+		background-color: rgb(255, 240, 221);
+	}
 }
