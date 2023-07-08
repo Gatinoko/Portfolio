@@ -1,8 +1,25 @@
-$MOBILE-SCREEN-BREAKPOINT: 320;
-$TABLET-SCREEN-BREAKPOINT: 481;
-$SMALL-SCREEN-BREAKPOINT: 769;
-$LARGE-SCREEN-BREAKPOINT: 1025;
-$EXTRA-LARGE-SCREEN-BREAKPOINT: 1201;
+$SCREEN-BREAKPOINTS: (
+	mobile: (
+		min: 320px,
+		max: 481px,
+	),
+	tablet: (
+		min: 481px,
+		max: 769px,
+	),
+	small: (
+		min: 769px,
+		max: 1025px,
+	),
+	large: (
+		min: 1025px,
+		max: 1201px,
+	),
+	extra-large: (
+		min: 1201px,
+		max: 99999px,
+	),
+);
 
 $SPACING-SIZE: (
 	spacing-2: 2px,
