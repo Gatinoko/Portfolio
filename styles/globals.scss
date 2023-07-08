@@ -15,39 +15,21 @@ html {
 		margin: 0px;
 
 		#__next {
-			@include flex-layout;
+			@include screen-breakpoint(extra-large, large, small) {
+				@include flex-layout;
+				gap: map-get($SPACING-SIZE, spacing-48);
+				margin: map-get($SPACING-SIZE, spacing-64)
+					map-get($SPACING-SIZE, spacing-48) map-get($SPACING-SIZE, spacing-64)
+					map-get($SPACING-SIZE, spacing-48);
+			}
+			@include screen-breakpoint(tablet, mobile) {
+				@include flex-vertical-layout;
+			}
 			@include full-parent-width-layout;
 
-			gap: map-get($SPACING-SIZE, spacing-48);
-			padding: map-get($SPACING-SIZE, spacing-64)
-				map-get($SPACING-SIZE, spacing-48) map-get($SPACING-SIZE, spacing-64)
-				map-get($SPACING-SIZE, spacing-48);
-
-			background-color: springgreen;
-
-			nav {
-				@include flex-vertical-layout;
-
-				align-items: center;
-				gap: map-get($SPACING-SIZE, spacing-64);
-				width: 20%;
-
-				background-color: rgba(0, 255, 255, 0);
-			}
-
-			main {
-				gap: map-get($SPACING-SIZE, spacing-32);
-				width: 80%;
-
-				overflow: auto;
-
-				background-color: bisque;
-
-				.index-section {
-					height: calc(100vh - 128px);
-					width: 100%;
-				}
-			}
+			background-color: rgb(0, 255, 179);
 		}
 	}
+
+	background-color: rgb(38, 0, 255);
 }
