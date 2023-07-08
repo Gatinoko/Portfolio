@@ -16,27 +16,18 @@
 /*
 	Screen size responsive styles
 */
-@include screen-breakpoint-extra-large {
-	.main {
-		gap: map-get($SPACING-SIZE, spacing-32);
+.main {
+	@include screen-breakpoint(extra-large) {
 		width: 70%;
-		overflow: auto;
-		background-color: rgb(255, 192, 116);
 	}
-}
-@include screen-breakpoint-large {
-	.main {
-		gap: map-get($SPACING-SIZE, spacing-32);
+	@include screen-breakpoint(large) {
 		width: 65%;
-		overflow: auto;
-		background-color: bisque;
 	}
-}
-@include screen-breakpoint-small {
-	.main {
-		gap: map-get($SPACING-SIZE, spacing-32);
+	@include screen-breakpoint(small) {
 		width: 60%;
-		overflow: auto;
-		background-color: rgb(255, 240, 221);
 	}
+
+	gap: map-get($SPACING-SIZE, spacing-32);
+	overflow: auto;
+	background-color: rgb(255, 192, 116);
 }
