@@ -21,3 +21,25 @@
 
 	background-color: rebeccapurple;
 }
+
+.navbar {
+	@include screen-breakpoint(extra-large) {
+		@include flex-vertical-layout;
+		width: 30%;
+	}
+	@include screen-breakpoint(large) {
+		@include flex-vertical-layout;
+		width: 35%;
+	}
+	@include screen-breakpoint(small) {
+		@include flex-vertical-layout;
+		width: 40%;
+	}
+	@include screen-breakpoint(tablet, mobile) {
+		@include flex-horizontal-layout;
+		width: 40%;
+	}
+
+	align-items: center;
+	gap: map-get($SPACING-SIZE, spacing-64);
+}
