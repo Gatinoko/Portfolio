@@ -4,12 +4,19 @@
 	@include flex-horizontal-layout;
 	@include full-parent-width-layout;
 	@include font-majormono;
+	@include screen-breakpoint(extra-large) {
+		font-size: map-get($HEADING-TEXT-FONT, xl);
+	}
+	@include screen-breakpoint(large, small) {
+		font-size: map-get($HEADING-TEXT-FONT, l);
+	}
+	@include screen-breakpoint(tablet, mobile) {
+		font-size: map-get($HEADING-TEXT-FONT, s);
+	}
 
 	justify-content: center;
-	font-size: map-get($HEADING-TEXT-FONT, xl);
 	color: white;
 	text-decoration: none;
-
 	background-color: aquamarine;
 }
 
@@ -36,10 +43,15 @@
 		width: 40%;
 	}
 	@include screen-breakpoint(tablet, mobile) {
-		@include flex-horizontal-layout;
-		width: 40%;
+		@include flex-vertical-layout;
+		width: 100%;
 	}
 
 	align-items: center;
-	gap: map-get($SPACING-SIZE, spacing-64);
+	@include screen-breakpoint(extra-large, large, small) {
+		gap: map-get($SPACING-SIZE, spacing-64);
+	}
+	@include screen-breakpoint(tablet, mobile) {
+		gap: map-get($SPACING-SIZE, spacing-16);
+	}
 }

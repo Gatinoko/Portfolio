@@ -15,19 +15,42 @@ html {
 		margin: 0px;
 
 		#__next {
+			@include full-parent-width-layout;
+			background-color: rgb(0, 255, 179);
+
+			// Flex direction
 			@include screen-breakpoint(extra-large, large, small) {
 				@include flex-layout;
+			}
+			@include screen-breakpoint(tablet, mobile) {
+				@include flex-vertical-layout;
+			}
+
+			// Gap and margin
+			@include screen-breakpoint(extra-large) {
 				gap: map-get($SPACING-SIZE, spacing-48);
 				margin: map-get($SPACING-SIZE, spacing-64)
 					map-get($SPACING-SIZE, spacing-48) map-get($SPACING-SIZE, spacing-64)
 					map-get($SPACING-SIZE, spacing-48);
 			}
-			@include screen-breakpoint(tablet, mobile) {
-				@include flex-vertical-layout;
+			@include screen-breakpoint(large) {
+				gap: map-get($SPACING-SIZE, spacing-40);
+				margin: map-get($SPACING-SIZE, spacing-48)
+					map-get($SPACING-SIZE, spacing-40) map-get($SPACING-SIZE, spacing-48)
+					map-get($SPACING-SIZE, spacing-40);
 			}
-			@include full-parent-width-layout;
-
-			background-color: rgb(0, 255, 179);
+			@include screen-breakpoint(small) {
+				gap: map-get($SPACING-SIZE, spacing-32);
+				margin: map-get($SPACING-SIZE, spacing-40)
+					map-get($SPACING-SIZE, spacing-32) map-get($SPACING-SIZE, spacing-40)
+					map-get($SPACING-SIZE, spacing-32);
+			}
+			@include screen-breakpoint(tablet, mobile) {
+				gap: map-get($SPACING-SIZE, spacing-24);
+				margin: map-get($SPACING-SIZE, spacing-32)
+					map-get($SPACING-SIZE, spacing-24) map-get($SPACING-SIZE, spacing-32)
+					map-get($SPACING-SIZE, spacing-24);
+			}
 		}
 	}
 
