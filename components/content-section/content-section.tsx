@@ -15,10 +15,10 @@ export default function ContentSection({
 	classNames,
 }: IContentSection) {
 	return (
-		<div
+		<section
 			id={id}
 			className={`${styles['content-section']} ${classNames}`}>
 			{children}
-		</div>
+		</section>
 	);
 }
