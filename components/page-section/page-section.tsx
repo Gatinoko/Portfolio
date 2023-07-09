@@ -1,9 +1,9 @@
 /* eslint-disable react/display-name */
-import styles from './content-section.module.scss';
+import styles from './page-section.module.scss';
 
 import React, { LegacyRef, ReactNode, forwardRef } from 'react';
 
-interface IContentSection {
+interface IPageSection {
 	children: ReactNode;
 	id: string;
 	classNames?: string;
@@ -13,11 +13,11 @@ export default function ContentSection({
 	children,
 	id,
 	classNames,
-}: IContentSection) {
+}: IPageSection) {
 	return (
 		<section
 			id={id}
-			className={`${styles['content-section']} ${classNames}`}>
+			className={`${styles['page-section']} ${classNames}`}>
 			{children}
 		</section>
 	);

@@ -1,6 +1,6 @@
 @use '../../styles/modules.scss' as *;
 
-.content-section {
+.page-section {
 	// Height
 	@include screen-breakpoint(extra-large) {
 		height: calc(100vh - 128px);
