@@ -82,7 +82,7 @@ export default function Icon(props: IIcon) {
 					viewBox='0 0 38 60'
 					fill='none'>
 					<path
-						d='M38 7.05L14.5128 30L38 52.95L30.7692 60L-1.31134e-06 30L30.7692 -3.16067e-07L38 7.05Z'
+						d='M38 7.05L14.5128 30L38 52.95L30.7692 60L0 30L30.7692 0L38 7.05Z'
 						fill={iconFill}
 					/>
 				</svg>
@@ -98,7 +98,8 @@ export default function Icon(props: IIcon) {
 					viewBox='0 0 38 60'
 					fill='none'>
 					<path
-						d='M38 7.05L14.5128 30L38 52.95L30.7692 60L-1.31134e-06 30L30.7692 -3.16067e-07L38 7.05Z'
+						transform='scaleX(-1)'
+						d='M2.00635e-06 52.95L23.4872 30L0 7.05L7.23077 0L38 30L7.23077 60L2.00635e-06 52.95Z'
 						fill={iconFill}
 					/>
 				</svg>
