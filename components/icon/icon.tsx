@@ -1,8 +1,4 @@
-export enum IconSizes {
-	LARGE,
-	REGULAR,
-	SMALL,
-}
+export type IconSizes = 'large' | 'regular' | 'small';
 
 export interface IIcon {
 	iconName: string;
@@ -17,7 +13,7 @@ export interface IIcon {
 export default function Icon(props: IIcon) {
 	const {
 		iconName = 'default',
-		iconSize = IconSizes.REGULAR,
+		iconSize = 'regular',
 		iconFill = 'white',
 		width,
 		height,
@@ -28,23 +24,47 @@ export default function Icon(props: IIcon) {
 	const ICON_LIST = [
 		{
 			name: 'leftChevron',
+			large: {
+				width: 57,
+				height: 90,
+			},
 			regular: {
 				width: 38,
 				height: 60,
+			},
+			small: {
+				width: 19,
+				height: 30,
 			},
 		},
 		{
 			name: 'rightChevron',
+			large: {
+				width: 57,
+				height: 90,
+			},
 			regular: {
 				width: 38,
 				height: 60,
 			},
+			small: {
+				width: 19,
+				height: 30,
+			},
 		},
 		{
 			name: 'default',
+			large: {
+				width: 90,
+				height: 90,
+			},
 			regular: {
 				width: 60,
 				height: 60,
+			},
+			small: {
+				width: 30,
+				height: 30,
 			},
 		},
 	];
@@ -52,21 +72,21 @@ export default function Icon(props: IIcon) {
 	function getIconSize(iconName: string) {
 		const icon = ICON_LIST.find((x) => x.name === iconName);
 		switch (iconSize) {
-			// case IconSizes.LARGE:
-			// 	return {
-			// 		width: icon?.large.width,
-			// 		height: icon?.large.height,
-			// 	};
-			case IconSizes.REGULAR:
+			case 'large':
+				return {
+					width: icon?.large.width,
+					height: icon?.large.height,
+				};
+			case 'regular':
 				return {
 					width: icon?.regular.width,
 					height: icon?.regular.height,
 				};
-			// case IconSizes.SMALL:
-			// 	return {
-			// 		width: icon?.small.width,
-			// 		height: icon?.small.height,
-			// 	};
+			case 'small':
+				return {
+					width: icon?.small.width,
+					height: icon?.small.height,
+				};
 		}
 	}
 
