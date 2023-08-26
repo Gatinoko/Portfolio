@@ -1,0 +1,22 @@
+@use '../layout/mixins' as *;
+@use './variables' as *;
+
+@mixin icon-sizes($iconMap, $iconName) {
+	@each $sizeName, $sizeValue in map-get($iconMap, $iconName) {
+		@if $sizeName == auto {
+			@each $sizeBreakpoint, $sizeClass in $sizeValue {
+				@include screen-breakpoint($sizeBreakpoint) {
+					&.#{$sizeName} {
+						width: map-get($ICONS, $iconName, $sizeClass, width);
+						height: map-get($ICONS, $iconName, $sizeClass, height);
+					}
+				}
+			}
+		} @else {
+			&.#{$sizeName} {
+				width: map-get($sizeValue, width);
+				height: map-get($sizeValue, height);
+			}
+		}
+	}
+}
