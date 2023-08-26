@@ -1,0 +1,89 @@
+$ICONS: (
+	rightChevron: (
+		extra-large: (
+			width: 57px,
+			height: 90px,
+		),
+		large: (
+			width: 47.5px,
+			height: 75px,
+		),
+		regular: (
+			width: 38px,
+			height: 60px,
+		),
+		small: (
+			width: 24.5px,
+			height: 45px,
+		),
+		extra-small: (
+			width: 19px,
+			height: 30px,
+		),
+		auto: (
+			extra-large: extra-large,
+			large: large,
+			small: regular,
+			tablet: small,
+			mobile: extra-small,
+		),
+	),
+	leftChevron: (
+		extra-large: (
+			width: 57px,
+			height: 90px,
+		),
+		large: (
+			width: 47.5px,
+			height: 75px,
+		),
+		regular: (
+			width: 38px,
+			height: 60px,
+		),
+		small: (
+			width: 24.5px,
+			height: 45px,
+		),
+		extra-small: (
+			width: 19px,
+			height: 30px,
+		),
+		auto: (
+			extra-large: extra-large,
+			large: large,
+			small: regular,
+			tablet: small,
+			mobile: extra-small,
+		),
+	),
+	default: (
+		extra-large: (
+			width: 90px,
+			height: 90px,
+		),
+		large: (
+			width: 75px,
+			height: 75px,
+		),
+		regular: (
+			width: 60px,
+			height: 60px,
+		),
+		small: (
+			width: 45px,
+			height: 45px,
+		),
+		extra-small: (
+			width: 30px,
+			height: 30px,
+		),
+		auto: (
+			extra-large: extra-large,
+			large: large,
+			small: regular,
+			tablet: small,
+			mobile: extra-small,
+		),
+	),
+);
