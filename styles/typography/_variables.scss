@@ -7,18 +7,21 @@ $OPEN-SANS: 'Open Sans', sans-serif;
 $MAJOR-MONO: 'Major Mono Display', monospace;
 
 $HEADING-TEXT-FONT: (
-	xs: 32px,
-	s: 40px,
-	m: 48px,
+	2xs: 32px,
+	xs: 40px,
+	s: 48px,
 	r: 64px,
 	l: 96px,
 	xl: 128px,
 );
 
 $BODY-TEXT-FONT: (
-	m: 16px,
+	2xs: 10px,
+	xs: 14px,
+	s: 16px,
 	r: 20px,
 	l: 24px,
+	xl: 32px,
 );
 
 $FONT-WEIGHT: (
