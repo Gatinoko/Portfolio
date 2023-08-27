@@ -31,7 +31,7 @@
 		width: 100%;
 	}
 
-	gap: map-get($SPACING-SIZE, spacing-32);
+	gap: get-spacing-value(spacing-32);
 	overflow: auto;
 	background-color: rgb(255, 192, 116);
 }

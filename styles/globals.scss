@@ -29,28 +29,24 @@ html {
 
 			// Gap and margin
 			@include screen-breakpoint(extra-large) {
-				gap: map-get($SPACING-SIZE, spacing-48);
-				margin: map-get($SPACING-SIZE, spacing-64)
-					map-get($SPACING-SIZE, spacing-48) map-get($SPACING-SIZE, spacing-64)
-					map-get($SPACING-SIZE, spacing-48);
+				gap: get-spacing-value(spacing-48);
+				margin: get-spacing-value(spacing-64) get-spacing-value(spacing-48)
+					get-spacing-value(spacing-64) get-spacing-value(spacing-48);
 			}
 			@include screen-breakpoint(large) {
-				gap: map-get($SPACING-SIZE, spacing-40);
-				margin: map-get($SPACING-SIZE, spacing-48)
-					map-get($SPACING-SIZE, spacing-40) map-get($SPACING-SIZE, spacing-48)
-					map-get($SPACING-SIZE, spacing-40);
+				gap: get-spacing-value(spacing-40);
+				margin: get-spacing-value(spacing-48) get-spacing-value(spacing-40)
+					get-spacing-value(spacing-48) get-spacing-value(spacing-40);
 			}
 			@include screen-breakpoint(small) {
-				gap: map-get($SPACING-SIZE, spacing-32);
-				margin: map-get($SPACING-SIZE, spacing-40)
-					map-get($SPACING-SIZE, spacing-32) map-get($SPACING-SIZE, spacing-40)
-					map-get($SPACING-SIZE, spacing-32);
+				gap: get-spacing-value(spacing-32);
+				margin: get-spacing-value(spacing-40) get-spacing-value(spacing-32)
+					get-spacing-value(spacing-40) get-spacing-value(spacing-32);
 			}
 			@include screen-breakpoint(tablet, mobile) {
-				gap: map-get($SPACING-SIZE, spacing-24);
-				margin: map-get($SPACING-SIZE, spacing-32)
-					map-get($SPACING-SIZE, spacing-24) map-get($SPACING-SIZE, spacing-32)
-					map-get($SPACING-SIZE, spacing-24);
+				gap: get-spacing-value(spacing-24);
+				margin: get-spacing-value(spacing-32) get-spacing-value(spacing-24)
+					get-spacing-value(spacing-32) get-spacing-value(spacing-24);
 			}
 		}
 	}

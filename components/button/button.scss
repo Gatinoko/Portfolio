@@ -81,7 +81,7 @@
 		// CSS transition properties
 		transition: background-color 150ms, padding-right 150ms;
 		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
-		padding-right: map-get($SPACING-SIZE, spacing-32);
+		padding-right: get-spacing-value(spacing-32);
 
 		background-color: rgb(255, 72, 0);
 	}

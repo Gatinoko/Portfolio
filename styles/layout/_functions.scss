@@ -1,9 +1,9 @@
 @use 'variables' as *;
 
-@function getRadiusValue($radius-size-token) {
+@function get-radius-value($radius-size-token) {
 	@return map-get($RADIUS-SIZE, $radius-size-token);
 }
 
-@function getSpacingValue($spacing-size-token) {
+@function get-spacing-value($spacing-size-token) {
 	@return map-get($SPACING-SIZE, $spacing-size-token);
 }

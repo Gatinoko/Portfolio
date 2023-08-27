@@ -24,7 +24,7 @@
 	@include flex-vertical-layout;
 	@include full-parent-layout;
 
-	gap: map-get($SPACING-SIZE, spacing-16);
+	gap: get-spacing-value(spacing-16);
 
 	background-color: rebeccapurple;
 }
@@ -49,9 +49,9 @@
 
 	align-items: center;
 	@include screen-breakpoint(extra-large, large, small) {
-		gap: map-get($SPACING-SIZE, spacing-64);
+		gap: get-spacing-value(spacing-64);
 	}
 	@include screen-breakpoint(tablet, mobile) {
-		gap: map-get($SPACING-SIZE, spacing-16);
+		gap: get-spacing-value(spacing-16);
 	}
 }
