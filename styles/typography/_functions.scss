@@ -1,0 +1,17 @@
+@use 'variables' as *;
+
+@function get-font-family($font-family-token) {
+	@return map-get($FONT-FAMILY, $font-family-token);
+}
+
+@function get-heading-font-value($heading-font-value-token) {
+	@return map-get($HEADING-TEXT-FONT, $heading-font-value-token);
+}
+
+@function get-body-font-value($body-font-value-token) {
+	@return map-get($BODY-TEXT-FONT, $body-font-value-token);
+}
+
+@function get-font-weight-value($font-weight-value-token) {
+	@return map-get($FONT-WEIGHT, $font-weight-value-token);
+}

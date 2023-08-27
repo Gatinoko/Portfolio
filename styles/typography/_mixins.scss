@@ -1,16 +1,16 @@
-@use 'variables' as va;
+@use 'functions' as *;
 
 /*
 	Font family mixins
 */
 @mixin font-syne {
-	font-family: va.$SYNE;
+	font-family: get-font-family(syne);
 }
 @mixin font-opensans {
-	font-family: va.$OPEN-SANS;
+	font-family: get-font-family(open-sans);
 }
 @mixin font-majormono {
-	font-family: va.$MAJOR-MONO;
+	font-family: get-font-family(major-mono);
 }
 
 /*
@@ -19,38 +19,38 @@
 @mixin heading-xl {
 	@include font-syne;
 
-	font-size: map-get(va.$HEADING-TEXT-FONT, xl);
-	font-weight: map-get(va.$FONT-WEIGHT, semibold);
+	font-size: get-heading-font-value(xl);
+	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-l {
 	@include font-syne;
 
-	font-size: map-get(va.$HEADING-TEXT-FONT, l);
-	font-weight: map-get(va.$FONT-WEIGHT, semibold);
+	font-size: get-heading-font-value(l);
+	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-r {
 	@include font-syne;
 
-	font-size: map-get(va.$HEADING-TEXT-FONT, r);
-	font-weight: map-get(va.$FONT-WEIGHT, semibold);
+	font-size: get-heading-font-value(r);
+	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-s {
 	@include font-syne;
 
-	font-size: map-get(va.$HEADING-TEXT-FONT, s);
-	font-weight: map-get(va.$FONT-WEIGHT, semibold);
+	font-size: get-heading-font-value(s);
+	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-xs {
 	@include font-syne;
 
-	font-size: map-get(va.$HEADING-TEXT-FONT, xs);
-	font-weight: map-get(va.$FONT-WEIGHT, semibold);
+	font-size: get-heading-font-value(xs);
+	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-2xs {
 	@include font-syne;
 
-	font-size: map-get(va.$HEADING-TEXT-FONT, 2xs);
-	font-weight: map-get(va.$FONT-WEIGHT, semibold);
+	font-size: get-heading-font-value(2xs);
+	font-weight: get-font-weight-value(semibold);
 }
 
 /*
@@ -59,36 +59,36 @@
 @mixin body-xl {
 	@include font-opensans;
 
-	font-size: map-get(va.$BODY-TEXT-FONT, xl);
-	font-weight: map-get(va.$FONT-WEIGHT, semibold);
+	font-size: get-body-font-value(xl);
+	font-weight: get-font-weight-value(semibold);
 }
 @mixin body-l {
 	@include font-opensans;
 
-	font-size: map-get(va.$BODY-TEXT-FONT, l);
-	font-weight: map-get(va.$FONT-WEIGHT, semibold);
+	font-size: get-body-font-value(l);
+	font-weight: get-font-weight-value(semibold);
 }
 @mixin body-r {
 	@include font-opensans;
 
-	font-size: map-get(va.$BODY-TEXT-FONT, r);
-	font-weight: map-get(va.$FONT-WEIGHT, regular);
+	font-size: get-body-font-value(r);
+	font-weight: get-font-weight-value(regular);
 }
 @mixin body-s {
 	@include font-opensans;
 
-	font-size: map-get(va.$BODY-TEXT-FONT, s);
-	font-weight: map-get(va.$FONT-WEIGHT, regular);
+	font-size: get-body-font-value(s);
+	font-weight: get-font-weight-value(regular);
 }
 @mixin body-xs {
 	@include font-opensans;
 
-	font-size: map-get(va.$BODY-TEXT-FONT, xs);
-	font-weight: map-get(va.$FONT-WEIGHT, regular);
+	font-size: get-body-font-value(xs);
+	font-weight: get-font-weight-value(regular);
 }
 @mixin body-2xs {
 	@include font-opensans;
 
-	font-size: map-get(va.$BODY-TEXT-FONT, 2xs);
-	font-weight: map-get(va.$FONT-WEIGHT, regular);
+	font-size: get-body-font-value(2xs);
+	font-weight: get-font-weight-value(regular);
 }
