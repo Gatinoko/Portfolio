@@ -1,5 +1,6 @@
 @use './modules.scss' as *;
-
+@use '../components/components' as *;
+@use '../pages/index.scss' as *;
 @use 'elements';
 
 /*

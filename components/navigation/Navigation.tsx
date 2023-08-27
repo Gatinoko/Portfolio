@@ -9,10 +9,10 @@ type Props = {
 export default function Navigation({ navButtons }: Props) {
 	return (
 		<>
-			<nav className={`${styles['navbar']}`}>
+			<nav className={'navbar'}>
 				{/* Logo */}
 				<a
-					className={`${styles['nav-logo']}`}
+					className={'nav-logo'}
 					href='#IntroSection'>
 					GBRL
 					<br />
@@ -20,7 +20,7 @@ export default function Navigation({ navButtons }: Props) {
 				</a>
 
 				{/* Navigation list */}
-				<div className={styles['nav-list']}>{navButtons}</div>
+				<div className={'nav-list'}>{navButtons}</div>
 			</nav>
 		</>
 	);

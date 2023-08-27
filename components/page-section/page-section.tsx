@@ -17,7 +17,7 @@ export default function ContentSection({
 	return (
 		<section
 			id={id}
-			className={`${styles['page-section']} ${classNames}`}>
+			className={`page-section ${classNames}`}>
 			{children}
 		</section>
 	);
