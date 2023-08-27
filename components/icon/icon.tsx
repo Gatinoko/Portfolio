@@ -1,120 +1,78 @@
-export type IconSizes = 'large' | 'regular' | 'small';
+import { cva } from 'class-variance-authority';
+
+export type IconSizes =
+	| 'auto'
+	| 'extra-large'
+	| 'large'
+	| 'regular'
+	| 'small'
+	| 'extra-small';
 
 export interface IIcon {
-	iconName: string;
-	iconSize: IconSizes;
+	name: string;
+	size: IconSizes;
 	iconFill?: string;
-	width?: number;
-	height?: number;
-	customIconClass?: string;
+	customClass?: string;
 	onClick?: () => void;
 }
 
+const icon = cva('icon', {
+	variants: {
+		name: {
+			['left-chevron']: 'left-chevron',
+			['right-chevron']: 'right-chevron',
+			default: 'default',
+		},
+		size: {
+			auto: 'auto',
+			['extra-large']: 'extra-large',
+			large: 'large',
+			regular: 'regular',
+			small: 'small',
+			['extra-small']: 'extra-small',
+		},
+	},
+});
+
 export default function Icon(props: IIcon) {
 	const {
-		iconName = 'default',
-		iconSize = 'regular',
+		name = 'default',
+		size = 'regular',
 		iconFill = 'white',
-		width,
-		height,
-		customIconClass,
+		customClass,
 		onClick,
 	} = props;
 
-	const ICON_LIST = [
-		{
-			name: 'leftChevron',
-			large: {
-				width: 57,
-				height: 90,
-			},
-			regular: {
-				width: 38,
-				height: 60,
-			},
-			small: {
-				width: 19,
-				height: 30,
-			},
-		},
-		{
-			name: 'rightChevron',
-			large: {
-				width: 57,
-				height: 90,
-			},
-			regular: {
-				width: 38,
-				height: 60,
-			},
-			small: {
-				width: 19,
-				height: 30,
-			},
-		},
-		{
-			name: 'default',
-			large: {
-				width: 90,
-				height: 90,
-			},
-			regular: {
-				width: 60,
-				height: 60,
-			},
-			small: {
-				width: 30,
-				height: 30,
-			},
-		},
-	];
+	const customClassValue = `${customClass ? customClass : ''}`;
 
-	function getIconSize(iconName: string) {
-		const icon = ICON_LIST.find((x) => x.name === iconName);
-		switch (iconSize) {
-			case 'large':
-				return {
-					width: icon?.large.width,
-					height: icon?.large.height,
-				};
-			case 'regular':
-				return {
-					width: icon?.regular.width,
-					height: icon?.regular.height,
-				};
-			case 'small':
-				return {
-					width: icon?.small.width,
-					height: icon?.small.height,
-				};
-		}
-	}
-
-	switch (iconName) {
-		case 'leftChevron':
+	switch (name) {
+		case 'left-chevron':
 			return (
 				<svg
 					onClick={onClick}
-					className={customIconClass}
+					className={`${customClassValue} ${icon({
+						name,
+						size,
+					})}`}
 					xmlns='http://www.w3.org/2000/svg'
-					width={width ? width : getIconSize('leftChevron')?.width}
-					height={height ? height : getIconSize('leftChevron')?.height}
 					viewBox='0 0 38 60'
 					fill='none'>
 					<path
+						style={{ width: 300, height: 200 }}
 						d='M38 7.05L14.5128 30L38 52.95L30.7692 60L0 30L30.7692 0L38 7.05Z'
 						fill={iconFill}
 					/>
 				</svg>
 			);
-		case 'rightChevron':
+		case 'right-chevron':
 			return (
 				<svg
 					onClick={onClick}
-					className={customIconClass}
+					className={`${customClassValue} ${icon({
+						name,
+						size,
+					})}`}
 					xmlns='http://www.w3.org/2000/svg'
-					width={width ? width : getIconSize('rightChevron')?.width}
-					height={height ? height : getIconSize('rightChevron')?.height}
 					viewBox='0 0 38 60'
 					fill='none'>
 					<path
@@ -128,10 +86,11 @@ export default function Icon(props: IIcon) {
 			return (
 				<svg
 					onClick={onClick}
-					className={customIconClass}
+					className={`${customClassValue} ${icon({
+						name: 'default',
+						size,
+					})}`}
 					xmlns='http://www.w3.org/2000/svg'
-					width={width ? width : getIconSize('default')?.width}
-					height={width ? width : getIconSize('default')?.height}
 					viewBox='0 0 60 60'
 					fill='none'>
 					<path

@@ -1,0 +1,11 @@
+@use '../../styles/modules.scss' as *;
+
+.right-chevron {
+	@include icon-sizes($ICONS, rightChevron);
+}
+.left-chevron {
+	@include icon-sizes($ICONS, leftChevron);
+}
+.default {
+	@include icon-sizes($ICONS, default);
+}
