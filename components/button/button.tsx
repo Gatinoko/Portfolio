@@ -20,6 +20,7 @@ const button = cva('button', {
 });
 
 export type ButtonSizes =
+	| 'auto'
 	| 'extra-large'
 	| 'large'
 	| 'regular'
@@ -71,6 +72,7 @@ export default function Button(props: IButton) {
 			{...extraProps}>
 			{prefixIcon && (
 				<Icon
+					customClass='prefix-icon'
 					name={`${prefixIcon}`}
 					size={size as IconSizes}
 				/>
@@ -78,6 +80,7 @@ export default function Button(props: IButton) {
 			{text}
 			{suffixIcon && (
 				<Icon
+					customClass='suffix-icon'
 					name={`${suffixIcon}`}
 					size={size as IconSizes}
 				/>
