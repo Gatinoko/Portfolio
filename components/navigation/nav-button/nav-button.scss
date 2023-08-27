@@ -50,7 +50,7 @@
 	.nav-button-text {
 		@include flex-horizontal-layout;
 
-		color: map-get($COMPONENT-COLOR-PALETTE, b-color-disabled);
+		color: get-component-color-value(b-color-disabled);
 
 		// CSS transition properties
 		transition: color 150ms, padding 150ms;
@@ -65,15 +65,15 @@
 
 		background-image: linear-gradient(
 				90deg,
-				map-get($COLOR-PALETTE, color-palette-transparent-ffffff00) 17.19%,
-				map-get($COLOR-PALETTE, black0-131313) 44.79%,
-				map-get($COLOR-PALETTE, black-000000) 100%
+				get-color-value(color-palette-transparent-ffffff00) 17.19%,
+				get-color-value(black0-131313) 44.79%,
+				get-color-value(black-000000) 100%
 			),
 			linear-gradient(
 				90deg,
 				rgba(255, 255, 255, 0) 0%,
 				rgba(255, 255, 255, 0.1) 50%,
-				map-get($COLOR-PALETTE, white-ffffff) 100%
+				get-color-value(white-ffffff) 100%
 			);
 	}
 
@@ -82,17 +82,17 @@
 
 		background-image: linear-gradient(
 				270deg,
-				map-get($COLOR-PALETTE, black-000000) 13.02%,
-				map-get($COLOR-PALETTE, black0-131313) 40.1%,
+				get-color-value(black-000000) 13.02%,
+				get-color-value(black0-131313) 40.1%,
 				rgba(28, 28, 28, 0.556522) 66.67%,
 				rgba(32, 32, 32, 0.391304) 76.56%,
 				rgba(40, 40, 40, 0) 100%
 			),
 			linear-gradient(
 				90deg,
-				map-get($COLOR-PALETTE, color-palette-transparent-ffffff00) 0%,
+				get-color-value(color-palette-transparent-ffffff00) 0%,
 				rgba(255, 255, 255, 0.1) 50%,
-				map-get($COLOR-PALETTE, white-ffffff) 100%
+				get-color-value(white-ffffff) 100%
 			);
 	}
 
@@ -157,7 +157,7 @@
 	*/
 	&:hover {
 		.nav-button-text {
-			color: map-get($COLOR-PALETTE, white-ffffff);
+			color: get-color-value(white-ffffff);
 			padding-right: get-spacing-value(spacing-32);
 
 			// CSS transition properties
@@ -171,7 +171,7 @@
 	}
 	&:active {
 		.nav-button-text {
-			color: map-get($COLOR-PALETTE, white-ffffff);
+			color: get-color-value(white-ffffff);
 			padding-right: get-spacing-value(spacing-32);
 
 			// CSS transition properties

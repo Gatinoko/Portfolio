@@ -1,0 +1,9 @@
+@use 'variables' as *;
+
+@function get-color-value($color-value-token) {
+	@return map-get($COLOR-PALETTE, $color-value-token);
+}
+
+@function get-component-color-value($component-color-value-token) {
+	@return map-get($COMPONENT-COLOR-PALETTE, $component-color-value-token);
+}
