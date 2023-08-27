@@ -1,0 +1,91 @@
+@use '../../styles/modules.scss' as *;
+
+.button {
+	@include flex-horizontal-layout;
+	@include flex-layout-perfectly-centered;
+	border-radius: 8px;
+	padding: 0px;
+	border: 0px;
+	text-transform: uppercase;
+
+	/*
+		Sizes
+	*/
+	&.auto {
+		@include screen-breakpoint(extra-large) {
+			@include body-xl;
+			gap: 32px;
+			padding: 32px 48px;
+			background-color: rgb(25, 116, 116);
+		}
+		@include screen-breakpoint(large) {
+			@include body-l;
+			gap: 16px;
+			padding: 16px 32px;
+			background-color: rgb(25, 116, 116);
+		}
+		@include screen-breakpoint(small) {
+			@include body-r;
+			gap: 8px;
+			padding: 8px 16px;
+			background-color: rgb(78, 167, 167);
+		}
+		@include screen-breakpoint(tablet) {
+			@include body-s;
+			gap: 4px;
+			padding: 4px 8px;
+			background-color: aqua;
+		}
+		@include screen-breakpoint(mobile) {
+			@include body-xs;
+			gap: 2px;
+			padding: 2px 4px;
+			background-color: aqua;
+		}
+	}
+	&.extra-large {
+		@include body-xl;
+		gap: 32px;
+		padding: 32px 48px;
+		background-color: rgb(25, 116, 116);
+	}
+	&.large {
+		@include body-l;
+		gap: 16px;
+		padding: 16px 32px;
+		background-color: rgb(25, 116, 116);
+	}
+	&.regular {
+		@include body-r;
+		gap: 8px;
+		padding: 8px 16px;
+		background-color: rgb(78, 167, 167);
+	}
+	&.small {
+		@include body-s;
+		gap: 4px;
+		padding: 4px 8px;
+		background-color: aqua;
+	}
+	&.extra-small {
+		@include body-xs;
+		gap: 2px;
+		padding: 2px 4px;
+		background-color: aqua;
+	}
+
+	/*
+		States
+	*/
+	&:hover {
+		// CSS transition properties
+		transition: background-color 150ms, padding-right 150ms;
+		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+		padding-right: map-get($SPACING-SIZE, spacing-32);
+
+		background-color: rgb(255, 72, 0);
+	}
+	&:active {
+		background-color: rgb(0, 153, 255);
+	}
+}
