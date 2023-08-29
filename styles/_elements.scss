@@ -6,26 +6,32 @@
 h1 {
 	@include ty.heading-xl;
 	margin: 0px;
+	word-break: break-all;
 }
 h2 {
 	@include ty.heading-l;
 	margin: 0px;
+	word-break: break-all;
 }
 h3 {
 	@include ty.heading-r;
 	margin: 0px;
+	word-break: break-all;
 }
 h4 {
 	@include ty.heading-s;
 	margin: 0px;
+	word-break: break-all;
 }
 h5 {
 	@include ty.heading-xs;
 	margin: 0px;
+	word-break: break-all;
 }
 h6 {
 	@include ty.heading-2xs;
 	margin: 0px;
+	word-break: break-all;
 }
 
 /*
@@ -34,4 +40,5 @@ h6 {
 p {
 	@include ty.body-r;
 	margin: 0px;
+	word-break: break-all;
 }
