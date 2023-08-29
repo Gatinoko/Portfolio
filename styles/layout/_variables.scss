@@ -1,19 +1,19 @@
 $SCREEN-BREAKPOINTS: (
 	mobile: (
-		min: 320px,
-		max: 481px,
+		min: 1px,
+		max: 480px,
 	),
 	tablet: (
 		min: 481px,
-		max: 769px,
+		max: 768px,
 	),
 	small: (
 		min: 769px,
-		max: 1025px,
+		max: 1024px,
 	),
 	large: (
 		min: 1025px,
-		max: 1201px,
+		max: 1200px,
 	),
 	extra-large: (
 		min: 1201px,
