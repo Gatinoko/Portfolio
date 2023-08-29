@@ -8,48 +8,23 @@
 */
 html {
 	@include full-viewport-layout;
-
-	body {
-		@include flex-layout;
-		@include full-parent-layout;
-
-		margin: 0px;
-
-		#__next {
-			@include full-parent-width-layout;
-			background-color: rgb(0, 255, 179);
-
-			// Flex direction
-			@include screen-breakpoint(extra-large, large, small) {
-				@include flex-layout;
-			}
-			@include screen-breakpoint(tablet, mobile) {
-				@include flex-vertical-layout;
-			}
-
-			// Gap and margin
-			@include screen-breakpoint(extra-large) {
-				gap: get-spacing-value(spacing-48);
-				margin: get-spacing-value(spacing-64) get-spacing-value(spacing-48)
-					get-spacing-value(spacing-64) get-spacing-value(spacing-48);
-			}
-			@include screen-breakpoint(large) {
-				gap: get-spacing-value(spacing-40);
-				margin: get-spacing-value(spacing-48) get-spacing-value(spacing-40)
-					get-spacing-value(spacing-48) get-spacing-value(spacing-40);
-			}
-			@include screen-breakpoint(small) {
-				gap: get-spacing-value(spacing-32);
-				margin: get-spacing-value(spacing-40) get-spacing-value(spacing-32)
-					get-spacing-value(spacing-40) get-spacing-value(spacing-32);
-			}
-			@include screen-breakpoint(tablet, mobile) {
-				gap: get-spacing-value(spacing-24);
-				margin: get-spacing-value(spacing-32) get-spacing-value(spacing-24)
-					get-spacing-value(spacing-32) get-spacing-value(spacing-24);
-			}
-		}
-	}
-
 	background-color: rgb(38, 0, 255);
+}
+
+body {
+	@include full-parent-layout;
+	margin: 0px;
+}
+
+#__next {
+	@include full-parent-layout;
+	background-color: rgb(0, 255, 179);
+
+	// Flex direction
+	@include screen-breakpoint(extra-large, large, small) {
+		@include flex-horizontal-layout;
+	}
+	@include screen-breakpoint(tablet, mobile) {
+		@include flex-vertical-layout;
+	}
 }
