@@ -50,7 +50,7 @@
 	.nav-button-text {
 		@include flex-horizontal-layout;
 
-		color: get-component-color-value(b-color-disabled);
+		color: get-component-color-value(disabled);
 
 		// CSS transition properties
 		transition: color 150ms, padding 150ms;
@@ -65,7 +65,7 @@
 
 		background-image: linear-gradient(
 				90deg,
-				get-color-value(color-palette-transparent-ffffff00) 17.19%,
+				get-color-value(transparent-ffffff) 17.19%,
 				get-color-value(black0-131313) 44.79%,
 				get-color-value(black-000000) 100%
 			),
@@ -90,7 +90,7 @@
 			),
 			linear-gradient(
 				90deg,
-				get-color-value(color-palette-transparent-ffffff00) 0%,
+				get-color-value(transparent-ffffff) 0%,
 				rgba(255, 255, 255, 0.1) 50%,
 				get-color-value(white-ffffff) 100%
 			);
