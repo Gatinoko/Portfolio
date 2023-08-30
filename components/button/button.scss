@@ -3,10 +3,13 @@
 .button {
 	@include flex-horizontal-layout;
 	@include flex-layout-perfectly-centered;
-	border-radius: 8px;
+	background-color: get-color-value(white-ffffff-15);
+	text-transform: uppercase;
 	padding: 0px;
 	border: 0px;
-	text-transform: uppercase;
+	user-select: none;
+	fill: get-color-value(white-ffffff);
+	color: get-color-value(white-ffffff);
 
 	/*
 		Sizes
@@ -14,64 +17,64 @@
 	&.auto {
 		@include screen-breakpoint(extra-large) {
 			@include interface-xl;
+			border-radius: 13px;
 			gap: 32px;
 			padding: 32px 48px;
-			background-color: rgb(25, 116, 116);
 		}
 		@include screen-breakpoint(large) {
 			@include interface-l;
-			gap: 16px;
+			border-radius: 13px;
+			gap: 24px;
 			padding: 24px 48px;
-			background-color: rgb(25, 116, 116);
 		}
 		@include screen-breakpoint(small) {
 			@include interface-r;
-			gap: 8px;
+			border-radius: 9px;
+			gap: 16px;
 			padding: 16px 32px;
-			background-color: rgb(78, 167, 167);
 		}
 		@include screen-breakpoint(tablet) {
 			@include interface-s;
-			gap: 4px;
+			border-radius: 7px;
+			gap: 16px;
 			padding: 16px 24px;
-			background-color: aqua;
 		}
 		@include screen-breakpoint(mobile) {
 			@include interface-2xs;
-			gap: 2px;
+			border-radius: 7px;
+			gap: 16px;
 			padding: 16px 24px;
-			background-color: aqua;
 		}
 	}
 	&.extra-large {
 		@include interface-xl;
+		border-radius: 13px;
 		gap: 32px;
 		padding: 32px 48px;
-		background-color: rgb(25, 116, 116);
 	}
 	&.large {
 		@include interface-l;
-		gap: 16px;
+		border-radius: 13px;
+		gap: 24px;
 		padding: 24px 48px;
-		background-color: rgb(25, 116, 116);
 	}
 	&.regular {
 		@include interface-r;
-		gap: 8px;
+		border-radius: 9px;
+		gap: 16px;
 		padding: 16px 32px;
-		background-color: rgb(78, 167, 167);
 	}
 	&.small {
 		@include interface-s;
-		gap: 4px;
+		border-radius: 7px;
+		gap: 16px;
 		padding: 16px 24px;
-		background-color: aqua;
 	}
 	&.extra-small {
 		@include interface-2xs;
-		gap: 2px;
+		border-radius: 7px;
+		gap: 16px;
 		padding: 16px 24px;
-		background-color: aqua;
 	}
 
 	/*
@@ -82,9 +85,18 @@
 		transition: background-color 150ms;
 		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 
-		background-color: rgb(255, 72, 0);
+		background-color: get-color-value(white-ffffff-35);
 	}
 	&:active {
 		background-color: rgb(0, 153, 255);
+	}
+	&:disabled {
+		.icon {
+			fill: get-component-color-value(disabled);
+		}
+		color: get-component-color-value(disabled);
+		text-decoration: none;
+
+		pointer-events: none;
 	}
 }

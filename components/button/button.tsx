@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ComponentProps, useState } from 'react';
 import { cva } from 'class-variance-authority';
 import Icon, { IconSizes } from '../icon/icon';
 
@@ -34,7 +34,7 @@ export type IButton = {
 	prefixIcon?: string;
 	suffixIcon?: string;
 	onClick?: () => void;
-} & { throttleValue?: number };
+} & { throttleValue?: number } & ComponentProps<'button'>;
 
 export default function Button(props: IButton) {
 	let {
@@ -65,6 +65,23 @@ export default function Button(props: IButton) {
 		} else onClick();
 	}
 
+	function assignIconSizes(): IconSizes {
+		switch (size) {
+			case 'extra-large':
+				return 'small';
+			case 'large':
+				return 'small';
+			case 'regular':
+				return 'extra-small';
+			case 'small':
+				return 'extra-small';
+			case 'extra-small':
+				return 'extra-small';
+			default:
+				return 'regular';
+		}
+	}
+
 	return (
 		<button
 			className={`${customClass} ${button({ size })}`}
@@ -74,7 +91,7 @@ export default function Button(props: IButton) {
 				<Icon
 					customClass='prefix-icon'
 					name={`${prefixIcon}`}
-					size={size as IconSizes}
+					size={assignIconSizes()}
 				/>
 			)}
 			{text}
@@ -82,7 +99,7 @@ export default function Button(props: IButton) {
 				<Icon
 					customClass='suffix-icon'
 					name={`${suffixIcon}`}
-					size={size as IconSizes}
+					size={assignIconSizes()}
 				/>
 			)}
 		</button>
