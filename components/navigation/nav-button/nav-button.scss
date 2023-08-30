@@ -172,7 +172,7 @@
 	&:active {
 		.nav-button-text {
 			color: get-color-value(white-ffffff);
-			padding-right: get-spacing-value(spacing-32);
+			padding-right: get-spacing-value(spacing-16);
 
 			// CSS transition properties
 			transition: color 150ms, padding-right 150ms;
