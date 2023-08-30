@@ -92,3 +92,49 @@
 	font-size: get-body-font-value(2xs);
 	font-weight: get-font-weight-value(regular);
 }
+
+/*
+	Interface text mixins
+*/
+@mixin interface-xl {
+	@include font-opensans;
+
+	letter-spacing: 3.2px;
+	font-size: get-body-font-value(xl);
+	font-weight: get-font-weight-value(semibold);
+}
+@mixin interface-l {
+	@include font-opensans;
+
+	letter-spacing: 3.2px;
+	font-size: get-body-font-value(l);
+	font-weight: get-font-weight-value(semibold);
+}
+@mixin interface-r {
+	@include font-opensans;
+
+	letter-spacing: 3.2px;
+	font-size: get-body-font-value(r);
+	font-weight: get-font-weight-value(semibold);
+}
+@mixin interface-s {
+	@include font-opensans;
+
+	letter-spacing: 3.2px;
+	font-size: get-body-font-value(s);
+	font-weight: get-font-weight-value(bold);
+}
+@mixin interface-xs {
+	@include font-opensans;
+
+	letter-spacing: 3.2px;
+	font-size: get-body-font-value(xs);
+	font-weight: get-font-weight-value(bold);
+}
+@mixin interface-2xs {
+	@include font-opensans;
+
+	letter-spacing: 3.2px;
+	font-size: get-body-font-value(2xs);
+	font-weight: get-font-weight-value(bold);
+}
