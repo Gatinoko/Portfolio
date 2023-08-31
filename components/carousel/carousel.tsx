@@ -61,13 +61,13 @@ export default function Carousel(props: ICarousel) {
 	return (
 		<div className={carousel({ size })}>
 			<Button
-				customClass='chevron-left'
+				className='chevron-left'
 				prefixIcon={'left-chevron'}
 				size={size as ButtonSizes}
 				onClick={() => onChevronClick('left', currentIndex, children.length)}
 			/>
 			<Button
-				customClass='chevron-right'
+				className='chevron-right'
 				suffixIcon={'right-chevron'}
 				size={size as ButtonSizes}
 				onClick={() => onChevronClick('right', currentIndex, children.length)}
