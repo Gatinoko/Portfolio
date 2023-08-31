@@ -4,6 +4,8 @@
 	position: relative;
 	background-color: rgb(0, 0, 0);
 	overflow: hidden;
+	width: 500px;
+	height: 500px;
 	border-radius: get-radius-value(radius-13);
 
 	.chevron-left {
@@ -29,48 +31,88 @@
 	}
 
 	/*
-		Sizes
+		Button sizes
 	*/
 	&.auto {
 		@include screen-breakpoint(extra-large) {
-			width: 500px;
-			height: 500px;
+			.chevron-left {
+				left: 32px;
+			}
+			.chevron-right {
+				right: 32px;
+			}
 		}
 		@include screen-breakpoint(large) {
-			width: 400px;
-			height: 400px;
+			.chevron-left {
+				left: 24px;
+			}
+			.chevron-right {
+				right: 24px;
+			}
 		}
 		@include screen-breakpoint(small) {
-			width: 300px;
-			height: 300px;
+			.chevron-left {
+				left: 16px;
+			}
+			.chevron-right {
+				right: 16px;
+			}
 		}
 		@include screen-breakpoint(tablet) {
-			width: 200px;
-			height: 200px;
+			.chevron-left {
+				left: 8px;
+			}
+			.chevron-right {
+				right: 8px;
+			}
 		}
 		@include screen-breakpoint(mobile) {
-			width: 100px;
-			height: 100px;
+			.chevron-left {
+				left: 4px;
+			}
+			.chevron-right {
+				right: 4px;
+			}
 		}
 	}
 	&.extra-large {
-		width: 500px;
-		height: 500px;
+		.chevron-left {
+			left: 32px;
+		}
+		.chevron-right {
+			right: 32px;
+		}
 	}
 	&.large {
-		width: 400px;
-		height: 400px;
+		.chevron-left {
+			left: 24px;
+		}
+		.chevron-right {
+			right: 24px;
+		}
 	}
 	&.regular {
-		width: 300px;
-		height: 300px;
+		.chevron-left {
+			left: 16px;
+		}
+		.chevron-right {
+			right: 16px;
+		}
 	}
 	&.small {
-		width: 200px;
-		height: 200px;
+		.chevron-left {
+			left: 8px;
+		}
+		.chevron-right {
+			right: 8px;
+		}
 	}
 	&.extra-small {
-		width: 100px;
-		height: 100px;
+		.chevron-left {
+			left: 4px;
+		}
+		.chevron-right {
+			right: 4px;
+		}
 	}
 }

@@ -14,13 +14,13 @@ export type CarouselSizes =
 
 export interface ICarousel {
 	customImageClass?: string;
-	size: CarouselSizes;
+	buttonSize: ButtonSizes;
 	children: ReactElement[];
 }
 
 const carousel = cva('carousel', {
 	variants: {
-		size: {
+		buttonSize: {
 			auto: 'auto',
 			['extra-large']: 'extra-large',
 			large: 'large',
@@ -31,12 +31,12 @@ const carousel = cva('carousel', {
 		},
 	},
 	defaultVariants: {
-		size: 'auto',
+		buttonSize: 'auto',
 	},
 });
 
 export default function Carousel(props: ICarousel) {
-	const { children, size, customImageClass } = props;
+	const { children, buttonSize, customImageClass } = props;
 	const [currentIndex, setCurrentIndex] = useState(0);
 
 	function onChevronClick(
@@ -59,17 +59,17 @@ export default function Carousel(props: ICarousel) {
 	}
 
 	return (
-		<div className={carousel({ size })}>
+		<div className={carousel({ buttonSize })}>
 			<Button
 				customClass='chevron-left'
 				prefixIcon={'left-chevron'}
-				size={size as ButtonSizes}
+				size={buttonSize as ButtonSizes}
 				onClick={() => onChevronClick('left', currentIndex, children.length)}
 			/>
 			<Button
 				customClass='chevron-right'
 				suffixIcon={'right-chevron'}
-				size={size as ButtonSizes}
+				size={buttonSize as ButtonSizes}
 				onClick={() => onChevronClick('right', currentIndex, children.length)}
 			/>
 			<div
