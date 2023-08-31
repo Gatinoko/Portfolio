@@ -13,7 +13,7 @@ export type CarouselSizes =
 	| 'extra-small';
 
 export interface ICarousel {
-	customImageClass?: string;
+	imageClassName?: string;
 	className?: string;
 	buttonSize: ButtonSizes;
 	children: ReactElement[];
@@ -37,7 +37,7 @@ const carousel = cva('carousel', {
 });
 
 export default function Carousel(props: ICarousel) {
-	const { children, buttonSize, className, customImageClass } = props;
+	const { children, buttonSize, className, imageClassName } = props;
 	const [currentIndex, setCurrentIndex] = useState(0);
 
 	function onChevronClick(
@@ -88,7 +88,7 @@ export default function Carousel(props: ICarousel) {
 							key={currentIndex}
 							alt={children[currentIndex].props.src}
 							fill={children[currentIndex].props.fill}
-							className={`${'carousel-image'} ${customImageClass}`}
+							className={`carousel-image ${imageClassName}`}
 							src={children[currentIndex].props.src}
 						/>
 					</motion.div>
