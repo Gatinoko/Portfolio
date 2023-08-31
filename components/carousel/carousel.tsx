@@ -13,6 +13,8 @@ export type CarouselSizes =
 	| 'extra-small';
 
 export interface ICarousel {
+	width?: string;
+	height?: string;
 	imageClassName?: string;
 	className?: string;
 	buttonSize: ButtonSizes;
@@ -37,7 +39,15 @@ const carousel = cva('carousel', {
 });
 
 export default function Carousel(props: ICarousel) {
-	const { children, buttonSize, className, imageClassName } = props;
+	const {
+		children,
+		buttonSize,
+		className,
+		imageClassName,
+		width = '500px',
+		height = '500px',
+	} = props;
+
 	const [currentIndex, setCurrentIndex] = useState(0);
 
 	function onChevronClick(
@@ -60,7 +70,9 @@ export default function Carousel(props: ICarousel) {
 	}
 
 	return (
-		<div className={carousel({ buttonSize })}>
+		<div
+			className={carousel({ buttonSize })}
+			style={{ width: width, height: height }}>
 			<Button
 				customClass={`chevron-left ${className}`}
 				prefixIcon={'left-chevron'}
