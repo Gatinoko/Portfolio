@@ -30,17 +30,19 @@ export type ButtonSizes =
 export type IButton = {
 	text?: string;
 	size: ButtonSizes;
-	customClass: string;
 	prefixIcon?: string;
 	suffixIcon?: string;
+	className?: string;
 	onClick?: () => void;
-} & { throttleValue?: number } & ComponentProps<'button'>;
+} & {
+	throttleValue?: number;
+} & ComponentProps<'button'>;
 
 export default function Button(props: IButton) {
 	let {
 		text,
 		size,
-		customClass,
+		className,
 		prefixIcon,
 		suffixIcon,
 		onClick = () => {},
@@ -65,33 +67,16 @@ export default function Button(props: IButton) {
 		} else onClick();
 	}
 
-	function assignIconSizes(): IconSizes {
-		switch (size) {
-			case 'extra-large':
-				return 'small';
-			case 'large':
-				return 'small';
-			case 'regular':
-				return 'extra-small';
-			case 'small':
-				return 'extra-small';
-			case 'extra-small':
-				return 'extra-small';
-			default:
-				return 'regular';
-		}
-	}
-
 	return (
 		<button
-			className={`${customClass} ${button({ size })}`}
+			className={`${className} ${button({ size })}`}
 			onClick={buttonClick}
 			{...extraProps}>
 			{prefixIcon && (
 				<Icon
 					customClass='prefix-icon'
 					name={`${prefixIcon}`}
-					size={assignIconSizes()}
+					size={size}
 				/>
 			)}
 			{text}
@@ -99,7 +84,7 @@ export default function Button(props: IButton) {
 				<Icon
 					customClass='suffix-icon'
 					name={`${suffixIcon}`}
-					size={assignIconSizes()}
+					size={size}
 				/>
 			)}
 		</button>
