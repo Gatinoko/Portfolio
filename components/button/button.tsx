@@ -42,7 +42,7 @@ export default function Button(props: IButton) {
 	let {
 		text,
 		size,
-		className,
+		className = '',
 		prefixIcon,
 		suffixIcon,
 		onClick = () => {},
