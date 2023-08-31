@@ -13,14 +13,17 @@ export type CarouselSizes =
 	| 'extra-small';
 
 export interface ICarousel {
-	customImageClass?: string;
-	size: CarouselSizes;
+	width?: string;
+	height?: string;
+	imageClassName?: string;
+	className?: string;
+	buttonSize: ButtonSizes;
 	children: ReactElement[];
 }
 
 const carousel = cva('carousel', {
 	variants: {
-		size: {
+		buttonSize: {
 			auto: 'auto',
 			['extra-large']: 'extra-large',
 			large: 'large',
@@ -31,12 +34,20 @@ const carousel = cva('carousel', {
 		},
 	},
 	defaultVariants: {
-		size: 'auto',
+		buttonSize: 'auto',
 	},
 });
 
 export default function Carousel(props: ICarousel) {
-	const { children, size, customImageClass } = props;
+	const {
+		children,
+		buttonSize,
+		className,
+		imageClassName,
+		width = '500px',
+		height = '500px',
+	} = props;
+
 	const [currentIndex, setCurrentIndex] = useState(0);
 
 	function onChevronClick(
@@ -59,17 +70,19 @@ export default function Carousel(props: ICarousel) {
 	}
 
 	return (
-		<div className={carousel({ size })}>
+		<div
+			className={carousel({ buttonSize })}
+			style={{ width: width, height: height }}>
 			<Button
-				className='chevron-left'
+				customClass={`chevron-left ${className}`}
 				prefixIcon={'left-chevron'}
-				size={size as ButtonSizes}
+				size={buttonSize as ButtonSizes}
 				onClick={() => onChevronClick('left', currentIndex, children.length)}
 			/>
 			<Button
-				className='chevron-right'
+				customClass={`chevron-right ${className}`}
 				suffixIcon={'right-chevron'}
-				size={size as ButtonSizes}
+				size={buttonSize as ButtonSizes}
 				onClick={() => onChevronClick('right', currentIndex, children.length)}
 			/>
 			<div
@@ -87,7 +100,7 @@ export default function Carousel(props: ICarousel) {
 							key={currentIndex}
 							alt={children[currentIndex].props.src}
 							fill={children[currentIndex].props.fill}
-							className={`${'carousel-image'} ${customImageClass}`}
+							className={`carousel-image ${imageClassName}`}
 							src={children[currentIndex].props.src}
 						/>
 					</motion.div>
