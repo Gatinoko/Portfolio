@@ -10,6 +10,7 @@
 }
 
 .information-page {
+	@include full-parent-layout;
 	@include flex-vertical-layout;
 }
 
@@ -32,6 +33,7 @@
 	}
 
 	gap: get-spacing-value(spacing-32);
-	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	background-color: rgb(255, 192, 116);
 }
