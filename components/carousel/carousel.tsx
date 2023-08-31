@@ -16,6 +16,7 @@ export interface ICarousel {
 	width?: string;
 	height?: string;
 	imageClassName?: string;
+	imageObjectFit: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
 	className?: string;
 	buttonSize: ButtonSizes;
 	children: ReactElement[];
@@ -44,11 +45,13 @@ export default function Carousel(props: ICarousel) {
 		buttonSize,
 		className,
 		imageClassName,
+		imageObjectFit = 'cover',
 		width = '500px',
 		height = '500px',
 	} = props;
 
 	const [currentIndex, setCurrentIndex] = useState(0);
+	const { src, fill, alt } = children[currentIndex].props;
 
 	function onChevronClick(
 		direction: 'left' | 'right',
@@ -97,11 +100,12 @@ export default function Carousel(props: ICarousel) {
 							opacity: { duration: 0.5 },
 						}}>
 						<Image
+							style={{ objectFit: imageObjectFit }}
 							key={currentIndex}
-							alt={children[currentIndex].props.src}
-							fill={children[currentIndex].props.fill}
+							alt={alt}
+							fill={fill}
 							className={`carousel-image ${imageClassName}`}
-							src={children[currentIndex].props.src}
+							src={src}
 						/>
 					</motion.div>
 				</AnimatePresence>
