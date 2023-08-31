@@ -16,7 +16,7 @@ export interface ICarousel {
 	width?: string;
 	height?: string;
 	imageClassName?: string;
-	imageObjectFit: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
+	imageObjectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
 	className?: string;
 	buttonSize: ButtonSizes;
 	children: ReactElement[];
