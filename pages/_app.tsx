@@ -10,10 +10,12 @@ export default function App({ Component, pageProps }: AppProps) {
 			<Navigation
 				navButtons={[
 					<NavButton
+						key={0}
 						text='About Me'
 						href='#AboutMeSession'
 					/>,
 					<NavButton
+						key={1}
 						text='Projects'
 						href='#ProjectsSection'
 					/>,
