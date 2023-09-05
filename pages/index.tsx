@@ -4,6 +4,7 @@ import Carousel from '@/components/carousel/carousel';
 import Image from 'next/image';
 import Button, { ButtonSizes } from '@/components/button/button';
 import Icon, { IconSizes } from '@/components/icon/icon';
+import Chip from '@/components/chip/chip';
 
 export default function Index(props: any, rootMainRef: any) {
 	return (
@@ -14,7 +15,7 @@ export default function Index(props: any, rootMainRef: any) {
 			<PageSection
 				id='IntroSection'
 				classNames={'index-title'}>
-				<Carousel size={'large'}>
+				{/* <Carousel buttonSize={'auto'}>
 					<Image
 						alt='image'
 						fill={true}
@@ -27,7 +28,12 @@ export default function Index(props: any, rootMainRef: any) {
 						className={'image'}
 						src={'/cat.jpg'}
 					/>
-				</Carousel>
+				</Carousel> */}
+				<Chip
+					text={'PEEEsssssssssssss'}
+					size={'auto'}
+					id={''}
+				/>
 				<RevealAnimation>
 					<h1>Gabriel.</h1>
 					<h4>Developer & designer.</h4>
