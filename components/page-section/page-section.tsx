@@ -6,18 +6,18 @@ import React, { LegacyRef, ReactNode, forwardRef } from 'react';
 interface IPageSection {
 	children: ReactNode;
 	id: string;
-	classNames?: string;
+	className?: string;
 }
 
 export default function ContentSection({
 	children,
 	id,
-	classNames,
+	className,
 }: IPageSection) {
 	return (
 		<section
 			id={id}
-			className={`page-section ${classNames}`}>
+			className={`page-section ${className}`}>
 			{children}
 		</section>
 	);

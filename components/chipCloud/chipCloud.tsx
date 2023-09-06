@@ -18,7 +18,7 @@ interface IChipCloud {
 		link?: string;
 	}[];
 	size: ChipCloudSizes;
-	classNames?: string;
+	className?: string;
 }
 
 const chipCloud = cva('chipCloud', {
@@ -39,7 +39,7 @@ const chipCloud = cva('chipCloud', {
 });
 
 export default function ChipCloud(props: IChipCloud) {
-	const { itemArray, size, classNames = '' } = props;
+	const { itemArray, size, className = '' } = props;
 
 	function assignChipSize(itemWeight: number): ChipSizes {
 		switch (itemWeight) {
@@ -62,7 +62,7 @@ export default function ChipCloud(props: IChipCloud) {
 		<ul
 			role='navigation'
 			aria-label='Tag cloud'
-			className={`${chipCloud({ size })} ${classNames}`}>
+			className={`${chipCloud({ size })} ${className}`}>
 			{itemArray.map((item) => (
 				<li key={item.key}>
 					{Object.hasOwnProperty.call(item, 'link') ? (
