@@ -12,8 +12,9 @@ export type ChipSizes =
 interface IChip {
 	text: string;
 	size: ChipSizes;
-	id: string;
-	classNames?: string;
+	id?: any;
+	link?: string;
+	className?: string;
 }
 
 const tag = cva('chip', {
@@ -34,7 +35,24 @@ const tag = cva('chip', {
 });
 
 export default function Chip(props: IChip) {
-	const { text, size, classNames } = props;
+	const { id, text, size, link, className = '' } = props;
 
-	return <p className={`${tag({ size })} ${classNames}`}>{text}</p>;
+	return (
+		<>
+			{Object.hasOwnProperty.call(props, 'link') ? (
+				<a
+					id={id}
+					className={`${tag({ size })} ${className}`}
+					href={link}>
+					{text}
+				</a>
+			) : (
+				<p
+					id={id}
+					className={`${tag({ size })} ${className}`}>
+					{text}
+				</p>
+			)}
+		</>
+	);
 }
