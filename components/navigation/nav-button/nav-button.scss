@@ -50,7 +50,7 @@
 	.nav-button-text {
 		@include flex-horizontal-layout;
 
-		color: get-component-color-value(disabled);
+		color: get-color-value(white-ffffff-25);
 
 		// CSS transition properties
 		transition: color 150ms, padding 150ms;
