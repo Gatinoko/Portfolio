@@ -1,19 +1,9 @@
 @use '../../styles/modules.scss' as *;
 
 .page-section {
-	// Height
-	@include screen-breakpoint(extra-large) {
-		height: calc(100vh - 128px);
-	}
-	@include screen-breakpoint(large) {
-		height: calc(100vh - 96px);
-	}
-	@include screen-breakpoint(small) {
-		height: calc(100vh - 80px);
-	}
-	@include screen-breakpoint(tablet, mobile) {
-		height: calc(100vh - 48px);
-	}
-
-	width: 100%;
+	@include flex-vertical-layout;
+	height: 100%;
+	width: auto;
+	padding: 0px get-spacing-value(spacing-64) 0px get-spacing-value(spacing-64);
+	gap: get-spacing-value(spacing-24);
 }
