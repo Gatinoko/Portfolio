@@ -1,10 +1,12 @@
+@use '../../styles/modules.scss' as *;
+
 .chipCloud {
 	& {
-		width: 750px;
+		width: auto;
 		list-style: none;
 		padding: 0;
 		display: flex;
-		gap: 8px;
+		gap: get-spacing-value(spacing-8);
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
