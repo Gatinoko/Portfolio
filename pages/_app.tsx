@@ -11,8 +11,8 @@ export default function App({ Component, pageProps }: AppProps) {
 				navButtons={[
 					<NavButton
 						key={0}
-						text='About Me'
-						href='#AboutMeSession'
+						text='Tech & Skills'
+						href='#Tech&SkillsSection'
 					/>,
 					<NavButton
 						key={1}
