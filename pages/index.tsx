@@ -15,7 +15,7 @@ export default function Index(props: any, rootMainRef: any) {
 			{/* Intro section */}
 			<PageSection
 				id='IntroSection'
-				classNames={'index-title'}>
+				className={'index-title'}>
 				{/* <Carousel buttonSize={'auto'}>
 					<Image
 						alt='image'
@@ -35,14 +35,31 @@ export default function Index(props: any, rootMainRef: any) {
 					size={'auto'}
 					id={''}
 				/> */}
+
+				<RevealAnimation>
+					<h1>Gabriel.</h1>
+					<h4>Developer & designer.</h4>
+					<h6>
+						Career statement goes here. Should be something like really
+						impactful. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Morbi non sapien ante. Suspendisse vel consectetur urna. Ut a dictum
+						sem. Praesent faucibus nisi ac fermentum posuere.
+					</h6>
+				</RevealAnimation>
+			</PageSection>
+
+			{/* About me section */}
+			<PageSection
+				id='Tech&SkillsSection'
+				className={'information-page'}>
+				<h2>Tech & Skills.</h2>
+				<hr />
 				<ChipCloud
 					itemArray={[
 						{ text: 'TypeScript', weight: 5 },
-						{ text: 'NodeJS', weight: 3 },
-						{ text: 'React', weight: 5 },
+						{ text: 'Node', weight: 3 },
 						{ text: 'Angular', weight: 5 },
 						{ text: 'MySQL', weight: 1 },
-						{ text: 'HTML', weight: 5 },
 						{ text: 'GIT', weight: 4 },
 						{ text: 'CSS', weight: 5 },
 						{ text: 'Storybook', weight: 4 },
@@ -50,35 +67,38 @@ export default function Index(props: any, rootMainRef: any) {
 						{ text: 'Python', weight: 2 },
 						{ text: 'Spring', weight: 3 },
 						{ text: 'MongoDB', weight: 3 },
+						{ text: 'JavaScript', weight: 5 },
 						{ text: 'Oracle SQL', weight: 1 },
 						{ text: 'JWT', weight: 3 },
 						{ text: 'Prettier', weight: 3 },
 						{ text: 'ESLint', weight: 3 },
 						{ text: 'Nodemon', weight: 3 },
-						{ text: 'Class Authority Variance', weight: 3 },
-						{ text: 'JavaScript', weight: 5 },
 						{ text: 'Sass', weight: 5 },
+						{ text: 'GitHub', weight: 4 },
+						{ text: 'Next.js', weight: 5 },
+						{ text: 'Class Authority Variance', weight: 3 },
+						{ text: 'React', weight: 5 },
+						{ text: 'GraphQL', weight: 2 },
+						{ text: 'HTML', weight: 5 },
+						{ text: 'Lodash', weight: 1 },
+						{ text: 'Jira', weight: 4 },
+						{ text: 'Jenkins', weight: 2 },
+						{ text: 'Express.js', weight: 3 },
+						{ text: 'CSHARP', weight: 4 },
+						{ text: 'XML', weight: 2 },
+						{ text: 'JSON', weight: 4 },
+						{ text: 'Figma', weight: 5 },
+						{ text: 'Adobe Photoshop', weight: 5 },
+						{ text: 'Adobe Premiere', weight: 4 },
 					]}
 					size={'auto'}
 				/>
-				<RevealAnimation>
-					<h1>Gabriel.</h1>
-					<h4>Developer & designer.</h4>
-				</RevealAnimation>
-			</PageSection>
-
-			{/* About me section */}
-			<PageSection
-				id='AboutMeSession'
-				classNames={'information-page'}>
-				<h2>About me.</h2>
-				<p>paragraph goes here</p>
 			</PageSection>
 
 			{/* Projects section */}
 			<PageSection
 				id='ProjectsSection'
-				classNames={'index-title'}>
+				className={'index-title'}>
 				<RevealAnimation>
 					<h1>Projecasdfasdfsdfts.</h1>
 					<h4>Developer & designer.</h4>
