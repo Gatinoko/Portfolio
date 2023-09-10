@@ -1,9 +1,27 @@
 @use '../../styles/modules.scss' as *;
 
 .page-section {
+	align-items: flex-start;
+	justify-items: start;
 	@include flex-vertical-layout;
 	height: 100%;
 	width: auto;
 	padding: 0px get-spacing-value(spacing-64) 0px get-spacing-value(spacing-64);
 	gap: get-spacing-value(spacing-24);
+
+	@include screen-breakpoint(extra-large) {
+		padding: 0px get-spacing-value(spacing-64) 0px get-spacing-value(spacing-64);
+	}
+	@include screen-breakpoint(large) {
+		padding: 0px get-spacing-value(spacing-32) 0px get-spacing-value(spacing-32);
+	}
+	@include screen-breakpoint(small) {
+		padding: 0px get-spacing-value(spacing-24) 0px get-spacing-value(spacing-24);
+	}
+	@include screen-breakpoint(tablet) {
+		padding: 0px get-spacing-value(spacing-16) 0px get-spacing-value(spacing-16);
+	}
+	@include screen-breakpoint(mobile) {
+		padding: 0px get-spacing-value(spacing-16) 0px get-spacing-value(spacing-16);
+	}
 }
