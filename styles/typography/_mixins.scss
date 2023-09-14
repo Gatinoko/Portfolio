@@ -19,37 +19,61 @@
 @mixin heading-xl {
 	@include font-syne;
 
-	font-size: get-heading-font-value(xl);
+	font-size: clamp(
+		get-heading-font-value(2xs),
+		get-heading-font-value(xl) + 1.5vw,
+		get-heading-font-value(xl) + 5vw
+	);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-l {
 	@include font-syne;
 
-	font-size: get-heading-font-value(l);
+	font-size: clamp(
+		get-heading-font-value(2xs),
+		get-heading-font-value(l) + 1.5vw,
+		get-heading-font-value(xl) + 5vw
+	);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-r {
 	@include font-syne;
 
-	font-size: get-heading-font-value(r);
+	font-size: clamp(
+		get-heading-font-value(2xs),
+		get-heading-font-value(r) + 1.5vw,
+		get-heading-font-value(xl) + 5vw
+	);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-s {
 	@include font-syne;
 
-	font-size: get-heading-font-value(s);
+	font-size: clamp(
+		get-heading-font-value(2xs),
+		get-heading-font-value(s) + 1.5vw,
+		get-heading-font-value(xl) + 5vw
+	);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-xs {
 	@include font-syne;
 
-	font-size: get-heading-font-value(xs);
+	font-size: clamp(
+		get-heading-font-value(2xs),
+		get-heading-font-value(xs) + 1.5vw,
+		get-heading-font-value(xl) + 5vw
+	);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-2xs {
 	@include font-syne;
 
-	font-size: get-heading-font-value(2xs);
+	font-size: clamp(
+		get-heading-font-value(2xs),
+		get-heading-font-value(2xs) + 1.5vw,
+		get-heading-font-value(xl) + 5vw
+	);
 	font-weight: get-font-weight-value(semibold);
 }
 
@@ -59,37 +83,61 @@
 @mixin body-xl {
 	@include font-opensans;
 
-	font-size: get-body-font-value(xl);
+	font-size: clamp(
+		get-body-font-value(2xs),
+		get-body-font-value(xl) + 1.5vw,
+		get-body-font-value(xl)
+	);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin body-l {
 	@include font-opensans;
 
-	font-size: get-body-font-value(l);
+	font-size: clamp(
+		get-body-font-value(2xs),
+		get-body-font-value(l) + 1.5vw,
+		get-body-font-value(xl)
+	);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin body-r {
 	@include font-opensans;
 
-	font-size: get-body-font-value(r);
+	font-size: clamp(
+		get-body-font-value(2xs),
+		get-body-font-value(r) + 1.5vw,
+		get-body-font-value(xl)
+	);
 	font-weight: get-font-weight-value(regular);
 }
 @mixin body-s {
 	@include font-opensans;
 
-	font-size: get-body-font-value(s);
+	font-size: clamp(
+		get-body-font-value(2xs),
+		get-body-font-value(s) + 1.5vw,
+		get-body-font-value(xl)
+	);
 	font-weight: get-font-weight-value(regular);
 }
 @mixin body-xs {
 	@include font-opensans;
 
-	font-size: get-body-font-value(xs);
+	font-size: clamp(
+		get-body-font-value(2xs),
+		get-body-font-value(xs) + 1.5vw,
+		get-body-font-value(xl)
+	);
 	font-weight: get-font-weight-value(regular);
 }
 @mixin body-2xs {
 	@include font-opensans;
 
-	font-size: get-body-font-value(2xs);
+	font-size: clamp(
+		get-body-font-value(2xs),
+		get-body-font-value(2xs) + 1.5vw,
+		get-body-font-value(xl)
+	);
 	font-weight: get-font-weight-value(regular);
 }
 
@@ -100,41 +148,65 @@
 	@include font-opensans;
 
 	letter-spacing: 3.2px;
-	font-size: get-body-font-value(xl);
+	font-size: clamp(
+		get-body-font-value(2xs),
+		get-body-font-value(xl) + 1.5vw,
+		get-body-font-value(xl)
+	);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin interface-l {
 	@include font-opensans;
 
 	letter-spacing: 3.2px;
-	font-size: get-body-font-value(l);
+	font-size: clamp(
+		get-body-font-value(2xs),
+		get-body-font-value(l) + 1.5vw,
+		get-body-font-value(xl)
+	);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin interface-r {
 	@include font-opensans;
 
 	letter-spacing: 3.2px;
-	font-size: get-body-font-value(r);
+	font-size: clamp(
+		get-body-font-value(2xs),
+		get-body-font-value(r) + 1.5vw,
+		get-body-font-value(xl)
+	);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin interface-s {
 	@include font-opensans;
 
 	letter-spacing: 3.2px;
-	font-size: get-body-font-value(s);
+	font-size: clamp(
+		get-body-font-value(2xs),
+		get-body-font-value(s) + 1.5vw,
+		get-body-font-value(xl)
+	);
 	font-weight: get-font-weight-value(bold);
 }
 @mixin interface-xs {
 	@include font-opensans;
 
 	letter-spacing: 3.2px;
-	font-size: get-body-font-value(xs);
+	font-size: clamp(
+		get-body-font-value(2xs),
+		get-body-font-value(xs) + 1.5vw,
+		get-body-font-value(xl)
+	);
 	font-weight: get-font-weight-value(bold);
 }
 @mixin interface-2xs {
 	@include font-opensans;
 
 	letter-spacing: 3.2px;
-	font-size: get-body-font-value(2xs);
+	font-size: clamp(
+		get-body-font-value(2xs),
+		get-body-font-value(2xs) + 1.5vw,
+		get-body-font-value(xl)
+	);
 	font-weight: get-font-weight-value(bold);
 }
