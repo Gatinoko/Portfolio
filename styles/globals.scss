@@ -21,11 +21,6 @@ body {
 	@include full-parent-layout;
 	background-color: rgb(0, 255, 179);
 
-	// Flex direction
-	@include screen-breakpoint(extra-large, large, small) {
-		@include flex-horizontal-layout;
-	}
-	@include screen-breakpoint(tablet, mobile) {
-		@include flex-vertical-layout;
-	}
+	display: flex;
+	flex-direction: column;
 }
