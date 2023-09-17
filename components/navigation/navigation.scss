@@ -4,14 +4,10 @@
 	& {
 		display: flex;
 		flex-direction: column;
-
 		position: sticky;
+
 		left: 0;
 		top: 0;
-
-		width: 100%;
-
-		background-color: brown;
 	}
 
 	.logo-button-container {
@@ -25,23 +21,20 @@
 		background-color: cadetblue;
 
 		.nav-logo {
-			@include font-majormono;
+			height: 100%;
 			width: fit-content;
-			height: fit-content;
-			color: white;
-			text-decoration: none;
-			font-size: map-get($HEADING-TEXT-FONT, r);
 			background-color: aquamarine;
 		}
 
 		.section-list {
 			display: flex;
+			gap: get-spacing-value(spacing-32);
+
 			align-self: center;
-			height: fit-content;
+			height: 100%;
 			padding: 0;
 			margin: 0;
 			list-style-type: none;
-			gap: get-spacing-value(spacing-32);
 		}
 		@include screen-breakpoint(mobile, tablet) {
 			.section-list {
@@ -65,13 +58,16 @@
 	}
 	@include screen-breakpoint(mobile, tablet) {
 		.nav-list {
-			position: absolute;
-			z-index: 1;
 			display: flex;
 			flex-direction: column;
+			gap: get-spacing-value(spacing-16);
+
 			width: 100%;
 			height: fit-content;
-			gap: get-spacing-value(spacing-16);
+
+			position: absolute;
+			z-index: 1;
+
 			background-color: rebeccapurple;
 		}
 	}

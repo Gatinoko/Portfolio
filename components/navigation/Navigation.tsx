@@ -3,6 +3,7 @@ import { cva } from 'class-variance-authority';
 import styles from './navigation.module.scss';
 import { ReactNode, useState } from 'react';
 import Button from '../button/button';
+import Logo from './logo/logo';
 
 type Props = {
 	navButtons?: ReactNode;
@@ -23,20 +24,17 @@ const navigation = cva('navigation', {
 export default function Navigation(props: Props) {
 	const { navButtons } = props;
 
-	const [open, setOpen] = useState(true);
+	const [open, setOpen] = useState(false);
 
 	return (
 		<>
 			<nav className={navigation({ open })}>
-				{/* Navigation */}
 				<div className='logo-button-container'>
 					{/* Logo */}
 					<a
 						className='nav-logo'
 						href='#IntroSection'>
-						GBRL
-						<br />
-						TNco
+						<Logo />
 					</a>
 
 					{/* Desktop navigation buttons */}
@@ -65,6 +63,8 @@ export default function Navigation(props: Props) {
 						onClick={() => setOpen(!open)}
 					/>
 				</div>
+
+				{/* Mobile navigation buttons */}
 				<div className='nav-list'>{navButtons}</div>
 			</nav>
 		</>
