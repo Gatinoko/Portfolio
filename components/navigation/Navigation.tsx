@@ -1,26 +1,71 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
+import { cva } from 'class-variance-authority';
 import styles from './navigation.module.scss';
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
+import Button from '../button/button';
+import Logo from './logo/logo';
 
 type Props = {
 	navButtons?: ReactNode;
 };
 
-export default function Navigation({ navButtons }: Props) {
+const navigation = cva('navigation', {
+	variants: {
+		open: {
+			true: 'open',
+			false: 'closed',
+		},
+	},
+	defaultVariants: {
+		open: true,
+	},
+});
+
+export default function Navigation(props: Props) {
+	const { navButtons } = props;
+
+	const [open, setOpen] = useState(false);
+
 	return (
 		<>
-			<nav className={'navbar'}>
-				{/* Logo */}
-				<a
-					className={'nav-logo'}
-					href='#IntroSection'>
-					GBRL
-					<br />
-					TNco
-				</a>
+			<nav className={navigation({ open })}>
+				<div className='logo-button-container'>
+					{/* Logo */}
+					<a
+						className='nav-logo'
+						href='#IntroSection'>
+						<Logo />
+					</a>
 
-				{/* Navigation list */}
-				<div className={'nav-list'}>{navButtons}</div>
+					{/* Desktop navigation buttons */}
+					<ul className='section-list'>
+						<li>
+							<Button
+								className='tech-and-skills-button'
+								size={'extra-small'}
+								text='Tech & Skills'
+							/>
+						</li>
+						<li>
+							<Button
+								className='projects-button'
+								size={'extra-small'}
+								text='Projects'
+							/>
+						</li>
+					</ul>
+
+					{/* Mobile navigation hamburguer button */}
+					<Button
+						className='mobile-hamburguer'
+						prefixIcon={'left-chevron'}
+						size={'extra-small'}
+						onClick={() => setOpen(!open)}
+					/>
+				</div>
+
+				{/* Mobile navigation buttons */}
+				<div className='nav-list'>{navButtons}</div>
 			</nav>
 		</>
 	);

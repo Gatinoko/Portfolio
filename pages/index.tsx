@@ -51,7 +51,7 @@ export default function Index(props: any, rootMainRef: any) {
 			{/* About me section */}
 			<PageSection
 				id='Tech&SkillsSection'
-				className={'information-page'}>
+				className={'index-title'}>
 				<h2>Tech & Skills.</h2>
 				<hr />
 				<ChipCloud

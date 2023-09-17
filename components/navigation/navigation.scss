@@ -1,57 +1,91 @@
 @use '../../styles/modules.scss' as *;
 
-.nav-logo {
-	@include flex-horizontal-layout;
-	@include full-parent-width-layout;
-	@include font-majormono;
-	@include screen-breakpoint(extra-large) {
-		font-size: map-get($HEADING-TEXT-FONT, xl);
-	}
-	@include screen-breakpoint(large, small) {
-		font-size: map-get($HEADING-TEXT-FONT, l);
-	}
-	@include screen-breakpoint(tablet, mobile) {
-		font-size: map-get($HEADING-TEXT-FONT, s);
+.navigation {
+	& {
+		display: flex;
+		flex-direction: column;
+		position: sticky;
+
+		left: 0;
+		top: 0;
 	}
 
-	justify-content: center;
-	color: white;
-	text-decoration: none;
-	background-color: aquamarine;
-}
+	.logo-button-container {
+		display: flex;
+		justify-content: space-between;
+		z-index: 2;
 
-.nav-list {
-	@include flex-vertical-layout;
-	@include full-parent-layout;
-
-	gap: get-spacing-value(spacing-16);
-
-	background-color: rebeccapurple;
-}
-
-.navbar {
-	@include screen-breakpoint(extra-large) {
-		@include flex-vertical-layout;
-		width: 30%;
-	}
-	@include screen-breakpoint(large) {
-		@include flex-vertical-layout;
-		width: 35%;
-	}
-	@include screen-breakpoint(small) {
-		@include flex-vertical-layout;
-		width: 40%;
-	}
-	@include screen-breakpoint(tablet, mobile) {
-		@include flex-vertical-layout;
 		width: 100%;
+		height: fit-content;
+
+		background-color: cadetblue;
+
+		.nav-logo {
+			height: 100%;
+			width: fit-content;
+			background-color: aquamarine;
+		}
+
+		.section-list {
+			display: flex;
+			gap: get-spacing-value(spacing-32);
+
+			align-self: center;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+		}
+		@include screen-breakpoint(mobile, tablet) {
+			.section-list {
+				display: none;
+			}
+		}
+
+		.mobile-hamburguer {
+			display: none;
+		}
+		@include screen-breakpoint(mobile, tablet) {
+			.mobile-hamburguer {
+				display: flex;
+				align-self: center;
+			}
+		}
 	}
 
-	align-items: center;
-	@include screen-breakpoint(extra-large, large, small) {
-		gap: get-spacing-value(spacing-64);
+	.nav-list {
+		display: none;
 	}
-	@include screen-breakpoint(tablet, mobile) {
-		gap: get-spacing-value(spacing-16);
+	@include screen-breakpoint(mobile, tablet) {
+		.nav-list {
+			display: flex;
+			flex-direction: column;
+			gap: get-spacing-value(spacing-16);
+
+			width: 100%;
+			height: fit-content;
+
+			position: absolute;
+			z-index: 1;
+
+			background-color: rebeccapurple;
+		}
+	}
+
+	/*
+		States
+	*/
+	&.open {
+		.nav-list {
+			top: 100%;
+			transition: top 150ms;
+		}
+	}
+
+	&.closed {
+		.nav-list {
+			top: -300%;
+			transition: top 150ms;
+		}
 	}
 }
