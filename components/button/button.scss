@@ -40,7 +40,7 @@
 			padding: 16px 24px;
 		}
 		@include screen-breakpoint(mobile) {
-			@include interface-2xs;
+			@include interface-xs;
 			border-radius: 7px;
 			gap: 16px;
 			padding: 16px 24px;
@@ -56,7 +56,7 @@
 		@include interface-l;
 		border-radius: 13px;
 		gap: 24px;
-		padding: 24px 48px;
+		padding: 16px 48px;
 	}
 	&.regular {
 		@include interface-r;
@@ -68,13 +68,13 @@
 		@include interface-s;
 		border-radius: 7px;
 		gap: 16px;
-		padding: 16px 24px;
+		padding: 8px 24px;
 	}
 	&.extra-small {
-		@include interface-2xs;
+		@include interface-xs;
 		border-radius: 7px;
 		gap: 16px;
-		padding: 16px 24px;
+		padding: 8px 24px;
 	}
 
 	/*

@@ -20,9 +20,9 @@
 	@include font-syne;
 
 	font-size: clamp(
-		get-heading-font-value(2xs),
-		get-heading-font-value(xl) + 1.5vw,
-		get-heading-font-value(xl) + 5vw
+		get-heading-font-value(l),
+		get-heading-font-value(xl) + 2vw,
+		get-heading-font-value(xl) + 100%
 	);
 	font-weight: get-font-weight-value(semibold);
 }
@@ -30,9 +30,9 @@
 	@include font-syne;
 
 	font-size: clamp(
-		get-heading-font-value(2xs),
-		get-heading-font-value(l) + 1.5vw,
-		get-heading-font-value(xl) + 5vw
+		get-heading-font-value(r),
+		get-heading-font-value(l) + 2vw,
+		get-heading-font-value(l) + 100%
 	);
 	font-weight: get-font-weight-value(semibold);
 }
@@ -40,9 +40,9 @@
 	@include font-syne;
 
 	font-size: clamp(
-		get-heading-font-value(2xs),
-		get-heading-font-value(r) + 1.5vw,
-		get-heading-font-value(xl) + 5vw
+		get-heading-font-value(s),
+		get-heading-font-value(r) + 2vw,
+		get-heading-font-value(r) + 100%
 	);
 	font-weight: get-font-weight-value(semibold);
 }
@@ -50,9 +50,9 @@
 	@include font-syne;
 
 	font-size: clamp(
-		get-heading-font-value(2xs),
-		get-heading-font-value(s) + 1.5vw,
-		get-heading-font-value(xl) + 5vw
+		get-heading-font-value(xs),
+		get-heading-font-value(s) + 2vw,
+		get-heading-font-value(s) + 100%
 	);
 	font-weight: get-font-weight-value(semibold);
 }
@@ -62,7 +62,7 @@
 	font-size: clamp(
 		get-heading-font-value(2xs),
 		get-heading-font-value(xs) + 1.5vw,
-		get-heading-font-value(xl) + 5vw
+		get-heading-font-value(xs) + 100%
 	);
 	font-weight: get-font-weight-value(semibold);
 }
@@ -72,7 +72,7 @@
 	font-size: clamp(
 		get-heading-font-value(2xs),
 		get-heading-font-value(2xs) + 1.5vw,
-		get-heading-font-value(xl) + 5vw
+		get-heading-font-value(2xs) + 50%
 	);
 	font-weight: get-font-weight-value(semibold);
 }
@@ -149,9 +149,9 @@
 
 	letter-spacing: 3.2px;
 	font-size: clamp(
-		get-body-font-value(2xs),
+		get-body-font-value(l),
 		get-body-font-value(xl) + 1.5vw,
-		get-body-font-value(xl)
+		get-body-font-value(xl) + 75%
 	);
 	font-weight: get-font-weight-value(semibold);
 }
@@ -160,9 +160,9 @@
 
 	letter-spacing: 3.2px;
 	font-size: clamp(
-		get-body-font-value(2xs),
+		get-body-font-value(r),
 		get-body-font-value(l) + 1.5vw,
-		get-body-font-value(xl)
+		get-body-font-value(l) + 75%
 	);
 	font-weight: get-font-weight-value(semibold);
 }
@@ -171,9 +171,9 @@
 
 	letter-spacing: 3.2px;
 	font-size: clamp(
-		get-body-font-value(2xs),
+		get-body-font-value(xs),
 		get-body-font-value(r) + 1.5vw,
-		get-body-font-value(xl)
+		get-body-font-value(r) + 75%
 	);
 	font-weight: get-font-weight-value(semibold);
 }
@@ -182,9 +182,9 @@
 
 	letter-spacing: 3.2px;
 	font-size: clamp(
-		get-body-font-value(2xs),
+		get-body-font-value(xs),
 		get-body-font-value(s) + 1.5vw,
-		get-body-font-value(xl)
+		get-body-font-value(s) + 75%
 	);
 	font-weight: get-font-weight-value(bold);
 }
@@ -195,7 +195,7 @@
 	font-size: clamp(
 		get-body-font-value(2xs),
 		get-body-font-value(xs) + 1.5vw,
-		get-body-font-value(xl)
+		get-body-font-value(xs) + 75%
 	);
 	font-weight: get-font-weight-value(bold);
 }
@@ -206,7 +206,7 @@
 	font-size: clamp(
 		get-body-font-value(2xs),
 		get-body-font-value(2xs) + 1.5vw,
-		get-body-font-value(xl)
+		get-body-font-value(2xs) + 100%
 	);
 	font-weight: get-font-weight-value(bold);
 }
