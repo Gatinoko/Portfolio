@@ -59,7 +59,7 @@ export default function Navigation(props: Props) {
 					<Button
 						className='mobile-hamburguer'
 						prefixIcon={'left-chevron'}
-						size={'extra-small'}
+						size={'small'}
 						onClick={() => setOpen(!open)}
 					/>
 				</div>
