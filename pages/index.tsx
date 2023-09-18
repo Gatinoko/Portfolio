@@ -37,6 +37,31 @@ export default function Index(props: any, rootMainRef: any) {
 				/> */}
 
 				<RevealAnimation>
+					{/* <Button
+						className='projects-button'
+						size={'extra-large'}
+						text='Projects'
+					/>
+					<Button
+						className='projects-button'
+						size={'large'}
+						text='Projects'
+					/>
+					<Button
+						className='projects-button'
+						size={'regular'}
+						text='Projects'
+					/>
+					<Button
+						className='projects-button'
+						size={'small'}
+						text='Projects'
+					/>
+					<Button
+						className='projects-button'
+						size={'extra-small'}
+						text='Projects'
+					/> */}
 					<h1>Gabriel.</h1>
 					<h4>Developer & designer.</h4>
 					<h6>
