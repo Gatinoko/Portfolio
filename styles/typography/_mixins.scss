@@ -16,42 +16,42 @@
 /*
 	Title text mixins
 
-	@link https://utopia.fyi/type/calculator?c=320,48,1.067,1240,56,1.333,5,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+	@link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,54,1.25,5,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
 */
 @mixin heading-xl {
 	@include font-syne;
 
-	font-size: clamp(4.15rem, 0.47rem + 18.4vw, 14.73rem);
+	font-size: clamp(2.8rem, 0.19rem + 13.04vw, 10.3rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-l {
 	@include font-syne;
 
-	font-size: clamp(3.89rem, 1.4rem + 12.46vw, 11.05rem);
+	font-size: clamp(2.33rem, 0.28rem + 10.27vw, 8.24rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-r {
 	@include font-syne;
 
-	font-size: clamp(3.64rem, 2.03rem + 8.08vw, 8.29rem);
+	font-size: clamp(1.94rem, 0.33rem + 8.08vw, 6.59rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-s {
 	@include font-syne;
 
-	font-size: clamp(3.42rem, 2.44rem + 4.88vw, 6.22rem);
+	font-size: clamp(1.62rem, 0.35rem + 6.35vw, 5.27rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-xs {
 	@include font-syne;
 
-	font-size: clamp(3.2rem, 2.69rem + 2.55vw, 4.67rem);
+	font-size: clamp(1.35rem, 0.35rem + 4.99vw, 4.22rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-2xs {
 	@include font-syne;
 
-	font-size: clamp(3rem, 2.83rem + 0.87vw, 3.5rem);
+	font-size: clamp(1.13rem, 0.34rem + 3.91vw, 3.38rem);
 	font-weight: get-font-weight-value(semibold);
 }
 
