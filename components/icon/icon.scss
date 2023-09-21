@@ -1,17 +1,28 @@
 @use '../../styles/modules.scss' as *;
 
-.icon {
-	fill: get-color-value(white-ffffff);
-}
+.svg {
+	& {
+		fill: get-color-value(white-ffffff);
+	}
 
-.right-chevron {
-	@include icon-sizes($ICONS, rightChevron);
-}
-
-.left-chevron {
-	@include icon-sizes($ICONS, leftChevron);
-}
-
-.default {
-	@include icon-sizes($ICONS, default);
+	&.extra-large {
+		width: clamp(1.38rem, 1.08rem + 1.51vw, 2.25rem);
+		height: clamp(1.38rem, 1.08rem + 1.51vw, 2.25rem);
+	}
+	&.large {
+		width: clamp(1.3rem, 1.05rem + 1.23vw, 2rem);
+		height: clamp(1.3rem, 1.05rem + 1.23vw, 2rem);
+	}
+	&.regular {
+		width: clamp(1.22rem, 1.02rem + 0.98vw, 1.78rem);
+		height: clamp(1.22rem, 1.02rem + 0.98vw, 1.78rem);
+	}
+	&.small {
+		width: clamp(1.14rem, 0.98rem + 0.77vw, 1.58rem);
+		height: clamp(1.14rem, 0.98rem + 0.77vw, 1.58rem);
+	}
+	&.extra-small {
+		width: clamp(1rem, 0.91rem + 0.43vw, 1.25rem);
+		height: clamp(1rem, 0.91rem + 0.43vw, 1.25rem);
+	}
 }
