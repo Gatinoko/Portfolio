@@ -13,31 +13,33 @@ export default function Index(props: any, rootMainRef: any) {
 			className={'main'}
 			id='root-main'>
 			{/* Intro section */}
-			<PageSection
-				id='IntroSection'
-				className={'index-title'}>
-				<RevealAnimation>
+			<RevealAnimation>
+				<PageSection
+					id='IntroSection'
+					className={'index-title'}>
 					{/* <Button
 						size={'extra-large'}
 						text='Projects'
-					/>
-					<Button
+						/>
+						<Button
 						size={'large'}
 						text='Projects'
-					/>
-					<Button
+						/>
+						<Button
 						size={'regular'}
 						text='Projects'
-					/>
-					<Button
+						/>
+						<Button
 						size={'small'}
 						text='Projects'
-					/>
-					<Button
+						/>
+						<Button
 						size={'extra-small'}
 						text='Projects'
 					/> */}
 					<h1 style={{ width: '6ch' }}>Gabriel Tinoco.</h1>
+					<h6>Software Engineer & Designer</h6>
+					<hr />
 					<p data-size='small'>
 						Career statement goes here. Should be something like really
 						impactful. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -48,16 +50,16 @@ export default function Index(props: any, rootMainRef: any) {
 					<h3>Gabriel Dias Days Tinoco Tinquito.</h3>
 					<h4>Gabriel Dias Days Tinoco Tinquito.</h4>
 					<h5>Gabriel Dias Days Tinoco Tinquito.</h5>
-					<h6>Gabriel Dias Days Tinoco Tinquito.</h6> */}
+				<h6>Gabriel Dias Days Tinoco Tinquito.</h6> */}
 					{/* <h4>Developer & designer.</h4>
 					<h6>
-						Career statement goes here. Should be something like really
-						impactful. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Morbi non sapien ante. Suspendisse vel consectetur urna. Ut a dictum
-						sem. Praesent faucibus nisi ac fermentum posuere.
-					</h6> */}
-				</RevealAnimation>
-			</PageSection>
+					Career statement goes here. Should be something like really
+					impactful. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Morbi non sapien ante. Suspendisse vel consectetur urna. Ut a dictum
+					sem. Praesent faucibus nisi ac fermentum posuere.
+				</h6> */}
+				</PageSection>
+			</RevealAnimation>
 
 			{/* About me section */}
 			<PageSection
