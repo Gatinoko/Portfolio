@@ -12,28 +12,6 @@
 	/*
 		Sizes
 	*/
-	&.auto {
-		@include screen-breakpoint(extra-large) {
-			@include interface-xl;
-			padding: 24px 24px;
-		}
-		@include screen-breakpoint(large) {
-			@include interface-l;
-			padding: 16px 16px;
-		}
-		@include screen-breakpoint(small) {
-			@include interface-r;
-			padding: 8px 16px;
-		}
-		@include screen-breakpoint(tablet) {
-			@include interface-s;
-			padding: 8px 16px;
-		}
-		@include screen-breakpoint(mobile) {
-			@include interface-2xs;
-			padding: 8px 16px;
-		}
-	}
 	&.extra-large {
 		@include interface-xl;
 		padding: 24px 24px;

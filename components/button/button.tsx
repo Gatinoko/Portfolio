@@ -5,7 +5,6 @@ import Icon, { IconSizes } from '../icon/icon';
 const button = cva('button', {
 	variants: {
 		size: {
-			auto: 'auto',
 			['extra-large']: 'extra-large',
 			large: 'large',
 			regular: 'regular',
@@ -15,12 +14,11 @@ const button = cva('button', {
 		},
 	},
 	defaultVariants: {
-		size: 'auto',
+		size: 'regular',
 	},
 });
 
 export type ButtonSizes =
-	| 'auto'
 	| 'extra-large'
 	| 'large'
 	| 'regular'

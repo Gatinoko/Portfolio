@@ -16,7 +16,6 @@ type NavButtonProps = {
 const navButton = cva('nav-button', {
 	variants: {
 		size: {
-			auto: 'auto',
 			['extra-large']: 'extra-large',
 			large: 'large',
 			regular: 'regular',
@@ -26,12 +25,12 @@ const navButton = cva('nav-button', {
 		},
 	},
 	defaultVariants: {
-		size: 'auto',
+		size: 'regular',
 	},
 });
 
 export default function NavButton(props: NavButtonProps) {
-	const { text, href, size = 'auto' } = props;
+	const { text, href, size = 'regular' } = props;
 
 	return (
 		<>

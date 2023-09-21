@@ -2,7 +2,6 @@ import { cva } from 'class-variance-authority';
 import React from 'react';
 
 export type ChipSizes =
-	| 'auto'
 	| 'extra-large'
 	| 'large'
 	| 'regular'
@@ -20,7 +19,6 @@ interface IChip {
 const tag = cva('chip', {
 	variants: {
 		size: {
-			auto: 'auto',
 			['extra-large']: 'extra-large',
 			large: 'large',
 			regular: 'regular',
@@ -30,7 +28,7 @@ const tag = cva('chip', {
 		},
 	},
 	defaultVariants: {
-		size: 'auto',
+		size: 'regular',
 	},
 });
 
