@@ -25,6 +25,7 @@ export default function RevealAnimation({ children }: IRevealAnimation) {
 	return (
 		<AnimatePresence mode='wait'>
 			<motion.div
+				id='animation-layer'
 				ref={divRef}
 				initial='initialState'
 				animate={animateControls}
