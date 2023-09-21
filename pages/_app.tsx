@@ -3,6 +3,7 @@ import '@/styles/globals.scss';
 import type { AppProps } from 'next/app';
 import Navigation from '@/components/navigation/Navigation';
 import NavButton from '@/components/navigation/nav-button/nav-button';
+import Footer from '@/components/footer/footer';
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
@@ -25,6 +26,8 @@ export default function App({ Component, pageProps }: AppProps) {
 			/>
 
 			<Component {...pageProps} />
+
+			<Footer />
 		</>
 	);
 }
