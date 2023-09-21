@@ -17,26 +17,6 @@ export default function Index(props: any, rootMainRef: any) {
 				<PageSection
 					id='IntroSection'
 					className={'index-title'}>
-					{/* <Button
-						size={'extra-large'}
-						text='Projects'
-						/>
-						<Button
-						size={'large'}
-						text='Projects'
-						/>
-						<Button
-						size={'regular'}
-						text='Projects'
-						/>
-						<Button
-						size={'small'}
-						text='Projects'
-						/>
-						<Button
-						size={'extra-small'}
-						text='Projects'
-					/> */}
 					<h1 style={{ width: '6ch' }}>Gabriel Tinoco.</h1>
 					<h6>Software Engineer & Designer</h6>
 					<hr />
@@ -46,18 +26,6 @@ export default function Index(props: any, rootMainRef: any) {
 						Morbi non sapien ante. Suspendisse vel consectetur urna. Ut a dictum
 						sem. Praesent faucibus nisi ac fermentum posuere.
 					</p>
-					{/* <h2>Gabriel Dias Days Tinoco Tinquito.</h2>
-					<h3>Gabriel Dias Days Tinoco Tinquito.</h3>
-					<h4>Gabriel Dias Days Tinoco Tinquito.</h4>
-					<h5>Gabriel Dias Days Tinoco Tinquito.</h5>
-				<h6>Gabriel Dias Days Tinoco Tinquito.</h6> */}
-					{/* <h4>Developer & designer.</h4>
-					<h6>
-					Career statement goes here. Should be something like really
-					impactful. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Morbi non sapien ante. Suspendisse vel consectetur urna. Ut a dictum
-					sem. Praesent faucibus nisi ac fermentum posuere.
-				</h6> */}
 				</PageSection>
 			</RevealAnimation>
 
@@ -109,14 +77,15 @@ export default function Index(props: any, rootMainRef: any) {
 			</PageSection>
 
 			{/* Projects section */}
-			{/* <PageSection
-				id='ProjectsSection'
-				className={'information-page'}>
-				<RevealAnimation>
-					<h1>Projecasdfasdfsdfts.</h1>
-					<h4>Developer & designer.</h4>
-				</RevealAnimation>
-			</PageSection> */}
+			<RevealAnimation>
+				<PageSection
+					id='ProjectsSection'
+					className={'information-page'}>
+					<h3>Projects</h3>
+					<hr />
+					<h6>Developer & designer.</h6>
+				</PageSection>
+			</RevealAnimation>
 		</main>
 	);
 }
