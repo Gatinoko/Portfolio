@@ -10,11 +10,11 @@ export type IconSizes =
 export interface IIcon {
 	name: string;
 	size: IconSizes;
-	customClass?: string;
+	className?: string;
 	onClick?: () => void;
 }
 
-const icon = cva('', {
+const icon = cva('svg', {
 	variants: {
 		name: {
 			['left-chevron']: 'left-chevron',
@@ -32,9 +32,9 @@ const icon = cva('', {
 });
 
 export default function Icon(props: IIcon) {
-	const { name = 'default', size = 'regular', customClass, onClick } = props;
+	const { name = 'default', size = 'regular', className, onClick } = props;
 
-	const customClassValue = `${customClass ? customClass : ''}`;
+	const customClassValue = `${className ? className : ''}`;
 
 	switch (name) {
 		case 'left-chevron':
