@@ -8,41 +8,41 @@ h1 {
 	color: get-color-value(white-ffffff);
 	@include ty.heading-xl;
 	margin: 0px;
-	word-break: break-all;
+	word-break: break-word;
 }
 h2 {
 	color: get-color-value(white-ffffff);
 	@include ty.heading-l;
 	margin: 0px;
-	word-break: break-all;
+	word-break: break-word;
 }
 h3 {
 	color: get-color-value(white-ffffff);
 
 	@include ty.heading-r;
 	margin: 0px;
-	word-break: break-all;
+	word-break: break-word;
 }
 h4 {
 	color: get-color-value(white-ffffff);
 
 	@include ty.heading-s;
 	margin: 0px;
-	word-break: break-all;
+	word-break: break-word;
 }
 h5 {
 	color: get-color-value(white-ffffff);
 
 	@include ty.heading-xs;
 	margin: 0px;
-	word-break: break-all;
+	word-break: break-word;
 }
 h6 {
 	color: get-color-value(white-ffffff);
 
 	@include ty.heading-2xs;
 	margin: 0px;
-	word-break: break-all;
+	word-break: break-word;
 }
 
 /*
@@ -59,27 +59,22 @@ p {
 	&[data-size='extra-large'] {
 		@include ty.body-xl;
 		margin: 0px;
-		word-break: break-all;
 	}
 	&[data-size='large'] {
 		@include ty.body-l;
 		margin: 0px;
-		word-break: break-all;
 	}
 	&[data-size='regular'] {
 		@include ty.body-r;
 		margin: 0px;
-		word-break: break-all;
 	}
 	&[data-size='small'] {
 		@include ty.body-s;
 		margin: 0px;
-		word-break: break-all;
 	}
 	&[data-size='extra-small'] {
 		@include ty.body-xs;
 		margin: 0px;
-		word-break: break-all;
 	}
 }
 
