@@ -14,38 +14,6 @@
 	/*
 		Sizes
 	*/
-	&.auto {
-		@include screen-breakpoint(extra-large) {
-			@include interface-xl;
-			border-radius: 13px;
-			gap: 32px;
-			padding: 32px 48px;
-		}
-		@include screen-breakpoint(large) {
-			@include interface-l;
-			border-radius: 13px;
-			gap: 24px;
-			padding: 24px 48px;
-		}
-		@include screen-breakpoint(small) {
-			@include interface-r;
-			border-radius: 9px;
-			gap: 16px;
-			padding: 16px 32px;
-		}
-		@include screen-breakpoint(tablet) {
-			@include interface-s;
-			border-radius: 7px;
-			gap: 16px;
-			padding: 16px 24px;
-		}
-		@include screen-breakpoint(mobile) {
-			@include interface-xs;
-			border-radius: 7px;
-			gap: 16px;
-			padding: 16px 24px;
-		}
-	}
 	&.extra-large {
 		@include interface-xl;
 		border-radius: 13px;

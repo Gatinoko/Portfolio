@@ -16,26 +16,6 @@ export default function Index(props: any, rootMainRef: any) {
 			<PageSection
 				id='IntroSection'
 				className={'index-title'}>
-				{/* <Carousel buttonSize={'auto'}>
-					<Image
-						alt='image'
-						fill={true}
-						className={'image'}
-						src={'/dog.jpg'}
-					/>
-					<Image
-						alt='image'
-						fill={true}
-						className={'image'}
-						src={'/cat.jpg'}
-					/>
-				</Carousel> */}
-				{/* <Chip
-					text={'PEEEsssssssssssss'}
-					size={'auto'}
-					id={''}
-				/> */}
-
 				<RevealAnimation>
 					{/* <Button
 						size={'extra-large'}
@@ -122,7 +102,7 @@ export default function Index(props: any, rootMainRef: any) {
 						{ text: 'Adobe Photoshop', weight: 5 },
 						{ text: 'Adobe Premiere', weight: 4 },
 					]}
-					size={'auto'}
+					size='regular'
 				/>
 			</PageSection>
 

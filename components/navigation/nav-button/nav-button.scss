@@ -99,33 +99,6 @@
 	/*
 		Sizes
 	*/
-	&.auto {
-		@include screen-breakpoint(extra-large) {
-			.nav-button-text {
-				@include heading-s;
-			}
-		}
-		@include screen-breakpoint(large) {
-			.nav-button-text {
-				@include heading-s;
-			}
-		}
-		@include screen-breakpoint(small) {
-			.nav-button-text {
-				@include heading-xs;
-			}
-		}
-		@include screen-breakpoint(tablet) {
-			.nav-button-text {
-				@include heading-2xs;
-			}
-		}
-		@include screen-breakpoint(mobile) {
-			.nav-button-text {
-				@include heading-2xs;
-			}
-		}
-	}
 	&.extra-large {
 		.nav-button-text {
 			@include heading-xl;

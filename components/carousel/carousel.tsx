@@ -5,7 +5,6 @@ import Button, { ButtonSizes } from '../button/button';
 import { cva } from 'class-variance-authority';
 
 export type CarouselSizes =
-	| 'auto'
 	| 'extra-large'
 	| 'large'
 	| 'regular'
@@ -25,7 +24,6 @@ export interface ICarousel {
 const carousel = cva('carousel', {
 	variants: {
 		buttonSize: {
-			auto: 'auto',
 			['extra-large']: 'extra-large',
 			large: 'large',
 			regular: 'regular',
@@ -35,7 +33,7 @@ const carousel = cva('carousel', {
 		},
 	},
 	defaultVariants: {
-		buttonSize: 'auto',
+		buttonSize: 'regular',
 	},
 });
 

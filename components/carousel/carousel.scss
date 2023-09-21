@@ -73,46 +73,4 @@
 			right: 4px;
 		}
 	}
-	&.auto {
-		@include screen-breakpoint(extra-large) {
-			.chevron-left {
-				left: 32px;
-			}
-			.chevron-right {
-				right: 32px;
-			}
-		}
-		@include screen-breakpoint(large) {
-			.chevron-left {
-				left: 24px;
-			}
-			.chevron-right {
-				right: 24px;
-			}
-		}
-		@include screen-breakpoint(small) {
-			.chevron-left {
-				left: 16px;
-			}
-			.chevron-right {
-				right: 16px;
-			}
-		}
-		@include screen-breakpoint(tablet) {
-			.chevron-left {
-				left: 8px;
-			}
-			.chevron-right {
-				right: 8px;
-			}
-		}
-		@include screen-breakpoint(mobile) {
-			.chevron-left {
-				left: 4px;
-			}
-			.chevron-right {
-				right: 4px;
-			}
-		}
-	}
 }

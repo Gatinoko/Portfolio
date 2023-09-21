@@ -1,7 +1,6 @@
 import { cva } from 'class-variance-authority';
 
 export type IconSizes =
-	| 'auto'
 	| 'extra-large'
 	| 'large'
 	| 'regular'
@@ -23,7 +22,6 @@ const icon = cva('', {
 			default: 'default',
 		},
 		size: {
-			auto: 'auto',
 			['extra-large']: 'extra-large',
 			large: 'large',
 			regular: 'regular',

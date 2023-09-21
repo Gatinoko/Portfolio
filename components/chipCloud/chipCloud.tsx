@@ -3,7 +3,6 @@ import React from 'react';
 import Chip, { ChipSizes } from '../chip/chip';
 
 export type ChipCloudSizes =
-	| 'auto'
 	| 'extra-large'
 	| 'large'
 	| 'regular'
@@ -24,7 +23,6 @@ interface IChipCloud {
 const chipCloud = cva('chipCloud', {
 	variants: {
 		size: {
-			auto: 'auto',
 			['extra-large']: 'extra-large',
 			large: 'large',
 			regular: 'regular',
@@ -34,7 +32,7 @@ const chipCloud = cva('chipCloud', {
 		},
 	},
 	defaultVariants: {
-		size: 'auto',
+		size: 'regular',
 	},
 });
 
