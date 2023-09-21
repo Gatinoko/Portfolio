@@ -2,45 +2,36 @@
 
 .chipCloud {
 	& {
-		position: relative;
-		width: auto;
-		list-style: none;
-		padding: 0;
 		display: flex;
-		gap: get-spacing-value(spacing-8);
 		flex-wrap: wrap;
+		gap: get-spacing-value(spacing-8);
+
+		position: relative;
+		padding: 0;
+
+		list-style: none;
 		align-items: center;
 		justify-content: center;
 	}
 
 	& li .chip[id='1'] {
-		font-size: 0.5vw;
-		opacity: 20%;
+		font-size: clamp(0.75rem, 1vw + 1rem, 1vw);
+		opacity: 30%;
 	}
 	& li .chip[id='2'] {
-		font-size: 1vw;
+		font-size: clamp(0.75rem, 1vw + 1rem, 1.25vw);
 		opacity: 40%;
 	}
 	& li .chip[id='3'] {
-		font-size: 1.5vw;
+		font-size: clamp(0.75rem, 1vw + 1rem, 1.5vw);
 		opacity: 60%;
 	}
 	& li .chip[id='4'] {
-		font-size: 2vw;
+		font-size: clamp(0.75rem, 1vw + 1rem, 1.75vw);
 		opacity: 80%;
 	}
 	& li .chip[id='5'] {
-		font-size: 2.5vw;
+		font-size: clamp(0.75rem, 1vw + 1rem, 2vw);
 		opacity: 100%;
-	}
-
-	&::after {
-		content: 'ㅤ';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		box-shadow: 0 0 100px rgba(255, 9, 9, 1) inset;
 	}
 }
