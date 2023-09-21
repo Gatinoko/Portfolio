@@ -4,7 +4,7 @@ import Carousel from '@/components/carousel/carousel';
 import Image from 'next/image';
 import Button, { ButtonSizes } from '@/components/button/button';
 import Icon, { IconSizes } from '@/components/icon/icon';
-import Chip from '@/components/chip/chip';
+import Chip from '@/components/chipCloud/chip/chip';
 import ChipCloud from '@/components/chipCloud/chipCloud';
 
 export default function Index(props: any, rootMainRef: any) {

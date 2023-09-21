@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority';
 import React from 'react';
-import Chip, { ChipSizes } from '../chip/chip';
+import Chip, { ChipSizes } from './chip/chip';
 
 export type ChipCloudSizes =
 	| 'extra-large'
