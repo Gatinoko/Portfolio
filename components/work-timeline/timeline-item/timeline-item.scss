@@ -1,0 +1,59 @@
+@use '../../../styles/modules.scss' as *;
+
+.timeline-item {
+	& {
+		display: flex;
+		min-width: 30ch;
+		background-color: cadetblue;
+		gap: get-spacing-value(spacing-16);
+	}
+
+	.date {
+		& {
+			display: flex;
+			width: 20%;
+			min-width: 10ch;
+			text-align: center;
+			justify-content: flex-end;
+			gap: get-spacing-value(spacing-16);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 9px;
+			height: 9px;
+			transform: translateX(50%) translateY(1.5rem);
+			border-radius: 99999px;
+			background-color: rgb(255, 255, 255);
+		}
+
+		&::after {
+			content: '';
+			transform: translateX(50%);
+			border: 1px solid white;
+		}
+	}
+
+	.item-information-container {
+		& {
+			display: flex;
+			flex-direction: column;
+			gap: get-spacing-value(spacing-16);
+			width: 80%;
+		}
+
+		.icons-container {
+			& {
+				display: flex;
+				gap: get-spacing-value(spacing-8);
+			}
+
+			.timeline-item-icon {
+				position: relative;
+				width: clamp(1.22rem, 1.08rem + 0.67vw, 1.6rem);
+				height: clamp(1.22rem, 1.08rem + 0.67vw, 1.6rem);
+			}
+		}
+	}
+}

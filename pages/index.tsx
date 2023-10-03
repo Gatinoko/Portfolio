@@ -6,6 +6,8 @@ import Button, { ButtonSizes } from '@/components/button/button';
 import Icon, { IconSizes } from '@/components/icon/icon';
 import Chip from '@/components/chipCloud/chip/chip';
 import ChipCloud from '@/components/chipCloud/chipCloud';
+import WorkTimeline from '@/components/work-timeline/work-timeline';
+import TimelineItem from '@/components/work-timeline/timeline-item/timeline-item';
 
 export default function Index(props: any, rootMainRef: any) {
 	return (
@@ -81,9 +83,31 @@ export default function Index(props: any, rootMainRef: any) {
 				<PageSection
 					id='ProjectsSection'
 					className={'information-page'}>
-					<h3>Projects</h3>
+					<h3>Timeline</h3>
 					<hr />
-					<h6>Developer & designer.</h6>
+					<WorkTimeline
+						workTimelineItems={[
+							<TimelineItem
+								key='first'
+								startDate={'Feb 2022'}
+								endDate={'May 2022'}
+								title={'WHIMTACH'}
+								description={
+									'descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription'
+								}
+								icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
+							/>,
+						]}
+					/>
+					{/* <TimelineItem
+				startDate={'Feb 2022'}
+				endDate={'May 2022'}
+				title={'WHIMTACH'}
+				description={
+					'descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription'
+				}
+				icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
+			/> */}
 				</PageSection>
 			</RevealAnimation>
 		</main>
