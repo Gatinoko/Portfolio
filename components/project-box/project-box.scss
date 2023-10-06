@@ -1,0 +1,11 @@
+@use '../../styles/modules.scss' as *;
+
+.project-box {
+	display: flex;
+	justify-content: center;
+	gap: get-spacing-value(spacing-16);
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}

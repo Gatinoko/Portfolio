@@ -1,0 +1,38 @@
+@use '../../../styles/modules.scss' as *;
+
+.project-item {
+	& {
+		display: flex;
+		width: 45%;
+		gap: get-spacing-value(spacing-16);
+		background-color: rgb(155, 96, 24);
+
+		@include screen-breakpoint(mobile, tablet) {
+			width: 100%;
+		}
+	}
+
+	.icon {
+		position: relative;
+		width: 30%;
+		height: auto;
+	}
+
+	.title-description-container {
+		& {
+			display: flex;
+			flex-direction: column;
+			gap: get-spacing-value(spacing-16);
+
+			width: 70%;
+			height: auto;
+		}
+
+		.title {
+			word-break: keep-all;
+		}
+
+		.description {
+		}
+	}
+}

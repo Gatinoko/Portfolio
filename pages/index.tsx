@@ -8,6 +8,8 @@ import Chip from '@/components/chipCloud/chip/chip';
 import ChipCloud from '@/components/chipCloud/chipCloud';
 import WorkTimeline from '@/components/work-timeline/work-timeline';
 import TimelineItem from '@/components/work-timeline/timeline-item/timeline-item';
+import ProjectItem from '@/components/project-box/project-item/project-item';
+import ProjectBox from '@/components/project-box/project-box';
 
 export default function Index(props: any, rootMainRef: any) {
 	return (
@@ -59,7 +61,7 @@ export default function Index(props: any, rootMainRef: any) {
 						{ text: 'Sass', weight: 5 },
 						{ text: 'GitHub', weight: 4 },
 						{ text: 'Next.js', weight: 5 },
-						{ text: 'Class Authority Variance', weight: 3 },
+						{ text: 'CVA', weight: 3 },
 						{ text: 'React', weight: 5 },
 						{ text: 'GraphQL', weight: 2 },
 						{ text: 'HTML', weight: 5 },
@@ -78,15 +80,35 @@ export default function Index(props: any, rootMainRef: any) {
 				/>
 			</PageSection>
 
-			{/* Projects section */}
+			{/* Timeline section */}
 			<RevealAnimation>
 				<PageSection
-					id='ProjectsSection'
+					id='TimelineSection'
 					className={'information-page'}>
 					<h3>Timeline</h3>
 					<hr />
 					<WorkTimeline
 						workTimelineItems={[
+							<TimelineItem
+								key='first'
+								startDate={'Feb 2022'}
+								endDate={'May 2022'}
+								title={'WHIMTACH'}
+								description={
+									'descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription'
+								}
+								icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
+							/>,
+							<TimelineItem
+								key='first'
+								startDate={'Feb 2022'}
+								endDate={'May 2022'}
+								title={'WHIMTACH'}
+								description={
+									'descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription'
+								}
+								icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
+							/>,
 							<TimelineItem
 								key='first'
 								startDate={'Feb 2022'}
@@ -108,6 +130,61 @@ export default function Index(props: any, rootMainRef: any) {
 				}
 				icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
 			/> */}
+				</PageSection>
+			</RevealAnimation>
+
+			{/* Projects section */}
+			<RevealAnimation>
+				<PageSection
+					id='ProjectsSection'
+					className={'information-page'}>
+					<h3>Projects</h3>
+					<hr />
+					<ProjectBox
+						projectBoxItems={[
+							<ProjectItem
+								key={'laksjd'}
+								icon={'/cat.jpg'}
+								title={'Title'}
+								description={'desc'}
+							/>,
+							<ProjectItem
+								key={'laksjd'}
+								icon={'/cat.jpg'}
+								title={'Title'}
+								description={'desc'}
+							/>,
+							<ProjectItem
+								key={'laksjd'}
+								icon={'/cat.jpg'}
+								title={'Title'}
+								description={'desc'}
+							/>,
+							<ProjectItem
+								key={'laksjd'}
+								icon={'/cat.jpg'}
+								title={'Title'}
+								description={'desc'}
+							/>,
+							<ProjectItem
+								key={'laksjd'}
+								icon={'/cat.jpg'}
+								title={'Title'}
+								description={'desc'}
+							/>,
+							<ProjectItem
+								key={'laksjd'}
+								icon={'/cat.jpg'}
+								title={'Title'}
+								description={'desc'}
+							/>,
+							<ProjectItem
+								key={'laksjd'}
+								icon={'/cat.jpg'}
+								title={'Title'}
+								description={'desc'}
+							/>,
+						]}></ProjectBox>
 				</PageSection>
 			</RevealAnimation>
 		</main>
