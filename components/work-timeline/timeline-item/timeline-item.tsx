@@ -38,7 +38,11 @@ export default function TimelineItem(props: TimelineItemProps) {
 				<h6 className='title'>{title}</h6>
 
 				{/* Item description */}
-				<p className='description'>{description}</p>
+				<p
+					className='description'
+					data-size='extra-small'>
+					{description}
+				</p>
 
 				{/* Item icons */}
 				{icons && (
