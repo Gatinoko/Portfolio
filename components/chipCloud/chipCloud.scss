@@ -4,6 +4,7 @@
 	& {
 		display: flex;
 		flex-wrap: wrap;
+		width: 100%;
 		gap: get-spacing-value(spacing-8);
 
 		position: relative;
@@ -15,23 +16,23 @@
 	}
 
 	& li .chip[id='1'] {
-		font-size: clamp(0.75rem, 1vw + 1rem, 1vw);
+		font-size: clamp(1rem, 1rem, 2rem);
 		opacity: 30%;
 	}
 	& li .chip[id='2'] {
-		font-size: clamp(0.75rem, 1vw + 1rem, 1.25vw);
+		font-size: clamp(1rem, 1rem, 2.25rem);
 		opacity: 40%;
 	}
 	& li .chip[id='3'] {
-		font-size: clamp(0.75rem, 1vw + 1rem, 1.5vw);
+		font-size: clamp(1rem, 1rem, 2.5rem);
 		opacity: 60%;
 	}
 	& li .chip[id='4'] {
-		font-size: clamp(0.75rem, 1vw + 1rem, 1.75vw);
+		font-size: clamp(1rem, 1rem, 2.75rem);
 		opacity: 80%;
 	}
 	& li .chip[id='5'] {
-		font-size: clamp(0.75rem, 1vw + 1rem, 2vw);
+		font-size: clamp(1rem, 1rem, 3rem);
 		opacity: 100%;
 	}
 }
