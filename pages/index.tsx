@@ -10,6 +10,7 @@ import WorkTimeline from '@/components/work-timeline/work-timeline';
 import TimelineItem from '@/components/work-timeline/timeline-item/timeline-item';
 import ProjectItem from '@/components/project-box/project-item/project-item';
 import ProjectBox from '@/components/project-box/project-box';
+import TimelineSubitem from '@/components/work-timeline/timeline-subitem/timeline-subitem';
 
 export default function Index(props: any, rootMainRef: any) {
 	return (
@@ -22,9 +23,9 @@ export default function Index(props: any, rootMainRef: any) {
 					id='IntroSection'
 					className={'index-title'}>
 					<h1 style={{ width: '6ch' }}>Gabriel Tinoco.</h1>
-					<h6>Software Engineer & Designer</h6>
+					<h4>Software Engineer & Designer</h4>
 					<hr />
-					<p data-size='small'>
+					<p>
 						Career statement goes here. Should be something like really
 						impactful. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Morbi non sapien ante. Suspendisse vel consectetur urna. Ut a dictum
@@ -37,7 +38,7 @@ export default function Index(props: any, rootMainRef: any) {
 			<PageSection
 				id='Tech&SkillsSection'
 				className={'information-page'}>
-				<h3>Tech & Skills.</h3>
+				<h2>Tech & Skills.</h2>
 				<hr />
 				<ChipCloud
 					itemArray={[
@@ -85,39 +86,49 @@ export default function Index(props: any, rootMainRef: any) {
 				<PageSection
 					id='TimelineSection'
 					className={'information-page'}>
-					<h3>Timeline</h3>
+					<h2>Timeline</h2>
 					<hr />
 					<WorkTimeline
 						workTimelineItems={[
 							<TimelineItem
 								key='first'
-								startDate={'Feb 2022'}
-								endDate={'May 2022'}
 								title={'WHIMTACH'}
-								description={
-									'descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription'
-								}
-								icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
+								startDate={'(6 months)'}
+								subitemArray={[
+									<TimelineSubitem
+										key={'sub1'}
+										startDate={'Feb 2022'}
+										endDate={'May 2022'}
+										subtitle={'UX Designer'}
+										description={`Acted as the lead UX designer in the elaboration of a cosmetic business’s website, creating multiple
+											page designs in Figma and conceptual designs in Photoshop, as well as having biweekly meetings with
+											the project’s stakeholders in order to gather feedback and discuss requirements`}
+										icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
+									/>,
+								]}
 							/>,
 							<TimelineItem
 								key='first'
-								startDate={'Feb 2022'}
-								endDate={'May 2022'}
-								title={'WHIMTACH'}
-								description={
-									'descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription'
-								}
-								icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
-							/>,
-							<TimelineItem
-								key='first'
-								startDate={'Feb 2022'}
-								endDate={'May 2022'}
-								title={'WHIMTACH'}
-								description={
-									'descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription'
-								}
-								icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
+								startDate={'(1 year)'}
+								title={'RBC (Royal Bank of Canada)'}
+								subitemArray={[
+									<TimelineSubitem
+										startDate={'May 2022'}
+										endDate={'Ago 2022'}
+										key={'sub1'}
+										subtitle={'Full-stack Developer Co-op'}
+										description={`Worked on developing a MEAN stack application for a small team of people in order to speed up data gathering and visualization`}
+										icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
+									/>,
+									<TimelineSubitem
+										key={'sub1'}
+										startDate={'Sep 2022'}
+										endDate={'Ago 2023'}
+										subtitle={'Front-end Developer Co-op'}
+										description={`Implemented, tested, and reviewed Angular/React components at the company's main front-end component library team`}
+										icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
+									/>,
+								]}
 							/>,
 						]}
 					/>
@@ -138,7 +149,7 @@ export default function Index(props: any, rootMainRef: any) {
 				<PageSection
 					id='ProjectsSection'
 					className={'information-page'}>
-					<h3>Projects</h3>
+					<h2>Projects</h2>
 					<hr />
 					<ProjectBox
 						projectBoxItems={[

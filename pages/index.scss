@@ -1,18 +1,12 @@
 @use '../styles/modules.scss' as *;
 
 .index-title {
-	& {
-		display: flex;
-		flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-		align-items: center;
-		justify-content: center;
-		min-height: 100vh;
-	}
-
-	@include screen-breakpoint(mobile, tablet) {
-		min-height: fit-content;
-	}
+	align-items: center;
+	justify-content: center;
+	min-height: fit-content;
 }
 
 .information-page {
