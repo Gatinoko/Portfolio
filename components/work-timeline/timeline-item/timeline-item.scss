@@ -7,24 +7,18 @@
 		gap: get-spacing-value(spacing-16);
 	}
 
-	.date {
+	.left-separator {
 		& {
 			display: flex;
-			width: 20%;
-			text-align: center;
-			word-break: keep-all;
 			justify-content: flex-end;
-			gap: get-spacing-value(spacing-16);
-		}
+			width: 20%;
 
-		&::before {
-			content: '';
-			position: absolute;
-			width: 9px;
-			height: 9px;
-			transform: translateX(50%) translateY(1.5rem);
-			border-radius: 99999px;
-			background-color: rgb(255, 255, 255);
+			@include screen-breakpoint(tablet) {
+				width: 25%;
+			}
+			@include screen-breakpoint(mobile) {
+				width: 30%;
+			}
 		}
 
 		&::after {
@@ -34,33 +28,64 @@
 		}
 	}
 
-	.item-information-container {
+	.information-container {
 		& {
 			display: flex;
+			margin-top: 1.5rem;
+			margin-bottom: 1.5rem;
 			flex-direction: column;
+			position: relative;
 			gap: get-spacing-value(spacing-16);
-			width: 70%;
+			width: 80%;
+
+			@include screen-breakpoint(tablet) {
+				width: 75%;
+			}
+			@include screen-breakpoint(mobile) {
+				width: 70%;
+			}
 		}
 
-		.title {
-			word-break: keep-all;
-		}
-
-		.description {
-			word-break: break-all;
-			word-wrap: break-word;
-		}
-
-		.icons-container {
+		.item-heading {
 			& {
+				position: relative;
 				display: flex;
-				gap: get-spacing-value(spacing-8);
+				align-items: center;
 			}
 
-			.timeline-item-icon {
-				position: relative;
-				width: clamp(1.22rem, 1.08rem + 0.67vw, 1.6rem);
-				height: clamp(1.22rem, 1.08rem + 0.67vw, 1.6rem);
+			.date {
+				position: absolute;
+				width: 7.5rem;
+				text-align: center;
+				word-break: keep-all;
+				left: -9rem;
+
+				@include screen-breakpoint(mobile, tablet) {
+					left: -8.25rem;
+				}
+			}
+
+			.title {
+				&::before {
+					content: '';
+					position: absolute;
+					width: 20px;
+					height: 20px;
+					top: 50%;
+					left: -1.65rem;
+					transform: translateY(-50%);
+					border-radius: 50%;
+					background-color: white;
+				}
+			}
+		}
+
+		.subitem-container {
+			& {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				gap: get-spacing-value(spacing-16);
 			}
 		}
 	}

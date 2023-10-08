@@ -1,66 +1,62 @@
-import { cva } from 'class-variance-authority';
-import Image from 'next/image';
 import React, { ReactElement } from 'react';
+import TimelineSubitem, {
+	TimelineSubitemProps,
+} from '../timeline-subitem/timeline-subitem';
 
 export interface TimelineItemProps {
-	startDate: string;
-	endDate: string;
 	title: string;
-	description: string;
+	startDate?: string;
+	endDate?: string;
 	className?: string;
-	icons?: string[];
+	subitemArray: ReactElement<TimelineSubitemProps>[];
 }
 
 export default function TimelineItem(props: TimelineItemProps) {
 	const {
-		startDate = 'Start date',
-		endDate = 'End date',
 		title = 'Title',
-		description = 'Description',
+		startDate,
+		endDate,
 		className = '',
-		icons,
+		subitemArray,
 	} = props;
 
 	return (
 		<li className={`${className} timeline-item`}>
-			{/* Date */}
-			<p
-				className='date'
-				data-size='extra-small'>
-				{startDate}
-				<br />
-				{endDate}
-			</p>
+			{/* Separator div */}
+			<div className='left-separator' />
 
-			{/* Item information container */}
-			<div className='item-information-container'>
-				{/* Item title */}
-				<h6 className='title'>{title}</h6>
+			{/* Container with information */}
+			<div className='information-container'>
+				{/* Item heading */}
+				<div className='item-heading'>
+					{/* Date */}
+					{(startDate || endDate) && (
+						<p
+							className='date'
+							data-size='extra-small'>
+							{startDate}
+							<br />
+							{endDate}
+						</p>
+					)}
 
-				{/* Item description */}
-				<p
-					className='description'
-					data-size='extra-small'>
-					{description}
-				</p>
+					{/* Item title */}
+					<h5 className='title'>{title}</h5>
+				</div>
 
-				{/* Item icons */}
-				{icons && (
-					<div className='icons-container'>
-						{icons.map((icon, index) => (
-							<div
-								className='timeline-item-icon'
-								key={index}>
-								<Image
-									key={index}
-									src={icons[index]}
-									fill={true}
-									alt={''}
-								/>
-							</div>
-						))}
-					</div>
-				)}
+				{/* Timeline subitem container */}
+				<div className='subitem-container'>
+					{subitemArray.map(({ key, props, type }, index) => (
+						<TimelineSubitem
+							key={index}
+							startDate={props.startDate}
+							endDate={props.endDate}
+							subtitle={props.subtitle}
+							description={props.description}
+							icons={props.icons}
+						/>
+					))}
+				</div>
 			</div>
 		</li>
 	);
