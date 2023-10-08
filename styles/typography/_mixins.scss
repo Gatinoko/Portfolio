@@ -16,84 +16,78 @@
 /*
 	Title text mixins
 
-	@link https://utopia.fyi/type/calculator?c=320,24,1.2,1240,48,1.333,5,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+	@link https://utopia.fyi/type/calculator?c=320,24,1.067,1240,96,1.2,3,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
 */
+@mixin heading-2xl {
+	@include font-syne;
+
+	font-size: clamp(3.9063rem, 1.5576rem + 11.7435vw, 10.6588rem);
+	font-weight: get-font-weight-value(semibold);
+}
 @mixin heading-xl {
 	@include font-syne;
 
-	font-size: clamp(3.7325rem, 0.639rem + 15.4674vw, 12.6263rem);
+	font-size: clamp(3.125rem, 1.4307rem + 8.4717vw, 7.9963rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-l {
 	@include font-syne;
 
-	font-size: clamp(3.1106rem, 0.898rem + 11.063vw, 9.4719rem);
+	font-size: clamp(2.5rem, 1.283rem + 6.0848vw, 5.9988rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-r {
 	@include font-syne;
 
-	font-size: clamp(2.5919rem, 1.0219rem + 7.85vw, 7.1056rem);
+	font-size: clamp(2rem, 1.1304rem + 4.3478vw, 4.5rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-s {
 	@include font-syne;
 
-	font-size: clamp(2.16rem, 1.0572rem + 5.5141vw, 5.3306rem);
+	font-size: clamp(1.6rem, 0.9824rem + 3.088vw, 3.3756rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-xs {
 	@include font-syne;
 
-	font-size: clamp(1.8rem, 1.0352rem + 3.8239vw, 3.9988rem);
-	font-weight: get-font-weight-value(semibold);
-}
-@mixin heading-2xs {
-	@include font-syne;
-
-	font-size: clamp(1.5rem, 0.9783rem + 2.6087vw, 3rem);
+	font-size: clamp(1.28rem, 0.8443rem + 2.1783vw, 2.5325rem);
 	font-weight: get-font-weight-value(semibold);
 }
 
 /*
 	Body text mixins
 
-	@link https://utopia.fyi/type/calculator?c=320,16,1.067,1240,20,1.125,5,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+	@link https://utopia.fyi/type/calculator?c=320,16,1.067,1240,20,1.125,2,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
 */
 @mixin body-xl {
 	@include font-opensans;
 
-	font-size: clamp(1.38rem, 1.08rem + 1.51vw, 2.25rem);
+	font-size: clamp(1.1388rem, 0.9846rem + 0.7707vw, 1.5819rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin body-l {
 	@include font-opensans;
 
-	font-size: clamp(1.3rem, 1.05rem + 1.23vw, 2rem);
+	font-size: clamp(1.0669rem, 0.9488rem + 0.5902vw, 1.4063rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin body-r {
 	@include font-opensans;
 
-	font-size: clamp(1.22rem, 1.02rem + 0.98vw, 1.78rem);
+	font-size: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
 	font-weight: get-font-weight-value(regular);
 }
 @mixin body-s {
 	@include font-opensans;
 
-	font-size: clamp(1.14rem, 0.98rem + 0.77vw, 1.58rem);
+	font-size: clamp(0.9375rem, 0.8771rem + 0.3022vw, 1.1113rem);
 	font-weight: get-font-weight-value(regular);
 }
 @mixin body-xs {
 	@include font-opensans;
 
-	font-size: clamp(1.07rem, 0.95rem + 0.59vw, 1.41rem);
-	font-weight: get-font-weight-value(regular);
-}
-@mixin body-2xs {
-	@include font-opensans;
-
-	font-size: clamp(1rem, 0.91rem + 0.43vw, 1.25rem);
+	font-size: clamp(0.8781rem, 0.8401rem + 0.1902vw, 0.9875rem);
 	font-weight: get-font-weight-value(regular);
 }
 
@@ -140,13 +134,5 @@
 	white-space: nowrap;
 	letter-spacing: 3.2px;
 	font-size: clamp(1.07rem, 1rem + 0.35vw, 1.27rem);
-	font-weight: get-font-weight-value(bold);
-}
-@mixin interface-2xs {
-	@include font-opensans;
-
-	white-space: nowrap;
-	letter-spacing: 3.2px;
-	font-size: clamp(1rem, 0.96rem + 0.22vw, 1.13rem);
 	font-weight: get-font-weight-value(bold);
 }
