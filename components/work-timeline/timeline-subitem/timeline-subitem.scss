@@ -1,0 +1,58 @@
+@use '../../../styles/modules.scss' as *;
+
+.timeline-subitem {
+	& {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		gap: get-spacing-value(spacing-8);
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			top: 50%;
+			left: -1.3rem;
+			transform: translateY(-50%);
+			border-radius: 50%;
+			background-color: white;
+		}
+	}
+
+	.subitem-date {
+		& {
+			width: 7.5rem;
+			position: absolute;
+			text-align: center;
+			word-break: keep-all;
+			left: -9rem;
+
+			@include screen-breakpoint(mobile, tablet) {
+				left: -8.25rem;
+			}
+		}
+	}
+
+	.subtitle {
+		width: fit-content;
+	}
+
+	.description {
+	}
+
+	.icons-container {
+		& {
+			display: flex;
+			gap: get-spacing-value(spacing-8);
+		}
+
+		.timeline-item-icon {
+			position: relative;
+			width: clamp(1.22rem, 1.08rem + 0.67vw, 1.6rem);
+			height: clamp(1.22rem, 1.08rem + 0.67vw, 1.6rem);
+		}
+	}
+}
