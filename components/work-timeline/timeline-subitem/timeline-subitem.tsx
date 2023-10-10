@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 export interface TimelineSubitemProps {
 	startDate?: string;
@@ -7,7 +7,7 @@ export interface TimelineSubitemProps {
 	subtitle: string;
 	description: string;
 	className?: string;
-	icons?: string[];
+	icons?: ReactNode[];
 }
 
 export default function TimelineSubitem(props: TimelineSubitemProps) {
@@ -24,34 +24,22 @@ export default function TimelineSubitem(props: TimelineSubitemProps) {
 		<div className={`${className} timeline-subitem`}>
 			{/* Date */}
 			<p
-				className='subitem-date'
+				className='date'
 				data-size='extra-small'>
 				{startDate}
 				<br />
 				{endDate}
 			</p>
 
-			{/* Item subtitle */}
+			{/* Subtitle */}
 			<h6 className='subtitle'>{subtitle}</h6>
 
-			{/* Item description */}
+			{/* Description */}
 			<p className='description'>{description}</p>
 
-			{/* Item icons */}
+			{/* Tech icons */}
 			{icons && (
-				<div className='icons-container'>
-					{icons.map((icon, index) => (
-						<div
-							className='timeline-item-icon'
-							key={index}>
-							<Image
-								src={icons[index]}
-								fill={true}
-								alt={''}
-							/>
-						</div>
-					))}
-				</div>
+				<div className='icons'>{icons.map((iconNode, index) => iconNode)}</div>
 			)}
 		</div>
 	);

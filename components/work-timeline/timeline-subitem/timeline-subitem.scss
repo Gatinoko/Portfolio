@@ -22,7 +22,7 @@
 		}
 	}
 
-	.subitem-date {
+	.date {
 		& {
 			width: 7.5rem;
 			position: absolute;
@@ -43,16 +43,8 @@
 	.description {
 	}
 
-	.icons-container {
-		& {
-			display: flex;
-			gap: get-spacing-value(spacing-8);
-		}
-
-		.timeline-item-icon {
-			position: relative;
-			width: clamp(1.22rem, 1.08rem + 0.67vw, 1.6rem);
-			height: clamp(1.22rem, 1.08rem + 0.67vw, 1.6rem);
-		}
+	.icons {
+		display: flex;
+		gap: get-spacing-value(spacing-8);
 	}
 }

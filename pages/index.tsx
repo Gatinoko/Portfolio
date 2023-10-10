@@ -103,7 +103,43 @@ export default function Index(props: any, rootMainRef: any) {
 										description={`Acted as the lead UX designer in the elaboration of a cosmetic business’s website, creating multiple
 											page designs in Figma and conceptual designs in Photoshop, as well as having biweekly meetings with
 											the project’s stakeholders in order to gather feedback and discuss requirements`}
-										icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
+										icons={[
+											<Icon
+												key={'1'}
+												name={'nodejs'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'angular'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'html5'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'css3'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'mongodb'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'express'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'ejs'}
+												size={'small'}
+											/>,
+										]}
 									/>,
 								]}
 							/>,
@@ -118,7 +154,43 @@ export default function Index(props: any, rootMainRef: any) {
 										key={'sub1'}
 										subtitle={'Full-stack Developer Co-op'}
 										description={`Worked on developing a MEAN stack application for a small team of people in order to speed up data gathering and visualization`}
-										icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
+										icons={[
+											<Icon
+												key={'1'}
+												name={'nodejs'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'angular'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'html5'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'css3'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'mongodb'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'express'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'ejs'}
+												size={'small'}
+											/>,
+										]}
 									/>,
 									<TimelineSubitem
 										key={'sub1'}
@@ -126,7 +198,43 @@ export default function Index(props: any, rootMainRef: any) {
 										endDate={'Ago 2023'}
 										subtitle={'Front-end Developer Co-op'}
 										description={`Implemented, tested, and reviewed Angular/React components at the company's main front-end component library team`}
-										icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
+										icons={[
+											<Icon
+												key={'1'}
+												name={'nodejs'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'angular'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'html5'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'css3'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'mongodb'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'express'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'1'}
+												name={'ejs'}
+												size={'small'}
+											/>,
+										]}
 									/>,
 								]}
 							/>,
