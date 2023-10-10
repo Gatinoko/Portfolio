@@ -45,6 +45,7 @@
 
 	.icons {
 		display: flex;
+		flex-wrap: wrap;
 		gap: get-spacing-value(spacing-8);
 	}
 }
