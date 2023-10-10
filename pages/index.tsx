@@ -91,12 +91,12 @@ export default function Index(props: any, rootMainRef: any) {
 					<WorkTimeline
 						workTimelineItems={[
 							<TimelineItem
-								key='first'
+								key='whimtach'
 								title={'WHIMTACH'}
 								startDate={'(6 months)'}
 								subitemArray={[
 									<TimelineSubitem
-										key={'sub1'}
+										key={'ux designer'}
 										startDate={'Feb 2022'}
 										endDate={'May 2022'}
 										subtitle={'UX Designer'}
@@ -105,38 +105,13 @@ export default function Index(props: any, rootMainRef: any) {
 											the project’s stakeholders in order to gather feedback and discuss requirements`}
 										icons={[
 											<Icon
-												key={'1'}
-												name={'nodejs'}
+												key={'photoshop'}
+												name={'photoshop'}
 												size={'small'}
 											/>,
 											<Icon
-												key={'1'}
-												name={'angular'}
-												size={'small'}
-											/>,
-											<Icon
-												key={'1'}
-												name={'html5'}
-												size={'small'}
-											/>,
-											<Icon
-												key={'1'}
-												name={'css3'}
-												size={'small'}
-											/>,
-											<Icon
-												key={'1'}
-												name={'mongodb'}
-												size={'small'}
-											/>,
-											<Icon
-												key={'1'}
-												name={'express'}
-												size={'small'}
-											/>,
-											<Icon
-												key={'1'}
-												name={'ejs'}
+												key={'figma'}
+												name={'figma'}
 												size={'small'}
 											/>,
 										]}
@@ -156,38 +131,48 @@ export default function Index(props: any, rootMainRef: any) {
 										description={`Worked on developing a MEAN stack application for a small team of people in order to speed up data gathering and visualization`}
 										icons={[
 											<Icon
-												key={'1'}
+												key={'nodejs'}
 												name={'nodejs'}
 												size={'small'}
 											/>,
 											<Icon
-												key={'1'}
+												key={'angular'}
 												name={'angular'}
 												size={'small'}
 											/>,
 											<Icon
-												key={'1'}
+												key={'html5'}
 												name={'html5'}
 												size={'small'}
 											/>,
 											<Icon
-												key={'1'}
+												key={'css3'}
 												name={'css3'}
 												size={'small'}
 											/>,
 											<Icon
-												key={'1'}
+												key={'mongodb'}
 												name={'mongodb'}
 												size={'small'}
 											/>,
 											<Icon
-												key={'1'}
+												key={'express'}
 												name={'express'}
 												size={'small'}
 											/>,
 											<Icon
-												key={'1'}
-												name={'ejs'}
+												key={'typescript'}
+												name={'typescript'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'python'}
+												name={'python'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'bootstrap'}
+												name={'bootstrap'}
 												size={'small'}
 											/>,
 										]}
@@ -200,38 +185,58 @@ export default function Index(props: any, rootMainRef: any) {
 										description={`Implemented, tested, and reviewed Angular/React components at the company's main front-end component library team`}
 										icons={[
 											<Icon
-												key={'1'}
+												key={'nodejs'}
 												name={'nodejs'}
 												size={'small'}
 											/>,
 											<Icon
-												key={'1'}
+												key={'angular'}
 												name={'angular'}
 												size={'small'}
 											/>,
 											<Icon
-												key={'1'}
+												key={'react'}
+												name={'react'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'html5'}
 												name={'html5'}
 												size={'small'}
 											/>,
 											<Icon
-												key={'1'}
+												key={'css3'}
 												name={'css3'}
 												size={'small'}
 											/>,
 											<Icon
-												key={'1'}
-												name={'mongodb'}
+												key={'sass'}
+												name={'sass'}
 												size={'small'}
 											/>,
 											<Icon
-												key={'1'}
-												name={'express'}
+												key={'storybook'}
+												name={'storybook'}
 												size={'small'}
 											/>,
 											<Icon
-												key={'1'}
-												name={'ejs'}
+												key={'nx'}
+												name={'nx'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'jenkins'}
+												name={'jenkins'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'jest'}
+												name={'jest'}
+												size={'small'}
+											/>,
+											<Icon
+												key={'figma'}
+												name={'figma'}
 												size={'small'}
 											/>,
 										]}
