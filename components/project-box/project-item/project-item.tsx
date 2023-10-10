@@ -1,29 +1,74 @@
 /* eslint-disable react/display-name */
+import Icon from '@/components/icon/icon';
 import Image from 'next/image';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 export interface ProjectItemProps {
-	icon: string;
+	coverImage: string;
 	title: string;
 	description: string;
+	icons?: ReactNode[];
+	githubProjectLink?: string;
+	projectWebsiteLink?: string;
 	className?: string;
 }
 
 export default function ProjectItem(props: ProjectItemProps) {
-	const { icon, title, description, className } = props;
+	const {
+		coverImage,
+		title,
+		description,
+		icons,
+		githubProjectLink,
+		projectWebsiteLink,
+		className,
+	} = props;
 	return (
 		<li className={`project-item ${className}`}>
-			<div className='icon'>
+			{/* Image */}
+			<div className='cover-image'>
 				<Image
 					style={{ objectFit: 'cover' }}
-					src={icon}
+					src={coverImage}
 					fill={true}
 					alt={''}
 				/>
 			</div>
-			<div className='title-description-container'>
+
+			{/* Main information */}
+			<div className='main-information'>
+				{/* Title */}
 				<h6 className='title'>{title}</h6>
+
+				{/* Description */}
 				<p className='description'>{description}</p>
+
+				{/* Technology icons */}
+				{icons && (
+					<div className='tech-icons'>
+						{icons.map((iconNode, index) => iconNode)}
+					</div>
+				)}
+			</div>
+
+			{/* Links to websites */}
+			<div className='icon-links'>
+				{githubProjectLink && (
+					<a href={githubProjectLink}>
+						<Icon
+							name={'github'}
+							size={'small'}
+						/>
+					</a>
+				)}
+				{projectWebsiteLink && (
+					<a href={projectWebsiteLink}>
+						<Icon
+							name={'link'}
+							size={'small'}
+						/>
+					</a>
+				)}
 			</div>
 		</li>
 	);

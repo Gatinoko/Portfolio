@@ -12,13 +12,13 @@
 		}
 	}
 
-	.icon {
+	.cover-image {
 		position: relative;
 		width: 30%;
 		height: auto;
 	}
 
-	.title-description-container {
+	.main-information {
 		& {
 			display: flex;
 			flex-direction: column;
@@ -34,5 +34,17 @@
 
 		.description {
 		}
+
+		.tech-icons {
+			display: flex;
+			gap: get-spacing-value(spacing-8);
+		}
+	}
+
+	.icon-links {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: get-spacing-value(spacing-16);
 	}
 }

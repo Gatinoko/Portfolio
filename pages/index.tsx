@@ -155,46 +155,61 @@ export default function Index(props: any, rootMainRef: any) {
 						projectBoxItems={[
 							<ProjectItem
 								key={'laksjd'}
-								icon={'/cat.jpg'}
-								title={'Title'}
-								description={'desc'}
+								coverImage={'/cat.jpg'}
+								title='Bracketeams Tournament Website'
+								description={`Collaborated in a group of 6 people as a lead software engineer in order to create a functional brackets
+							website, where the user could create, read, edit, and delete game tournaments`}
+								icons={[
+									<Icon
+										key={'1'}
+										name={'nodejs'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'1'}
+										name={'angular'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'1'}
+										name={'html5'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'1'}
+										name={'css3'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'1'}
+										name={'mongodb'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'1'}
+										name={'express'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'1'}
+										name={'ejs'}
+										size={'small'}
+									/>,
+								]}
 							/>,
-							<ProjectItem
-								key={'laksjd'}
-								icon={'/cat.jpg'}
-								title={'Title'}
-								description={'desc'}
-							/>,
-							<ProjectItem
-								key={'laksjd'}
-								icon={'/cat.jpg'}
-								title={'Title'}
-								description={'desc'}
-							/>,
-							<ProjectItem
-								key={'laksjd'}
-								icon={'/cat.jpg'}
-								title={'Title'}
-								description={'desc'}
-							/>,
-							<ProjectItem
-								key={'laksjd'}
-								icon={'/cat.jpg'}
-								title={'Title'}
-								description={'desc'}
-							/>,
-							<ProjectItem
-								key={'laksjd'}
-								icon={'/cat.jpg'}
-								title={'Title'}
-								description={'desc'}
-							/>,
-							<ProjectItem
-								key={'laksjd'}
-								icon={'/cat.jpg'}
-								title={'Title'}
-								description={'desc'}
-							/>,
+							// <ProjectItem
+							// 	key={'laksjd'}
+							// 	icon={'/cat.jpg'}
+							// 	title='Mockup Music Player'
+							// 	description={`Implemented the following features: add and delete artists, assign music to specific artists, edit music
+							// 	information, delete music, and play the user’s selected music`}
+							// />,
+							// <ProjectItem
+							// 	key={'laksjd'}
+							// 	icon={'/cat.jpg'}
+							// 	title='Personal Website'
+							// 	description={`Created a website with information about my projects, services, contact information, and a login page`}
+							// />,
 						]}></ProjectBox>
 				</PageSection>
 			</RevealAnimation>
