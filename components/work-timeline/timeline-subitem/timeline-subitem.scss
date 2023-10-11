@@ -29,6 +29,8 @@
 			text-align: center;
 			word-break: keep-all;
 			left: -9rem;
+			font-weight: lighter;
+			color: #ffffff80;
 
 			@include screen-breakpoint(mobile, tablet) {
 				left: -8.25rem;
