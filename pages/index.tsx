@@ -1,8 +1,5 @@
 import RevealAnimation from '@/utilities/reveal-animation';
 import PageSection from '@/components/page-section/page-section';
-import Carousel from '@/components/carousel/carousel';
-import Image from 'next/image';
-import Button, { ButtonSizes } from '@/components/button/button';
 import Icon, { IconSizes } from '@/components/icon/icon';
 import Chip from '@/components/chipCloud/chip/chip';
 import ChipCloud from '@/components/chipCloud/chipCloud';
@@ -11,6 +8,7 @@ import TimelineItem from '@/components/work-timeline/timeline-item/timeline-item
 import ProjectItem from '@/components/project-box/project-item/project-item';
 import ProjectBox from '@/components/project-box/project-box';
 import TimelineSubitem from '@/components/work-timeline/timeline-subitem/timeline-subitem';
+import Button from '@/components/button/button';
 
 export default function Index(props: any, rootMainRef: any) {
 	return (
@@ -34,52 +32,54 @@ export default function Index(props: any, rootMainRef: any) {
 				</PageSection>
 			</RevealAnimation>
 
-			{/* About me section */}
-			<PageSection
-				id='Tech&SkillsSection'
-				className={'information-page'}>
-				<h2>Tech & Skills.</h2>
-				<hr />
-				<ChipCloud
-					itemArray={[
-						{ text: 'TypeScript', weight: 5 },
-						{ text: 'Node', weight: 3 },
-						{ text: 'Angular', weight: 5 },
-						{ text: 'MySQL', weight: 1 },
-						{ text: 'GIT', weight: 4 },
-						{ text: 'CSS', weight: 5 },
-						{ text: 'Storybook', weight: 4 },
-						{ text: 'Java', weight: 3 },
-						{ text: 'Python', weight: 2 },
-						{ text: 'Spring', weight: 3 },
-						{ text: 'MongoDB', weight: 3 },
-						{ text: 'JavaScript', weight: 5 },
-						{ text: 'Oracle SQL', weight: 1 },
-						{ text: 'JWT', weight: 3 },
-						{ text: 'Prettier', weight: 3 },
-						{ text: 'ESLint', weight: 3 },
-						{ text: 'Nodemon', weight: 3 },
-						{ text: 'Sass', weight: 5 },
-						{ text: 'GitHub', weight: 4 },
-						{ text: 'Next.js', weight: 5 },
-						{ text: 'CVA', weight: 3 },
-						{ text: 'React', weight: 5 },
-						{ text: 'GraphQL', weight: 2 },
-						{ text: 'HTML', weight: 5 },
-						{ text: 'Lodash', weight: 1 },
-						{ text: 'Jira', weight: 4 },
-						{ text: 'Jenkins', weight: 2 },
-						{ text: 'Express.js', weight: 3 },
-						{ text: 'CSHARP', weight: 4 },
-						{ text: 'XML', weight: 2 },
-						{ text: 'JSON', weight: 4 },
-						{ text: 'Figma', weight: 5 },
-						{ text: 'Adobe Photoshop', weight: 5 },
-						{ text: 'Adobe Premiere', weight: 4 },
-					]}
-					size='regular'
-				/>
-			</PageSection>
+			{/* Tech & skills section */}
+			<RevealAnimation>
+				<PageSection
+					id='Tech&SkillsSection'
+					className={'information-page'}>
+					<h2>Tech & Skills.</h2>
+					<hr />
+					<ChipCloud
+						itemArray={[
+							{ text: 'TypeScript', weight: 5 },
+							{ text: 'Node', weight: 3 },
+							{ text: 'Angular', weight: 5 },
+							{ text: 'MySQL', weight: 1 },
+							{ text: 'GIT', weight: 4 },
+							{ text: 'CSS', weight: 5 },
+							{ text: 'Storybook', weight: 4 },
+							{ text: 'Java', weight: 3 },
+							{ text: 'Python', weight: 2 },
+							{ text: 'Spring', weight: 3 },
+							{ text: 'MongoDB', weight: 3 },
+							{ text: 'JavaScript', weight: 5 },
+							{ text: 'Oracle SQL', weight: 1 },
+							{ text: 'JWT', weight: 3 },
+							{ text: 'Prettier', weight: 3 },
+							{ text: 'ESLint', weight: 3 },
+							{ text: 'Nodemon', weight: 3 },
+							{ text: 'Sass', weight: 5 },
+							{ text: 'GitHub', weight: 4 },
+							{ text: 'Next.js', weight: 5 },
+							{ text: 'CVA', weight: 3 },
+							{ text: 'React', weight: 5 },
+							{ text: 'GraphQL', weight: 2 },
+							{ text: 'HTML', weight: 5 },
+							{ text: 'Lodash', weight: 1 },
+							{ text: 'Jira', weight: 4 },
+							{ text: 'Jenkins', weight: 2 },
+							{ text: 'Express.js', weight: 3 },
+							{ text: 'CSHARP', weight: 4 },
+							{ text: 'XML', weight: 2 },
+							{ text: 'JSON', weight: 4 },
+							{ text: 'Figma', weight: 5 },
+							{ text: 'Adobe Photoshop', weight: 5 },
+							{ text: 'Adobe Premiere', weight: 4 },
+						]}
+						size='regular'
+					/>
+				</PageSection>
+			</RevealAnimation>
 
 			{/* Timeline section */}
 			<RevealAnimation>
@@ -93,7 +93,7 @@ export default function Index(props: any, rootMainRef: any) {
 							<TimelineItem
 								key='whimtach'
 								title={'WHIMTACH'}
-								startDate={'(6 months)'}
+								date={'(6 months)'}
 								subitemArray={[
 									<TimelineSubitem
 										key={'ux designer'}
@@ -119,14 +119,14 @@ export default function Index(props: any, rootMainRef: any) {
 								]}
 							/>,
 							<TimelineItem
-								key='first'
-								startDate={'(1 year)'}
+								key='RBC (Royal Bank of Canada)'
+								date={'(1 year)'}
 								title={'RBC (Royal Bank of Canada)'}
 								subitemArray={[
 									<TimelineSubitem
+										key={'Full-stack Developer Co-op'}
 										startDate={'May 2022'}
 										endDate={'Ago 2022'}
-										key={'sub1'}
 										subtitle={'Full-stack Developer Co-op'}
 										description={`Worked on developing a MEAN stack application for a small team of people in order to speed up data gathering and visualization`}
 										icons={[
@@ -178,7 +178,7 @@ export default function Index(props: any, rootMainRef: any) {
 										]}
 									/>,
 									<TimelineSubitem
-										key={'sub1'}
+										key={'Front-end Developer Co-op'}
 										startDate={'Sep 2022'}
 										endDate={'Ago 2023'}
 										subtitle={'Front-end Developer Co-op'}
@@ -245,15 +245,6 @@ export default function Index(props: any, rootMainRef: any) {
 							/>,
 						]}
 					/>
-					{/* <TimelineItem
-				startDate={'Feb 2022'}
-				endDate={'May 2022'}
-				title={'WHIMTACH'}
-				description={
-					'descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription'
-				}
-				icons={['/cat.jpg', '/cat.jpg', '/cat.jpg']}
-			/> */}
 				</PageSection>
 			</RevealAnimation>
 
@@ -267,8 +258,8 @@ export default function Index(props: any, rootMainRef: any) {
 					<ProjectBox
 						projectBoxItems={[
 							<ProjectItem
-								key={'laksjd'}
-								coverImage={'/cat.jpg'}
+								key={'Bracketeams Tournament Website'}
+								githubProjectLink='https://github.com/Gatinoko/bracketeamsProject'
 								title='Bracketeams Tournament Website'
 								description={`Collaborated in a group of 6 people as a lead software engineer in order to create a functional brackets
 							website, where the user could create, read, edit, and delete game tournaments`}
@@ -303,6 +294,39 @@ export default function Index(props: any, rootMainRef: any) {
 										name={'express'}
 										size={'small'}
 									/>,
+								]}
+							/>,
+							<ProjectItem
+								key={'Personal Website'}
+								title='Personal Website'
+								githubProjectLink='https://github.com/Gatinoko/GabrielTinocoWebsite'
+								description={`Created a website with information about my projects, services, contact information, and a login page`}
+								icons={[
+									<Icon
+										key={'1'}
+										name={'nodejs'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'1'}
+										name={'html5'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'1'}
+										name={'css3'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'1'}
+										name={'mongodb'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'1'}
+										name={'express'}
+										size={'small'}
+									/>,
 									<Icon
 										key={'1'}
 										name={'ejs'}
@@ -310,20 +334,27 @@ export default function Index(props: any, rootMainRef: any) {
 									/>,
 								]}
 							/>,
-							// <ProjectItem
-							// 	key={'laksjd'}
-							// 	icon={'/cat.jpg'}
-							// 	title='Mockup Music Player'
-							// 	description={`Implemented the following features: add and delete artists, assign music to specific artists, edit music
-							// 	information, delete music, and play the user’s selected music`}
-							// />,
-							// <ProjectItem
-							// 	key={'laksjd'}
-							// 	icon={'/cat.jpg'}
-							// 	title='Personal Website'
-							// 	description={`Created a website with information about my projects, services, contact information, and a login page`}
-							// />,
-						]}></ProjectBox>
+							<ProjectItem
+								key={'Mockup Music Player'}
+								title='Mockup Music Player'
+								githubProjectLink='https://github.com/Gatinoko/COMP123-Assignment4'
+								description={`Implemented the following features: add and delete artists, assign music to specific artists, edit music
+								information, delete music, and play the user’s selected music`}
+								icons={[
+									<Icon
+										key={'1'}
+										name={'nodejs'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'1'}
+										name={'angular'}
+										size={'small'}
+									/>,
+								]}
+							/>,
+						]}
+					/>
 				</PageSection>
 			</RevealAnimation>
 		</main>
