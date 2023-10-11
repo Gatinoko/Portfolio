@@ -5,20 +5,13 @@ import TimelineSubitem, {
 
 export interface TimelineItemProps {
 	title: string;
-	startDate?: string;
-	endDate?: string;
+	date?: string;
 	className?: string;
 	subitemArray: ReactElement<TimelineSubitemProps>[];
 }
 
 export default function TimelineItem(props: TimelineItemProps) {
-	const {
-		title = 'Title',
-		startDate,
-		endDate,
-		className = '',
-		subitemArray,
-	} = props;
+	const { title = 'Title', date, className = '', subitemArray } = props;
 
 	return (
 		<li className={`${className} timeline-item`}>
@@ -30,13 +23,11 @@ export default function TimelineItem(props: TimelineItemProps) {
 				{/* Item heading */}
 				<div className='item-heading'>
 					{/* Date */}
-					{(startDate || endDate) && (
+					{date && (
 						<p
 							className='date'
 							data-size='extra-small'>
-							{startDate}
-							<br />
-							{endDate}
+							{date}
 						</p>
 					)}
 
