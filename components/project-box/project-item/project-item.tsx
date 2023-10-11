@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React, { ReactNode } from 'react';
 
 export interface ProjectItemProps {
-	coverImage: string;
+	coverImage?: string;
 	title: string;
 	description: string;
 	icons?: ReactNode[];
@@ -26,14 +26,16 @@ export default function ProjectItem(props: ProjectItemProps) {
 	return (
 		<li className={`project-item ${className}`}>
 			{/* Image */}
-			<div className='cover-image'>
-				<Image
-					style={{ objectFit: 'cover' }}
-					src={coverImage}
-					fill={true}
-					alt={''}
-				/>
-			</div>
+			{coverImage && (
+				<div className='cover-image'>
+					<Image
+						style={{ objectFit: 'cover' }}
+						src={coverImage}
+						fill={true}
+						alt={''}
+					/>
+				</div>
+			)}
 
 			{/* Main information */}
 			<div className='main-information'>
