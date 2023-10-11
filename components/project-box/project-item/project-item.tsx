@@ -21,7 +21,7 @@ export default function ProjectItem(props: ProjectItemProps) {
 		icons,
 		githubProjectLink,
 		projectWebsiteLink,
-		className,
+		className = '',
 	} = props;
 	return (
 		<li className={`project-item ${className}`}>
