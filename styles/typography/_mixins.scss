@@ -16,92 +16,92 @@
 /*
 	Title text mixins
 
-	@link https://utopia.fyi/type/calculator?c=320,24,1.067,1240,96,1.2,3,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+	@link https://utopia.fyi/type/calculator?c=320,32,1.25,1136,72,1.333,3,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
 */
 @mixin heading-2xl {
 	@include font-syne;
 
-	font-size: clamp(3.9063rem, 1.5576rem + 11.7435vw, 10.6588rem);
+	font-size: clamp(3.9063rem, 1.2582rem + 13.2402vw, 10.6588rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-xl {
 	@include font-syne;
 
-	font-size: clamp(3.125rem, 1.4307rem + 8.4717vw, 7.9963rem);
+	font-size: clamp(3.125rem, 1.2147rem + 9.5515vw, 7.9963rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-l {
 	@include font-syne;
 
-	font-size: clamp(2.5rem, 1.283rem + 6.0848vw, 5.9988rem);
+	font-size: clamp(2.5rem, 1.1279rem + 6.8603vw, 5.9988rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-r {
 	@include font-syne;
 
-	font-size: clamp(2rem, 1.1304rem + 4.3478vw, 4.5rem);
+	font-size: clamp(2rem, 1.0196rem + 4.902vw, 4.5rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-s {
 	@include font-syne;
 
-	font-size: clamp(1.6rem, 0.9824rem + 3.088vw, 3.3756rem);
+	font-size: clamp(1.6rem, 0.9037rem + 3.4816vw, 3.3756rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin heading-xs {
 	@include font-syne;
 
-	font-size: clamp(1.28rem, 0.8443rem + 2.1783vw, 2.5325rem);
+	font-size: clamp(1.28rem, 0.7888rem + 2.4559vw, 2.5325rem);
 	font-weight: get-font-weight-value(semibold);
 }
 
 /*
 	Body text mixins
 
-	@link https://utopia.fyi/type/calculator?c=320,16,1.067,1240,20,1.125,2,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+	@link https://utopia.fyi/type/calculator?c=320,16,1.067,1136,20,1.125,2,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
 */
 @mixin body-xl {
 	@include font-opensans;
 
-	font-size: clamp(1.1388rem, 0.9846rem + 0.7707vw, 1.5819rem);
+	font-size: clamp(1.1388rem, 0.965rem + 0.8689vw, 1.5819rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin body-l {
 	@include font-opensans;
 
-	font-size: clamp(1.0669rem, 0.9488rem + 0.5902vw, 1.4063rem);
+	font-size: clamp(1.0669rem, 0.9338rem + 0.6654vw, 1.4063rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin body-r {
 	@include font-opensans;
 
-	font-size: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+	font-size: clamp(1rem, 0.902rem + 0.4902vw, 1.25rem);
 	font-weight: get-font-weight-value(regular);
 }
 @mixin body-s {
 	@include font-opensans;
 
-	font-size: clamp(0.9375rem, 0.8771rem + 0.3022vw, 1.1113rem);
+	font-size: clamp(0.9375rem, 0.8694rem + 0.3407vw, 1.1113rem);
 	font-weight: get-font-weight-value(regular);
 }
 @mixin body-xs {
 	@include font-opensans;
 
-	font-size: clamp(0.8781rem, 0.8401rem + 0.1902vw, 0.9875rem);
+	font-size: clamp(0.8781rem, 0.8352rem + 0.2145vw, 0.9875rem);
 	font-weight: get-font-weight-value(regular);
 }
 
 /*
 	Interface text mixins
 
-	@link https://utopia.fyi/type/calculator?c=320,16,1.067,1240,18,1.125,5,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+	@link https://utopia.fyi/type/calculator?c=320,16,1.125,1136,24,1.2,2,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
 */
 @mixin interface-xl {
 	@include font-opensans;
 
 	white-space: nowrap;
 	letter-spacing: 3.2px;
-	font-size: clamp(1.8rem, 1.7467rem + 0.2663vw, 1.9531rem);
+	font-size: clamp(1.2656rem, 0.9149rem + 1.7537vw, 2.16rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin interface-l {
@@ -109,7 +109,7 @@
 
 	white-space: nowrap;
 	letter-spacing: 3.2px;
-	font-size: clamp(1.5rem, 1.4783rem + 0.1087vw, 1.5625rem);
+	font-size: clamp(1.125rem, 0.8603rem + 1.3235vw, 1.8rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin interface-r {
@@ -117,7 +117,7 @@
 
 	white-space: nowrap;
 	letter-spacing: 3.2px;
-	font-size: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
+	font-size: clamp(1rem, 0.8039rem + 0.9804vw, 1.5rem);
 	font-weight: get-font-weight-value(semibold);
 }
 @mixin interface-s {
@@ -125,7 +125,7 @@
 
 	white-space: nowrap;
 	letter-spacing: 3.2px;
-	font-size: clamp(1rem, 1.0564rem + -0.0728vw, 1.0419rem);
+	font-size: clamp(0.8888rem, 0.7471rem + 0.7083vw, 1.25rem);
 	font-weight: get-font-weight-value(bold);
 }
 @mixin interface-xs {
@@ -133,6 +133,6 @@
 
 	white-space: nowrap;
 	letter-spacing: 3.2px;
-	font-size: clamp(0.8rem, 0.8918rem + -0.1185vw, 0.8681rem);
+	font-size: clamp(0.79rem, 0.6912rem + 0.4939vw, 1.0419rem);
 	font-weight: get-font-weight-value(bold);
 }
