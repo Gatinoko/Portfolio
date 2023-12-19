@@ -32,7 +32,7 @@ export default function Navigation(props: Props) {
 				<div className='logo-button-container'>
 					{/* Logo */}
 					<a
-						className='nav-logo'
+						className='logo'
 						href='#IntroSection'>
 						<Logo />
 					</a>
@@ -42,14 +42,14 @@ export default function Navigation(props: Props) {
 						<li>
 							<Button
 								className='tech-and-skills-button'
-								size={'extra-small'}
+								size={'small'}
 								text='Tech & Skills'
 							/>
 						</li>
 						<li>
 							<Button
 								className='projects-button'
-								size={'extra-small'}
+								size={'small'}
 								text='Projects'
 							/>
 						</li>
