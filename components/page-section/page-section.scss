@@ -3,11 +3,10 @@
 .page-section {
 	display: flex;
 	flex-direction: column;
-	gap: get-spacing-value(spacing-16);
-	padding: 0px get-spacing-value(spacing-64) 0px get-spacing-value(spacing-64);
+	gap: 1rem;
+	align-items: center;
 
-	@include screen-breakpoint(mobile, tablet) {
-		gap: get-spacing-value(spacing-4);
-		padding: 0px get-spacing-value(spacing-16) 0px get-spacing-value(spacing-16);
+	.section-title {
+		text-align: center;
 	}
 }
