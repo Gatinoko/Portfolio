@@ -7,7 +7,7 @@
 		flex-direction: column;
 		justify-content: center;
 		width: 100%;
-		gap: get-spacing-value(spacing-8);
+		gap: 0.5rem;
 
 		&::before {
 			content: '';
@@ -24,30 +24,25 @@
 
 	.date {
 		& {
-			width: 7.5rem;
 			position: absolute;
+			width: 5rem;
 			text-align: center;
-			word-break: keep-all;
-			left: -9rem;
-			font-weight: lighter;
-			color: #ffffff80;
+			left: -7rem;
+			color: get-color-value(white-ffffff-50);
 
-			@include screen-breakpoint(mobile, tablet) {
-				left: -8.25rem;
+			@include screen-breakpoint(tablet) {
+				left: -6.75rem;
+			}
+			@include screen-breakpoint(mobile) {
+				left: -6.5rem;
 			}
 		}
-	}
-
-	.subtitle {
-		width: fit-content;
-	}
-
-	.description {
 	}
 
 	.icons {
 		display: flex;
 		flex-wrap: wrap;
-		gap: get-spacing-value(spacing-8);
+		gap: 0.5rem;
+		width: fit-content;
 	}
 }
