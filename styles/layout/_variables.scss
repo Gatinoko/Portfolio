@@ -21,7 +21,7 @@ $SCREEN-BREAKPOINTS: (
 	),
 );
 
-/* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1136,24,1.25,2,2,&s=0.75|0.5|0.25,1.5|2|3|4|5|6|8|10|11|12,s-5xl&g=s,l,xl,12 */
+/* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1136,24,1.25,2,2,768-1024&s=0.75|0.5|0.25,1.5|2|3|4|5|6|8|10|11|12,s-2xl|s-4xl|s-5xl&g=s,l,xl,12 */
 $RESPONSIVE-SPACING-SIZES: (
 	default: (
 		// Space 3xs: 4px → 6px
@@ -66,6 +66,10 @@ $RESPONSIVE-SPACING-SIZES: (
 		spacing-3xl-4xl: clamp(5rem, 3.4314rem + 7.8431vw, 9rem),
 	),
 	custom-pairs: (
+		// Space s-2xl: 16px → 96px
+		spacing-s-2xl: clamp(1rem, -0.9608rem + 9.8039vw, 6rem),
+		// Space s-4xl: 16px → 144px
+		spacing-s-4xl: clamp(1rem, -2.1373rem + 15.6863vw, 9rem),
 		// Space s-5xl: 16px → 192px
 		spacing-s-5xl: clamp(1rem, -3.3137rem + 21.5686vw, 12rem),
 	),
