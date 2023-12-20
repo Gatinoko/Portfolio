@@ -2,16 +2,14 @@
 
 $margin-left: 0px;
 $margin-right: 0px;
-$gutter: 16px;
+$gutter: 1rem;
 
 .colgrid {
 	position: relative;
 	width: fit-content;
 	height: 100%;
-	// min-width: 320px;
 	max-width: 1136px;
 	gap: $gutter;
-	// padding: 0px $gutter 0px $gutter;
 	top: 0;
 	left: 0;
 	display: flex;
@@ -49,6 +47,42 @@ $gutter: 16px;
 				display: auto;
 			}
 		}
+		@include screen-breakpoint(large) {
+			.col12,
+			.col11,
+			.col10,
+			.col9 {
+				display: none;
+			}
+
+			.col8,
+			.col7,
+			.col6,
+			.col4,
+			.col3,
+			.col2,
+			.col1 {
+				width: 80px;
+			}
+		}
+		@include screen-breakpoint(small) {
+			.col12,
+			.col11,
+			.col10,
+			.col9 {
+				display: none;
+			}
+
+			.col8,
+			.col7,
+			.col6,
+			.col4,
+			.col3,
+			.col2,
+			.col1 {
+				width: 71px;
+			}
+		}
 		@include screen-breakpoint(tablet) {
 			.col12,
 			.col11,
@@ -57,6 +91,14 @@ $gutter: 16px;
 			.col8,
 			.col7 {
 				display: none;
+			}
+
+			.col6,
+			.col4,
+			.col3,
+			.col2,
+			.col1 {
+				width: 77px;
 			}
 		}
 		@include screen-breakpoint(mobile) {
@@ -69,6 +111,13 @@ $gutter: 16px;
 			.col6,
 			.col5 {
 				display: none;
+			}
+
+			.col4,
+			.col3,
+			.col2,
+			.col1 {
+				width: 60px;
 			}
 		}
 	}
