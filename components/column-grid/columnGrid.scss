@@ -45,6 +45,7 @@ $gutter: 1rem;
 			.col2,
 			.col1 {
 				display: auto;
+				width: 80px;
 			}
 		}
 		@include screen-breakpoint(large) {

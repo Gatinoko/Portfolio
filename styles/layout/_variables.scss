@@ -17,6 +17,10 @@ $SCREEN-BREAKPOINTS: (
 	),
 	extra-large: (
 		min: 1137px,
+		max: 1920px,
+	),
+	ultra-wide: (
+		min: 1921px,
 		max: 99999px,
 	),
 );
