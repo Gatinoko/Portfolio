@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import '@/styles/globals.scss';
 import type { AppProps } from 'next/app';
-import Navigation from '@/components/navigation/Navigation';
+import Navigation from '@/components/navigation/navigation';
 import NavButton from '@/components/navigation/nav-button/nav-button';
 import Footer from '@/components/footer/footer';
 

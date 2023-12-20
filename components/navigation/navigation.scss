@@ -4,10 +4,13 @@
 	& {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+
 		height: fit-content;
 		width: 100%;
-		position: fixed;
+		z-index: 1;
 
+		position: fixed;
 		left: 0;
 		top: 0;
 
@@ -20,16 +23,24 @@
 		& {
 			display: flex;
 			justify-content: space-between;
-			z-index: 2;
+			box-sizing: border-box;
+
+			padding: get-spacing-value(spacing-16)
+				get-responsive-spacing-value(custom-pairs, spacing-s-2xl)
+				get-spacing-value(spacing-16)
+				get-responsive-spacing-value(custom-pairs, spacing-s-2xl);
+
 			width: 100%;
 			height: fit-content;
+
 			background-color: #262626;
 		}
 
 		.logo {
 			& {
-				padding: get-spacing-value(spacing-16);
+				// padding: get-spacing-value(spacing-16);
 				width: fit-content;
+				// padding: 18px;
 			}
 
 			.logo-svg {
@@ -41,9 +52,11 @@
 			& {
 				display: flex;
 				gap: get-spacing-value(spacing-16);
-				margin: 0;
-				padding: get-spacing-value(spacing-16);
 				align-self: center;
+
+				margin: 0;
+				padding: 0;
+
 				list-style-type: none;
 
 				@include screen-breakpoint(mobile, tablet) {
@@ -62,13 +75,13 @@
 			@include screen-breakpoint(mobile, tablet) {
 				display: flex;
 				align-self: center;
-				margin: 8px;
 			}
 		}
 	}
 
 	.nav-list {
 		display: none;
+
 		@include screen-breakpoint(mobile, tablet) {
 			display: flex;
 			flex-direction: column;
@@ -78,7 +91,7 @@
 			height: fit-content;
 
 			position: absolute;
-			z-index: 1;
+			z-index: -1;
 
 			background-color: rebeccapurple;
 		}
