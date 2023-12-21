@@ -5,21 +5,25 @@ $margin-right: 0px;
 $gutter: 1rem;
 
 .colgrid {
-	position: relative;
-	width: fit-content;
-	height: 100%;
-	max-width: 1136px;
-	gap: $gutter;
-	top: 0;
-	left: 0;
-	display: flex;
-	justify-content: space-evenly;
-	background-color: rgba(255, 192, 203, 0.233);
+	& {
+		position: relative;
+		width: fit-content;
+		height: 100%;
+		max-width: 1136px;
+		gap: $gutter;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: space-evenly;
+		background-color: rgba(255, 192, 203, 0.233);
+	}
 
 	.col {
-		width: 80px;
-		height: 100%;
-		background-color: rgba(210, 36, 216, 0.418);
+		& {
+			width: 80px;
+			height: 100%;
+			background-color: rgba(210, 36, 216, 0.418);
+		}
 
 		&:first-child {
 			margin-left: $margin-left;
