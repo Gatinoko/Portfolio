@@ -11,6 +11,7 @@
 
 	padding: 0 get-responsive-spacing-value(custom-pairs, spacing-s-5xl) 0
 		get-responsive-spacing-value(custom-pairs, spacing-s-5xl);
+	padding-top: get-responsive-spacing-value(one-up-pairs, spacing-s-m);
 }
 
 .information-page {
@@ -27,18 +28,11 @@
 
 	align-items: center;
 	height: fit-content;
-	gap: get-spacing-value(spacing-64);
+	gap: get-spacing-value(spacing-128);
 
 	background-color: rgb(0, 0, 0);
-	padding-top: get-responsive-spacing-value(one-up-pairs, spacing-2xl-3xl);
 
-	@include screen-breakpoint(tablet, mobile) {
-		padding-top: get-responsive-spacing-value(one-up-pairs, spacing-m-l);
-	}
-	@include screen-breakpoint(tablet) {
-		gap: get-spacing-value(spacing-48);
-	}
-	@include screen-breakpoint(mobile) {
+	@include screen-breakpoint(mobile, tablet) {
 		gap: get-spacing-value(spacing-48);
 	}
 }

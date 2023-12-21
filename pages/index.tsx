@@ -1,20 +1,16 @@
-import RevealAnimation from '@/utilities/reveal-animation';
 import PageSection from '@/components/page-section/page-section';
-import Icon, { IconSizes } from '@/components/icon/icon';
-import Chip from '@/components/chipCloud/chip/chip';
+import Icon from '@/components/icon/icon';
 import ChipCloud from '@/components/chipCloud/chipCloud';
 import WorkTimeline from '@/components/work-timeline/work-timeline';
 import TimelineItem from '@/components/work-timeline/timeline-item/timeline-item';
 import ProjectItem from '@/components/project-box/project-item/project-item';
 import ProjectBox from '@/components/project-box/project-box';
 import TimelineSubitem from '@/components/work-timeline/timeline-subitem/timeline-subitem';
-import Button from '@/components/button/button';
-import ColumnGrid from '@/components/column-grid/column-grid';
 
 export default function Index(props: any, rootMainRef: any) {
 	return (
 		<>
-			<ColumnGrid platform={'responsive'} />
+			{/* <ColumnGrid platform={'responsive'} /> */}
 			<main
 				className={'main'}
 				id='root-main'>
@@ -261,32 +257,32 @@ export default function Index(props: any, rootMainRef: any) {
 							website, where the user could create, read, edit, and delete game tournaments`}
 								icons={[
 									<Icon
-										key={'1'}
+										key={'projectItemIcon-1'}
 										name={'nodejs'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'1'}
+										key={'projectItemIcon-2'}
 										name={'angular'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'1'}
+										key={'projectItemIcon-3'}
 										name={'html5'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'1'}
+										key={'projectItemIcon-4'}
 										name={'css3'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'1'}
+										key={'projectItemIcon-5'}
 										name={'mongodb'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'1'}
+										key={'projectItemIcon-6'}
 										name={'express'}
 										size={'small'}
 									/>,
@@ -299,32 +295,32 @@ export default function Index(props: any, rootMainRef: any) {
 								description={`Created a website with information about my projects, services, contact information, and a login page`}
 								icons={[
 									<Icon
-										key={'1'}
+										key={'projectItemIcon-1'}
 										name={'nodejs'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'1'}
+										key={'projectItemIcon-2'}
 										name={'html5'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'1'}
+										key={'projectItemIcon-3'}
 										name={'css3'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'1'}
+										key={'projectItemIcon-4'}
 										name={'mongodb'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'1'}
+										key={'projectItemIcon-5'}
 										name={'express'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'1'}
+										key={'projectItemIcon-6'}
 										name={'ejs'}
 										size={'small'}
 									/>,
@@ -338,12 +334,12 @@ export default function Index(props: any, rootMainRef: any) {
 								information, delete music, and play the user’s selected music`}
 								icons={[
 									<Icon
-										key={'1'}
+										key={'projectItemIcon-1'}
 										name={'nodejs'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'1'}
+										key={'projectItemIcon-2'}
 										name={'angular'}
 										size={'small'}
 									/>,
