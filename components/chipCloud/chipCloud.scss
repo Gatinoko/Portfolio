@@ -5,7 +5,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
-		gap: get-spacing-value(spacing-8);
+		gap: 0.5rem;
 
 		position: relative;
 		padding: 0;
@@ -16,23 +16,23 @@
 	}
 
 	& li .chip[id='1'] {
-		font-size: clamp(1rem, 1rem, 2rem);
-		opacity: 30%;
+		@include interface-xs;
+		opacity: 45%;
 	}
 	& li .chip[id='2'] {
-		font-size: clamp(1rem, 1rem, 2.25rem);
-		opacity: 40%;
+		@include interface-s;
+		opacity: 55%;
 	}
 	& li .chip[id='3'] {
-		font-size: clamp(1rem, 1rem, 2.5rem);
-		opacity: 60%;
+		@include interface-r;
+		opacity: 70%;
 	}
 	& li .chip[id='4'] {
-		font-size: clamp(1rem, 1rem, 2.75rem);
-		opacity: 80%;
+		@include interface-l;
+		opacity: 85%;
 	}
 	& li .chip[id='5'] {
-		font-size: clamp(1rem, 1rem, 3rem);
+		@include interface-xl;
 		opacity: 100%;
 	}
 }

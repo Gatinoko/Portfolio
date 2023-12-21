@@ -2,21 +2,14 @@ import { cva } from 'class-variance-authority';
 import React from 'react';
 import Chip, { ChipSizes } from './chip/chip';
 
-export type ChipCloudSizes =
-	| 'extra-large'
-	| 'large'
-	| 'regular'
-	| 'small'
-	| 'extra-small';
-
-interface IChipCloud {
+interface ChipCloudProps {
 	itemArray: {
 		key?: string | number;
 		text: string;
 		weight: number;
 		link?: string;
 	}[];
-	size: ChipCloudSizes;
+	size: ChipSizes;
 	className?: string;
 }
 
@@ -36,33 +29,16 @@ const chipCloud = cva('chipCloud', {
 	},
 });
 
-export default function ChipCloud(props: IChipCloud) {
+export default function ChipCloud(props: ChipCloudProps) {
 	const { itemArray, size, className = '' } = props;
-
-	function assignChipSize(itemWeight: number): ChipSizes {
-		switch (itemWeight) {
-			case 1:
-				return 'extra-small' as ChipSizes;
-			case 2:
-				return 'small' as ChipSizes;
-			case 3:
-				return 'regular' as ChipSizes;
-			case 4:
-				return 'large' as ChipSizes;
-			case 5:
-				return 'extra-large' as ChipSizes;
-			default:
-				return 'regular' as ChipSizes;
-		}
-	}
 
 	return (
 		<ul
 			role='navigation'
 			aria-label='Tag cloud'
 			className={`${chipCloud({ size })} ${className}`}>
-			{itemArray.map((item) => (
-				<li key={item.key}>
+			{itemArray.map((item, index) => (
+				<li key={`chip-${index}`}>
 					{Object.hasOwnProperty.call(item, 'link') ? (
 						<Chip
 							id={item.weight}
