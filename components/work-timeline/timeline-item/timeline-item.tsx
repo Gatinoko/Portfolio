@@ -39,7 +39,7 @@ export default function TimelineItem(props: TimelineItemProps) {
 				<div className='subitem-container'>
 					{subitemArray.map(({ key, props, type }, index) => (
 						<TimelineSubitem
-							key={index}
+							key={`subItem-${index}`}
 							startDate={props.startDate}
 							endDate={props.endDate}
 							subtitle={props.subtitle}
