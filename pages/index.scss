@@ -4,31 +4,41 @@
 	display: flex;
 	flex-direction: column;
 
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
-	min-height: fit-content;
+
+	min-height: 50%;
+
+	padding: 0 get-responsive-spacing-value(custom-pairs, spacing-s-5xl) 0
+		get-responsive-spacing-value(custom-pairs, spacing-s-5xl);
 }
 
 .information-page {
 	align-items: center;
 	justify-content: center;
+
+	padding: 0 get-responsive-spacing-value(custom-pairs, spacing-s-5xl) 0
+		get-responsive-spacing-value(custom-pairs, spacing-s-5xl);
 }
 
 .main {
 	display: flex;
 	flex-direction: column;
-	padding: get-spacing-value(spacing-64) get-spacing-value(spacing-24);
+
 	align-items: center;
 	height: fit-content;
 	gap: get-spacing-value(spacing-64);
-	background-color: rgb(0, 0, 0);
 
+	background-color: rgb(0, 0, 0);
+	padding-top: get-responsive-spacing-value(one-up-pairs, spacing-2xl-3xl);
+
+	@include screen-breakpoint(tablet, mobile) {
+		padding-top: get-responsive-spacing-value(one-up-pairs, spacing-m-l);
+	}
 	@include screen-breakpoint(tablet) {
-		padding: get-spacing-value(spacing-24);
 		gap: get-spacing-value(spacing-48);
 	}
 	@include screen-breakpoint(mobile) {
-		padding: get-spacing-value(spacing-8);
 		gap: get-spacing-value(spacing-48);
 	}
 }
