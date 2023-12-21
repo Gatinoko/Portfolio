@@ -12,6 +12,10 @@ const button = cva('button', {
 			small: 'small',
 			['extra-small']: 'extra-small',
 		},
+		variant: {
+			default: 'default',
+			flat: 'flat',
+		},
 	},
 	defaultVariants: {
 		size: 'regular',
@@ -28,6 +32,7 @@ export type ButtonSizes =
 export type ButtonProps = {
 	text?: string;
 	size: ButtonSizes;
+	variant: 'default' | 'flat';
 	prefixIcon?: string;
 	suffixIcon?: string;
 	className?: string;
@@ -40,6 +45,7 @@ export default function Button(props: ButtonProps) {
 	let {
 		text,
 		size,
+		variant = 'default',
 		className = '',
 		prefixIcon,
 		suffixIcon,
@@ -67,7 +73,7 @@ export default function Button(props: ButtonProps) {
 
 	return (
 		<button
-			className={`${className} ${button({ size })}`}
+			className={`${className} ${button({ size, variant })}`}
 			onClick={buttonClick}
 			{...extraProps}>
 			{/* Prefix icon */}

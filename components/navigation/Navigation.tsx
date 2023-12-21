@@ -40,6 +40,7 @@ export default function Navigation({ navButtons }: NavigationProps) {
 							className='tech-and-skills-button'
 							size={'extra-small'}
 							text='Tech & Skills'
+							variant={'flat'}
 						/>
 					</li>
 					<li>
@@ -47,6 +48,7 @@ export default function Navigation({ navButtons }: NavigationProps) {
 							className='projects-button'
 							size={'extra-small'}
 							text='Projects'
+							variant={'flat'}
 						/>
 					</li>
 				</ul>
@@ -57,6 +59,7 @@ export default function Navigation({ navButtons }: NavigationProps) {
 					prefixIcon={'left-chevron'}
 					size={'small'}
 					onClick={() => setOpen(!open)}
+					variant={'flat'}
 				/>
 			</div>
 

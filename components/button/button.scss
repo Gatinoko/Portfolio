@@ -3,7 +3,7 @@
 .button {
 	@include flex-horizontal-layout;
 	@include flex-layout-perfectly-centered;
-	background-color: get-color-value(white-ffffff-15);
+	background-color: get-color-value(white-ffffff-5);
 	text-transform: uppercase;
 	padding: 0px;
 	border: 0px;
@@ -16,44 +16,52 @@
 	*/
 	&.extra-large {
 		@include interface-xl;
-		border-radius: 13px;
-		gap: 32px;
-		padding: 16px 24px;
+		border-radius: get-radius-value(radius-13);
+		gap: get-spacing-value(spacing-32);
+		padding: get-spacing-value(spacing-16) get-spacing-value(spacing-24);
 	}
 	&.large {
 		@include interface-l;
-		border-radius: 13px;
-		gap: 24px;
-		padding: 16px 24px;
+		border-radius: get-radius-value(radius-13);
+		gap: get-spacing-value(spacing-24);
+		padding: get-spacing-value(spacing-16) get-spacing-value(spacing-24);
 	}
 	&.regular {
 		@include interface-r;
-		border-radius: 9px;
-		gap: 16px;
-		padding: 8px 24px;
+		border-radius: get-radius-value(radius-9);
+		gap: get-spacing-value(spacing-16);
+		padding: get-spacing-value(spacing-8) get-spacing-value(spacing-24);
 	}
 	&.small {
 		@include interface-s;
-		border-radius: 7px;
-		gap: 16px;
-		padding: 8px 24px;
+		border-radius: get-radius-value(radius-7);
+		gap: get-spacing-value(spacing-16);
+		padding: get-spacing-value(spacing-8) get-spacing-value(spacing-24);
 	}
 	&.extra-small {
 		@include interface-xs;
-		border-radius: 7px;
-		gap: 16px;
-		padding: 8px 24px;
+		border-radius: get-radius-value(radius-7);
+		gap: get-spacing-value(spacing-16);
+		padding: get-spacing-value(spacing-8) get-spacing-value(spacing-24);
+	}
+
+	/*
+		Variants
+	*/
+	&.flat {
+		background-color: transparent;
 	}
 
 	/*
 		States
 	*/
-	&:hover {
-		// CSS transition properties
-		transition: background-color 150ms;
-		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
-
-		background-color: get-color-value(white-ffffff-35);
+	@media (hover: hover) {
+		&:hover {
+			// CSS transition properties
+			transition: background-color 150ms;
+			transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+			background-color: get-color-value(white-ffffff-15);
+		}
 	}
 	&:active {
 		background-color: rgb(0, 153, 255);
@@ -64,7 +72,6 @@
 		}
 		color: get-component-color-value(disabled);
 		text-decoration: none;
-
 		pointer-events: none;
 	}
 }

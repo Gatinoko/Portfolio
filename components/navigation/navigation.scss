@@ -10,13 +10,9 @@
 		width: 100%;
 		z-index: 1;
 
-		position: fixed;
+		position: sticky;
 		left: 0;
 		top: 0;
-
-		@include screen-breakpoint(mobile, tablet) {
-			position: sticky;
-		}
 	}
 
 	.logo-button-container {
