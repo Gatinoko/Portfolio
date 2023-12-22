@@ -15,9 +15,7 @@ export default function Index(props: any, rootMainRef: any) {
 				className={'main'}
 				id='root-main'>
 				{/* Intro section */}
-				<PageSection
-					id='IntroSection'
-					className={'index-title'}>
+				<PageSection id='IntroSection'>
 					<h1 style={{ width: '6ch' }}>Gabriel Tinoco.</h1>
 					<h4>Software Engineer & Designer</h4>
 					<hr />
@@ -30,9 +28,7 @@ export default function Index(props: any, rootMainRef: any) {
 				</PageSection>
 
 				{/* Tech & skills section */}
-				<PageSection
-					id='Tech&SkillsSection'
-					className={'information-page'}>
+				<PageSection id='Tech&SkillsSection'>
 					<h3 className='section-title'>Tech & Skills.</h3>
 					<hr />
 					<ChipCloud
@@ -84,9 +80,7 @@ export default function Index(props: any, rootMainRef: any) {
 				</PageSection>
 
 				{/* Timeline section */}
-				<PageSection
-					id='TimelineSection'
-					className={'information-page'}>
+				<PageSection id='TimelineSection'>
 					<h3 className='section-title'>Timeline</h3>
 					<hr />
 					<WorkTimeline
@@ -249,9 +243,7 @@ export default function Index(props: any, rootMainRef: any) {
 				</PageSection>
 
 				{/* Projects section */}
-				<PageSection
-					id='ProjectsSection'
-					className={'information-page'}>
+				<PageSection id='ProjectsSection'>
 					<h3 className='section-title'>Projects</h3>
 					<hr />
 					<ProjectBox

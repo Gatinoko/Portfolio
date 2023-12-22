@@ -1,29 +1,13 @@
 @use '../styles/modules.scss' as *;
 
-.index-title {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
-	min-height: 50%;
-	padding: get-responsive-spacing-value(one-up-pairs, spacing-s-m)
-		get-responsive-spacing-value(custom-pairs, spacing-s-5xl) 0
-		get-responsive-spacing-value(custom-pairs, spacing-s-5xl);
-}
-
-.information-page {
-	align-items: center;
-	justify-content: center;
-	padding: 0 get-responsive-spacing-value(custom-pairs, spacing-s-5xl) 0
-		get-responsive-spacing-value(custom-pairs, spacing-s-5xl);
-}
-
 .main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: fit-content;
-	gap: 8rem;
+	& {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: fit-content;
+		gap: 8rem;
+	}
 
 	@include screen-breakpoint(mobile, tablet) {
 		gap: 3rem;

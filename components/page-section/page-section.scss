@@ -2,12 +2,21 @@
 
 .page-section {
 	display: flex;
-	max-width: 1136px;
 	flex-direction: column;
-	gap: 1rem;
+	justify-content: center;
 	align-items: center;
+	max-width: 1136px;
+	gap: 1rem;
+	padding: 0 get-responsive-spacing-value(custom-pairs, spacing-s-5xl) 0
+		get-responsive-spacing-value(custom-pairs, spacing-s-5xl);
 
 	.section-title {
 		text-align: center;
+	}
+
+	&:first-child {
+		min-height: 50%;
+		align-items: flex-start;
+		padding-top: get-responsive-spacing-value(one-up-pairs, spacing-s-m);
 	}
 }
