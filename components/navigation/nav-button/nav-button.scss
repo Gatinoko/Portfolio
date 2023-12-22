@@ -44,8 +44,7 @@
 .nav-button {
 	@include nav-button-mixin;
 
-	padding: get-spacing-value(spacing-24) get-spacing-value(spacing-40)
-		get-spacing-value(spacing-24) get-spacing-value(spacing-40);
+	padding: 1.5rem 2rem 1.5rem 2rem;
 
 	.nav-button-text {
 		@include flex-horizontal-layout;
@@ -131,7 +130,7 @@
 	&:hover {
 		.nav-button-text {
 			color: get-color-value(white-ffffff);
-			padding-right: get-spacing-value(spacing-32);
+			padding-right: 2rem;
 
 			// CSS transition properties
 			transition: color 150ms, padding-right 150ms;

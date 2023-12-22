@@ -6,6 +6,7 @@ import TimelineItem from '@/components/work-timeline/timeline-item/timeline-item
 import ProjectItem from '@/components/project-box/project-item/project-item';
 import ProjectBox from '@/components/project-box/project-box';
 import TimelineSubitem from '@/components/work-timeline/timeline-subitem/timeline-subitem';
+import ColumnGrid from '@/components/column-grid/column-grid';
 
 export default function Index(props: any, rootMainRef: any) {
 	return (
@@ -38,39 +39,46 @@ export default function Index(props: any, rootMainRef: any) {
 					<ChipCloud
 						itemArray={[
 							{ text: 'TypeScript', weight: 5 },
-							{ text: 'Node', weight: 3 },
-							{ text: 'Angular', weight: 5 },
-							{ text: 'MySQL', weight: 1 },
+							{ text: 'Node.js', weight: 3 },
+							{ text: 'Angular', weight: 4 },
+							{ text: 'MySQL', weight: 3 },
 							{ text: 'GIT', weight: 4 },
 							{ text: 'CSS', weight: 5 },
-							{ text: 'Storybook', weight: 4 },
-							{ text: 'Java', weight: 3 },
+							{ text: 'Storybook', weight: 3 },
+							{ text: 'Java', weight: 2 },
 							{ text: 'Python', weight: 2 },
-							{ text: 'Spring', weight: 3 },
+							{ text: 'React', weight: 5 },
+							{ text: 'GraphQL', weight: 1 },
+							{ text: 'GitHub', weight: 5 },
+							{ text: 'Spring', weight: 2 },
 							{ text: 'MongoDB', weight: 3 },
 							{ text: 'JavaScript', weight: 5 },
 							{ text: 'Oracle SQL', weight: 1 },
-							{ text: 'JWT', weight: 3 },
+							{ text: 'JWT', weight: 5 },
 							{ text: 'Prettier', weight: 3 },
-							{ text: 'ESLint', weight: 3 },
+							{ text: 'NextUI', weight: 4 },
+							{ text: 'ESLint', weight: 2 },
 							{ text: 'Nodemon', weight: 3 },
 							{ text: 'Sass', weight: 5 },
-							{ text: 'GitHub', weight: 4 },
 							{ text: 'Next.js', weight: 5 },
 							{ text: 'CVA', weight: 3 },
-							{ text: 'React', weight: 5 },
-							{ text: 'GraphQL', weight: 2 },
 							{ text: 'HTML', weight: 5 },
-							{ text: 'Lodash', weight: 1 },
 							{ text: 'Jira', weight: 4 },
 							{ text: 'Jenkins', weight: 2 },
 							{ text: 'Express.js', weight: 3 },
-							{ text: 'CSHARP', weight: 4 },
+							{ text: 'CSHARP', weight: 1 },
 							{ text: 'XML', weight: 2 },
 							{ text: 'JSON', weight: 4 },
+							{ text: 'Passport.js', weight: 2 },
+							{ text: 'Adobe Premiere', weight: 3 },
+							{ text: 'Prisma', weight: 4 },
+							{ text: 'Vercel', weight: 3 },
+							{ text: 'AWS', weight: 3 },
 							{ text: 'Figma', weight: 5 },
+							{ text: 'Planetscale', weight: 1 },
+							{ text: 'Tailwindcss', weight: 4 },
 							{ text: 'Adobe Photoshop', weight: 5 },
-							{ text: 'Adobe Premiere', weight: 4 },
+							{ text: 'Zod', weight: 3 },
 						]}
 						size='regular'
 					/>

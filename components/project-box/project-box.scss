@@ -1,11 +1,14 @@
 @use '../../styles/modules.scss' as *;
 
 .project-box {
-	display: flex;
-	justify-content: center;
-	gap: get-spacing-value(spacing-16);
-	flex-wrap: wrap;
-	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1rem;
 	padding: 0px;
 	margin: 0px;
+	width: 100%;
+
+	@include screen-breakpoint(mobile, tablet, small) {
+		grid-template-columns: 1fr;
+	}
 }

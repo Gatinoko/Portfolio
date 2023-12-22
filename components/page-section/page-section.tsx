@@ -3,7 +3,7 @@ import styles from './page-section.module.scss';
 
 import React, { LegacyRef, ReactNode, forwardRef } from 'react';
 
-interface IPageSection {
+interface PageSectionProps {
 	children: ReactNode;
 	id: string;
 	className?: string;
@@ -13,7 +13,7 @@ export default function ContentSection({
 	children,
 	id,
 	className,
-}: IPageSection) {
+}: PageSectionProps) {
 	return (
 		<section
 			id={id}

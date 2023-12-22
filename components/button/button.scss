@@ -1,8 +1,8 @@
 @use '../../styles/modules.scss' as *;
 
 .button {
-	@include flex-horizontal-layout;
-	@include flex-layout-perfectly-centered;
+	display: flex;
+	justify-items: center;
 	background-color: get-color-value(white-ffffff-5);
 	text-transform: uppercase;
 	padding: 0px;
@@ -17,32 +17,32 @@
 	&.extra-large {
 		@include interface-xl;
 		border-radius: get-radius-value(radius-13);
-		gap: get-spacing-value(spacing-32);
-		padding: get-spacing-value(spacing-16) get-spacing-value(spacing-24);
+		gap: 2rem;
+		padding: 1rem 1.5rem;
 	}
 	&.large {
 		@include interface-l;
 		border-radius: get-radius-value(radius-13);
-		gap: get-spacing-value(spacing-24);
-		padding: get-spacing-value(spacing-16) get-spacing-value(spacing-24);
+		gap: 1.5rem;
+		padding: 1rem 1.5rem;
 	}
 	&.regular {
 		@include interface-r;
 		border-radius: get-radius-value(radius-9);
-		gap: get-spacing-value(spacing-16);
-		padding: get-spacing-value(spacing-8) get-spacing-value(spacing-24);
+		gap: 1rem;
+		padding: 0.5rem 1.5rem;
 	}
 	&.small {
 		@include interface-s;
 		border-radius: get-radius-value(radius-7);
-		gap: get-spacing-value(spacing-16);
-		padding: get-spacing-value(spacing-8) get-spacing-value(spacing-24);
+		gap: 1rem;
+		padding: 0.5rem 1.5rem;
 	}
 	&.extra-small {
 		@include interface-xs;
 		border-radius: get-radius-value(radius-7);
-		gap: get-spacing-value(spacing-16);
-		padding: get-spacing-value(spacing-8) get-spacing-value(spacing-24);
+		gap: 1rem;
+		padding: 0.5rem 1.5rem;
 	}
 
 	/*
@@ -57,7 +57,6 @@
 	*/
 	@media (hover: hover) {
 		&:hover {
-			// CSS transition properties
 			transition: background-color 150ms;
 			transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 			background-color: get-color-value(white-ffffff-15);

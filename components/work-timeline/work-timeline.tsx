@@ -1,6 +1,5 @@
-import { cva } from 'class-variance-authority';
-import React, { PropsWithChildren, ReactElement } from 'react';
-import TimelineItem, { TimelineItemProps } from './timeline-item/timeline-item';
+import React, { ReactElement } from 'react';
+import { TimelineItemProps } from './timeline-item/timeline-item';
 
 interface WorkTimelineProps {
 	className?: string;

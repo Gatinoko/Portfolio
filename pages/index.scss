@@ -3,21 +3,17 @@
 .index-title {
 	display: flex;
 	flex-direction: column;
-
 	align-items: flex-start;
 	justify-content: center;
-
 	min-height: 50%;
-
-	padding: 0 get-responsive-spacing-value(custom-pairs, spacing-s-5xl) 0
+	padding: get-responsive-spacing-value(one-up-pairs, spacing-s-m)
+		get-responsive-spacing-value(custom-pairs, spacing-s-5xl) 0
 		get-responsive-spacing-value(custom-pairs, spacing-s-5xl);
-	padding-top: get-responsive-spacing-value(one-up-pairs, spacing-s-m);
 }
 
 .information-page {
 	align-items: center;
 	justify-content: center;
-
 	padding: 0 get-responsive-spacing-value(custom-pairs, spacing-s-5xl) 0
 		get-responsive-spacing-value(custom-pairs, spacing-s-5xl);
 }
@@ -25,14 +21,12 @@
 .main {
 	display: flex;
 	flex-direction: column;
-
 	align-items: center;
 	height: fit-content;
-	gap: get-spacing-value(spacing-128);
-
+	gap: 8rem;
 	background-color: rgb(0, 0, 0);
 
 	@include screen-breakpoint(mobile, tablet) {
-		gap: get-spacing-value(spacing-48);
+		gap: 3rem;
 	}
 }

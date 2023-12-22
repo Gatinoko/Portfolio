@@ -39,7 +39,7 @@ export default function ChipCloud(props: ChipCloudProps) {
 			className={`${chipCloud({ size })} ${className}`}>
 			{itemArray.map((item, index) => (
 				<li key={`chip-${index}`}>
-					{Object.hasOwnProperty.call(item, 'link') ? (
+					{'link' in item ? (
 						<Chip
 							id={item.weight}
 							text={item.text}

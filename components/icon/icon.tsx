@@ -7,7 +7,7 @@ export type IconSizes =
 	| 'small'
 	| 'extra-small';
 
-export interface IIcon {
+export interface IconProps {
 	name: string;
 	size: IconSizes;
 	className?: string;
@@ -26,7 +26,7 @@ const icon = cva('svg', {
 	},
 });
 
-export default function Icon(props: IIcon) {
+export default function Icon(props: IconProps) {
 	const { name = 'default', size = 'regular', className, onClick } = props;
 
 	const customClassValue = `${className ? className : ''}`;

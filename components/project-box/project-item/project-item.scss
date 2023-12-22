@@ -3,15 +3,14 @@
 .project-item {
 	& {
 		display: flex;
-		width: 45%;
+		gap: 1rem;
+		width: 100%;
 		background-color: get-color-value(white-ffffff-15);
-		border-radius: 2.5rem;
+		border-radius: 1rem;
 		overflow: hidden;
 		justify-content: center;
-
-		@include screen-breakpoint(mobile, tablet) {
-			width: 100%;
-		}
+		box-sizing: border-box;
+		padding: 1rem;
 	}
 
 	.cover-image {
@@ -24,9 +23,7 @@
 		& {
 			display: flex;
 			flex-direction: column;
-			gap: get-spacing-value(spacing-16);
-			padding: get-spacing-value(spacing-16);
-			width: 70%;
+			gap: 1rem;
 		}
 
 		.title {
@@ -39,14 +36,13 @@
 
 		.tech-icons {
 			display: flex;
-			gap: get-spacing-value(spacing-8);
+			gap: 0.5rem;
 		}
 	}
 
 	.icon-links {
 		display: flex;
 		flex-direction: column;
-		gap: get-spacing-value(spacing-16);
-		padding: get-spacing-value(spacing-16);
+		gap: 1rem;
 	}
 }
