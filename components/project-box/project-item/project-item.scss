@@ -6,11 +6,16 @@
 		gap: 1rem;
 		width: 100%;
 		background-color: get-color-value(white-ffffff-15);
-		border-radius: 1rem;
 		overflow: hidden;
 		justify-content: center;
 		box-sizing: border-box;
-		padding: 1rem;
+		padding: get-responsive-spacing-value(default, spacing-s);
+		border-width: 1px;
+		border-style: solid;
+		border-radius: get-radius-value(radius-13);
+		border-color: get-color-value(white-ffffff-5)
+			get-color-value(white-ffffff-5) get-color-value(white-ffffff-15)
+			get-color-value(white-ffffff-5);
 	}
 
 	.cover-image {

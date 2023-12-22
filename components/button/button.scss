@@ -1,15 +1,22 @@
 @use '../../styles/modules.scss' as *;
 
 .button {
-	display: flex;
-	justify-items: center;
-	background-color: get-color-value(white-ffffff-5);
-	text-transform: uppercase;
-	padding: 0px;
-	border: 0px;
-	user-select: none;
-	fill: get-color-value(white-ffffff);
-	color: get-color-value(white-ffffff);
+	& {
+		display: flex;
+		justify-items: center;
+		background-color: get-color-value(white-ffffff-5);
+		text-transform: uppercase;
+		padding: 0px;
+		border: 0px;
+		user-select: none;
+		fill: get-color-value(white-ffffff);
+		color: get-color-value(white-ffffff);
+		border-width: 1px;
+		border-style: solid;
+		border-color: get-color-value(white-ffffff-5)
+			get-color-value(white-ffffff-5) get-color-value(white-ffffff-15)
+			get-color-value(white-ffffff-5);
+	}
 
 	/*
 		Sizes
@@ -49,7 +56,32 @@
 		Variants
 	*/
 	&.flat {
-		background-color: transparent;
+		& {
+			background-color: transparent;
+			border-width: 1px;
+			border-style: solid;
+			border-color: get-color-value(transparent-ffffff);
+		}
+
+		/*
+			"Flat" variant custom states
+		*/
+		@media (hover: hover) {
+			&:hover {
+				transition: background-color 150ms;
+				transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+				background-color: get-color-value(white-ffffff-15);
+
+				border-width: 1px;
+				border-style: solid;
+				border-color: get-color-value(white-ffffff-5)
+					get-color-value(white-ffffff-5) get-color-value(white-ffffff-15)
+					get-color-value(white-ffffff-5);
+			}
+		}
+		&:active {
+			background-color: rgb(0, 153, 255);
+		}
 	}
 
 	/*

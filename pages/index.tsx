@@ -6,7 +6,6 @@ import TimelineItem from '@/components/work-timeline/timeline-item/timeline-item
 import ProjectItem from '@/components/project-box/project-item/project-item';
 import ProjectBox from '@/components/project-box/project-box';
 import TimelineSubitem from '@/components/work-timeline/timeline-subitem/timeline-subitem';
-import ColumnGrid from '@/components/column-grid/column-grid';
 
 export default function Index(props: any, rootMainRef: any) {
 	return (

@@ -24,7 +24,6 @@
 	align-items: center;
 	height: fit-content;
 	gap: 8rem;
-	background-color: rgb(0, 0, 0);
 
 	@include screen-breakpoint(mobile, tablet) {
 		gap: 3rem;
