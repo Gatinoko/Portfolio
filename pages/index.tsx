@@ -1,6 +1,6 @@
 import PageSection from '@/components/page-section/page-section';
 import Icon from '@/components/icon/icon';
-import ChipCloud from '@/components/chipCloud/chipCloud';
+import ChipCloud from '@/components/chip-cloud/chip-cloud';
 import WorkTimeline from '@/components/work-timeline/work-timeline';
 import TimelineItem from '@/components/work-timeline/timeline-item/timeline-item';
 import ProjectItem from '@/components/project-box/project-item/project-item';
