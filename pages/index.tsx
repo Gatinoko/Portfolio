@@ -6,6 +6,7 @@ import TimelineItem from '@/components/work-timeline/timeline-item/timeline-item
 import ProjectItem from '@/components/project-box/project-item/project-item';
 import ProjectBox from '@/components/project-box/project-box';
 import TimelineSubitem from '@/components/work-timeline/timeline-subitem/timeline-subitem';
+import { LandingBanner } from '@/components/landing-banner/landing-banner';
 
 export default function Index(props: any, rootMainRef: any) {
 	return (
@@ -14,22 +15,28 @@ export default function Index(props: any, rootMainRef: any) {
 			<main
 				className={'main'}
 				id='root-main'>
-				{/* Intro section */}
-				<PageSection id='IntroSection'>
-					<h1 style={{ width: '6ch' }}>Gabriel Tinoco.</h1>
-					<h4>Software Engineer & Designer</h4>
-					<hr />
-					<p>
-						Career statement goes here. Should be something like really
-						impactful. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Morbi non sapien ante. Suspendisse vel consectetur urna. Ut a dictum
-						sem. Praesent faucibus nisi ac fermentum posuere.
-					</p>
-				</PageSection>
+				<div className='banner-container'>
+					{/* Interactive banner section */}
+					<LandingBanner />
+
+					{/* Intro section */}
+					<PageSection id='IntroSection'>
+						<h1 style={{ width: '6ch' }}>Gabriel Tinoco.</h1>
+						<h4>Software Engineer & Designer</h4>
+						<hr />
+						<p>
+							Career statement goes here. Should be something like really
+							impactful. Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit. Morbi non sapien ante. Suspendisse vel consectetur urna. Ut
+							a dictum sem. Praesent faucibus nisi ac fermentum posuere.
+						</p>
+					</PageSection>
+					<hr data-variant='solid' />
+				</div>
 
 				{/* Tech & skills section */}
 				<PageSection id='Tech&SkillsSection'>
-					<h3 className='section-title'>Tech & Skills.</h3>
+					<h3 className='section-title'>Tech & Skills</h3>
 					<hr />
 					<ChipCloud
 						itemArray={[
