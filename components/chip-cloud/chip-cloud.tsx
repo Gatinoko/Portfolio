@@ -2,8 +2,11 @@ import { cva } from 'class-variance-authority';
 import React from 'react';
 import Chip, { ChipSizes } from './chip/chip';
 
-interface ChipCloudProps {
-	itemArray: {
+/**
+ * Custom type declaration for the `ChipCloud` React component properties.
+ */
+type ChipCloudProps = {
+	chipArray: {
 		key?: string | number;
 		text: string;
 		weight: number;
@@ -11,39 +14,30 @@ interface ChipCloudProps {
 	}[];
 	size: ChipSizes;
 	className?: string;
-}
+};
 
-const chipCloud = cva('chipCloud', {
-	variants: {
-		size: {
-			['extra-large']: 'extra-large',
-			large: 'large',
-			regular: 'regular',
-			medium: 'medium',
-			small: 'small',
-			['extra-small']: 'extra-small',
-		},
-	},
-	defaultVariants: {
-		size: 'regular',
-	},
-});
+const chipCloud = cva('chipCloud');
 
+/**
+ * React component.
+ *
+ * @param {ChipCloudProps} props - Component properties.
+ */
 export default function ChipCloud(props: ChipCloudProps) {
-	const { itemArray, size, className = '' } = props;
+	const { chipArray, size, className = '' } = props;
 
 	return (
 		<ul
 			role='navigation'
 			aria-label='Tag cloud'
-			className={`${chipCloud({ size })} ${className}`}>
-			{itemArray.map((item, index) => (
+			className={`${chipCloud({})} ${className}`}>
+			{chipArray.map((item, index) => (
 				<li key={`chip-${index}`}>
 					{'link' in item ? (
 						<Chip
 							id={item.weight}
 							text={item.text}
-							size='regular'
+							size={'regular'}
 							link={item.link}
 						/>
 					) : (
