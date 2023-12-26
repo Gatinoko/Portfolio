@@ -1,31 +1,25 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
-import { cva } from 'class-variance-authority';
-import { ReactNode, useState } from 'react';
+import { useState } from 'react';
 import Button from '../button/button';
 import Logo from './logo/logo';
+import MobileButton from './mobile-navigation-list/mobile-button/mobile-button';
+import MobileNavigationList from './mobile-navigation-list/mobile-navigation-list';
 
-type NavigationProps = {
-	navButtons?: ReactNode;
-};
+/**
+ * Custom type declaration for the `Navigation` React component properties.
+ */
+type NavigationProps = {};
 
-const navigation = cva('navigation', {
-	variants: {
-		open: {
-			true: 'open',
-			false: 'closed',
-		},
-	},
-	defaultVariants: {
-		open: true,
-	},
-});
-
-export default function Navigation({ navButtons }: NavigationProps) {
-	const [open, setOpen] = useState(false);
+/**
+ * React component.
+ *
+ * @param {NavigationProps} props - Component properties.
+ */
+export default function Navigation(props: NavigationProps) {
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 	return (
-		<nav className={navigation({ open })}>
-			<div className='logo-button-container'>
+		<nav className='navigation'>
+			<div className='navigation-root'>
 				{/* Logo */}
 				<a
 					className='logo'
@@ -34,7 +28,7 @@ export default function Navigation({ navButtons }: NavigationProps) {
 				</a>
 
 				{/* Desktop navigation buttons */}
-				<ul className='section-list'>
+				<ul className='desktop-button-list'>
 					<li>
 						<Button
 							className='tech-and-skills-button'
@@ -55,16 +49,27 @@ export default function Navigation({ navButtons }: NavigationProps) {
 
 				{/* Mobile navigation hamburguer button */}
 				<Button
-					className='mobile-hamburguer'
+					className='mobile-hamburguer-button'
 					prefixIcon={'left-chevron'}
 					size={'small'}
-					onClick={() => setOpen(!open)}
+					onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 					variant={'flat'}
 				/>
 			</div>
 
 			{/* Mobile navigation buttons */}
-			<div className='nav-list'>{navButtons}</div>
+			<MobileNavigationList open={isMobileMenuOpen}>
+				<MobileButton
+					key={0}
+					text='Tech & Skills'
+					href='#Tech&SkillsSection'
+				/>
+				<MobileButton
+					key={1}
+					text='Projects'
+					href='#ProjectsSection'
+				/>
+			</MobileNavigationList>
 		</nav>
 	);
 }

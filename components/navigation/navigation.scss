@@ -7,14 +7,14 @@
 		align-items: center;
 		height: fit-content;
 		width: 100%;
-		z-index: 1;
 		position: sticky;
 		left: 0;
 		top: 0;
-		box-shadow: 0px 10px 25px 5px #00000080;
+		box-shadow: 0px 10px 25px 5px #00000040;
+		z-index: 2;
 	}
 
-	.logo-button-container {
+	.navigation-root {
 		& {
 			display: flex;
 			justify-content: space-between;
@@ -25,21 +25,18 @@
 			height: fit-content;
 			background-color: #262626;
 			border-bottom: 1px solid get-color-value(white-ffffff-15);
+			z-index: 1;
 		}
 
 		.logo {
-			& {
-				// padding: get-spacing-value(spacing-16);
-				width: fit-content;
-				// padding: 18px;
-			}
+			width: fit-content;
 
 			.logo-svg {
 				width: clamp(2px, 5rem + 1vw, 10rem);
 			}
 		}
 
-		.section-list {
+		.desktop-button-list {
 			& {
 				display: flex;
 				gap: 1rem;
@@ -47,9 +44,10 @@
 				margin: 0;
 				padding: 0;
 				list-style-type: none;
-				@include screen-breakpoint(mobile, tablet) {
-					display: none;
-				}
+			}
+
+			@include screen-breakpoint(mobile, tablet) {
+				display: none;
 			}
 
 			li {
@@ -57,44 +55,13 @@
 			}
 		}
 
-		.mobile-hamburguer {
+		.mobile-hamburguer-button {
 			display: none;
 
 			@include screen-breakpoint(mobile, tablet) {
 				display: flex;
 				align-self: center;
 			}
-		}
-	}
-
-	.nav-list {
-		display: none;
-
-		@include screen-breakpoint(mobile, tablet) {
-			display: flex;
-			flex-direction: column;
-			gap: 1rem;
-			width: 100%;
-			height: fit-content;
-			position: absolute;
-			z-index: -1;
-			background-color: rebeccapurple;
-		}
-	}
-
-	/*
-		States
-	*/
-	&.open {
-		.nav-list {
-			top: 100%;
-			transition: top 150ms;
-		}
-	}
-	&.closed {
-		.nav-list {
-			top: -300%;
-			transition: top 150ms;
 		}
 	}
 }
