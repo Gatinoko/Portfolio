@@ -1,22 +1,23 @@
 @use '../../styles/modules.scss' as *;
 
 .page-section {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	max-width: 1136px;
-	gap: 1rem;
-	padding: 0 get-responsive-spacing-value(custom-pairs, spacing-s-5xl) 0
-		get-responsive-spacing-value(custom-pairs, spacing-s-5xl);
+	& {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 1136px;
+		gap: 1rem;
+		padding: 0 get-responsive-spacing-value(custom-pairs, spacing-s-5xl) 0
+			get-responsive-spacing-value(custom-pairs, spacing-s-5xl);
+	}
 
 	.section-title {
 		text-align: center;
 	}
 
 	&:first-child {
-		min-height: 50%;
+		min-height: fit-content;
 		align-items: flex-start;
-		padding-top: get-responsive-spacing-value(one-up-pairs, spacing-s-m);
 	}
 }

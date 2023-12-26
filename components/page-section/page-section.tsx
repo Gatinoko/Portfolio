@@ -1,23 +1,23 @@
-/* eslint-disable react/display-name */
-import styles from './page-section.module.scss';
+import React, { PropsWithChildren, ReactNode } from 'react';
 
-import React, { LegacyRef, ReactNode, forwardRef } from 'react';
-
-interface PageSectionProps {
-	children: ReactNode;
+/**
+ * Custom type declaration for the `PageSection` React component properties.
+ */
+export type PageSectionProps = {
 	id: string;
 	className?: string;
-}
+} & PropsWithChildren;
 
-export default function ContentSection({
-	children,
-	id,
-	className,
-}: PageSectionProps) {
+/**
+ * React component.
+ *
+ * @param {PageSectionProps} props - Component properties.
+ */
+export function PageSection({ children, id, className }: PageSectionProps) {
 	return (
 		<section
 			id={id}
-			className={`page-section ${className}`}>
+			className={`page-section ${className && className}`}>
 			{children}
 		</section>
 	);
