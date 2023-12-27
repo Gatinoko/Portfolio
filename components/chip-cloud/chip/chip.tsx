@@ -17,7 +17,7 @@ export type ChipSizes =
 export type ChipProps = {
 	text: string;
 	size: ChipSizes;
-	type?: 'static' | 'animated';
+	type?: 'static' | 'interactive';
 	id?: any;
 	link?: string;
 	className?: string;
@@ -34,7 +34,7 @@ const chip = cva('chip', {
 			['extra-small']: 'extra-small',
 		},
 		type: {
-			animated: 'animated',
+			interactive: 'interactive',
 			static: 'static',
 		},
 	},
