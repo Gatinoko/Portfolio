@@ -28,14 +28,6 @@
 			z-index: 1;
 		}
 
-		.logo {
-			width: fit-content;
-
-			.logo-svg {
-				width: clamp(2px, 5rem + 1vw, 10rem);
-			}
-		}
-
 		.desktop-button-list {
 			& {
 				display: flex;

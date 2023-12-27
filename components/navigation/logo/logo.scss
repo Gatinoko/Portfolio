@@ -1,0 +1,11 @@
+@use '../../../styles/modules.scss' as *;
+
+.logo {
+	& {
+		width: fit-content;
+	}
+
+	.logo-svg {
+		width: clamp(2px, 5rem + 1vw, 10rem);
+	}
+}
