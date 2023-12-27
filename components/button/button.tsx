@@ -1,6 +1,6 @@
 import React, { ComponentProps, useState } from 'react';
 import { cva } from 'class-variance-authority';
-import Icon, { IconSizes } from '../icon/icon';
+import Icon from '../icon/icon';
 
 const button = cva('button', {
 	variants: {
@@ -19,9 +19,13 @@ const button = cva('button', {
 	},
 	defaultVariants: {
 		size: 'regular',
+		variant: 'default',
 	},
 });
 
+/**
+ * Custom type declaration for the different sizes a `Button` component can assume.
+ */
 export type ButtonSizes =
 	| 'extra-large'
 	| 'large'
@@ -29,6 +33,9 @@ export type ButtonSizes =
 	| 'small'
 	| 'extra-small';
 
+/**
+ * Custom type declaration for the `Button` React component properties.
+ */
 export type ButtonProps = {
 	text?: string;
 	size: ButtonSizes;
@@ -41,7 +48,12 @@ export type ButtonProps = {
 	throttleValue?: number;
 } & ComponentProps<'button'>;
 
-export default function Button(props: ButtonProps) {
+/**
+ * React component.
+ *
+ * @param {ButtonProps} props - Component properties.
+ */
+export function Button(props: ButtonProps) {
 	let {
 		text,
 		size,
@@ -64,8 +76,8 @@ export default function Button(props: ButtonProps) {
 		}, throttleValue);
 	}
 
-	function buttonClick(): void {
-		if (Object.hasOwnProperty.call(props, 'throttleValue')) {
+	function buttonClick() {
+		if ('throttleValue' in props) {
 			const { throttleValue } = props;
 			throttleClick(throttleValue as number);
 		} else onClick();
@@ -73,7 +85,7 @@ export default function Button(props: ButtonProps) {
 
 	return (
 		<button
-			className={`${className} ${button({ size, variant })}`}
+			className={`${className && className} ${button({ size, variant })}`}
 			onClick={buttonClick}
 			{...extraProps}>
 			{/* Prefix icon */}

@@ -80,7 +80,7 @@
 			}
 		}
 		&:active {
-			background-color: rgb(0, 153, 255);
+			background-color: get-color-value(white-ffffff-25);
 		}
 	}
 
@@ -95,7 +95,7 @@
 		}
 	}
 	&:active {
-		background-color: rgb(0, 153, 255);
+		background-color: get-color-value(white-ffffff-25);
 	}
 	&:disabled {
 		.icon {
