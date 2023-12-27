@@ -1,19 +1,21 @@
-import { cva } from 'class-variance-authority';
-
+/**
+ * Custom type declaration for the `LandingBanner` React component properties.
+ */
 export type LandingBannerProps = {
 	className?: string;
+	id?: string;
 };
 
-const landingBanner = cva('landing-banner');
-
-export function LandingBanner(props: LandingBannerProps) {
-	const { className } = props;
-
-	const customClassValue = `${className ? className : ''}`;
-
+/**
+ * React component.
+ *
+ * @param {ButtonProps} props - Component properties.
+ */
+export function LandingBanner({ className, id }: LandingBannerProps) {
 	return (
-		<div className={`${customClassValue} ${landingBanner({})}`}>
-			<div className='cursor-radial' />
+		<div
+			id={id && id}
+			className={`${className && className} landing-banner`}>
 			<div className='gradient' />
 		</div>
 	);

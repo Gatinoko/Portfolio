@@ -13,19 +13,6 @@
 		z-index: -2;
 	}
 
-	.cursor-radial {
-		position: absolute;
-		width: 300px;
-		height: 300px;
-		background: radial-gradient(
-			circle at center,
-			rgba(255, 255, 255, 0.75) 0%,
-			rgba(0, 0, 0, 0) 50%
-		);
-		z-index: -3;
-		scale: 5;
-	}
-
 	.gradient {
 		width: 100%;
 		height: 100%;
@@ -35,11 +22,12 @@
 			rgba(2, 0, 36, 1) 0%,
 			rgb(105, 54, 187) 24%,
 			rgb(255, 40, 105) 48%,
-			rgb(177, 42, 230) 73%,
+			rgb(97, 40, 255) 70%,
+			rgb(177, 42, 230) 80%,
 			rgb(0, 110, 255) 100%
 		);
+		opacity: 100%;
 		z-index: -4;
-		filter: blur();
 		@keyframes gradient-animation {
 			0% {
 			}
