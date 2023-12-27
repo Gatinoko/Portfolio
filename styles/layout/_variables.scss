@@ -80,6 +80,8 @@ $RESPONSIVE-SPACING-SIZES: (
 		spacing-s-4xl: clamp(1rem, -2.1373rem + 15.6863vw, 9rem),
 		// Space s-5xl: 16px → 192px
 		spacing-s-5xl: clamp(1rem, -3.3137rem + 21.5686vw, 12rem),
+		// Space xl-5xl: 48px → 192px
+		space-xl-5xl: clamp(3rem, -0.5294rem + 17.6471vw, 12rem),
 	),
 );
 
