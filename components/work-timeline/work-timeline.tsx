@@ -1,15 +1,19 @@
-import React, { ReactElement } from 'react';
+import React, { PropsWithChildren, ReactElement } from 'react';
 import { TimelineItemProps } from './timeline-item/timeline-item';
 
-interface WorkTimelineProps {
+/**
+ * Custom type declaration for the `WorkTimeline` React component properties.
+ */
+type WorkTimelineProps = {
 	className?: string;
-	workTimelineItems:
-		| ReactElement<TimelineItemProps>[]
-		| ReactElement<TimelineItemProps>;
-}
+	children: ReactElement<TimelineItemProps>[] | ReactElement<TimelineItemProps>;
+} & PropsWithChildren;
 
-export default function WorkTimeline(props: WorkTimelineProps) {
-	const { className = '', workTimelineItems } = props;
-
-	return <ul className={`${className} work-timeline`}>{workTimelineItems}</ul>;
+/**
+ * React component.
+ *
+ * @param {WorkTimelineProps} props - Component properties.
+ */
+export function WorkTimeline({ className = '', children }: WorkTimelineProps) {
+	return <ul className={`${className} work-timeline`}>{children}</ul>;
 }

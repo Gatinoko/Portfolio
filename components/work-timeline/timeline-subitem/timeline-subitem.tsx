@@ -1,15 +1,23 @@
 import React, { ReactNode } from 'react';
 
-export interface TimelineSubitemProps {
+/**
+ * Custom type declaration for the `TimelineSubitem` React component properties.
+ */
+export type TimelineSubitemProps = {
 	startDate?: string;
 	endDate?: string;
 	subtitle: string;
 	description: string;
 	className?: string;
 	icons?: ReactNode[];
-}
+};
 
-export default function TimelineSubitem(props: TimelineSubitemProps) {
+/**
+ * React component.
+ *
+ * @param {TimelineSubitemProps} props - Component properties.
+ */
+export function TimelineSubitem(props: TimelineSubitemProps) {
 	const {
 		startDate,
 		endDate,
