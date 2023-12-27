@@ -1,9 +1,11 @@
-/* eslint-disable react/display-name */
 import Icon from '@/components/icon/icon';
 import Image from 'next/image';
 import React, { ReactNode } from 'react';
 
-export interface ProjectItemProps {
+/**
+ * Custom type declaration for the `ProjectItem` React component properties.
+ */
+export type ProjectItemProps = {
 	coverImage?: string;
 	title: string;
 	description: string;
@@ -11,18 +13,22 @@ export interface ProjectItemProps {
 	githubProjectLink?: string;
 	projectWebsiteLink?: string;
 	className?: string;
-}
+};
 
-export default function ProjectItem(props: ProjectItemProps) {
-	const {
-		coverImage,
-		title,
-		description,
-		icons,
-		githubProjectLink,
-		projectWebsiteLink,
-		className = '',
-	} = props;
+/**
+ * React component.
+ *
+ * @param {ProjectItemProps} props - Component properties.
+ */
+export default function ProjectItem({
+	coverImage,
+	title,
+	description,
+	icons,
+	githubProjectLink,
+	projectWebsiteLink,
+	className = '',
+}: ProjectItemProps) {
 	return (
 		<li className={`project-item ${className}`}>
 			{/* Image */}
@@ -48,7 +54,7 @@ export default function ProjectItem(props: ProjectItemProps) {
 				{/* Technology icons */}
 				{icons && (
 					<div className='tech-icons'>
-						{icons.map((iconNode, index) => iconNode)}
+						{icons.map((iconNode, _index) => iconNode)}
 					</div>
 				)}
 			</div>
