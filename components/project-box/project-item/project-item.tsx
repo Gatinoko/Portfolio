@@ -20,7 +20,7 @@ export type ProjectItemProps = {
  *
  * @param {ProjectItemProps} props - Component properties.
  */
-export default function ProjectItem({
+export function ProjectItem({
 	coverImage,
 	title,
 	description,
