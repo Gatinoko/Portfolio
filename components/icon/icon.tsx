@@ -1,6 +1,33 @@
 import { cva } from 'class-variance-authority';
 
 /**
+ * Custom type declaration for the differents icons an `Icon` component can display.
+ */
+export type Icon =
+	| 'left-chevron'
+	| 'right-chevron'
+	| 'github'
+	| 'link'
+	| 'nodejs'
+	| 'html5'
+	| 'css3'
+	| 'mongodb'
+	| 'express'
+	| 'ejs'
+	| 'figma'
+	| 'photoshop'
+	| 'typescript'
+	| 'python'
+	| 'bootstrap'
+	| 'react'
+	| 'sass'
+	| 'nx'
+	| 'storybook'
+	| 'jenkins'
+	| 'angular'
+	| 'jest';
+
+/**
  * Custom type declaration for the different sizes an `Icon` component can assume.
  */
 export type IconSizes =
@@ -14,23 +41,11 @@ export type IconSizes =
  * Custom type declaration for the `Icon` React component properties.
  */
 export type IconProps = {
-	name: string;
+	name: Icon;
 	size: IconSizes;
 	className?: string;
 	onClick?: () => void;
 };
-
-const icon = cva('svg', {
-	variants: {
-		size: {
-			['extra-large']: 'extra-large',
-			large: 'large',
-			regular: 'regular',
-			small: 'small',
-			['extra-small']: 'extra-small',
-		},
-	},
-});
 
 /**
  * React component.
@@ -38,16 +53,27 @@ const icon = cva('svg', {
  * @param {IconProps} props - Component properties.
  */
 export default function Icon(props: IconProps) {
-	const { name = 'default', size = 'regular', className, onClick } = props;
+	const { name, size = 'regular', className = '', onClick } = props;
 
-	const customClassName = `${className && className}`;
+	// Component CVA function
+	const icon = cva('svg', {
+		variants: {
+			size: {
+				['extra-large']: 'extra-large',
+				large: 'large',
+				regular: 'regular',
+				small: 'small',
+				['extra-small']: 'extra-small',
+			},
+		},
+	});
 
 	switch (name) {
 		case 'left-chevron':
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -63,7 +89,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -80,7 +106,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -92,7 +118,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -104,7 +130,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -119,7 +145,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					viewBox='0 0 512 512'
@@ -138,7 +164,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					viewBox='0 0 512 512'
@@ -157,7 +183,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -180,7 +206,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -195,7 +221,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -210,7 +236,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					viewBox='0 0 38 57'
@@ -251,7 +277,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -276,7 +302,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					viewBox='0 0 512 512'
@@ -295,7 +321,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					viewBox='0 0 256 255'
@@ -314,7 +340,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					viewBox='0 0 512 418'
@@ -333,7 +359,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -368,7 +394,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					viewBox='0 0 32 32'
@@ -382,7 +408,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -396,7 +422,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -435,7 +461,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -450,7 +476,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -476,7 +502,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
@@ -490,7 +516,7 @@ export default function Icon(props: IconProps) {
 			return (
 				<svg
 					onClick={onClick}
-					className={`${customClassName} ${icon({
+					className={`${className} ${icon({
 						size,
 					})}`}
 					xmlns='http://www.w3.org/2000/svg'
