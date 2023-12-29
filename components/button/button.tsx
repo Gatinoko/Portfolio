@@ -1,27 +1,6 @@
-import React, { ComponentProps, useState } from 'react';
+import React, { ComponentProps, ReactElement, useState } from 'react';
 import { cva } from 'class-variance-authority';
-import Icon from '../icon/icon';
-
-const button = cva('button', {
-	variants: {
-		size: {
-			['extra-large']: 'extra-large',
-			large: 'large',
-			regular: 'regular',
-			medium: 'medium',
-			small: 'small',
-			['extra-small']: 'extra-small',
-		},
-		variant: {
-			default: 'default',
-			flat: 'flat',
-		},
-	},
-	defaultVariants: {
-		size: 'regular',
-		variant: 'default',
-	},
-});
+import { IconProps } from '../icon/icon';
 
 /**
  * Custom type declaration for the different sizes a `Button` component can assume.
@@ -36,17 +15,30 @@ export type ButtonSizes =
 /**
  * Custom type declaration for the `Button` React component properties.
  */
-export type ButtonProps = {
-	text?: string;
-	size: ButtonSizes;
-	variant: 'default' | 'flat';
-	prefixIcon?: string;
-	suffixIcon?: string;
+export type ButtonProps = BaseButton &
+	(TextOnlyButton | IconOnlyButton | TextWithIconsButton);
+
+type BaseButton = {
+	size?: ButtonSizes;
+	variant?: 'default' | 'flat';
 	className?: string;
-	onClick?: () => void;
-} & {
 	throttleValue?: number;
+	onClick?: () => void;
 } & ComponentProps<'button'>;
+
+type TextOnlyButton = {
+	children: string;
+};
+
+type IconOnlyButton = {
+	icon: ReactElement<IconProps>;
+};
+
+type TextWithIconsButton = {
+	prefixIcon?: ReactElement<IconProps>;
+	suffixIcon?: ReactElement<IconProps>;
+	children: string;
+};
 
 /**
  * React component.
@@ -55,59 +47,69 @@ export type ButtonProps = {
  */
 export function Button(props: ButtonProps) {
 	let {
-		text,
-		size,
+		size = 'regular',
 		variant = 'default',
 		className = '',
-		prefixIcon,
-		suffixIcon,
 		onClick = () => {},
 		...extraProps
 	} = props;
 
-	const [clickThrottleLock, setClickThrottleLock] = useState(false);
+	// Throttle click lock state variable
+	const [throttleLock, setThrottleLock] = useState(false);
 
+	// Component CVA function
+	const button = cva('button', {
+		variants: {
+			size: {
+				['extra-large']: 'extra-large',
+				large: 'large',
+				regular: 'regular',
+				medium: 'medium',
+				small: 'small',
+				['extra-small']: 'extra-small',
+			},
+			variant: {
+				default: 'default',
+				flat: 'flat',
+			},
+		},
+		defaultVariants: {
+			size: 'regular',
+			variant: 'default',
+		},
+	});
+
+	// Function for throttling the click event for a number of ms
 	async function throttleClick(throttleValue: number) {
-		if (clickThrottleLock) return;
-		setClickThrottleLock(true);
+		if (throttleLock) return;
+		setThrottleLock(true);
 		onClick();
 		setTimeout(() => {
-			setClickThrottleLock(false);
+			setThrottleLock(false);
 		}, throttleValue);
 	}
 
+	// Handler function for the click event
 	function buttonClick() {
-		if ('throttleValue' in props) {
+		if (props.throttleValue) {
 			const { throttleValue } = props;
-			throttleClick(throttleValue as number);
+			throttleClick(throttleValue);
 		} else onClick();
 	}
 
 	return (
 		<button
-			className={`${className && className} ${button({ size, variant })}`}
+			className={`${className} ${button({ size, variant })}`}
 			onClick={buttonClick}
 			{...extraProps}>
 			{/* Prefix icon */}
-			{prefixIcon && (
-				<Icon
-					className='prefix-icon'
-					name={`${prefixIcon}`}
-					size={size}
-				/>
-			)}
+			{'prefixIcon' in props && props.prefixIcon}
 
-			{/* Text */}
-			{text}
+			{/* Text or single icon */}
+			{'icon' in props ? props.icon : props.children}
 
 			{/* Suffix icon */}
-			{suffixIcon && (
-				<Icon
-					className='suffix-icon'
-					name={`${suffixIcon}`}
-					size={size}
-				/>
-			)}
+			{'suffixIcon' in props && props.suffixIcon}
 		</button>
 	);
 }

@@ -3,6 +3,7 @@ import { Button } from '../button/button';
 import { Logo } from './logo/logo';
 import MobileButton from './mobile-navigation-list/mobile-button/mobile-button';
 import MobileNavigationList from './mobile-navigation-list/mobile-navigation-list';
+import Icon from '../icon/icon';
 
 /**
  * Custom type declaration for the `Navigation` React component properties.
@@ -29,27 +30,32 @@ export default function Navigation(props: NavigationProps) {
 						<Button
 							className='tech-and-skills-button'
 							size={'extra-small'}
-							text='Tech & Skills'
-							variant={'flat'}
-						/>
+							variant={'flat'}>
+							Tech & Skills
+						</Button>
 					</li>
 					<li>
 						<Button
 							className='projects-button'
 							size={'extra-small'}
-							text='Projects'
-							variant={'flat'}
-						/>
+							variant={'flat'}>
+							Projects
+						</Button>
 					</li>
 				</ul>
 
 				{/* Mobile navigation hamburguer button */}
 				<Button
 					className='mobile-hamburguer-button'
-					prefixIcon={'left-chevron'}
 					size={'small'}
 					onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 					variant={'flat'}
+					icon={
+						<Icon
+							name={'right-chevron'}
+							size={'extra-large'}
+						/>
+					}
 				/>
 			</div>
 
