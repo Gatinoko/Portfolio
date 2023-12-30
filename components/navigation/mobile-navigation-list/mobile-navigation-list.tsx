@@ -34,12 +34,8 @@ export default function MobileNavigationList({
 
 	return (
 		<ul className={mobileNavigationList({ open })}>
-			{children.map((mobileButton) => (
-				<MobileButton
-					key={mobileButton.key}
-					text={mobileButton.props.text}
-					href={''}
-				/>
+			{children.map((mobileButton, index) => (
+				<li key={`mobileButton-${index}`}>{mobileButton}</li>
 			))}
 		</ul>
 	);

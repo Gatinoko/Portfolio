@@ -63,14 +63,14 @@ export default function Navigation(props: NavigationProps) {
 			<MobileNavigationList open={isMobileMenuOpen}>
 				<MobileButton
 					key={0}
-					text='Tech & Skills'
-					href='#Tech&SkillsSection'
-				/>
+					href='#Tech&SkillsSection'>
+					Tech & Skills
+				</MobileButton>
 				<MobileButton
 					key={1}
-					text='Projects'
-					href='#ProjectsSection'
-				/>
+					href='#ProjectsSection'>
+					Projects
+				</MobileButton>
 			</MobileNavigationList>
 		</nav>
 	);

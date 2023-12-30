@@ -14,38 +14,49 @@ export type MobileButtonSizes =
  * Custom type declaration for the `Navigation` React component properties.
  */
 export type MobileButtonProps = {
-	text: string;
 	size?: MobileButtonSizes;
-	href: string;
+	href?: string;
+	children: string;
+	onClick?: () => void;
 };
-
-const mobileButton = cva('mobile-button', {
-	variants: {
-		size: {
-			['extra-large']: 'extra-large',
-			large: 'large',
-			regular: 'regular',
-			medium: 'medium',
-			small: 'small',
-			['extra-small']: 'extra-small',
-		},
-	},
-	defaultVariants: {
-		size: 'regular',
-	},
-});
 
 /**
  * React component.
  *
- * @param {NavigationProps} props - Component properties.
+ * @param {MobileButtonProps} props - Component properties.
  */
-export default function MobileButton(props: MobileButtonProps) {
-	const { text, href, size = 'regular' } = props;
+export default function MobileButton({
+	size = 'regular',
+	children,
+	onClick = () => {},
+}: MobileButtonProps) {
+	// Component CVA function
+	const mobileButton = cva('mobile-button', {
+		variants: {
+			size: {
+				['extra-large']: 'extra-large',
+				large: 'large',
+				regular: 'regular',
+				medium: 'medium',
+				small: 'small',
+				['extra-small']: 'extra-small',
+			},
+		},
+		defaultVariants: {
+			size: 'regular',
+		},
+	});
+
+	// Handler function for the click event
+	function buttonClick() {
+		onClick();
+	}
 
 	return (
-		<button className={mobileButton({ size })}>
-			<span className={'text'}>{text}</span>
-		</button>
+		<a
+			className={mobileButton({ size })}
+			onClick={buttonClick}>
+			<span className={'text'}>{children}</span>
+		</a>
 	);
 }
