@@ -9,13 +9,13 @@ export type LandingBannerProps = {
 /**
  * React component.
  *
- * @param {ButtonProps} props - Component properties.
+ * @param {LandingBannerProps} props - Component properties.
  */
-export function LandingBanner({ className, id }: LandingBannerProps) {
+export function LandingBanner({ className = '', id }: LandingBannerProps) {
 	return (
 		<div
-			id={id && id}
-			className={`${className && className} landing-banner`}>
+			id={id}
+			className={`${className} landing-banner`}>
 			<div className='gradient' />
 		</div>
 	);

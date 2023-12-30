@@ -1,4 +1,4 @@
-import { PropsWithChildren, ReactElement } from 'react';
+import { ReactElement } from 'react';
 import MobileButton, { MobileButtonProps } from './mobile-button/mobile-button';
 import { cva } from 'class-variance-authority';
 
@@ -8,29 +8,30 @@ import { cva } from 'class-variance-authority';
 type MobileNavigationListProps = {
 	open: boolean;
 	children: ReactElement<MobileButtonProps>[];
-} & PropsWithChildren;
-
-const mobileNavigationList = cva('mobile-navigation-list', {
-	variants: {
-		open: {
-			true: 'open',
-			false: 'closed',
-		},
-	},
-	defaultVariants: {
-		open: false,
-	},
-});
+};
 
 /**
  * React component.
  *
- * @param {NavigationProps} props - Component properties.
+ * @param {MobileNavigationListProps} props - Component properties.
  */
 export default function MobileNavigationList({
-	open,
+	open = false,
 	children,
 }: MobileNavigationListProps) {
+	// Component CVA function
+	const mobileNavigationList = cva('mobile-navigation-list', {
+		variants: {
+			open: {
+				true: 'open',
+				false: 'closed',
+			},
+		},
+		defaultVariants: {
+			open: false,
+		},
+	});
+
 	return (
 		<ul className={mobileNavigationList({ open })}>
 			{children.map((mobileButton) => (

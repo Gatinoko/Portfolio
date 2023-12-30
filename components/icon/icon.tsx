@@ -52,9 +52,12 @@ export type IconProps = {
  *
  * @param {IconProps} props - Component properties.
  */
-export default function Icon(props: IconProps) {
-	const { name, size = 'regular', className = '', onClick } = props;
-
+export default function Icon({
+	name,
+	size = 'regular',
+	className = '',
+	onClick,
+}: IconProps) {
 	// Component CVA function
 	const icon = cva('svg', {
 		variants: {
