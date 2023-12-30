@@ -1,6 +1,6 @@
 @use '../../styles/modules.scss' as *;
 
-.chipCloud {
+.chip-cloud {
 	& {
 		display: flex;
 		flex-wrap: wrap;
@@ -14,24 +14,29 @@
 		justify-content: center;
 	}
 
-	& li .chip[id='1'] {
+	& li .chip.extra-small {
 		@include interface-xs;
+		padding: 0.5rem;
 		opacity: 45%;
 	}
-	& li .chip[id='2'] {
+	& li .chip.small {
 		@include interface-s;
+		padding: 0.5rem;
 		opacity: 55%;
 	}
-	& li .chip[id='3'] {
+	& li .chip.regular {
 		@include interface-r;
+		padding: 0.5rem;
 		opacity: 70%;
 	}
-	& li .chip[id='4'] {
+	& li .chip.large {
 		@include interface-l;
+		padding: 0.5rem;
 		opacity: 85%;
 	}
-	& li .chip[id='5'] {
+	& li .chip.extra-large {
 		@include interface-xl;
+		padding: 0.5rem;
 		opacity: 100%;
 	}
 }

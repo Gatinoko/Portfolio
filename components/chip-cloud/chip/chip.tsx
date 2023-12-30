@@ -1,5 +1,5 @@
 import { cva } from 'class-variance-authority';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 /**
  * Custom type declaration for the different sizes a `Chip` component can assume.
@@ -15,34 +15,13 @@ export type ChipSizes =
  * Custom type declaration for the `Chip` React component properties.
  */
 export type ChipProps = {
-	text: string;
-	size: ChipSizes;
+	size?: ChipSizes;
 	type?: 'static' | 'interactive';
 	id?: any;
 	link?: string;
 	className?: string;
+	children: string;
 };
-
-const chip = cva('chip', {
-	variants: {
-		size: {
-			['extra-large']: 'extra-large',
-			large: 'large',
-			regular: 'regular',
-			medium: 'medium',
-			small: 'small',
-			['extra-small']: 'extra-small',
-		},
-		type: {
-			interactive: 'interactive',
-			static: 'static',
-		},
-	},
-	defaultVariants: {
-		size: 'regular',
-		type: 'static',
-	},
-});
 
 /**
  * React component to-be used inside the `ChipCloud` component or by itself.
@@ -50,7 +29,36 @@ const chip = cva('chip', {
  * @param {ChipProps} props - Component properties.
  */
 export default function Chip(props: ChipProps) {
-	const { id, text, size, link, type, className = '' } = props;
+	const {
+		id,
+		children,
+		size = 'regular',
+		link,
+		type = 'static',
+		className = '',
+	} = props;
+
+	// Component CVA function
+	const chip = cva('chip', {
+		variants: {
+			size: {
+				['extra-large']: 'extra-large',
+				large: 'large',
+				regular: 'regular',
+				medium: 'medium',
+				small: 'small',
+				['extra-small']: 'extra-small',
+			},
+			type: {
+				interactive: 'interactive',
+				static: 'static',
+			},
+		},
+		defaultVariants: {
+			size: 'regular',
+			type: 'static',
+		},
+	});
 
 	return (
 		<>
@@ -59,13 +67,13 @@ export default function Chip(props: ChipProps) {
 					id={id}
 					className={`${chip({ size, type })} ${className}`}
 					href={link}>
-					{text}
+					{children}
 				</a>
 			) : (
 				<p
 					id={id}
 					className={`${chip({ size, type })} ${className}`}>
-					{text}
+					{children}
 				</p>
 			)}
 		</>
