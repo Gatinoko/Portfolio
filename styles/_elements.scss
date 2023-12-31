@@ -54,6 +54,7 @@ p {
 		@include ty.body-r;
 		margin: 0px;
 		word-break: break-word;
+		hyphens: auto;
 	}
 
 	&[data-size='extra-large'] {
