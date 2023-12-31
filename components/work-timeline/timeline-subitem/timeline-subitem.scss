@@ -12,10 +12,10 @@
 		&::before {
 			content: '';
 			position: absolute;
-			width: 10px;
-			height: 10px;
+			width: 0.5rem;
+			height: 0.5rem;
 			top: 50%;
-			left: -1.3rem;
+			left: -1.25rem;
 			transform: translateY(-50%);
 			border-radius: 50%;
 			background-color: white;
@@ -23,20 +23,15 @@
 	}
 
 	.date {
-		& {
-			position: absolute;
-			width: 5rem;
-			text-align: center;
-			left: -7rem;
-			color: get-color-value(white-ffffff-50);
-
-			@include screen-breakpoint(tablet) {
-				left: -6.75rem;
-			}
-			@include screen-breakpoint(mobile) {
-				left: -6.5rem;
-			}
-		}
+		@include interface-xs;
+		letter-spacing: normal;
+		font-weight: get-font-weight-value(light);
+		position: absolute;
+		width: 5rem;
+		text-align: center;
+		left: -8rem;
+		color: get-color-value(white-ffffff-50);
+		left: calc(get-responsive-spacing-value(default, spacing-l) * -3);
 	}
 
 	.icons {
