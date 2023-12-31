@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 import {
 	TimelineSubitem,
 	TimelineSubitemProps,
@@ -9,12 +9,12 @@ import {
  */
 export type TimelineItemProps = {
 	title: string;
-	date?: string;
+	date: string;
 	className?: string;
 	children:
 		| ReactElement<TimelineSubitemProps>[]
 		| ReactElement<TimelineSubitemProps>;
-} & PropsWithChildren;
+};
 
 /**
  * React component.
@@ -53,15 +53,15 @@ export function TimelineItem({
 				<div className='subitem-container'>
 					{Array.isArray(children) ? (
 						<>
-							{children.map(({ key, props, type }) => (
+							{children.map(({ key, props }) => (
 								<TimelineSubitem
 									key={`subItem-${key}`}
 									startDate={props.startDate}
 									endDate={props.endDate}
 									subtitle={props.subtitle}
-									description={props.description}
-									icons={props.icons}
-								/>
+									icons={props.icons}>
+									{props.children}
+								</TimelineSubitem>
 							))}
 						</>
 					) : (
@@ -70,9 +70,9 @@ export function TimelineItem({
 							startDate={children.props.startDate}
 							endDate={children.props.endDate}
 							subtitle={children.props.subtitle}
-							description={children.props.description}
-							icons={children.props.icons}
-						/>
+							icons={children.props.icons}>
+							{children.props.children}
+						</TimelineSubitem>
 					)}
 				</div>
 			</div>

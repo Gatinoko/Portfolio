@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactNode } from 'react';
+import React, { PropsWithChildren } from 'react';
 
 /**
  * Custom type declaration for the `PageSection` React component properties.
@@ -13,11 +13,15 @@ export type PageSectionProps = {
  *
  * @param {PageSectionProps} props - Component properties.
  */
-export function PageSection({ children, id, className }: PageSectionProps) {
+export function PageSection({
+	children,
+	id,
+	className = '',
+}: PageSectionProps) {
 	return (
 		<section
 			id={id}
-			className={`page-section ${className && className}`}>
+			className={`page-section ${className}`}>
 			{children}
 		</section>
 	);

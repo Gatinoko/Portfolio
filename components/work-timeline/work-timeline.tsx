@@ -15,5 +15,5 @@ type WorkTimelineProps = {
  * @param {WorkTimelineProps} props - Component properties.
  */
 export function WorkTimeline({ className = '', children }: WorkTimelineProps) {
-	return <ul className={`${className} work-timeline`}>{children}</ul>;
+	return <ol className={`${className} work-timeline`}>{children}</ol>;
 }

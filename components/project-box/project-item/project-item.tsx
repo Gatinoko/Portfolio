@@ -1,6 +1,6 @@
-import Icon from '@/components/icon/icon';
+import Icon, { IconProps } from '@/components/icon/icon';
 import Image from 'next/image';
-import React, { ReactNode } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 
 /**
  * Custom type declaration for the `ProjectItem` React component properties.
@@ -8,8 +8,8 @@ import React, { ReactNode } from 'react';
 export type ProjectItemProps = {
 	coverImage?: string;
 	title: string;
-	description: string;
-	icons?: ReactNode[];
+	children: string;
+	icons?: ReactElement<IconProps>[];
 	githubProjectLink?: string;
 	projectWebsiteLink?: string;
 	className?: string;
@@ -23,7 +23,7 @@ export type ProjectItemProps = {
 export function ProjectItem({
 	coverImage,
 	title,
-	description,
+	children,
 	icons,
 	githubProjectLink,
 	projectWebsiteLink,
@@ -49,7 +49,7 @@ export function ProjectItem({
 				<h6 className='title'>{title}</h6>
 
 				{/* Description */}
-				<p className='description'>{description}</p>
+				<p className='description'>{children}</p>
 
 				{/* Technology icons */}
 				{icons && (

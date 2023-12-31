@@ -28,7 +28,7 @@ export type ChipProps = {
  *
  * @param {ChipProps} props - Component properties.
  */
-export default function Chip(props: ChipProps) {
+export function Chip(props: ChipProps) {
 	const {
 		id,
 		children,
