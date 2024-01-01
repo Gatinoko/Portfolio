@@ -1,23 +1,19 @@
-import { cva } from 'class-variance-authority';
 import React from 'react';
 
-interface ColumnGridProps {
+/**
+ * Custom type declaration for the `ColumnGrid` React component properties.
+ */
+export type ColumnGridProps = {
 	platform: 'desktop' | 'tablet' | 'mobile' | 'responsive';
 	className?: string;
-}
+};
 
-const columnGrid = cva('colgrid', {
-	variants: {
-		platform: {
-			mobile: 'mobile',
-			tablet: 'tablet',
-			desktop: 'desktop',
-			responsive: 'responsive',
-		},
-	},
-});
-
-export default function ColumnGrid(props: ColumnGridProps) {
+/**
+ * React component.
+ *
+ * @param {ColumnGridProps} props - Component properties.
+ */
+export function ColumnGrid(props: ColumnGridProps) {
 	const { platform = 'desktop', className = '' } = props;
 
 	return (
@@ -28,8 +24,9 @@ export default function ColumnGrid(props: ColumnGridProps) {
 				height: '100%',
 				justifyContent: 'center',
 				position: 'fixed',
+				zIndex: 99,
 			}}>
-			<div className={`${columnGrid({ platform })}`}>
+			<div className='colgrid'>
 				<div className='col1 col' />
 				<div className='col2 col' />
 				<div className='col3 col' />

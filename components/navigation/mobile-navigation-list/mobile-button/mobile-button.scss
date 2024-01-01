@@ -1,0 +1,90 @@
+@use '../../../../styles/modules.scss' as *;
+
+.mobile-button {
+	& {
+		display: flex;
+		user-select: none;
+		position: relative;
+		text-decoration: none;
+		justify-content: flex-end;
+		align-items: center;
+		background-color: get-color-value(white-ffffff-5);
+		border-top: 1px solid get-color-value(transparent-ffffff);
+		border-left: 0;
+		border-bottom: 1px solid get-color-value(transparent-ffffff);
+		border-right: 0;
+	}
+
+	.text {
+		display: flex;
+		color: get-color-value(white-ffffff-50);
+		transition: color 150ms, padding 150ms;
+		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+	}
+
+	/*
+		Sizes
+	*/
+	&.extra-large {
+		padding: 1.75rem 1.5rem;
+		@include interface-xl;
+	}
+	&.large {
+		padding: 1.5rem 1.5rem;
+		@include interface-l;
+	}
+	&.regular {
+		padding: 1.5rem 1.5rem;
+		@include interface-r;
+	}
+	&.small {
+		padding: 1.5rem 1.5rem;
+		@include interface-s;
+	}
+	&.extra-small {
+		padding: 1.5rem 1.5rem;
+		@include interface-xs;
+	}
+
+	/*
+		States
+	*/
+	@media (hover: hover) {
+		&:hover {
+			& {
+				background-color: get-color-value(white-ffffff-15);
+				border-top: 1px solid get-color-value(white-ffffff-5);
+				border-left: 0;
+				border-bottom: 1px solid get-color-value(white-ffffff-15);
+				border-right: 0;
+				transition: background-color 150ms;
+				transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+			}
+
+			.text {
+				color: get-color-value(white-ffffff);
+				padding-right: 1.5rem;
+				transition: color 150ms, padding-right 150ms;
+				transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+			}
+		}
+	}
+	&:active {
+		& {
+			background-color: get-color-value(white-ffffff-25);
+			border-top: 1px solid get-color-value(white-ffffff-5);
+			border-left: 0;
+			border-bottom: 1px solid get-color-value(white-ffffff-15);
+			border-right: 0;
+			transition: background-color 150ms;
+			transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+		}
+
+		.text {
+			color: get-color-value(white-ffffff);
+			padding-right: 1rem;
+			transition: color 150ms, padding-right 150ms;
+			transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+		}
+	}
+}

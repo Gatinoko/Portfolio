@@ -1,18 +1,32 @@
 import React, { ReactElement } from 'react';
-import TimelineSubitem, {
+import {
+	TimelineSubitem,
 	TimelineSubitemProps,
 } from '../timeline-subitem/timeline-subitem';
 
-export interface TimelineItemProps {
+/**
+ * Custom type declaration for the `TimelineItem` React component properties.
+ */
+export type TimelineItemProps = {
 	title: string;
-	date?: string;
+	date: string;
 	className?: string;
-	subitemArray: ReactElement<TimelineSubitemProps>[];
-}
+	children:
+		| ReactElement<TimelineSubitemProps>[]
+		| ReactElement<TimelineSubitemProps>;
+};
 
-export default function TimelineItem(props: TimelineItemProps) {
-	const { title = 'Title', date, className = '', subitemArray } = props;
-
+/**
+ * React component.
+ *
+ * @param {TimelineItemProps} props - Component properties.
+ */
+export function TimelineItem({
+	title = 'Title',
+	date,
+	className = '',
+	children,
+}: TimelineItemProps) {
 	return (
 		<li className={`${className} timeline-item`}>
 			{/* Separator div */}
@@ -37,16 +51,29 @@ export default function TimelineItem(props: TimelineItemProps) {
 
 				{/* Timeline subitem container */}
 				<div className='subitem-container'>
-					{subitemArray.map(({ key, props, type }, index) => (
+					{Array.isArray(children) ? (
+						<>
+							{children.map(({ key, props }) => (
+								<TimelineSubitem
+									key={`subItem-${key}`}
+									startDate={props.startDate}
+									endDate={props.endDate}
+									subtitle={props.subtitle}
+									icons={props.icons}>
+									{props.children}
+								</TimelineSubitem>
+							))}
+						</>
+					) : (
 						<TimelineSubitem
-							key={`subItem-${index}`}
-							startDate={props.startDate}
-							endDate={props.endDate}
-							subtitle={props.subtitle}
-							description={props.description}
-							icons={props.icons}
-						/>
-					))}
+							key={`subItem-${children.key}`}
+							startDate={children.props.startDate}
+							endDate={children.props.endDate}
+							subtitle={children.props.subtitle}
+							icons={children.props.icons}>
+							{children.props.children}
+						</TimelineSubitem>
+					)}
 				</div>
 			</div>
 		</li>

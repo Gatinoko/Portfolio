@@ -2,8 +2,7 @@
 
 .footer {
 	& {
-		background-color: get-color-value(white-ffffff-15);
-		margin-top: get-responsive-spacing-value(one-up-pairs, spacing-s-m);
+		background-color: #262626;
 		border-top: 1px solid get-color-value(white-ffffff-5);
 		padding: 1rem get-responsive-spacing-value(custom-pairs, spacing-s-2xl) 1rem
 			get-responsive-spacing-value(custom-pairs, spacing-s-2xl);

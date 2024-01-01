@@ -1,15 +1,18 @@
-/* eslint-disable react/display-name */
-import { cva } from 'class-variance-authority';
-
 import React from 'react';
 
-interface FooterType {}
+/**
+ * Custom type declaration for the `Footer` React component properties.
+ */
+export type FooterProps = {};
 
-const footer = cva('footer');
-
-export default function Footer(props: FooterType) {
+/**
+ * React component.
+ *
+ * @param {FooterProps} props - Component properties.
+ */
+export function Footer(props: FooterProps) {
 	return (
-		<footer className={footer({})}>
+		<footer className='footer'>
 			<p
 				id='CopyrightNotice'
 				data-size='extra-small'>

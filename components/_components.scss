@@ -1,6 +1,8 @@
 @forward './icon/icon.scss';
-@forward './navigation/nav-button/nav-button.scss';
+@forward './navigation/mobile-navigation-list/mobile-button/mobile-button.scss';
+@forward './navigation/mobile-navigation-list/mobile-navigation-list.scss';
 @forward './navigation/navigation.scss';
+@forward './navigation/logo/logo.scss';
 @forward './page-section/page-section.scss';
 @forward './button/button.scss';
 @forward './carousel/carousel.scss';
@@ -13,4 +15,4 @@
 @forward './project-box/project-item/project-item.scss';
 @forward './project-box/project-box.scss';
 @forward './column-grid/columnGrid.scss';
-@forward './landing-banner/landing-banner.scss';
+@forward './banner-art/banner-art.scss';

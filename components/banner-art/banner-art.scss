@@ -1,0 +1,33 @@
+@use '../../styles/modules.scss' as *;
+
+.banner-art {
+	& {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		transform: scaleY(3) scaleX(clamp(1, 0.1, 3));
+		z-index: -1;
+		background-color: rgb(2, 0, 36);
+	}
+
+	.gradient {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+			rgba(2, 0, 36, 0) 0%,
+			rgb(68, 4, 170) 21.25%,
+			rgb(50, 70, 255) 22%,
+			rgb(73, 131, 255) 25%,
+			rgb(124, 43, 255) 70%,
+			rgb(0, 19, 185) 80%,
+			rgba(0, 0, 0, 0) 100%
+		);
+		transform: rotate(45deg) scaleX(clamp(7.5, 1, 10)) translateX(5rem);
+	}
+}

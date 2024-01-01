@@ -1,24 +1,31 @@
-import React, { ReactNode } from 'react';
+import { IconProps } from '@/components/icon/icon';
+import React, { ReactElement, ReactNode } from 'react';
 
-export interface TimelineSubitemProps {
+/**
+ * Custom type declaration for the `TimelineSubitem` React component properties.
+ */
+export type TimelineSubitemProps = {
+	subtitle: string;
+	children: string;
 	startDate?: string;
 	endDate?: string;
-	subtitle: string;
-	description: string;
 	className?: string;
-	icons?: ReactNode[];
-}
+	icons?: ReactElement<IconProps>[];
+};
 
-export default function TimelineSubitem(props: TimelineSubitemProps) {
-	const {
-		startDate,
-		endDate,
-		subtitle = 'Subtitle',
-		description = 'Description',
-		className = '',
-		icons,
-	} = props;
-
+/**
+ * React component.
+ *
+ * @param {TimelineSubitemProps} props - Component properties.
+ */
+export function TimelineSubitem({
+	subtitle,
+	children,
+	startDate,
+	endDate,
+	className = '',
+	icons,
+}: TimelineSubitemProps) {
 	return (
 		<div className={`${className} timeline-subitem`}>
 			{/* Date */}
@@ -34,11 +41,11 @@ export default function TimelineSubitem(props: TimelineSubitemProps) {
 			<h6 className='subtitle'>{subtitle}</h6>
 
 			{/* Description */}
-			<p className='description'>{description}</p>
+			<p className='description'>{children}</p>
 
 			{/* Tech icons */}
 			{icons && (
-				<div className='icons'>{icons.map((iconNode, index) => iconNode)}</div>
+				<div className='icons'>{icons.map((iconNode, _index) => iconNode)}</div>
 			)}
 		</div>
 	);

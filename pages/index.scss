@@ -2,14 +2,43 @@
 
 .main {
 	& {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		height: fit-content;
-		gap: 8rem;
+		z-index: 0;
 	}
 
-	@include screen-breakpoint(mobile, tablet) {
-		gap: 3rem;
+	.page-banner {
+		& {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-top: get-responsive-spacing-value(custom-pairs, spacing-s-xl);
+			padding-bottom: get-responsive-spacing-value(
+				custom-pairs,
+				spacing-xl-5xl
+			);
+			width: 100%;
+			z-index: -1;
+		}
+
+		.intro-section {
+			text-align: center;
+		}
+	}
+
+	.page-content {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: get-responsive-spacing-value(custom-pairs, spacing-xl-5xl) 0
+			get-responsive-spacing-value(custom-pairs, spacing-xl-5xl) 0;
+		gap: get-responsive-spacing-value(custom-pairs, spacing-xl-5xl);
+		z-index: 1;
+		background: linear-gradient(
+			rgba(0, 0, 0, 0) 0.1%,
+			rgb(0, 0, 0) 15%,
+			rgb(0, 0, 0) 30%,
+			rgb(0, 0, 0) 70%,
+			rgb(0, 0, 0) 100%
+		);
 	}
 }

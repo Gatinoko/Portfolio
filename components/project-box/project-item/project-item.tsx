@@ -1,28 +1,34 @@
-/* eslint-disable react/display-name */
-import Icon from '@/components/icon/icon';
+import Icon, { IconProps } from '@/components/icon/icon';
 import Image from 'next/image';
-import React, { ReactNode } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 
-export interface ProjectItemProps {
+/**
+ * Custom type declaration for the `ProjectItem` React component properties.
+ */
+export type ProjectItemProps = {
 	coverImage?: string;
 	title: string;
-	description: string;
-	icons?: ReactNode[];
+	children: string;
+	icons?: ReactElement<IconProps>[];
 	githubProjectLink?: string;
 	projectWebsiteLink?: string;
 	className?: string;
-}
+};
 
-export default function ProjectItem(props: ProjectItemProps) {
-	const {
-		coverImage,
-		title,
-		description,
-		icons,
-		githubProjectLink,
-		projectWebsiteLink,
-		className = '',
-	} = props;
+/**
+ * React component.
+ *
+ * @param {ProjectItemProps} props - Component properties.
+ */
+export function ProjectItem({
+	coverImage,
+	title,
+	children,
+	icons,
+	githubProjectLink,
+	projectWebsiteLink,
+	className = '',
+}: ProjectItemProps) {
 	return (
 		<li className={`project-item ${className}`}>
 			{/* Image */}
@@ -43,12 +49,12 @@ export default function ProjectItem(props: ProjectItemProps) {
 				<h6 className='title'>{title}</h6>
 
 				{/* Description */}
-				<p className='description'>{description}</p>
+				<p className='description'>{children}</p>
 
 				{/* Technology icons */}
 				{icons && (
 					<div className='tech-icons'>
-						{icons.map((iconNode, index) => iconNode)}
+						{icons.map((iconNode, _index) => iconNode)}
 					</div>
 				)}
 			</div>

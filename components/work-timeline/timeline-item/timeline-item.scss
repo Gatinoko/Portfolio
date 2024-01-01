@@ -41,17 +41,7 @@
 		& {
 			display: flex;
 			justify-content: flex-end;
-			width: 12.76595745%;
-
-			@include screen-breakpoint(small) {
-				width: 17.5%;
-			}
-			@include screen-breakpoint(tablet) {
-				width: 25%;
-			}
-			@include screen-breakpoint(mobile) {
-				width: 32.5%;
-			}
+			width: clamp(60px, 25vw, 210px);
 		}
 
 		&::after {
@@ -68,17 +58,7 @@
 			flex-direction: column;
 			position: relative;
 			gap: 1rem;
-			width: 87.23404255%;
-
-			@include screen-breakpoint(small) {
-				width: 82.5%;
-			}
-			@include screen-breakpoint(tablet) {
-				width: 75%;
-			}
-			@include screen-breakpoint(mobile) {
-				width: 67.5%;
-			}
+			width: 100%;
 		}
 
 		.item-heading {
@@ -89,28 +69,24 @@
 			}
 
 			.date {
+				@include interface-xs;
+				letter-spacing: normal;
+				font-weight: get-font-weight-value(light);
 				position: absolute;
 				width: 5rem;
 				text-align: center;
 				color: get-color-value(white-ffffff-50);
-				left: -7rem;
-
-				@include screen-breakpoint(tablet) {
-					left: -6.75rem;
-				}
-				@include screen-breakpoint(mobile) {
-					left: -6.5rem;
-				}
+				left: calc(get-responsive-spacing-value(default, spacing-l) * -3);
 			}
 
 			.title {
 				&::before {
 					content: '';
 					position: absolute;
-					width: 20px;
-					height: 20px;
+					width: 1rem;
+					height: 1rem;
 					top: 50%;
-					left: -1.6rem;
+					left: -1.5rem;
 					transform: translateY(-50%);
 					border-radius: 50%;
 					background-color: get-color-value(white-ffffff);
@@ -119,12 +95,10 @@
 		}
 
 		.subitem-container {
-			& {
-				display: flex;
-				flex-direction: column;
-				width: 100%;
-				gap: 1rem;
-			}
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			gap: 1rem;
 		}
 	}
 }

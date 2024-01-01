@@ -2,9 +2,12 @@
 
 .svg {
 	& {
-		fill: get-color-value(white-ffffff);
+		fill: none;
 	}
 
+	/*
+		Sizes
+	*/
 	&.extra-large {
 		width: clamp(1.38rem, 1.08rem + 1.51vw, 2.25rem);
 		height: clamp(1.38rem, 1.08rem + 1.51vw, 2.25rem);

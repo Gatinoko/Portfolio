@@ -1,70 +1,77 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
-import { cva } from 'class-variance-authority';
-import { ReactNode, useState } from 'react';
-import Button from '../button/button';
-import Logo from './logo/logo';
+import { useState } from 'react';
+import { Button } from '../button/button';
+import { Logo } from './logo/logo';
+import MobileButton from './mobile-navigation-list/mobile-button/mobile-button';
+import MobileNavigationList from './mobile-navigation-list/mobile-navigation-list';
+import Icon from '../icon/icon';
 
-type NavigationProps = {
-	navButtons?: ReactNode;
-};
+/**
+ * Custom type declaration for the `Navigation` React component properties.
+ */
+type NavigationProps = {};
 
-const navigation = cva('navigation', {
-	variants: {
-		open: {
-			true: 'open',
-			false: 'closed',
-		},
-	},
-	defaultVariants: {
-		open: true,
-	},
-});
-
-export default function Navigation({ navButtons }: NavigationProps) {
-	const [open, setOpen] = useState(false);
+/**
+ * React component.
+ *
+ * @param {NavigationProps} props - Component properties.
+ */
+export default function Navigation(props: NavigationProps) {
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 	return (
-		<nav className={navigation({ open })}>
-			<div className='logo-button-container'>
+		<nav className='navigation'>
+			<div className='navigation-root'>
 				{/* Logo */}
-				<a
-					className='logo'
-					href='#IntroSection'>
-					<Logo />
-				</a>
+				<Logo href='#IntroSection' />
 
 				{/* Desktop navigation buttons */}
-				<ul className='section-list'>
+				<ul className='desktop-button-list'>
 					<li>
 						<Button
 							className='tech-and-skills-button'
 							size={'extra-small'}
-							text='Tech & Skills'
-							variant={'flat'}
-						/>
+							variant={'flat'}>
+							Tech & Skills
+						</Button>
 					</li>
 					<li>
 						<Button
 							className='projects-button'
 							size={'extra-small'}
-							text='Projects'
-							variant={'flat'}
-						/>
+							variant={'flat'}>
+							Projects
+						</Button>
 					</li>
 				</ul>
 
 				{/* Mobile navigation hamburguer button */}
 				<Button
-					className='mobile-hamburguer'
-					prefixIcon={'left-chevron'}
+					className='mobile-hamburguer-button'
 					size={'small'}
-					onClick={() => setOpen(!open)}
+					onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 					variant={'flat'}
+					icon={
+						<Icon
+							name={'right-chevron'}
+							size={'extra-large'}
+						/>
+					}
 				/>
 			</div>
 
 			{/* Mobile navigation buttons */}
-			<div className='nav-list'>{navButtons}</div>
+			<MobileNavigationList open={isMobileMenuOpen}>
+				<MobileButton
+					key={0}
+					href='#Tech&SkillsSection'>
+					Tech & Skills
+				</MobileButton>
+				<MobileButton
+					key={1}
+					href='#ProjectsSection'>
+					Projects
+				</MobileButton>
+			</MobileNavigationList>
 		</nav>
 	);
 }
