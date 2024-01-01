@@ -1,7 +1,7 @@
 /**
  * Custom type declaration for the `LandingBanner` React component properties.
  */
-export type LandingBannerProps = {
+export type BannerArtProps = {
 	className?: string;
 	id?: string;
 };
@@ -9,13 +9,13 @@ export type LandingBannerProps = {
 /**
  * React component.
  *
- * @param {LandingBannerProps} props - Component properties.
+ * @param {BannerArtProps} props - Component properties.
  */
-export function LandingBanner({ className = '', id }: LandingBannerProps) {
+export function BannerArt({ className = '', id }: BannerArtProps) {
 	return (
 		<div
 			id={id}
-			className={`${className} landing-banner`}>
+			className={`${className} banner-art`}>
 			<div className='gradient' />
 		</div>
 	);
