@@ -1,7 +1,7 @@
 import React, { ReactElement, useState } from 'react';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
-import Button, { ButtonSizes } from '../button/button';
+import { ButtonSizes, Button } from '../button/button';
 import { cva } from 'class-variance-authority';
 
 export type CarouselSizes =
@@ -79,12 +79,14 @@ export default function Carousel(props: ICarousel) {
 				prefixIcon={'left-chevron'}
 				size={buttonSize as ButtonSizes}
 				onClick={() => onChevronClick('left', currentIndex, children.length)}
+				variant={'default'}
 			/>
 			<Button
 				className={`chevron-right ${className}`}
 				suffixIcon={'right-chevron'}
 				size={buttonSize as ButtonSizes}
 				onClick={() => onChevronClick('right', currentIndex, children.length)}
+				variant={'default'}
 			/>
 			<div
 				id='ImageContainer'

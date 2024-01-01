@@ -10,8 +10,10 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		z-index: -2;
-		background-color: #070044;
+		overflow: hidden;
+		transform: scaleY(3) scaleX(clamp(1, 0.1, 3));
+		z-index: -1;
+		background-color: rgb(2, 0, 36);
 	}
 
 	.gradient {
@@ -26,7 +28,6 @@
 			rgb(0, 19, 185) 80%,
 			rgba(0, 0, 0, 0) 100%
 		);
-		z-index: -4;
-		transform: rotate(70deg) scaleX(clamp(2.25, 1, 2.5));
+		transform: rotate(45deg) scaleX(clamp(7.5, 1, 10)) translateX(5rem);
 	}
 }
