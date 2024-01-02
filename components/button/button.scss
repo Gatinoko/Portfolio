@@ -4,19 +4,25 @@
 	& {
 		display: flex;
 		justify-items: center;
-		background-color: get-color-value(white-ffffff-5);
 		align-items: center;
-		text-transform: uppercase;
-		padding: 0px;
+
+		background-color: get-color-value(white-ffffff-5);
+		color: get-color-value(white-ffffff-50);
+
 		border: 0px;
+		padding: 0px;
+
+		text-transform: uppercase;
 		user-select: none;
-		fill: get-color-value(white-ffffff);
-		color: get-color-value(white-ffffff);
+
 		border-width: 1px;
 		border-style: solid;
 		border-color: get-color-value(white-ffffff-5)
 			get-color-value(white-ffffff-5) get-color-value(white-ffffff-15)
 			get-color-value(white-ffffff-5);
+
+		transition: background-color 150ms, color 150ms;
+		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 	}
 
 	/*
@@ -59,22 +65,16 @@
 	&.flat {
 		& {
 			background-color: transparent;
-			border-width: 1px;
-			border-style: solid;
-			border-color: get-color-value(transparent-ffffff);
+			border-color: transparent;
 		}
 
 		/*
-			"Flat" variant custom states
+			"Flat" variant states
 		*/
 		@media (hover: hover) {
 			&:hover {
-				transition: background-color 150ms;
-				transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+				color: get-color-value(white-ffffff);
 				background-color: get-color-value(white-ffffff-15);
-
-				border-width: 1px;
-				border-style: solid;
 				border-color: get-color-value(white-ffffff-5)
 					get-color-value(white-ffffff-5) get-color-value(white-ffffff-15)
 					get-color-value(white-ffffff-5);
@@ -90,8 +90,7 @@
 	*/
 	@media (hover: hover) {
 		&:hover {
-			transition: background-color 150ms;
-			transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+			color: get-color-value(white-ffffff);
 			background-color: get-color-value(white-ffffff-15);
 		}
 	}
@@ -99,11 +98,14 @@
 		background-color: get-color-value(white-ffffff-25);
 	}
 	&:disabled {
+		& {
+			color: get-component-color-value(disabled);
+			text-decoration: none;
+			pointer-events: none;
+		}
+
 		.icon {
 			fill: get-component-color-value(disabled);
 		}
-		color: get-component-color-value(disabled);
-		text-decoration: none;
-		pointer-events: none;
 	}
 }

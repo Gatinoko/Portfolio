@@ -4,14 +4,17 @@
 	& {
 		display: flex;
 		flex-wrap: wrap;
-		width: 100%;
-		gap: 0.5rem;
 		position: relative;
-		padding: 0;
-		margin: 0;
-		list-style: none;
 		align-items: center;
 		justify-content: center;
+
+		width: 100%;
+		gap: 0.5rem;
+
+		padding: 0;
+		margin: 0;
+
+		list-style: none;
 	}
 
 	& li .chip.extra-small {
