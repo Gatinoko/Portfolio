@@ -1,5 +1,5 @@
 import { cva } from 'class-variance-authority';
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
 
 /**
  * Custom type declaration for the different sizes a `Chip` component can assume.
@@ -16,7 +16,7 @@ export type ChipSizes =
  */
 export type ChipProps = {
 	size?: ChipSizes;
-	type?: 'static' | 'interactive';
+	interactive?: boolean;
 	id?: any;
 	link?: string;
 	className?: string;
@@ -34,7 +34,7 @@ export function Chip(props: ChipProps) {
 		children,
 		size = 'regular',
 		link,
-		type = 'static',
+		interactive,
 		className = '',
 	} = props;
 
@@ -49,14 +49,13 @@ export function Chip(props: ChipProps) {
 				small: 'small',
 				['extra-small']: 'extra-small',
 			},
-			type: {
-				interactive: 'interactive',
-				static: 'static',
+			interactive: {
+				true: 'interactive',
 			},
 		},
 		defaultVariants: {
 			size: 'regular',
-			type: 'static',
+			interactive: false,
 		},
 	});
 
@@ -65,14 +64,14 @@ export function Chip(props: ChipProps) {
 			{'link' in props ? (
 				<a
 					id={id}
-					className={`${chip({ size, type })} ${className}`}
+					className={`${chip({ size, interactive })} ${className}`}
 					href={link}>
 					{children}
 				</a>
 			) : (
 				<p
 					id={id}
-					className={`${chip({ size, type })} ${className}`}>
+					className={`${chip({ size, interactive })} ${className}`}>
 					{children}
 				</p>
 			)}
