@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority';
 /**
  * Custom type declaration for the differents icons an `Icon` component can display.
  */
-export type Icon =
+export type IconNames =
 	| 'left-chevron'
 	| 'right-chevron'
 	| 'github'
@@ -41,7 +41,7 @@ export type IconSizes =
  * Custom type declaration for the `Icon` React component properties.
  */
 export type IconProps = {
-	name: Icon;
+	name: IconNames;
 	size: IconSizes;
 	className?: string;
 	onClick?: () => void;
@@ -52,7 +52,7 @@ export type IconProps = {
  *
  * @param {IconProps} props - Component properties.
  */
-export default function Icon({
+export function Icon({
 	name,
 	size = 'regular',
 	className = '',

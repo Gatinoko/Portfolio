@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import MobileButton, { MobileButtonProps } from './mobile-button/mobile-button';
+import { MobileButtonProps } from './mobile-button/mobile-button';
 import { cva } from 'class-variance-authority';
 
 /**
@@ -15,7 +15,7 @@ type MobileNavigationListProps = {
  *
  * @param {MobileNavigationListProps} props - Component properties.
  */
-export default function MobileNavigationList({
+export function MobileNavigationList({
 	open = false,
 	children,
 }: MobileNavigationListProps) {

@@ -1,4 +1,4 @@
-import Icon, { IconProps } from '@/components/icon/icon';
+import { Icon, IconProps } from '@/components/icon/icon';
 import Image from 'next/image';
 import React, { ReactElement, ReactNode } from 'react';
 

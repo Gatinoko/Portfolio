@@ -25,7 +25,7 @@ export type MobileButtonProps = {
  *
  * @param {MobileButtonProps} props - Component properties.
  */
-export default function MobileButton({
+export function MobileButton({
 	size = 'regular',
 	children,
 	onClick = () => {},

@@ -1,6 +1,5 @@
 import { PageSection } from '@/components/page-section/page-section';
-import Icon from '@/components/icon/icon';
-import ChipCloud from '@/components/chip-cloud/chip-cloud';
+import { ChipCloud } from '@/components/chip-cloud/chip-cloud';
 import { WorkTimeline } from '@/components/work-timeline/work-timeline';
 import { TimelineItem } from '@/components/work-timeline/timeline-item/timeline-item';
 import { ProjectItem } from '@/components/project-box/project-item/project-item';
@@ -9,6 +8,7 @@ import { TimelineSubitem } from '@/components/work-timeline/timeline-subitem/tim
 import { BannerArt } from '@/components/banner-art/banner-art';
 import { ColumnGrid } from '@/components/column-grid/column-grid';
 import { Chip } from '@/components/chip-cloud/chip/chip';
+import { Icon } from '@/components/icon/icon';
 
 export default function Index(props: any, rootMainRef: any) {
 	return (

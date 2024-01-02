@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Button } from '../button/button';
 import { Logo } from './logo/logo';
-import MobileButton from './mobile-navigation-list/mobile-button/mobile-button';
-import MobileNavigationList from './mobile-navigation-list/mobile-navigation-list';
-import Icon from '../icon/icon';
+import { MobileButton } from './mobile-navigation-list/mobile-button/mobile-button';
+import { MobileNavigationList } from './mobile-navigation-list/mobile-navigation-list';
+import { Icon } from '../icon/icon';
 
 /**
  * Custom type declaration for the `Navigation` React component properties.
@@ -15,7 +15,7 @@ type NavigationProps = {};
  *
  * @param {NavigationProps} props - Component properties.
  */
-export default function Navigation(props: NavigationProps) {
+export function Navigation(props: NavigationProps) {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 	return (

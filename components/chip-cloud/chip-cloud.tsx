@@ -14,10 +14,7 @@ type ChipCloudProps = {
  *
  * @param {ChipCloudProps} props - Component properties.
  */
-export default function ChipCloud({
-	children,
-	className = '',
-}: ChipCloudProps) {
+export function ChipCloud({ children, className = '' }: ChipCloudProps) {
 	return (
 		<ul
 			role='navigation'
