@@ -1,16 +1,15 @@
-import { PageSection } from '@/components/page-section/page-section';
-import { ChipCloud } from '@/components/chip-cloud/chip-cloud';
-import { WorkTimeline } from '@/components/work-timeline/work-timeline';
-import { TimelineItem } from '@/components/work-timeline/timeline-item/timeline-item';
-import { ProjectItem } from '@/components/project-box/project-item/project-item';
-import { ProjectBox } from '@/components/project-box/project-box';
-import { TimelineSubitem } from '@/components/work-timeline/timeline-subitem/timeline-subitem';
 import { BannerArt } from '@/components/banner-art/banner-art';
-import { ColumnGrid } from '@/components/column-grid/column-grid';
+import { ChipCloud } from '@/components/chip-cloud/chip-cloud';
 import { Chip } from '@/components/chip-cloud/chip/chip';
 import { Icon } from '@/components/icon/icon';
+import { PageSection } from '@/components/page-section/page-section';
+import { ProjectBox } from '@/components/project-box/project-box';
+import { ProjectItem } from '@/components/project-box/project-item/project-item';
+import { TimelineItem } from '@/components/work-timeline/timeline-item/timeline-item';
+import { TimelineSubitem } from '@/components/work-timeline/timeline-subitem/timeline-subitem';
+import { WorkTimeline } from '@/components/work-timeline/work-timeline';
 
-export default function Index(props: any, rootMainRef: any) {
+export default function Home() {
 	return (
 		<>
 			{/* <ColumnGrid platform={'responsive'} /> */}
