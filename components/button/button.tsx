@@ -1,3 +1,5 @@
+'use client';
+
 import React, { ComponentProps, ReactElement, useState } from 'react';
 import { cva } from 'class-variance-authority';
 import { IconProps } from '../icon/icon';

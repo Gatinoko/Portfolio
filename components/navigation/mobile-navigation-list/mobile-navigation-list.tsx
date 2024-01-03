@@ -1,3 +1,5 @@
+'use client';
+
 import { ReactElement } from 'react';
 import { MobileButtonProps } from './mobile-button/mobile-button';
 import { cva } from 'class-variance-authority';

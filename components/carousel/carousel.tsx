@@ -1,8 +1,11 @@
+'use client';
+
 import React, { ReactElement, useState } from 'react';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ButtonSizes, Button } from '../button/button';
 import { cva } from 'class-variance-authority';
+import { Icon, IconSizes } from '../icon/icon';
 
 export type CarouselSizes =
 	| 'extra-large'
@@ -11,51 +14,54 @@ export type CarouselSizes =
 	| 'small'
 	| 'extra-small';
 
-export interface ICarousel {
+export interface CarouselProps {
 	width?: string;
 	height?: string;
+	size: CarouselSizes;
+	className?: string;
 	imageClassName?: string;
 	imageObjectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
-	className?: string;
-	buttonSize: ButtonSizes;
 	children: ReactElement[];
 }
 
-const carousel = cva('carousel', {
-	variants: {
-		buttonSize: {
-			['extra-large']: 'extra-large',
-			large: 'large',
-			regular: 'regular',
-			medium: 'medium',
-			small: 'small',
-			['extra-small']: 'extra-small',
-		},
-	},
-	defaultVariants: {
-		buttonSize: 'regular',
-	},
-});
-
-export default function Carousel(props: ICarousel) {
+// TODO: REFACTOR COMPONENT
+export default function Carousel(props: CarouselProps) {
 	const {
-		children,
-		buttonSize,
+		width = '500px',
+		height = '500px',
+		size,
 		className,
 		imageClassName,
 		imageObjectFit = 'cover',
-		width = '500px',
-		height = '500px',
+		children,
 	} = props;
 
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const { src, fill, alt } = children[currentIndex].props;
 
-	function onChevronClick(
+	// Component CVA function
+	const carousel = cva('carousel', {
+		variants: {
+			size: {
+				['extra-large']: 'extra-large',
+				large: 'large',
+				regular: 'regular',
+				medium: 'medium',
+				small: 'small',
+				['extra-small']: 'extra-small',
+			},
+		},
+		defaultVariants: {
+			size: 'regular',
+		},
+	});
+
+	// Chevron buttons click handler
+	function buttonClickHandler(
 		direction: 'left' | 'right',
 		currentIndex: number,
 		childrenLenght: number
-	): void {
+	) {
 		switch (direction) {
 			case 'left':
 				setCurrentIndex(
@@ -72,22 +78,39 @@ export default function Carousel(props: ICarousel) {
 
 	return (
 		<div
-			className={carousel({ buttonSize })}
+			className={carousel({ size })}
 			style={{ width: width, height: height }}>
+			{/* Left chevron button */}
 			<Button
 				className={`chevron-left ${className}`}
-				prefixIcon={'left-chevron'}
-				size={buttonSize as ButtonSizes}
-				onClick={() => onChevronClick('left', currentIndex, children.length)}
-				variant={'default'}
+				icon={
+					<Icon
+						name={'left-chevron'}
+						size={size as IconSizes}
+					/>
+				}
+				size={size}
+				onClick={() =>
+					buttonClickHandler('left', currentIndex, children.length)
+				}
 			/>
+
+			{/* Right chevron button */}
 			<Button
 				className={`chevron-right ${className}`}
-				suffixIcon={'right-chevron'}
-				size={buttonSize as ButtonSizes}
-				onClick={() => onChevronClick('right', currentIndex, children.length)}
-				variant={'default'}
+				icon={
+					<Icon
+						name={'right-chevron'}
+						size={size as IconSizes}
+					/>
+				}
+				size={size}
+				onClick={() =>
+					buttonClickHandler('right', currentIndex, children.length)
+				}
 			/>
+
+			{/* Image container */}
 			<div
 				id='ImageContainer'
 				className={'image-container'}>
@@ -99,14 +122,7 @@ export default function Carousel(props: ICarousel) {
 						transition={{
 							opacity: { duration: 0.5 },
 						}}>
-						<Image
-							style={{ objectFit: imageObjectFit }}
-							key={currentIndex}
-							alt={alt}
-							fill={fill}
-							className={`carousel-image ${imageClassName}`}
-							src={src}
-						/>
+						{children}
 					</motion.div>
 				</AnimatePresence>
 			</div>

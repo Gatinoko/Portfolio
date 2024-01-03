@@ -1,3 +1,5 @@
+'use client';
+
 /**
  * Custom type declaration for the `LandingBanner` React component properties.
  */
