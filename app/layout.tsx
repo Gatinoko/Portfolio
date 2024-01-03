@@ -15,8 +15,8 @@ export default async function RootLayout({ children }: PropsWithChildren) {
 			<body>
 				<Navigation />
 				{children}
+				<Footer />
 			</body>
-			<Footer />
 		</html>
 	);
 }
