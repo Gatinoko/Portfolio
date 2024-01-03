@@ -3,21 +3,21 @@
 .mobile-button {
 	& {
 		display: flex;
-		user-select: none;
 		position: relative;
-		text-decoration: none;
 		justify-content: flex-end;
 		align-items: center;
-		background-color: get-color-value(white-ffffff-5);
-		border-top: 1px solid get-color-value(transparent-ffffff);
+		user-select: none;
+		text-decoration: none;
+		border-top: 1px solid transparent;
 		border-left: 0;
-		border-bottom: 1px solid get-color-value(transparent-ffffff);
+		border-bottom: 1px solid transparent;
 		border-right: 0;
+		background-color: get-component-color-value(bg-default);
 	}
 
 	.text {
 		display: flex;
-		color: get-color-value(white-ffffff-50);
+		color: get-component-color-value(text-default);
 		transition: color 150ms, padding 150ms;
 		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 	}
@@ -26,24 +26,24 @@
 		Sizes
 	*/
 	&.extra-large {
-		padding: 1.75rem 1.5rem;
 		@include interface-xl;
+		padding: 1.75rem 1.5rem;
 	}
 	&.large {
-		padding: 1.5rem 1.5rem;
 		@include interface-l;
+		padding: 1.5rem 1.5rem;
 	}
 	&.regular {
-		padding: 1.5rem 1.5rem;
 		@include interface-r;
+		padding: 1.5rem 1.5rem;
 	}
 	&.small {
-		padding: 1.5rem 1.5rem;
 		@include interface-s;
+		padding: 1.5rem 1.5rem;
 	}
 	&.extra-small {
-		padding: 1.5rem 1.5rem;
 		@include interface-xs;
+		padding: 1.5rem 1.5rem;
 	}
 
 	/*
@@ -52,18 +52,18 @@
 	@media (hover: hover) {
 		&:hover {
 			& {
-				background-color: get-color-value(white-ffffff-15);
-				border-top: 1px solid get-color-value(white-ffffff-5);
 				border-left: 0;
-				border-bottom: 1px solid get-color-value(white-ffffff-15);
 				border-right: 0;
+				background-color: get-component-color-value(bg-hover);
+				border-top: 1px solid get-color-value(white-ffffff-5);
+				border-bottom: 1px solid get-color-value(white-ffffff-15);
 				transition: background-color 150ms;
 				transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 			}
 
 			.text {
-				color: get-color-value(white-ffffff);
 				padding-right: 1.5rem;
+				color: get-component-color-value(text-hover);
 				transition: color 150ms, padding-right 150ms;
 				transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 			}
@@ -71,7 +71,7 @@
 	}
 	&:active {
 		& {
-			background-color: get-color-value(white-ffffff-25);
+			background-color: get-component-color-value(bg-active);
 			border-top: 1px solid get-color-value(white-ffffff-5);
 			border-left: 0;
 			border-bottom: 1px solid get-color-value(white-ffffff-15);
@@ -81,7 +81,7 @@
 		}
 
 		.text {
-			color: get-color-value(white-ffffff);
+			color: get-component-color-value(text-active);
 			padding-right: 1rem;
 			transition: color 150ms, padding-right 150ms;
 			transition-timing-function: cubic-bezier(0, 0, 0.25, 1);

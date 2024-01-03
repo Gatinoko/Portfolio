@@ -4,35 +4,36 @@
 	& {
 		display: flex;
 		gap: 1rem;
+	}
 
-		&:first-child {
-			.left-separator {
-				&::after {
-					content: '';
-					transform: translateX(50%);
-					border-image: linear-gradient(
-							to top,
-							get-color-value(white-ffffff-50) 85%,
-							get-color-value(white-ffffff-50) 5%,
-							get-color-value(transparent-ffffff)
-						)
-						1 / 5px;
-				}
+	&:first-child {
+		.left-separator {
+			&::after {
+				content: '';
+				transform: translateX(50%);
+				border-image: linear-gradient(
+						to top,
+						get-color-value(white-ffffff-50) 85%,
+						get-color-value(white-ffffff-50) 5%,
+						get-color-value(transparent-ffffff)
+					)
+					1 / 5px;
 			}
 		}
-		&:last-child {
-			.left-separator {
-				&::after {
-					content: '';
-					transform: translateX(50%);
-					border-image: linear-gradient(
-							to bottom,
-							get-color-value(white-ffffff-50) 85%,
-							get-color-value(white-ffffff-50) 5%,
-							get-color-value(transparent-ffffff)
-						)
-						1 / 5px;
-				}
+	}
+
+	&:last-child {
+		.left-separator {
+			&::after {
+				content: '';
+				transform: translateX(50%);
+				border-image: linear-gradient(
+						to bottom,
+						get-color-value(white-ffffff-50) 85%,
+						get-color-value(white-ffffff-50) 5%,
+						get-color-value(transparent-ffffff)
+					)
+					1 / 5px;
 			}
 		}
 	}
@@ -46,17 +47,17 @@
 
 		&::after {
 			content: '';
-			transform: translateX(50%);
 			border: 1px solid;
+			transform: translateX(50%);
 		}
 	}
 
 	.information-container {
 		& {
 			display: flex;
-			margin: 2rem 0 2rem 0;
 			flex-direction: column;
 			position: relative;
+			margin: 2rem 0 2rem 0;
 			gap: 1rem;
 			width: 100%;
 		}
@@ -71,10 +72,10 @@
 			.date {
 				@include interface-xs;
 				letter-spacing: normal;
-				font-weight: get-font-weight-value(light);
 				position: absolute;
-				width: 5rem;
 				text-align: center;
+				width: 5rem;
+				font-weight: get-font-weight-value(light);
 				color: get-color-value(white-ffffff-50);
 				left: calc(get-responsive-spacing-value(default, spacing-l) * -3);
 			}
@@ -87,8 +88,8 @@
 					height: 1rem;
 					top: 50%;
 					left: -1.5rem;
-					transform: translateY(-50%);
 					border-radius: 50%;
+					transform: translateY(-50%);
 					background-color: get-color-value(white-ffffff);
 				}
 			}

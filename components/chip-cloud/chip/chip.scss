@@ -2,21 +2,17 @@
 
 .chip {
 	& {
-		background-color: get-color-value(white-ffffff-15);
-		color: get-color-value(white-ffffff);
-
-		border-radius: 99999px;
 		width: fit-content;
-
 		text-transform: uppercase;
 		text-align: center;
-
-		border-width: 1px;
 		border-style: solid;
+		border-radius: 99999px;
+		border-width: 1px;
+		background-color: get-color-value(white-ffffff-15);
+		color: get-color-value(white-ffffff);
 		border-color: get-color-value(white-ffffff-5)
 			get-color-value(white-ffffff-5) get-color-value(white-ffffff-15)
 			get-color-value(white-ffffff-5);
-
 		transition: background-color 150ms;
 		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 	}
@@ -49,9 +45,7 @@
 		Types
 	*/
 	&.interactive {
-		& {
-			user-select: none;
-		}
+		user-select: none;
 
 		&:hover {
 		}
@@ -64,9 +58,9 @@
 		States
 	*/
 	&:disabled {
-		color: get-component-color-value(disabled);
 		text-decoration: none;
 		pointer-events: none;
+		color: get-component-color-value(bg-default);
 	}
 	&:hover {
 	}

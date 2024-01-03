@@ -22,5 +22,20 @@ $COLOR-PALETTE: (
 );
 
 $COMPONENT-COLOR-PALETTE: (
-	disabled: #ffffff40,
+	text-active: white,
+	text-hover: white,
+	text-default: #ffffff80,
+
+	// white-ffffff-50
+	bg-active: #ffffff40,
+	// white-ffffff-25
+	bg-hover: #ffffff26,
+	// white-ffffff-15
+	bg-default: #ffffff0d,
+
+	// white-ffffff-5
+	bg-disabled: #ffffff40,
+	// TODO: change sicne active already uses this color
+	icon-disabled: #ffffff40,
+	// TODO: change sicne active already uses this color
 );

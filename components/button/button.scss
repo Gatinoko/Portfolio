@@ -5,24 +5,18 @@
 		display: flex;
 		justify-items: center;
 		align-items: center;
-
-		background-color: get-color-value(white-ffffff-5);
-		color: get-color-value(white-ffffff-50);
-
-		border: 0px;
-		padding: 0px;
-
 		text-transform: uppercase;
 		user-select: none;
-
-		border-width: 1px;
 		border-style: solid;
+		padding: 0px;
+		border-width: 1px;
+		background-color: get-component-color-value(bg-default);
+		color: get-component-color-value(text-default);
 		border-color: get-color-value(white-ffffff-5)
 			get-color-value(white-ffffff-5) get-color-value(white-ffffff-15)
 			get-color-value(white-ffffff-5);
-
-		transition: background-color 150ms, color 150ms;
 		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+		transition: background-color 150ms, color 150ms;
 	}
 
 	/*
@@ -30,33 +24,33 @@
 	*/
 	&.extra-large {
 		@include interface-xl;
-		border-radius: get-radius-value(radius-13);
 		gap: 2rem;
 		padding: 1rem 1.5rem;
+		border-radius: get-radius-value(radius-13);
 	}
 	&.large {
 		@include interface-l;
-		border-radius: get-radius-value(radius-13);
 		gap: 1.5rem;
 		padding: 1rem 1.5rem;
+		border-radius: get-radius-value(radius-13);
 	}
 	&.regular {
 		@include interface-r;
-		border-radius: get-radius-value(radius-9);
 		gap: 1rem;
 		padding: 0.5rem 1.5rem;
+		border-radius: get-radius-value(radius-9);
 	}
 	&.small {
 		@include interface-s;
-		border-radius: get-radius-value(radius-7);
 		gap: 1rem;
 		padding: 0.5rem 1.5rem;
+		border-radius: get-radius-value(radius-7);
 	}
 	&.extra-small {
 		@include interface-xs;
-		border-radius: get-radius-value(radius-7);
 		gap: 1rem;
 		padding: 0.5rem 1.5rem;
+		border-radius: get-radius-value(radius-7);
 	}
 
 	/*
@@ -73,15 +67,18 @@
 		*/
 		@media (hover: hover) {
 			&:hover {
-				color: get-color-value(white-ffffff);
-				background-color: get-color-value(white-ffffff-15);
+				color: get-component-color-value(text-hover);
+				background-color: get-component-color-value(bg-hover);
 				border-color: get-color-value(white-ffffff-5)
 					get-color-value(white-ffffff-5) get-color-value(white-ffffff-15)
 					get-color-value(white-ffffff-5);
 			}
 		}
 		&:active {
-			background-color: get-color-value(white-ffffff-25);
+			background-color: get-component-color-value(bg-active);
+			border-color: get-color-value(white-ffffff-5)
+				get-color-value(white-ffffff-5) get-color-value(white-ffffff-15)
+				get-color-value(white-ffffff-5);
 		}
 	}
 
@@ -90,22 +87,22 @@
 	*/
 	@media (hover: hover) {
 		&:hover {
-			color: get-color-value(white-ffffff);
-			background-color: get-color-value(white-ffffff-15);
+			color: get-component-color-value(text-hover);
+			background-color: get-component-color-value(bg-hover);
 		}
 	}
 	&:active {
-		background-color: get-color-value(white-ffffff-25);
+		background-color: get-component-color-value(bg-active);
 	}
 	&:disabled {
 		& {
-			color: get-component-color-value(disabled);
 			text-decoration: none;
 			pointer-events: none;
+			color: get-component-color-value(text-disabled);
 		}
 
 		.icon {
-			fill: get-component-color-value(disabled);
+			fill: get-component-color-value(icon-disabled);
 		}
 	}
 }
