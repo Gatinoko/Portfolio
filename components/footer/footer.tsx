@@ -14,7 +14,7 @@ export function Footer(props: FooterProps) {
 	return (
 		<footer className='footer'>
 			<p
-				id='CopyrightNotice'
+				className='copyright-notice'
 				data-size='extra-small'>
 				&#169; Gabriel Dias Tinoco, 2023
 			</p>
