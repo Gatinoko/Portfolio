@@ -8,6 +8,19 @@
 		transition: top 150ms;
 	}
 
+	&::before {
+		content: '';
+		display: flex;
+		position: absolute;
+		background-color: transparent;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		z-index: -1;
+		transition: background-color 150ms;
+		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+	}
+
 	@include screen-breakpoint(mobile, tablet) {
 		& {
 			display: flex;
@@ -17,19 +30,6 @@
 			background-color: black;
 			box-shadow: 0px 10px 25px 5px #00000040;
 			border-radius: 0 0 get-radius-value(radius-13) get-radius-value(radius-13);
-		}
-
-		&::before {
-			content: '';
-			display: flex;
-			position: absolute;
-			background-color: transparent;
-			top: 0;
-			left: 0;
-			width: 100%;
-			z-index: -1;
-			transition: background-color 150ms, height 1ms;
-			transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 		}
 
 		li:last-child {
@@ -46,7 +46,7 @@
 		top: 100%;
 
 		&::before {
-			height: 125vh;
+			height: 100dvh;
 			background-color: get-color-value(black-000000-50);
 		}
 	}
