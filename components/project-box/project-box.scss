@@ -4,10 +4,9 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 1rem;
+	width: 100%;
 	padding: 0px;
 	margin: 0px;
-	width: 100%;
-
 	@include screen-breakpoint(mobile, tablet, small) {
 		grid-template-columns: 1fr;
 	}

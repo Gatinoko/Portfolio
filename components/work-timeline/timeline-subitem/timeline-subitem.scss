@@ -2,10 +2,10 @@
 
 .timeline-subitem {
 	& {
-		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		position: relative;
 		width: 100%;
 		gap: 0.5rem;
 	}
@@ -13,24 +13,24 @@
 	&::before {
 		content: '';
 		position: absolute;
-		background-color: white;
-		width: 0.5rem;
-		height: 0.5rem;
 		top: 50%;
 		left: -1.25rem;
+		width: 0.5rem;
+		height: 0.5rem;
 		border-radius: 50%;
+		background-color: white;
 		transform: translateY(-50%);
 	}
 
 	.date {
 		@include interface-xs;
-		letter-spacing: normal;
 		position: absolute;
-		text-align: center;
-		width: 5rem;
-		color: get-color-value(white-ffffff-50);
-		font-weight: get-font-weight-value(light);
 		left: calc(get-responsive-spacing-value(default, spacing-l) * -3);
+		width: 5rem;
+		font-weight: get-font-weight-value(light);
+		letter-spacing: normal;
+		text-align: center;
+		color: get-color-value(white-ffffff-50);
 	}
 
 	.icons {

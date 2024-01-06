@@ -57,9 +57,9 @@
 			display: flex;
 			flex-direction: column;
 			position: relative;
-			margin: 2rem 0 2rem 0;
 			gap: 1rem;
 			width: 100%;
+			margin: 2rem 0 2rem 0;
 		}
 
 		.item-heading {
@@ -71,13 +71,13 @@
 
 			.date {
 				@include interface-xs;
-				letter-spacing: normal;
 				position: absolute;
-				text-align: center;
+				left: calc(get-responsive-spacing-value(default, spacing-l) * -3);
 				width: 5rem;
+				letter-spacing: normal;
+				text-align: center;
 				font-weight: get-font-weight-value(light);
 				color: get-color-value(white-ffffff-50);
-				left: calc(get-responsive-spacing-value(default, spacing-l) * -3);
 			}
 
 			.title {
@@ -89,8 +89,8 @@
 					top: 50%;
 					left: -1.5rem;
 					border-radius: 50%;
-					transform: translateY(-50%);
 					background-color: get-color-value(white-ffffff);
+					transform: translateY(-50%);
 				}
 			}
 		}
