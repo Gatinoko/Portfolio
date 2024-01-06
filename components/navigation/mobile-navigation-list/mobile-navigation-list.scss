@@ -12,13 +12,14 @@
 		content: '';
 		display: flex;
 		position: absolute;
-		top: 100%;
+		top: 0;
 		left: 0;
 		z-index: -1;
 		width: 100%;
 		background-color: transparent;
 		transition: background-color 150ms;
 		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+		transform: scaleY(2);
 	}
 
 	@include screen-breakpoint(mobile, tablet) {
