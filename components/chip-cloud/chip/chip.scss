@@ -8,8 +8,7 @@
 		border-style: solid;
 		border-radius: 99999px;
 		border-width: 1px;
-		background-color: get-color-value(white-ffffff-15);
-		color: get-color-value(white-ffffff);
+		background-color: get-component-color-value(bg-default);
 		border-color: get-color-value(white-ffffff-5)
 			get-color-value(white-ffffff-5) get-color-value(white-ffffff-15)
 			get-color-value(white-ffffff-5);
@@ -50,20 +49,21 @@
 		&:hover {
 		}
 		&:active {
-			background-color: get-color-value(white-ffffff-25);
+			background-color: get-component-color-value(bg-active);
 		}
 	}
 
 	/*
 		States
 	*/
-	&:disabled {
-		text-decoration: none;
-		pointer-events: none;
-		color: get-component-color-value(bg-default);
-	}
 	&:hover {
 	}
 	&:active {
+	}
+	&.disabled {
+		text-decoration: none;
+		pointer-events: none;
+		color: get-component-color-value(text-disabled);
+		background-color: get-component-color-value(bg-disabled);
 	}
 }

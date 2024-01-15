@@ -1,7 +1,7 @@
 'use client';
 
 import { cva } from 'class-variance-authority';
-import React from 'react';
+import { ComponentProps } from 'react';
 
 /**
  * Custom type declaration for the different sizes a `Chip` component can assume.
@@ -23,7 +23,7 @@ export type ChipProps = {
 	link?: string;
 	className?: string;
 	children: string;
-};
+} & ComponentProps<'button'>;
 
 /**
  * React component to-be used inside the `ChipCloud` component or by itself.
@@ -37,6 +37,7 @@ export function Chip(props: ChipProps) {
 		size = 'regular',
 		link,
 		interactive,
+		disabled,
 		className = '',
 	} = props;
 
@@ -54,10 +55,14 @@ export function Chip(props: ChipProps) {
 			interactive: {
 				true: 'interactive',
 			},
+			disabled: {
+				true: 'disabled',
+			},
 		},
 		defaultVariants: {
 			size: 'regular',
 			interactive: false,
+			disabled: false,
 		},
 	});
 
@@ -66,14 +71,14 @@ export function Chip(props: ChipProps) {
 			{'link' in props ? (
 				<a
 					id={id}
-					className={`${chip({ size, interactive })} ${className}`}
+					className={`${chip({ size, interactive, disabled })} ${className}`}
 					href={link}>
 					{children}
 				</a>
 			) : (
 				<p
 					id={id}
-					className={`${chip({ size, interactive })} ${className}`}>
+					className={`${chip({ size, interactive, disabled })} ${className}`}>
 					{children}
 				</p>
 			)}
