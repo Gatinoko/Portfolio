@@ -1,70 +1,22 @@
+@use '../colors/functions' as *;
+@use 'functions' as *;
 @use 'variables' as *;
 
-/*
-	100% layout mixins
-*/
-@mixin full-parent-width-layout {
-	width: 100%;
-}
-@mixin full-parent-height-layout {
-	height: 100%;
-}
-@mixin full-parent-layout {
-	@include full-parent-width-layout;
-	@include full-parent-height-layout;
-}
 
 /*
-    Flex layout mixins
+	Border mixins
 */
-@mixin flex-layout {
-	display: flex;
+@mixin base-border-color {
+	border-top-color: get-color-value(white-ffffff-5);
+	border-bottom-color: get-color-value(white-ffffff-15);
+	border-left-color: get-color-value(white-ffffff-5);
+	border-right-color: get-color-value(white-ffffff-5);
 }
-@mixin flex-vertical-layout {
-	@include flex-layout;
-	flex-direction: column;
-}
-@mixin flex-horizontal-layout {
-	@include flex-layout;
-	flex-direction: row;
-}
-@mixin flex-layout-center-justified {
-	justify-content: center;
-}
-@mixin flex-layout-center-aligned {
-	align-items: center;
-}
-@mixin flex-layout-perfectly-centered {
-	@include flex-layout-center-justified;
-	@include flex-layout-center-aligned;
-}
-
-/*
-    Viewport layout mixins
-*/
-@mixin full-viewport-width-layout {
-	width: 100vw;
-}
-@mixin full-viewport-height-layout {
-	height: 100vh;
-}
-@mixin full-viewport-layout {
-	@include full-viewport-width-layout;
-	@include full-viewport-height-layout;
-}
-
-/*
-	Layout layout mixins
-*/
-@mixin clickable-layout {
-	cursor: pointer;
-}
-@mixin unselectable-layout {
-	user-select: none;
-}
-@mixin clickable-unselectable-layout {
-	@include clickable-layout;
-	@include unselectable-layout;
+@mixin base-border {
+	@include base-border-color;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: get-radius-value(radius-13);
 }
 
 /*

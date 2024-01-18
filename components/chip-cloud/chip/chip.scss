@@ -2,16 +2,12 @@
 
 .chip {
 	& {
+		@include base-border;
 		width: fit-content;
 		text-transform: uppercase;
 		text-align: center;
-		border-style: solid;
 		border-radius: 99999px;
-		border-width: 1px;
 		background-color: get-component-color-value(bg-default);
-		border-color: get-color-value(white-ffffff-5)
-			get-color-value(white-ffffff-5) get-color-value(white-ffffff-15)
-			get-color-value(white-ffffff-5);
 		transition: background-color 150ms;
 		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 	}

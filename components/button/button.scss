@@ -2,24 +2,15 @@
 
 .button {
 	& {
+		@include base-border;
 		display: flex;
 		justify-items: center;
 		align-items: center;
-
 		text-transform: uppercase;
 		user-select: none;
-
-		border-style: solid;
-		border-width: 1px;
-
 		padding: 0px;
-
 		background-color: get-component-color-value(bg-default);
 		color: get-component-color-value(text-default);
-		border-color: get-color-value(white-ffffff-5)
-			get-color-value(white-ffffff-5) get-color-value(white-ffffff-15)
-			get-color-value(white-ffffff-5);
-
 		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 		transition: background-color 150ms, color 150ms;
 	}
@@ -72,18 +63,14 @@
 		*/
 		@media (hover: hover) {
 			&:hover {
+				@include base-border-color;
 				color: get-component-color-value(text-hover);
 				background-color: get-component-color-value(bg-hover);
-				border-color: get-color-value(white-ffffff-5)
-					get-color-value(white-ffffff-5) get-color-value(white-ffffff-15)
-					get-color-value(white-ffffff-5);
 			}
 		}
 		&:active {
+			@include base-border-color;
 			background-color: get-component-color-value(bg-active);
-			border-color: get-color-value(white-ffffff-5)
-				get-color-value(white-ffffff-5) get-color-value(white-ffffff-15)
-				get-color-value(white-ffffff-5);
 		}
 	}
 
@@ -103,7 +90,6 @@
 		& {
 			text-decoration: none;
 			pointer-events: none;
-
 			color: get-component-color-value(text-disabled);
 		}
 
