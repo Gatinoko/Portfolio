@@ -13,9 +13,9 @@
 				transform: translateX(50%);
 				border-image: linear-gradient(
 						to top,
-						get-color-value(white-ffffff-50) 85%,
-						get-color-value(white-ffffff-50) 5%,
-						get-color-value(transparent-ffffff)
+						$white-ffffff-50 85%,
+						$white-ffffff-50 5%,
+						transparent
 					)
 					1 / 5px;
 			}
@@ -29,9 +29,9 @@
 				transform: translateX(50%);
 				border-image: linear-gradient(
 						to bottom,
-						get-color-value(white-ffffff-50) 85%,
-						get-color-value(white-ffffff-50) 5%,
-						get-color-value(transparent-ffffff)
+						$white-ffffff-50 85%,
+						$white-ffffff-50 5%,
+						transparent
 					)
 					1 / 5px;
 			}
@@ -77,7 +77,7 @@
 				letter-spacing: normal;
 				text-align: center;
 				font-weight: get-font-weight-value(light);
-				color: get-color-value(white-ffffff-50);
+				color: $white-ffffff-50;
 			}
 
 			.title {
@@ -89,7 +89,7 @@
 					top: 50%;
 					left: -1.5rem;
 					border-radius: 50%;
-					background-color: get-color-value(white-ffffff);
+					background-color: white;
 					transform: translateY(-50%);
 				}
 			}

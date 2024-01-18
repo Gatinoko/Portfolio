@@ -5,40 +5,40 @@
 	Global title text styling
 */
 h1 {
-	color: get-color-value(white-ffffff);
+	color: white;
 	@include ty.heading-2xl;
 	margin: 0px;
 	word-break: break-word;
 }
 h2 {
-	color: get-color-value(white-ffffff);
+	color: white;
 	@include ty.heading-xl;
 	margin: 0px;
 	word-break: break-word;
 }
 h3 {
-	color: get-color-value(white-ffffff);
+	color: white;
 
 	@include ty.heading-l;
 	margin: 0px;
 	word-break: break-word;
 }
 h4 {
-	color: get-color-value(white-ffffff);
+	color: white;
 
 	@include ty.heading-r;
 	margin: 0px;
 	word-break: break-word;
 }
 h5 {
-	color: get-color-value(white-ffffff);
+	color: white;
 
 	@include ty.heading-s;
 	margin: 0px;
 	word-break: break-word;
 }
 h6 {
-	color: get-color-value(white-ffffff);
+	color: white;
 
 	@include ty.heading-xs;
 	margin: 0px;

@@ -10,7 +10,7 @@
 		box-sizing: border-box;
 		padding: get-responsive-spacing-value(default, spacing-s);
 		gap: 1rem;
-		background-color: get-component-color-value(bg-default);
+		background-color: $bg-default;
 	}
 
 	.cover-image {

@@ -1,4 +1,4 @@
-@use '../colors/functions' as *;
+@use '../colors/variables' as *;
 @use 'functions' as *;
 @use 'variables' as *;
 
@@ -7,10 +7,10 @@
 	Border mixins
 */
 @mixin base-border-color {
-	border-top-color: get-color-value(white-ffffff-5);
-	border-bottom-color: get-color-value(white-ffffff-15);
-	border-left-color: get-color-value(white-ffffff-5);
-	border-right-color: get-color-value(white-ffffff-5);
+	border-top-color: $white-ffffff-5;
+	border-bottom-color: $white-ffffff-15;
+	border-left-color: $white-ffffff-5;
+	border-right-color: $white-ffffff-5;
 }
 @mixin base-border {
 	@include base-border-color;

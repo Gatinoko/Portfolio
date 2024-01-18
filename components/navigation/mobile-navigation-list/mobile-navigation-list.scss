@@ -48,7 +48,7 @@
 
 		&::before {
 			height: 100dvh;
-			background-color: get-color-value(black-000000-50);
+			background-color: $black-000000-50;
 		}
 	}
 	&.closed {
