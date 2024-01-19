@@ -22,31 +22,31 @@
 		@include interface-xl;
 		gap: 2rem;
 		padding: 1rem 1.5rem;
-		border-radius: get-radius-value(radius-13);
+		border-radius: $radius-13;
 	}
 	&.large {
 		@include interface-l;
 		gap: 1.5rem;
 		padding: 1rem 1.5rem;
-		border-radius: get-radius-value(radius-13);
+		border-radius: $radius-13;
 	}
 	&.regular {
 		@include interface-r;
 		gap: 1rem;
 		padding: 0.5rem 1.5rem;
-		border-radius: get-radius-value(radius-9);
+		border-radius: $radius-9;
 	}
 	&.small {
 		@include interface-s;
 		gap: 1rem;
 		padding: 0.5rem 1.5rem;
-		border-radius: get-radius-value(radius-7);
+		border-radius: $radius-7;
 	}
 	&.extra-small {
 		@include interface-xs;
 		gap: 1rem;
 		padding: 0.5rem 1.5rem;
-		border-radius: get-radius-value(radius-7);
+		border-radius: $radius-7;
 	}
 
 	/*

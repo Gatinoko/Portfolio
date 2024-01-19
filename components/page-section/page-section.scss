@@ -8,8 +8,8 @@
 		align-items: center;
 		gap: 1rem;
 		max-width: 1136px;
-		padding: 0 get-responsive-spacing-value(custom-pairs, spacing-s-5xl) 0
-			get-responsive-spacing-value(custom-pairs, spacing-s-5xl);
+		padding: 0 $spacing-s-5xl 0
+			$spacing-s-5xl;
 	}
 
 	.section-title {

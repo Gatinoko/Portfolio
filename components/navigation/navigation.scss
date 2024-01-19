@@ -23,8 +23,8 @@
 			height: fit-content;
 			box-sizing: border-box;
 			background-color: $black3-262626;
-			padding: 1rem get-responsive-spacing-value(custom-pairs, spacing-s-2xl)
-				1rem get-responsive-spacing-value(custom-pairs, spacing-s-2xl);
+			padding: 1rem $spacing-s-2xl
+				1rem $spacing-s-2xl;
 			border-bottom: 1px solid $white-ffffff-15;
 		}
 

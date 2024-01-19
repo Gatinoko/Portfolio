@@ -8,7 +8,7 @@
 		width: 100%;
 		overflow: hidden;
 		box-sizing: border-box;
-		padding: get-responsive-spacing-value(default, spacing-s);
+		padding: $spacing-s;
 		gap: 1rem;
 		background-color: $bg-default;
 	}

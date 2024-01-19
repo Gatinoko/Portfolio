@@ -1,5 +1,4 @@
 @use '../colors/variables' as *;
-@use 'functions' as *;
 @use 'variables' as *;
 
 
@@ -16,7 +15,7 @@
 	@include base-border-color;
 	border-width: 1px;
 	border-style: solid;
-	border-radius: get-radius-value(radius-13);
+	border-radius: $radius-13;
 }
 
 /*

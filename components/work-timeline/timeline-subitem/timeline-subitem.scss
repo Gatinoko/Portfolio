@@ -25,7 +25,7 @@
 	.date {
 		@include interface-xs;
 		position: absolute;
-		left: calc(get-responsive-spacing-value(default, spacing-l) * -3);
+		left: calc($spacing-l * -3);
 		width: 5rem;
 		font-weight: get-font-weight-value(light);
 		letter-spacing: normal;

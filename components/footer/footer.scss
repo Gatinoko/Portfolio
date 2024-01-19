@@ -3,8 +3,8 @@
 .footer {
 	& {
 		border-top: 1px solid $white-ffffff-5;
-		padding: 1rem get-responsive-spacing-value(custom-pairs, spacing-s-2xl) 1rem
-			get-responsive-spacing-value(custom-pairs, spacing-s-2xl);
+		padding: 1rem $spacing-s-2xl 1rem
+			$spacing-s-2xl;
 
 		background-color: $black3-262626;
 	}
