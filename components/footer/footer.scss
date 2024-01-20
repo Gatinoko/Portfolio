@@ -1,10 +1,9 @@
-@use '../../styles/modules.scss' as *;
+@use '../../styles/modules/modules.scss' as *;
 
 .footer {
 	& {
 		border-top: 1px solid $white-ffffff-5;
-		padding: 1rem $spacing-s-2xl 1rem
-			$spacing-s-2xl;
+		padding: 1rem $SPACING-S-2XL 1rem $SPACING-S-2XL;
 
 		background-color: $black3-262626;
 	}

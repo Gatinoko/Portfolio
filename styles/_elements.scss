@@ -1,46 +1,46 @@
-@use './typography/typography.module.scss' as ty;
-@use './modules.scss' as *;
+@use './modules/typography/typography.module.scss' as *;
+@use './modules/modules.scss' as *;
 
 /*
 	Global title text styling
 */
 h1 {
 	color: white;
-	@include ty.heading-2xl;
+	@include heading-2xl;
 	margin: 0px;
 	word-break: break-word;
 }
 h2 {
 	color: white;
-	@include ty.heading-xl;
+	@include heading-xl;
 	margin: 0px;
 	word-break: break-word;
 }
 h3 {
 	color: white;
 
-	@include ty.heading-l;
+	@include heading-l;
 	margin: 0px;
 	word-break: break-word;
 }
 h4 {
 	color: white;
 
-	@include ty.heading-r;
+	@include heading-r;
 	margin: 0px;
 	word-break: break-word;
 }
 h5 {
 	color: white;
 
-	@include ty.heading-s;
+	@include heading-s;
 	margin: 0px;
 	word-break: break-word;
 }
 h6 {
 	color: white;
 
-	@include ty.heading-xs;
+	@include heading-xs;
 	margin: 0px;
 	word-break: break-word;
 }
@@ -51,30 +51,30 @@ h6 {
 p {
 	& {
 		color: white;
-		@include ty.body-r;
+		@include body-r;
 		margin: 0px;
 		word-break: break-word;
 		hyphens: auto;
 	}
 
 	&[data-size='extra-large'] {
-		@include ty.body-xl;
+		@include body-xl;
 		margin: 0px;
 	}
 	&[data-size='large'] {
-		@include ty.body-l;
+		@include body-l;
 		margin: 0px;
 	}
 	&[data-size='regular'] {
-		@include ty.body-r;
+		@include body-r;
 		margin: 0px;
 	}
 	&[data-size='small'] {
-		@include ty.body-s;
+		@include body-s;
 		margin: 0px;
 	}
 	&[data-size='extra-small'] {
-		@include ty.body-xs;
+		@include body-xs;
 		margin: 0px;
 	}
 }

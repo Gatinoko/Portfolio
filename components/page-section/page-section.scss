@@ -1,4 +1,4 @@
-@use '../../styles/modules.scss' as *;
+@use '../../styles/modules/modules.scss' as *;
 
 .page-section {
 	& {
@@ -8,8 +8,7 @@
 		align-items: center;
 		gap: 1rem;
 		max-width: 1136px;
-		padding: 0 $spacing-s-5xl 0
-			$spacing-s-5xl;
+		padding: 0 $SPACING-S-5XL 0 $SPACING-S-5XL;
 	}
 
 	.section-title {

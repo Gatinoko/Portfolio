@@ -1,0 +1,34 @@
+/*
+	@link https://utopia.fyi/space/calculator?c=320,16,1.2,1136,24,1.25,2,2,768-1024&s=0.75|0.5|0.25,1.5|2|3|4|5|6|8|10|11|12,s-xl|s-2xl|s-3xl|s-4xl|s-5xl&g=s,l,xl,12
+*/
+// Default spacing variables
+$SPACING-3XS: clamp(0.25rem, 0.201rem + 0.2451vw, 0.375rem); // 4px → 6px
+$SPACING-2XS: clamp(0.5rem, 0.402rem + 0.4902vw, 0.75rem); // 8px → 12px
+$SPACING-XS: clamp(0.75rem, 0.6029rem + 0.7353vw, 1.125rem); // 12px → 18px
+$SPACING-S: clamp(1rem, 0.8039rem + 0.9804vw, 1.5rem); // 16px → 24px
+$SPACING-M: clamp(1.5rem, 1.2059rem + 1.4706vw, 2.25rem); // 24px → 36px
+$SPACING-L: clamp(2rem, 1.6078rem + 1.9608vw, 3rem); // 32px → 48px
+$SPACING-XL: clamp(3rem, 2.4118rem + 2.9412vw, 4.5rem); // 48px → 72px
+$SPACING-2XL: clamp(4rem, 3.2157rem + 3.9216vw, 6rem); // 64px → 96px
+$SPACING-3XL: clamp(5rem, 4.0196rem + 4.902vw, 7.5rem); // 80px → 120px
+$SPACING-4XL: clamp(6rem, 4.8235rem + 5.8824vw, 9rem); // 96px → 144px
+
+// One-up spacing variables
+$SPACING-3XS-2XS: clamp(0.25rem, 0.0539rem + 0.9804vw, 0.75rem); // 4px → 12px
+$SPACING-2XS-XS: clamp(0.5rem, 0.2549rem + 1.2255vw, 1.125rem); // 8px → 18px
+$SPACING-XS-S: clamp(0.75rem, 0.4559rem + 1.4706vw, 1.5rem); // 12px → 24px
+$SPACING-S-M: clamp(1rem, 0.5098rem + 2.451vw, 2.25rem); // 16px → 36px
+$SPACING-M-L: clamp(1.5rem, 0.9118rem + 2.9412vw, 3rem); // 24px → 48px
+$SPACING-L-XL: clamp(2rem, 1.0196rem + 4.902vw, 4.5rem); // 32px → 72px
+$SPACING-XL-2XL: clamp(3rem, 1.8235rem + 5.8824vw, 6rem); // 48px → 96px
+$SPACING-2XL-3XL: clamp(4rem, 2.6275rem + 6.8627vw, 7.5rem); // 64px → 120px
+$SPACING-3XL-4XL: clamp(5rem, 3.4314rem + 7.8431vw, 9rem); // 80px → 144px
+
+// Custom spacing variables
+$SPACING-S-XL: clamp(1rem, -0.3725rem + 6.8627vw, 4.5rem); // 16px → 72px
+$SPACING-S-2XL: clamp(1rem, -0.9608rem + 9.8039vw, 6rem); // 16px → 96px
+$SPACING-S-3XL: clamp(1rem, -1.549rem + 12.7451vw, 7.5rem); // 16px → 120px
+$SPACING-S-4XL: clamp(1rem, -2.1373rem + 15.6863vw, 9rem); // 16px → 144px
+$SPACING-S-5XL: clamp(1rem, -3.3137rem + 21.5686vw, 12rem); // 16px → 192px
+$SPACING-XL-5XL: clamp(3rem, -0.5294rem + 17.6471vw, 12rem); // 48px → 192px
+$SPACING-3XL-6XL: clamp(5rem, 1.0784rem + 19.6078vw, 15rem); // 80px → 240px

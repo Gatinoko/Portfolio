@@ -1,0 +1,40 @@
+/*
+	Map with min and max of all screen breakpoints
+*/
+$SCREEN-BREAKPOINTS: (
+	mobile: (
+		min: 1px,
+		max: 320px,
+	),
+	tablet: (
+		min: 321px,
+		max: 768px,
+	),
+	small: (
+		min: 769px,
+		max: 1024px,
+	),
+	large: (
+		min: 1025px,
+		max: 1136px,
+	),
+	extra-large: (
+		min: 1137px,
+		max: 1920px,
+	),
+	ultra-wide: (
+		min: 1921px,
+		max: 99999px,
+	),
+);
+
+/*
+	Media queries mixins
+*/
+@mixin screen-breakpoint($keys...) {
+	@each $key in $keys {
+		@media only screen and (min-width: map-get($SCREEN-BREAKPOINTS, $key, 'min')) and (max-width: map-get($SCREEN-BREAKPOINTS, $key, 'max')) {
+			@content;
+		}
+	}
+}

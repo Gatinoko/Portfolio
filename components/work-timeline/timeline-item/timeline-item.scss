@@ -1,4 +1,4 @@
-@use '../../../styles/modules.scss' as *;
+@use '../../../styles/modules/modules.scss' as *;
 
 .timeline-item {
 	& {
@@ -72,7 +72,7 @@
 			.date {
 				@include interface-xs;
 				position: absolute;
-				left: calc($spacing-l * -3);
+				left: calc($SPACING-L * -3);
 				width: 5rem;
 				letter-spacing: normal;
 				text-align: center;

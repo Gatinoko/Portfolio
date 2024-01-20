@@ -1,4 +1,4 @@
-@use '../../../styles/modules.scss' as *;
+@use '../../../styles/modules/modules.scss' as *;
 
 .project-item {
 	& {
@@ -8,7 +8,7 @@
 		width: 100%;
 		overflow: hidden;
 		box-sizing: border-box;
-		padding: $spacing-s;
+		padding: $SPACING-S;
 		gap: 1rem;
 		background-color: $bg-default;
 	}

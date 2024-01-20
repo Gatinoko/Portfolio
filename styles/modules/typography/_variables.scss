@@ -6,31 +6,19 @@ $SYNE: 'Syne', sans-serif;
 $OPEN-SANS: 'Open Sans', sans-serif;
 $MAJOR-MONO: 'Major Mono Display', monospace;
 
-$FONT-FAMILY: (
-	syne: $SYNE,
-	open-sans: $OPEN-SANS,
-	major-mono: $MAJOR-MONO,
-);
+$HEADING-XS: 2rem;
+$HEADING-S: 2.4rem;
+$HEADING-R: 3.2rem;
+$HEADING-L: 4.8rem;
+$HEADING-XL: 6.4rem;
 
-$HEADING-TEXT-FONT: (
-	xs: 2rem,
-	s: 2.4rem,
-	r: 3.2rem,
-	l: 4.8rem,
-	xl: 6.4rem,
-);
+$BODY-XS: 0.7rem;
+$BODY-S: 0.8rem;
+$BODY-R: 1rem;
+$BODY-L: 1.2rem;
+$BODY-XL: 1.6rem;
 
-$BODY-TEXT-FONT: (
-	xs: 0.7rem,
-	s: 0.8rem,
-	r: 1rem,
-	l: 1.2rem,
-	xl: 1.6rem,
-);
-
-$FONT-WEIGHT: (
-	light: 300,
-	regular: 400,
-	semibold: 600,
-	bold: 800,
-);
+$WEIGHT-LIGHT: 300;
+$WEIGHT-REGULAR: 400;
+$WEIGHT-SEMIBOLD: 600;
+$WEIGHT-BOLD: 800;

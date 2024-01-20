@@ -1,4 +1,4 @@
-@use '../../styles/modules.scss' as *;
+@use '../../styles/modules/modules.scss' as *;
 
 .navigation {
 	& {
@@ -23,8 +23,7 @@
 			height: fit-content;
 			box-sizing: border-box;
 			background-color: $black3-262626;
-			padding: 1rem $spacing-s-2xl
-				1rem $spacing-s-2xl;
+			padding: 1rem $SPACING-S-2XL 1rem $SPACING-S-2XL;
 			border-bottom: 1px solid $white-ffffff-15;
 		}
 

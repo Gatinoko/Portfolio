@@ -1,16 +1,16 @@
-@use 'functions' as *;
+@use 'variables' as *;
 
 /*
 	Font family mixins
 */
 @mixin font-syne {
-	font-family: get-font-family(syne);
+	font-family: $SYNE;
 }
 @mixin font-opensans {
-	font-family: get-font-family(open-sans);
+	font-family: $OPEN-SANS;
 }
 @mixin font-majormono {
-	font-family: get-font-family(major-mono);
+	font-family: $MAJOR-MONO;
 }
 
 /*
@@ -20,39 +20,33 @@
 */
 @mixin heading-2xl {
 	@include font-syne;
-
 	font-size: clamp(3.9063rem, 1.2582rem + 13.2402vw, 10.6588rem);
-	font-weight: get-font-weight-value(semibold);
+	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin heading-xl {
 	@include font-syne;
-
 	font-size: clamp(3.125rem, 1.2147rem + 9.5515vw, 7.9963rem);
-	font-weight: get-font-weight-value(semibold);
+	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin heading-l {
 	@include font-syne;
-
 	font-size: clamp(2.5rem, 1.1279rem + 6.8603vw, 5.9988rem);
-	font-weight: get-font-weight-value(semibold);
+	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin heading-r {
 	@include font-syne;
-
 	font-size: clamp(2rem, 1.0196rem + 4.902vw, 4.5rem);
-	font-weight: get-font-weight-value(semibold);
+	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin heading-s {
 	@include font-syne;
-
 	font-size: clamp(1.6rem, 0.9037rem + 3.4816vw, 3.3756rem);
-	font-weight: get-font-weight-value(semibold);
+	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin heading-xs {
 	@include font-syne;
-
 	font-size: clamp(1.28rem, 0.7888rem + 2.4559vw, 2.5325rem);
-	font-weight: get-font-weight-value(semibold);
+	font-weight: $WEIGHT-SEMIBOLD;
 }
 
 /*
@@ -62,33 +56,28 @@
 */
 @mixin body-xl {
 	@include font-opensans;
-
 	font-size: clamp(1.1388rem, 0.965rem + 0.8689vw, 1.5819rem);
-	font-weight: get-font-weight-value(semibold);
+	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin body-l {
 	@include font-opensans;
-
 	font-size: clamp(1.0669rem, 0.9338rem + 0.6654vw, 1.4063rem);
-	font-weight: get-font-weight-value(semibold);
+	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin body-r {
 	@include font-opensans;
-
 	font-size: clamp(1rem, 0.902rem + 0.4902vw, 1.25rem);
-	font-weight: get-font-weight-value(regular);
+	font-weight: $WEIGHT-REGULAR;
 }
 @mixin body-s {
 	@include font-opensans;
-
 	font-size: clamp(0.9375rem, 0.8694rem + 0.3407vw, 1.1113rem);
-	font-weight: get-font-weight-value(regular);
+	font-weight: $WEIGHT-REGULAR;
 }
 @mixin body-xs {
 	@include font-opensans;
-
 	font-size: clamp(0.8781rem, 0.8352rem + 0.2145vw, 0.9875rem);
-	font-weight: get-font-weight-value(regular);
+	font-weight: $WEIGHT-REGULAR;
 }
 
 /*
@@ -98,41 +87,36 @@
 */
 @mixin interface-xl {
 	@include font-opensans;
-
 	white-space: nowrap;
 	letter-spacing: 3.2px;
 	font-size: clamp(1.1075rem, 0.6948rem + 2.0637vw, 2.16rem);
-	font-weight: get-font-weight-value(semibold);
+	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin interface-l {
 	@include font-opensans;
-
 	white-space: nowrap;
 	letter-spacing: 3.2px;
 	font-size: clamp(0.9844rem, 0.6645rem + 1.5993vw, 1.8rem);
-	font-weight: get-font-weight-value(semibold);
+	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin interface-r {
 	@include font-opensans;
-
 	white-space: nowrap;
 	letter-spacing: 3.2px;
 	font-size: clamp(0.875rem, 0.6299rem + 1.2255vw, 1.5rem);
-	font-weight: get-font-weight-value(semibold);
+	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin interface-s {
 	@include font-opensans;
-
 	white-space: nowrap;
 	letter-spacing: 3.2px;
 	font-size: clamp(0.7775rem, 0.5922rem + 0.9265vw, 1.25rem);
-	font-weight: get-font-weight-value(bold);
+	font-weight: $WEIGHT-BOLD;
 }
 @mixin interface-xs {
 	@include font-opensans;
-
 	white-space: nowrap;
 	letter-spacing: 3.2px;
 	font-size: clamp(0.6913rem, 0.5538rem + 0.6875vw, 1.0419rem);
-	font-weight: get-font-weight-value(bold);
+	font-weight: $WEIGHT-BOLD;
 }

@@ -1,6 +1,5 @@
-@use '../colors/variables' as *;
-@use 'variables' as *;
-
+@use 'colors.module.scss' as *;
+@use 'radius.module.scss' as *;
 
 /*
 	Border mixins
@@ -16,15 +15,4 @@
 	border-width: 1px;
 	border-style: solid;
 	border-radius: $radius-13;
-}
-
-/*
-	Media queries mixins
-*/
-@mixin screen-breakpoint($keys...) {
-	@each $key in $keys {
-		@media only screen and (min-width: map-get($SCREEN-BREAKPOINTS, $key, 'min')) and (max-width: map-get($SCREEN-BREAKPOINTS, $key, 'max')) {
-			@content;
-		}
-	}
 }
