@@ -1,4 +1,6 @@
-@use '../../../styles/modules/modules.scss' as *;
+@use '../../../styles/modules/radius.module.scss' as *;
+@use '../../../styles/modules/colors.module.scss' as *;
+@use '../../../styles/modules/breakpoint.module.scss' as *;
 
 .mobile-navigation-list {
 	& {

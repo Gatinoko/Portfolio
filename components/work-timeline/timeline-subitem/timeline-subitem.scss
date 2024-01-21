@@ -1,4 +1,6 @@
-@use '../../../styles/modules/modules.scss' as *;
+@use '../../../styles/modules/typography/typography.module.scss' as *;
+@use '../../../styles/modules/spacing.module.scss' as *;
+@use '../../../styles/modules/colors.module.scss' as *;
 
 .timeline-subitem {
 	& {
@@ -27,7 +29,7 @@
 		position: absolute;
 		left: calc($SPACING-L * -3);
 		width: 5rem;
-		font-weight: get-font-weight-value(light);
+		font-weight: $WEIGHT-LIGHT;
 		letter-spacing: normal;
 		text-align: center;
 		color: $white-ffffff-50;

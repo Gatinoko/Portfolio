@@ -1,4 +1,6 @@
-@use '../../../styles/modules/modules.scss' as *;
+@use '../../../styles/modules/colors.module.scss' as *;
+@use '../../../styles/modules/spacing.module.scss' as *;
+@use '../../../styles/modules/typography/typography.module.scss' as *;
 
 .timeline-item {
 	& {
@@ -76,7 +78,7 @@
 				width: 5rem;
 				letter-spacing: normal;
 				text-align: center;
-				font-weight: get-font-weight-value(light);
+				font-weight: $WEIGHT-LIGHT;
 				color: $white-ffffff-50;
 			}
 

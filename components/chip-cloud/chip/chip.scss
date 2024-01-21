@@ -1,4 +1,6 @@
-@use '../../../styles/modules/modules.scss' as *;
+@use '../../../styles/modules/colors.module.scss' as *;
+@use '../../../styles/modules/border.module.scss' as *;
+@use '../../../styles/modules/typography/typography.module.scss' as *;
 
 .chip {
 	& {
