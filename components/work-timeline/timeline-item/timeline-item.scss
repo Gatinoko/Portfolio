@@ -15,8 +15,8 @@
 				transform: translateX(50%);
 				border-image: linear-gradient(
 						to top,
-						$white-ffffff-50 85%,
-						$white-ffffff-50 5%,
+						$WHITE-50 85%,
+						$WHITE-50 5%,
 						transparent
 					)
 					1 / 5px;
@@ -31,8 +31,8 @@
 				transform: translateX(50%);
 				border-image: linear-gradient(
 						to bottom,
-						$white-ffffff-50 85%,
-						$white-ffffff-50 5%,
+						$WHITE-50 85%,
+						$WHITE-50 5%,
 						transparent
 					)
 					1 / 5px;
@@ -79,7 +79,7 @@
 				letter-spacing: normal;
 				text-align: center;
 				font-weight: $WEIGHT-LIGHT;
-				color: $white-ffffff-50;
+				color: $WHITE-50;
 			}
 
 			.title {

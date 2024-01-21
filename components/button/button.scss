@@ -12,8 +12,8 @@
 		text-transform: uppercase;
 		user-select: none;
 		padding: 0px;
-		background-color: $bg-default;
-		color: $text-default;
+		background-color: $BG-DEFAULT;
+		color: $TEXT-DEFAULT;
 		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 		transition: background-color 150ms, color 150ms;
 	}
@@ -25,31 +25,31 @@
 		@include interface-xl;
 		gap: 2rem;
 		padding: 1rem 1.5rem;
-		border-radius: $radius-13;
+		border-radius: $RADIUS-13;
 	}
 	&.large {
 		@include interface-l;
 		gap: 1.5rem;
 		padding: 1rem 1.5rem;
-		border-radius: $radius-13;
+		border-radius: $RADIUS-13;
 	}
 	&.regular {
 		@include interface-r;
 		gap: 1rem;
 		padding: 0.5rem 1.5rem;
-		border-radius: $radius-9;
+		border-radius: $RADIUS-9;
 	}
 	&.small {
 		@include interface-s;
 		gap: 1rem;
 		padding: 0.5rem 1.5rem;
-		border-radius: $radius-7;
+		border-radius: $RADIUS-7;
 	}
 	&.extra-small {
 		@include interface-xs;
 		gap: 1rem;
 		padding: 0.5rem 1.5rem;
-		border-radius: $radius-7;
+		border-radius: $RADIUS-7;
 	}
 
 	/*
@@ -67,13 +67,13 @@
 		@media (hover: hover) {
 			&:hover {
 				@include base-border-color;
-				color: $text-hover;
-				background-color: $bg-hover;
+				color: $TEXT-HOVER;
+				background-color: $BG-HOVER;
 			}
 		}
 		&:active {
 			@include base-border-color;
-			background-color: $bg-active;
+			background-color: $BG-ACTIVE;
 		}
 	}
 
@@ -82,22 +82,22 @@
 	*/
 	@media (hover: hover) {
 		&:hover {
-			color: $text-hover;
-			background-color: $bg-hover;
+			color: $TEXT-HOVER;
+			background-color: $BG-HOVER;
 		}
 	}
 	&:active {
-		background-color: $bg-active;
+		background-color: $BG-ACTIVE;
 	}
 	&:disabled {
 		& {
 			text-decoration: none;
 			pointer-events: none;
-			color: $text-disabled;
+			color: $TEXT-DISABLED;
 		}
 
 		.icon {
-			fill: $icon-disabled;
+			fill: $ICON-DISABLED;
 		}
 	}
 }

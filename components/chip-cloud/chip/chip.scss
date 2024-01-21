@@ -9,7 +9,7 @@
 		text-transform: uppercase;
 		text-align: center;
 		border-radius: 99999px;
-		background-color: $bg-default;
+		background-color: $BG-DEFAULT;
 		transition: background-color 150ms;
 		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 	}
@@ -47,7 +47,7 @@
 		&:hover {
 		}
 		&:active {
-			background-color: $bg-active;
+			background-color: $BG-ACTIVE;
 		}
 	}
 
@@ -61,7 +61,7 @@
 	&.disabled {
 		text-decoration: none;
 		pointer-events: none;
-		color: $text-disabled;
-		background-color: $bg-disabled;
+		color: $TEXT-DISABLED;
+		background-color: $BG-DISABLED;
 	}
 }

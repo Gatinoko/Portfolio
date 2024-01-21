@@ -5,14 +5,14 @@
 	Border mixins
 */
 @mixin base-border-color {
-	border-top-color: $white-ffffff-5;
-	border-bottom-color: $white-ffffff-15;
-	border-left-color: $white-ffffff-5;
-	border-right-color: $white-ffffff-5;
+	border-top-color: $WHITE-5;
+	border-bottom-color: $WHITE-15;
+	border-left-color: $WHITE-5;
+	border-right-color: $WHITE-5;
 }
 @mixin base-border {
 	@include base-border-color;
 	border-width: 1px;
 	border-style: solid;
-	border-radius: $radius-13;
+	border-radius: $RADIUS-13;
 }
