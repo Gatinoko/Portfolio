@@ -62,7 +62,9 @@ export function ProjectItem({
 			{/* Links to websites */}
 			<div className='icon-links'>
 				{githubProjectLink && (
-					<a href={githubProjectLink}>
+					<a
+						href={githubProjectLink}
+						aria-label={"Access this project's repository on GitHub"}>
 						<Icon
 							name={'github'}
 							size={'small'}
@@ -70,7 +72,9 @@ export function ProjectItem({
 					</a>
 				)}
 				{projectWebsiteLink && (
-					<a href={projectWebsiteLink}>
+					<a
+						href={projectWebsiteLink}
+						aria-label={"Access this project's live website"}>
 						<Icon
 							name={'link'}
 							size={'small'}

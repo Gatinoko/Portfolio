@@ -18,10 +18,7 @@ type ChipCloudProps = {
  */
 export function ChipCloud({ children, className = '' }: ChipCloudProps) {
 	return (
-		<ul
-			role='navigation'
-			aria-label='Chip cloud'
-			className={`chip-cloud ${className}`}>
+		<ul className={`chip-cloud ${className}`}>
 			{children.map((chip, index) => (
 				<li key={`chipCloud-chip-${index}`}>{chip}</li>
 			))}

@@ -48,7 +48,7 @@ export function Navigation(props: NavigationProps) {
 
 				{/* Mobile navigation hamburguer button */}
 				<Button
-					aria-label={'Toggle mobile menu'}
+					aria-label={'Toggle mobile '}
 					className='mobile-hamburguer-button'
 					size={'small'}
 					onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
