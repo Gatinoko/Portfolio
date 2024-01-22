@@ -17,11 +17,12 @@ export function Logo({ className, href }: LogoProps) {
 	return (
 		<a
 			className={`${className && className} logo`}
-			href={href && href}>
+			href={href && href}
+			aria-label="Reload the website's landing page">
 			<svg
 				className='logo-svg'
 				xmlns='http://www.w3.org/2000/svg'
-				height='auto'
+				height='100%'
 				viewBox='0 0 200 93'
 				fill='white'>
 				<path
