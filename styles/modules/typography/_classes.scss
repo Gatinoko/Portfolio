@@ -1,0 +1,38 @@
+@use './mixins' as *;
+
+// Heading utility classes
+.h-2xl {
+	@include heading-2xl;
+}
+.h-xl {
+	@include heading-xl;
+}
+.h-l {
+	@include heading-l;
+}
+.h-r {
+	@include heading-r;
+}
+.h-s {
+	@include heading-s;
+}
+.h-xs {
+	@include heading-xs;
+}
+
+// Paragraph utility classes
+.p-xl {
+	@include body-xl;
+}
+.p-l {
+	@include body-l;
+}
+.p-r {
+	@include body-r;
+}
+.p-s {
+	@include body-s;
+}
+.p-xs {
+	@include body-xs;
+}

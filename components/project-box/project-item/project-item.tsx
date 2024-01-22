@@ -46,7 +46,7 @@ export function ProjectItem({
 			{/* Main information */}
 			<div className='main-information'>
 				{/* Title */}
-				<h6 className='title'>{title}</h6>
+				<h4 className='title h-xs'>{title}</h4>
 
 				{/* Description */}
 				<p className='description'>{children}</p>

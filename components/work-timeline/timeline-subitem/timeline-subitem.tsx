@@ -38,7 +38,7 @@ export function TimelineSubitem({
 			</p>
 
 			{/* Subtitle */}
-			<h6 className='subtitle'>{subtitle}</h6>
+			<h5 className='subtitle h-xs'>{subtitle}</h5>
 
 			{/* Description */}
 			<p className='description'>{children}</p>

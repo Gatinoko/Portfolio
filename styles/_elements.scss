@@ -1,46 +1,15 @@
 @use './modules/typography/typography.module.scss' as *;
-@use './modules/modules.scss' as *;
 
 /*
 	Global title text styling
 */
-h1 {
-	color: white;
-	@include heading-2xl;
-	margin: 0px;
-	word-break: break-word;
-}
-h2 {
-	color: white;
-	@include heading-xl;
-	margin: 0px;
-	word-break: break-word;
-}
-h3 {
-	color: white;
-
-	@include heading-l;
-	margin: 0px;
-	word-break: break-word;
-}
-h4 {
-	color: white;
-
-	@include heading-r;
-	margin: 0px;
-	word-break: break-word;
-}
-h5 {
-	color: white;
-
-	@include heading-s;
-	margin: 0px;
-	word-break: break-word;
-}
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
 	color: white;
-
-	@include heading-xs;
 	margin: 0px;
 	word-break: break-word;
 }
@@ -50,8 +19,8 @@ h6 {
 */
 p {
 	& {
-		color: white;
 		@include body-r;
+		color: white;
 		margin: 0px;
 		word-break: break-word;
 		hyphens: auto;

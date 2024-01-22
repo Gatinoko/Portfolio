@@ -46,7 +46,7 @@ export function TimelineItem({
 					)}
 
 					{/* Item title */}
-					<h5 className='title'>{title}</h5>
+					<h4 className='title h-s'>{title}</h4>
 				</div>
 
 				{/* Timeline subitem container */}
