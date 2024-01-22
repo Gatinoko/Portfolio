@@ -101,6 +101,7 @@ export function Button(props: ButtonProps) {
 
 	return (
 		<button
+			aria-label={extraProps['aria-label']}
 			className={`${className} ${button({ size, variant })}`}
 			onClick={buttonClick}
 			{...extraProps}>
