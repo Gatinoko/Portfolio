@@ -4,30 +4,17 @@
 
 .timeline-subitem {
 	& {
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template-columns: auto auto 1fr;
 		justify-content: center;
+		align-items: center;
 		position: relative;
 		width: 100%;
-		gap: 0.5rem;
-	}
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: -1.25rem;
-		width: 0.5rem;
-		height: 0.5rem;
-		border-radius: 50%;
-		background-color: white;
-		transform: translateY(-50%);
+		gap: 1rem;
 	}
 
 	.date {
 		@include interface-xs;
-		position: absolute;
-		left: calc($SPACING-L * -3);
 		width: 5rem;
 		font-weight: $WEIGHT-LIGHT;
 		letter-spacing: normal;
@@ -35,10 +22,44 @@
 		color: $WHITE-50;
 	}
 
-	.icons {
-		display: flex;
-		flex-wrap: wrap;
-		width: fit-content;
-		gap: 0.5rem;
+	.vertical-separator {
+		& {
+			position: relative;
+			width: 2px;
+			height: 100%;
+			background-color: $WHITE-50;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 0.5rem;
+			height: 0.5rem;
+			top: 50%;
+			left: 50%;
+			border-radius: 50%;
+			background-color: white;
+			transform: translateY(-50%) translateX(-50%);
+		}
+	}
+
+	.information-container {
+		& {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			padding-bottom: 0.5rem;
+		}
+
+		.description {
+			max-width: 75ch;
+		}
+
+		.icons {
+			display: flex;
+			flex-wrap: wrap;
+			width: fit-content;
+			gap: 0.25rem;
+		}
 	}
 }

@@ -37,16 +37,23 @@ export function TimelineSubitem({
 				{endDate}
 			</p>
 
-			{/* Subtitle */}
-			<h5 className='subtitle h-xs'>{subtitle}</h5>
+			{/* Vertical separator */}
+			<div className='vertical-separator' />
 
-			{/* Description */}
-			<p className='description'>{children}</p>
+			<div className='information-container'>
+				{/* Subtitle */}
+				<h5 className='subtitle h-xs'>{subtitle}</h5>
 
-			{/* Tech icons */}
-			{icons && (
-				<div className='icons'>{icons.map((iconNode, _index) => iconNode)}</div>
-			)}
+				{/* Description */}
+				<p className='description'>{children}</p>
+
+				{/* Tech icons */}
+				{icons && (
+					<div className='icons'>
+						{icons.map((iconNode, _index) => iconNode)}
+					</div>
+				)}
+			</div>
 		</div>
 	);
 }

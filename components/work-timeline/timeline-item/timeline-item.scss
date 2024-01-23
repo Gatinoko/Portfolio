@@ -3,105 +3,47 @@
 @use '../../../styles/modules/typography/typography.module.scss' as *;
 
 .timeline-item {
-	& {
-		display: flex;
-		gap: 1rem;
-	}
-
-	&:first-child {
-		.left-separator {
-			&::after {
-				content: '';
-				transform: translateX(50%);
-				border-image: linear-gradient(
-						to top,
-						$WHITE-50 85%,
-						$WHITE-50 5%,
-						transparent
-					)
-					1 / 5px;
-			}
-		}
-	}
-
-	&:last-child {
-		.left-separator {
-			&::after {
-				content: '';
-				transform: translateX(50%);
-				border-image: linear-gradient(
-						to bottom,
-						$WHITE-50 85%,
-						$WHITE-50 5%,
-						transparent
-					)
-					1 / 5px;
-			}
-		}
-	}
-
 	.left-separator {
-		& {
-			display: flex;
-			justify-content: flex-end;
-			width: clamp(60px, 25vw, 210px);
-		}
-
-		&::after {
-			content: '';
-			border: 1px solid;
-			transform: translateX(50%);
-		}
+		display: flex;
+		justify-content: flex-end;
 	}
 
-	.information-container {
+	.item-heading {
 		& {
-			display: flex;
-			flex-direction: column;
-			position: relative;
+			display: grid;
+			grid-template-columns: auto auto 1fr;
 			gap: 1rem;
-			width: 100%;
-			margin: 2rem 0 2rem 0;
+			align-items: center;
 		}
 
-		.item-heading {
+		.date {
+			@include interface-xs;
+			width: 5rem;
+			letter-spacing: normal;
+			text-align: center;
+			font-weight: $WEIGHT-LIGHT;
+			color: $WHITE-50;
+		}
+
+		.vertical-separator {
 			& {
 				position: relative;
-				display: flex;
-				align-items: center;
+				width: 2px;
+				height: 100%;
+				background-color: $WHITE-50;
 			}
 
-			.date {
-				@include interface-xs;
+			&::before {
+				content: '';
 				position: absolute;
-				left: calc($SPACING-L * -3);
-				width: 5rem;
-				letter-spacing: normal;
-				text-align: center;
-				font-weight: $WEIGHT-LIGHT;
-				color: $WHITE-50;
+				width: 1rem;
+				height: 1rem;
+				top: 50%;
+				left: 50%;
+				border-radius: 50%;
+				background-color: white;
+				transform: translateY(-50%) translateX(-50%);
 			}
-
-			.title {
-				&::before {
-					content: '';
-					position: absolute;
-					width: 1rem;
-					height: 1rem;
-					top: 50%;
-					left: -1.5rem;
-					border-radius: 50%;
-					background-color: white;
-					transform: translateY(-50%);
-				}
-			}
-		}
-
-		.subitem-container {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-			gap: 1rem;
 		}
 	}
 }

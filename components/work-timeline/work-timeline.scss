@@ -1,7 +1,59 @@
+@use '../../styles/modules/colors.module.scss' as *;
+
 .work-timeline {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	padding: 0;
 	margin: 0;
+
+	.timeline-item {
+		&:first-child {
+			& > .item-heading {
+				.date {
+					padding-top: 1rem;
+				}
+
+				.vertical-separator {
+					background-color: transparent;
+					border-image: linear-gradient(
+							to top,
+							$WHITE-50 85%,
+							$WHITE-50 5%,
+							transparent
+						)
+						1 / 5px;
+
+					&::before {
+						margin-top: 0.5rem;
+					}
+				}
+
+				.title {
+					padding-top: 1rem;
+				}
+			}
+		}
+
+		&:last-child {
+			& > .subitem-container > .timeline-subitem:last-child {
+				.information-container {
+					padding-bottom: 1rem;
+				}
+
+				.vertical-separator {
+					& {
+						background-color: transparent;
+						border-image: linear-gradient(
+								to bottom,
+								$WHITE-50 85%,
+								$WHITE-50 5%,
+								transparent
+							)
+							1 / 5px;
+					}
+				}
+			}
+		}
+	}
 }

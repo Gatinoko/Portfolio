@@ -29,52 +29,49 @@ export function TimelineItem({
 }: TimelineItemProps) {
 	return (
 		<li className={`${className} timeline-item`}>
-			{/* Separator div */}
-			<div className='left-separator' />
+			{/* Item heading */}
+			<div className='item-heading'>
+				{/* Date */}
+				{date && (
+					<p
+						className='date'
+						data-size='extra-small'>
+						{date}
+					</p>
+				)}
 
-			{/* Container with information */}
-			<div className='information-container'>
-				{/* Item heading */}
-				<div className='item-heading'>
-					{/* Date */}
-					{date && (
-						<p
-							className='date'
-							data-size='extra-small'>
-							{date}
-						</p>
-					)}
+				{/* Vertical separator */}
+				<div className='vertical-separator' />
 
-					{/* Item title */}
-					<h4 className='title h-s'>{title}</h4>
-				</div>
+				{/* Item title */}
+				<h4 className='title h-s'>{title}</h4>
+			</div>
 
-				{/* Timeline subitem container */}
-				<div className='subitem-container'>
-					{Array.isArray(children) ? (
-						<>
-							{children.map(({ key, props }) => (
-								<TimelineSubitem
-									key={`subItem-${key}`}
-									startDate={props.startDate}
-									endDate={props.endDate}
-									subtitle={props.subtitle}
-									icons={props.icons}>
-									{props.children}
-								</TimelineSubitem>
-							))}
-						</>
-					) : (
-						<TimelineSubitem
-							key={`subItem-${children.key}`}
-							startDate={children.props.startDate}
-							endDate={children.props.endDate}
-							subtitle={children.props.subtitle}
-							icons={children.props.icons}>
-							{children.props.children}
-						</TimelineSubitem>
-					)}
-				</div>
+			{/* Timeline subitem container */}
+			<div className='subitem-container'>
+				{Array.isArray(children) ? (
+					<>
+						{children.map(({ key, props }) => (
+							<TimelineSubitem
+								key={`subItem-${key}`}
+								startDate={props.startDate}
+								endDate={props.endDate}
+								subtitle={props.subtitle}
+								icons={props.icons}>
+								{props.children}
+							</TimelineSubitem>
+						))}
+					</>
+				) : (
+					<TimelineSubitem
+						key={`subItem-${children.key}`}
+						startDate={children.props.startDate}
+						endDate={children.props.endDate}
+						subtitle={children.props.subtitle}
+						icons={children.props.icons}>
+						{children.props.children}
+					</TimelineSubitem>
+				)}
 			</div>
 		</li>
 	);
