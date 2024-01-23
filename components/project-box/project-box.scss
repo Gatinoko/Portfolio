@@ -7,7 +7,7 @@
 	width: 100%;
 	padding: 0px;
 	margin: 0px;
-	@include screen-breakpoint(mobile, tablet, small) {
+	@include screen-breakpoint(mobile, tablet, small, large) {
 		grid-template-columns: 1fr;
 	}
 }
