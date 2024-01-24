@@ -1,6 +1,7 @@
 import { BannerArt } from '@/components/banner-art/banner-art';
 import { ChipCloud } from '@/components/chip-cloud/chip-cloud';
 import { Chip } from '@/components/chip-cloud/chip/chip';
+import { ColumnGrid } from '@/components/column-grid/column-grid';
 import { Icon } from '@/components/icon/icon';
 import { PageSection } from '@/components/page-section/page-section';
 import { ProjectBox } from '@/components/project-box/project-box';
@@ -8,38 +9,46 @@ import { ProjectItem } from '@/components/project-box/project-item/project-item'
 import { TimelineItem } from '@/components/work-timeline/timeline-item/timeline-item';
 import { TimelineSubitem } from '@/components/work-timeline/timeline-subitem/timeline-subitem';
 import { WorkTimeline } from '@/components/work-timeline/work-timeline';
+import RevealAnimation from '@/utilities/reveal-animation';
 
 export default function Home() {
 	return (
-		<>
-			{/* <ColumnGrid platform={'responsive'} /> */}
-			<main
-				className={'main'}
-				id='root-main'>
-				<div className='page-banner'>
-					{/* Interactive banner section */}
-					<BannerArt />
+		<main
+			className={'main'}
+			id='root-main'>
+			<div className='page-banner'>
+				{/* Interactive banner section */}
+				<BannerArt />
 
-					{/* Intro section */}
-					<PageSection
-						id='IntroSection'
-						className='intro-section'>
-						<h1 style={{ width: '6ch' }}>Gabriel Tinoco.</h1>
-						<h4>Software Engineer & Designer</h4>
-						<hr data-variant='animated-gradient' />
-						<p>
-							Career statement goes here. Should be something like really
-							impactful. Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit. Morbi non sapien ante. Suspendisse vel consectetur urna. Ut
-							a dictum sem. Praesent faucibus nisi ac fermentum posuere.
-						</p>
-					</PageSection>
-				</div>
+				{/* Intro section */}
+				<PageSection
+					id='IntroSection'
+					className='intro-section'>
+					<h1
+						style={{ width: '6ch' }}
+						className='h-2xl'>
+						Gabriel Tinoco
+					</h1>
+					<h2
+						style={{ maxWidth: '20ch' }}
+						className='h-r'>
+						Software Engineer & Designer
+					</h2>
+					<hr data-variant='animated-gradient' />
+					<p style={{ maxWidth: '75ch' }}>
+						Career statement goes here. Should be something like really
+						impactful. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Morbi non sapien ante. Suspendisse vel consectetur urna. Ut a dictum
+						sem. Praesent faucibus nisi ac fermentum posuere.
+					</p>
+				</PageSection>
+			</div>
 
-				<div className='page-content'>
-					{/* Tech & skills section */}
+			<div className='page-content'>
+				{/* Tech & skills section */}
+				<RevealAnimation>
 					<PageSection id='Tech&SkillsSection'>
-						<h3 className='section-title'>Tech & Skills</h3>
+						<h3 className='section-title h-l'>Tech & Skills</h3>
 						<hr data-variant='solid-gradient' />
 						<ChipCloud>
 							<Chip size='extra-large'>Typescript</Chip>
@@ -83,10 +92,12 @@ export default function Home() {
 							<Chip size='regular'>Zod</Chip>
 						</ChipCloud>
 					</PageSection>
+				</RevealAnimation>
 
-					{/* Timeline section */}
+				{/* Timeline section */}
+				<RevealAnimation>
 					<PageSection id='TimelineSection'>
-						<h3 className='section-title'>Timeline</h3>
+						<h3 className='section-title h-l'>Timeline</h3>
 						<hr />
 						<WorkTimeline>
 							<TimelineItem
@@ -246,10 +257,12 @@ export default function Home() {
 							</TimelineItem>
 						</WorkTimeline>
 					</PageSection>
+				</RevealAnimation>
 
-					{/* Projects section */}
+				{/* Projects section */}
+				<RevealAnimation>
 					<PageSection id='ProjectsSection'>
-						<h3 className='section-title'>Projects</h3>
+						<h3 className='section-title h-l'>Projects</h3>
 						<hr />
 						<ProjectBox>
 							<ProjectItem
@@ -353,8 +366,8 @@ export default function Home() {
 							</ProjectItem>
 						</ProjectBox>
 					</PageSection>
-				</div>
-			</main>
-		</>
+				</RevealAnimation>
+			</div>
+		</main>
 	);
 }

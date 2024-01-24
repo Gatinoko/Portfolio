@@ -1,23 +1,19 @@
-@use '../styles/modules.scss' as *;
+@use '../styles/modules/spacing.module.scss' as *;
 
 .main {
-	& {
-		z-index: 0;
-	}
+	z-index: 0;
 
 	.page-banner {
 		& {
-			position: relative;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			padding-top: get-responsive-spacing-value(custom-pairs, spacing-s-xl);
-			padding-bottom: get-responsive-spacing-value(
-				custom-pairs,
-				spacing-xl-5xl
-			);
-			width: 100%;
+			justify-content: flex-start;
+			position: relative;
 			z-index: -1;
+			width: 100%;
+			padding-top: $SPACING-S-XL;
+			padding-bottom: $SPACING-XL-5XL;
 		}
 
 		.intro-section {
@@ -27,17 +23,16 @@
 
 	.page-content {
 		display: flex;
-		align-items: center;
 		flex-direction: column;
-		padding: get-responsive-spacing-value(custom-pairs, spacing-xl-5xl) 0
-			get-responsive-spacing-value(custom-pairs, spacing-xl-5xl) 0;
-		gap: get-responsive-spacing-value(custom-pairs, spacing-xl-5xl);
+		align-items: center;
 		z-index: 1;
+		padding: $SPACING-XL-5XL 0 $SPACING-XL-5XL 0;
+		gap: $SPACING-XL-5XL;
 		background: linear-gradient(
-			rgba(0, 0, 0, 0) 0.1%,
-			rgb(0, 0, 0) 15%,
-			rgb(0, 0, 0) 30%,
-			rgb(0, 0, 0) 70%,
+			rgba(0, 0, 0, 0) 1%,
+			rgba(0, 0, 0, 0.5) 20%,
+			rgb(0, 0, 0, 0.8) 40%,
+			rgb(0, 0, 0) 60%,
 			rgb(0, 0, 0) 100%
 		);
 	}
