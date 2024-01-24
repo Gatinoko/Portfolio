@@ -1,6 +1,7 @@
 @use '../../../styles/modules/radius.module.scss' as *;
 @use '../../../styles/modules/colors.module.scss' as *;
 @use '../../../styles/modules/breakpoint.module.scss' as *;
+@use '../../../styles/modules/shadow.module.scss' as *;
 
 .mobile-navigation-list {
 	& {
@@ -27,12 +28,12 @@
 
 	@include screen-breakpoint(mobile, tablet) {
 		& {
+			@include shadow-black;
 			display: flex;
 			flex-direction: column;
 			position: absolute;
 			width: 100%;
 			border-radius: 0 0 $RADIUS-13 $RADIUS-13;
-			box-shadow: 0px 10px 25px 5px #00000040;
 			background-color: $BLACK5-0D0D0D;
 		}
 
