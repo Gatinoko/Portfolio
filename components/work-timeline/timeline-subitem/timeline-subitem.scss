@@ -1,6 +1,6 @@
 @use '../../../styles/modules/typography/typography.module.scss' as *;
 @use '../../../styles/modules/spacing.module.scss' as *;
-@use '../../../styles/modules/colors.module.scss' as *;
+@use '../../../styles/modules/color/color.module.scss' as *;
 
 .timeline-subitem {
 	& {
