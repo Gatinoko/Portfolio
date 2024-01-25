@@ -1,5 +1,8 @@
 .logo {
-	width: fit-content;
+	& {
+		width: fit-content;
+		padding-right: 1rem;
+	}
 
 	.logo-svg {
 		width: clamp(2px, 5rem + 1vw, 10rem);
