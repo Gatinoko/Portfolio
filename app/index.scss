@@ -1,4 +1,5 @@
 @use '../styles/modules/spacing.module.scss' as *;
+@use '../styles/modules/colors.module.scss' as *;
 
 .main {
 	z-index: 0;
@@ -29,11 +30,11 @@
 		padding: $SPACING-XL-5XL 0 $SPACING-XL-5XL 0;
 		gap: $SPACING-XL-5XL;
 		background: linear-gradient(
-			rgba(0, 0, 0, 0) 1%,
-			rgba(0, 0, 0, 0.5) 20%,
-			rgb(0, 0, 0, 0.8) 40%,
-			rgb(0, 0, 0) 60%,
-			rgb(0, 0, 0) 100%
+			transparent 1%,
+			#00000080 20%,
+			#000000cc 40%,
+			black 60%,
+			black 100%
 		);
 	}
 }
