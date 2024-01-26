@@ -5,10 +5,10 @@
 	Border mixins
 */
 @mixin base-border-color {
-	border-top-color: $WHITE-5;
-	border-bottom-color: $WHITE-15;
-	border-left-color: $WHITE-5;
-	border-right-color: $WHITE-5;
+	border-top-color: var(--BORDER-PRIMARY);
+	border-bottom-color: var(--BORDER-SECONDARY);
+	border-left-color: var(--BORDER-PRIMARY);
+	border-right-color: var(--BORDER-PRIMARY);
 }
 @mixin base-border {
 	@include base-border-color;

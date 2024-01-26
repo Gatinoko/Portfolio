@@ -9,6 +9,7 @@
 		position: relative;
 		user-select: none;
 		text-decoration: none;
+		box-sizing: border-box;
 		border-top: 1px solid transparent;
 		border-left: 0;
 		border-bottom: 1px solid transparent;
@@ -18,7 +19,7 @@
 
 	.text {
 		display: flex;
-		color: $TEXT-DEFAULT;
+		color: var(--TEXT-DEFAULT);
 		transition: color 150ms, padding 150ms;
 		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 	}
@@ -53,18 +54,18 @@
 	@media (hover: hover) {
 		&:hover {
 			& {
-				border-top: 1px solid $WHITE-5;
-				border-bottom: 1px solid $WHITE-15;
+				border-top: 1px solid var(--BORDER-PRIMARY);
+				border-bottom: 1px solid var(--BORDER-SECONDARYb);
 				border-left: 0;
 				border-right: 0;
-				background-color: $BG-HOVER;
+				background-color: var(--BG-HOVER);
 				transition: background-color 150ms;
 				transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 			}
 
 			.text {
 				padding-right: 1.5rem;
-				color: $TEXT-HOVER;
+				color: var(--TEXT-HOVER);
 				transition: color 150ms, padding-right 150ms;
 				transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 			}
@@ -72,10 +73,10 @@
 	}
 	&:active {
 		& {
-			background-color: $BG-ACTIVE;
-			border-top: 1px solid $WHITE-5;
+			background-color: var(--BG-ACTIVE);
+			border-top: 1px solid var(--BORDER-PRIMARY);
 			border-left: 0;
-			border-bottom: 1px solid $WHITE-15;
+			border-bottom: 1px solid var(--BORDER-SECONDARY);
 			border-right: 0;
 			transition: background-color 150ms;
 			transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
@@ -83,7 +84,7 @@
 
 		.text {
 			padding-right: 1rem;
-			color: $TEXT-ACTIVE;
+			color: var(--TEXT-ACTIVE);
 			transition: color 150ms, padding-right 150ms;
 			transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 		}

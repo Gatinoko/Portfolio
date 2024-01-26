@@ -1,0 +1,54 @@
+// Whites and blacks
+$WHITE-5: #ffffff0d;
+$WHITE-15: #ffffff26;
+$WHITE-25: #ffffff40;
+$WHITE-35: #ffffff59;
+$WHITE-45: #ffffff73;
+$WHITE-50: #ffffff80;
+$BLACK-5: #0000000d;
+$BLACK-15: #00000026;
+$BLACK-25: #00000040;
+$BLACK-35: #00000059;
+$BLACK-45: #00000073;
+$BLACK-50: #00000080;
+
+// Colors
+$BLACK1-0D0D0D: #0d0d0d;
+$WHITE1-F0F0F0: #f0f0f0;
+
+// Gradients
+$GRADIENT1: linear-gradient(
+	45deg,
+	rgba(2, 0, 36, 0) 0%,
+	rgb(68, 4, 170) 28%,
+	rgb(39, 60, 255) 32%,
+	rgb(11, 68, 255) 33.4%,
+	rgb(52, 133, 255) 34%,
+	rgb(111, 21, 255) 65%,
+	rgb(126, 70, 255) 65.5%,
+	rgb(0, 19, 185) 69.5%,
+	rgba(0, 0, 0, 0) 100%
+);
+$GRADIENT2: linear-gradient(
+	45deg,
+	rgba(2, 0, 36, 0) 0%,
+	rgb(179, 132, 255) 28%,
+	rgb(100, 116, 255) 32%,
+	rgb(57, 103, 255) 33.4%,
+	rgb(109, 167, 255) 34%,
+	rgb(165, 109, 255) 65%,
+	rgb(126, 70, 255) 65.5%,
+	rgb(100, 116, 255) 69.5%,
+	rgba(0, 0, 0, 0) 100%
+);
+
+// Component colors
+$TEXT-ACTIVE: white;
+$TEXT-HOVER: white;
+$TEXT-DEFAULT: $WHITE-45;
+$TEXT-DISABLED: $WHITE-35;
+$BG-ACTIVE: $WHITE-25;
+$BG-HOVER: $WHITE-15;
+$BG-DEFAULT: $WHITE-5;
+$BG-DISABLED: $WHITE-15;
+$ICON-DISABLED: $WHITE-25;

@@ -3,7 +3,7 @@
 @use 'elements';
 
 :root {
-	background-color: black;
+	background-color: var(--BG-SECONDARY);
 	font-size: 16px;
 	min-width: 320px;
 }

@@ -31,10 +31,9 @@
 		gap: $SPACING-XL-5XL;
 		background: linear-gradient(
 			transparent 1%,
-			#00000080 20%,
-			#000000cc 40%,
-			black 60%,
-			black 100%
+			var(--BG-SECONDARY-SHADE) 20%,
+			var(--BG-SECONDARY) 60%,
+			var(--BG-SECONDARY) 100%
 		);
 	}
 }

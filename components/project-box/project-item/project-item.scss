@@ -12,7 +12,7 @@
 		box-sizing: border-box;
 		padding: $SPACING-S;
 		gap: 1rem;
-		background-color: $BG-DEFAULT;
+		background-color: var(--BG-DEFAULT);
 	}
 
 	.cover-image {

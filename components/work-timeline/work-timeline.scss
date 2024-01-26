@@ -6,6 +6,7 @@
 	width: 100%;
 	padding: 0;
 	margin: 0;
+	list-style: none;
 
 	.timeline-item {
 		&:first-child {
@@ -18,8 +19,8 @@
 					background-color: transparent;
 					border-image: linear-gradient(
 							to top,
-							$WHITE-50 60%,
-							$WHITE-50 5%,
+							var(--FG-PRIMARY-SHADE) 60%,
+							var(--FG-PRIMARY-SHADE) 5%,
 							transparent
 						)
 						1 / 5px;
@@ -46,8 +47,8 @@
 						background-color: transparent;
 						border-image: linear-gradient(
 								to bottom,
-								$WHITE-50 60%,
-								$WHITE-50 5%,
+								var(--FG-PRIMARY-SHADE) 60%,
+								var(--FG-PRIMARY-SHADE) 5%,
 								transparent
 							)
 							1 / 5px;

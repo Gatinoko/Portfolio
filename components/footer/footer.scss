@@ -5,7 +5,7 @@
 	& {
 		border-top: 1px solid $WHITE-5;
 		padding: 1rem $SPACING-S-2XL 1rem $SPACING-S-2XL;
-		background-color: $BLACK5-0D0D0D;
+		background-color: var(--BG-PRIMARY);
 	}
 
 	.copyright-notice {

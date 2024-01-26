@@ -1,4 +1,3 @@
-@use '../../styles/modules/color/color.module.scss' as *;
 @use '../../styles/modules/border.module.scss' as *;
 @use '../../styles/modules/typography/typography.module.scss' as *;
 @use '../../styles/modules/radius.module.scss' as *;
@@ -12,8 +11,8 @@
 		text-transform: uppercase;
 		user-select: none;
 		padding: 0px;
-		background-color: $BG-DEFAULT;
-		color: $TEXT-DEFAULT;
+		background-color: var(--BG-DEFAULT);
+		color: var(--TEXT-DEFAULT);
 		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 		transition: background-color 150ms, color 150ms;
 	}
@@ -67,13 +66,13 @@
 		@media (hover: hover) {
 			&:hover {
 				@include base-border-color;
-				color: $TEXT-HOVER;
-				background-color: $BG-HOVER;
+				color: var(--TEXT-HOVER);
+				background-color: var(--BG-HOVER);
 			}
 		}
 		&:active {
 			@include base-border-color;
-			background-color: $BG-ACTIVE;
+			background-color: var(--BG-ACTIVE);
 		}
 	}
 
@@ -82,22 +81,22 @@
 	*/
 	@media (hover: hover) {
 		&:hover {
-			color: $TEXT-HOVER;
-			background-color: $BG-HOVER;
+			color: var(--TEXT-HOVER);
+			background-color: var(--BG-HOVER);
 		}
 	}
 	&:active {
-		background-color: $BG-ACTIVE;
+		background-color: var(--BG-ACTIVE);
 	}
 	&:disabled {
 		& {
 			text-decoration: none;
 			pointer-events: none;
-			color: $TEXT-DISABLED;
+			color: var(--TEXT-DISABLED);
 		}
 
 		.icon {
-			fill: $ICON-DISABLED;
+			fill: var(--ICON-DISABLED);
 		}
 	}
 }

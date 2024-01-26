@@ -31,7 +31,9 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: PropsWithChildren) {
 	return (
-		<html lang='en'>
+		<html
+			lang='en'
+			className='dark-theme'>
 			<body
 				className={`${syne.variable} ${majorMonoDisplay.variable} ${openSans.variable}`}>
 				<Navigation />
