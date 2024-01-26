@@ -8,19 +8,19 @@ import { Syne, Major_Mono_Display, Open_Sans } from 'next/font/google';
 const syne = Syne({
 	subsets: ['latin'],
 	display: 'swap',
-	variable: '--font-syne',
+	variable: '--FONT-SYNE',
 	weight: ['400', '500', '600', '700'],
 });
 const majorMonoDisplay = Major_Mono_Display({
 	subsets: ['latin'],
 	display: 'swap',
-	variable: '--font-major-mono',
+	variable: '--FONT-MAJOR-MONO',
 	weight: '400',
 });
 const openSans = Open_Sans({
 	subsets: ['latin'],
 	display: 'swap',
-	variable: '--font-open-sans',
+	variable: '--FONT-OPEN-SANS',
 	weight: ['300', '400', '600'],
 });
 
