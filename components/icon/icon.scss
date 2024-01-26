@@ -1,5 +1,10 @@
-.svg {
-	fill: var(--FG-PRIMARY);
+@use '../../styles/modules/shadow.module.scss' as *;
+
+.icon {
+	& {
+		@include shadow-black(filter-shadow);
+		fill: var(--FG-PRIMARY);
+	}
 
 	/*
 		Sizes

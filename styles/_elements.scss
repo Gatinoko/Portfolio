@@ -1,3 +1,4 @@
+@use './modules/shadow.module.scss' as *;
 @use './modules/typography/typography.module.scss' as *;
 @use './modules/color/color.module.scss' as *;
 
@@ -10,6 +11,7 @@ h3,
 h4,
 h5,
 h6 {
+	@include shadow-black(text-shadow);
 	color: var(--FG-PRIMARY);
 	margin: 0px;
 	word-break: break-word;
@@ -21,6 +23,7 @@ h6 {
 p {
 	& {
 		@include body-r;
+		@include shadow-black(text-shadow);
 		color: var(--FG-PRIMARY);
 		margin: 0px;
 		word-break: break-word;

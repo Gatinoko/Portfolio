@@ -3,6 +3,12 @@
 /*
 	Custom shadow mixins
 */
-@mixin shadow-black {
-	box-shadow: 0px 10px 25px 5px $BLACK-25;
+@mixin shadow-black($shadow-type: box-shadow) {
+	@if $shadow-type == box-shadow {
+		box-shadow: 0px 0.125rem 0.5rem 0.125rem $BLACK-5;
+	} @else if $shadow-type == text-shadow {
+		text-shadow: 0px 0.125rem 0.125rem $BLACK-5;
+	} @else if $shadow-type == filter-shadow {
+		filter: drop-shadow(0px 0.125rem 0.125rem $BLACK-5);
+	}
 }

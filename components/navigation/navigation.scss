@@ -5,7 +5,7 @@
 
 .navigation {
 	& {
-		@include shadow-black;
+		@include shadow-black();
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -27,11 +27,11 @@
 			box-sizing: border-box;
 			background-color: var(--BG-PRIMARY);
 			padding: 1rem $SPACING-S-2XL 1rem $SPACING-S-2XL;
-			border-bottom: 1px solid $WHITE-15;
+			border-bottom: 1px solid var(--BORDER-SECONDARY);
 		}
 
 		::-webkit-scrollbar {
-			height: 0px; /* height of horizontal scrollbar ← You're missing this */
+			height: 0px;
 		}
 
 		.desktop-button-list {

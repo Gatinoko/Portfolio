@@ -26,14 +26,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		z-index: 1;
 		padding: $SPACING-XL-5XL 0 $SPACING-XL-5XL 0;
 		gap: $SPACING-XL-5XL;
-		background: linear-gradient(
-			transparent 1%,
-			var(--BG-SECONDARY-SHADE) 20%,
-			var(--BG-SECONDARY) 60%,
-			var(--BG-SECONDARY) 100%
-		);
 	}
 }

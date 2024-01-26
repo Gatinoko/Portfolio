@@ -61,7 +61,7 @@ export function Icon({
 	onClick,
 }: IconProps) {
 	// Component CVA function
-	const icon = cva('svg', {
+	const icon = cva('icon', {
 		variants: {
 			size: {
 				['extra-large']: 'extra-large',

@@ -1,12 +1,15 @@
 @use '../../../styles/modules/border.module.scss' as *;
+@use '../../../styles/modules/shadow.module.scss' as *;
 @use '../../../styles/modules/typography/typography.module.scss' as *;
 
 .chip {
 	& {
 		@include base-border;
+		@include shadow-black(box-shadow);
 		width: fit-content;
 		box-sizing: border-box;
 		text-transform: uppercase;
+		text-shadow: none;
 		text-align: center;
 		border-radius: 99999px;
 		background-color: var(--BG-DEFAULT);

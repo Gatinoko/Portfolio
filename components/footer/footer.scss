@@ -3,12 +3,13 @@
 
 .footer {
 	& {
-		border-top: 1px solid $WHITE-5;
+		border-top: 1px solid var(--BORDER-PRIMARY);
 		padding: 1rem $SPACING-S-2XL 1rem $SPACING-S-2XL;
 		background-color: var(--BG-PRIMARY);
 	}
 
 	.copyright-notice {
 		opacity: 50%;
+		text-shadow: none;
 	}
 }
