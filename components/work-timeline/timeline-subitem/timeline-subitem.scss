@@ -16,7 +16,7 @@
 	.date {
 		@include interface-xs;
 		width: 5rem;
-		font-weight: $WEIGHT-LIGHT;
+		font-weight: $WEIGHT-REGULAR;
 		letter-spacing: normal;
 		text-align: center;
 		color: var(--FG-PRIMARY-SHADE);

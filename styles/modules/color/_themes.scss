@@ -2,7 +2,7 @@
 
 .dark-theme {
 	// Color variables
-	--BG-PRIMARY: #{$BLACK1-0D0D0D};
+	--BG-PRIMARY: #{$BLACK1-181818};
 	--BG-SECONDARY: black;
 	--BG-SECONDARY-SHADE: #{$BLACK-50};
 	--FG-PRIMARY: white;
@@ -25,23 +25,23 @@
 
 .light-theme {
 	// Color variables
-	--BG-PRIMARY: #{$WHITE1-F0F0F0};
-	--BG-SECONDARY: white;
-	--BG-SECONDARY-SHADE: #{$WHITE-50};
+	--BG-PRIMARY: #{$WHITE1-EEEEEE};
+	--BG-SECONDARY: #ffffff;
+	--BG-SECONDARY-SHADE: rgba(210, 181, 254, 0.705);
 	--FG-PRIMARY: black;
 	--FG-PRIMARY-SHADE: #{$BLACK-50};
 	--BORDER-PRIMARY: #{$BLACK-5};
 	--BORDER-SECONDARY: #{$BLACK-15};
-	--GRADIENT: #{$GRADIENT2};
+	--GRADIENT: #{$GRADIENT1};
 
 	// Component variables
 	--TEXT-ACTIVE: black;
 	--TEXT-HOVER: black;
 	--TEXT-DEFAULT: #{$BLACK-45};
-	--TEXT-DISABLED: #{$BLACK-35};
-	--BG-ACTIVE: #{$BLACK-25};
-	--BG-HOVER: #{$BLACK-15};
-	--BG-DEFAULT: #{$BLACK-5};
-	--BG-DISABLED: #{$BLACK-15};
+	--TEXT-DISABLED: #{$WHITE-35};
+	--BG-ACTIVE: #{$BLACK-15};
+	--BG-HOVER: #{$BLACK-5};
+	--BG-DEFAULT: #{$WHITE-5};
+	--BG-DISABLED: #{$WHITE-15};
 	--ICON-DISABLED: #{$BLACK-25};
 }

@@ -77,6 +77,7 @@
 		&:active {
 			@include base-border-color;
 			background-color: var(--BG-ACTIVE);
+			color: var(--TEXT-ACTIVE);
 		}
 	}
 
@@ -85,11 +86,12 @@
 	*/
 	@media (hover: hover) {
 		&:hover {
-			color: var(--TEXT-HOVER);
 			background-color: var(--BG-HOVER);
+			color: var(--TEXT-HOVER);
 		}
 	}
 	&:active {
+		color: var(--TEXT-ACTIVE);
 		background-color: var(--BG-ACTIVE);
 	}
 	&:disabled {
