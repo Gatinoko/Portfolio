@@ -359,6 +359,21 @@ export default function Home() {
 						</ProjectItem>
 					</ProjectBox>
 				</PageSection>
+
+				<PageSection id='ContactSection'>
+					<h3 className='section-title h-l'>Contact</h3>
+					<hr />
+					<p style={{ maxWidth: '75ch', textAlign: 'center' }}>
+						Interested in any of my skills? Shoot me an email or a message on
+						LinkedIn! I'm a very friendly guy, so coffee chats (even virtual
+						ones) are more than welcome.
+					</p>
+					<h4
+						style={{ textAlign: 'center' }}
+						className='h-xs'>
+						gabriel.dias.tinoco@gmail.com
+					</h4>
+				</PageSection>
 			</div>
 		</main>
 	);
