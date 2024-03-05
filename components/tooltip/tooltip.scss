@@ -1,0 +1,101 @@
+@use '../../styles/modules/typography/typography.module.scss' as *;
+@use '../../styles/modules/radius.module.scss' as *;
+@use '../../styles/modules/shadow.module.scss' as *;
+
+.tooltip-container {
+	position: relative;
+
+	.tooltip {
+		& {
+			position: absolute;
+			pointer-events: none;
+			opacity: 0%;
+			left: 50%;
+			top: -75%;
+			transform: translateX(-50%);
+			transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+			transition: opacity 150ms, top 150ms;
+		}
+
+		.text {
+			& {
+				@include shadow-black(box-shadow);
+				display: inline-block;
+				overflow: hidden;
+				max-width: 15ch;
+				min-width: 2.5ch;
+				text-align: center;
+				text-wrap: nowrap;
+				user-select: none;
+				background-color: var(--FG-PRIMARY);
+				color: var(--BG-PRIMARY);
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 88%;
+				left: 50%;
+				border-top: 7px solid var(--FG-PRIMARY);
+				border-right: 7px solid transparent;
+				border-bottom: 7px solid transparent;
+				border-left: 7px solid transparent;
+				transform: translateX(-50%);
+			}
+		}
+
+		/*
+			Sizes
+		*/
+		&.extra-large {
+			.text {
+				@include body-xl;
+				gap: 2rem;
+				padding: 0.5rem 1rem;
+				border-radius: $RADIUS-13;
+			}
+		}
+		&.large {
+			.text {
+				@include body-l;
+				gap: 1.5rem;
+				padding: 0.5rem 1rem;
+				border-radius: $RADIUS-13;
+			}
+		}
+		&.regular {
+			.text {
+				@include body-r;
+				gap: 1rem;
+				padding: 0.5rem 0.5rem;
+				border-radius: $RADIUS-9;
+			}
+		}
+		&.small {
+			.text {
+				@include body-s;
+				gap: 1rem;
+				padding: 0.5rem 0.5rem;
+				border-radius: $RADIUS-7;
+			}
+		}
+		&.extra-small {
+			.text {
+				@include body-xs;
+				gap: 1rem;
+				padding: 0.5rem 0.5rem;
+				border-radius: $RADIUS-7;
+			}
+		}
+	}
+
+	/*
+		States
+	*/
+	&:hover {
+		.tooltip {
+			top: -100%;
+			opacity: 100%;
+		}
+	}
+}
