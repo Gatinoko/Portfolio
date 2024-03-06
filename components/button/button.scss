@@ -14,7 +14,7 @@
 		background-color: var(--BG-DEFAULT);
 		color: var(--TEXT-DEFAULT);
 		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
-		transition: background-color 150ms, color 150ms;
+		transition: background-color 50ms, color 50ms;
 	}
 
 	.icon {
