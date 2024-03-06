@@ -20,11 +20,18 @@ type NavigationProps = {};
 export function Navigation(props: NavigationProps) {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+	// Function for scrolling the page to a designated section
+	function scrollToSection(sectionId: string) {
+		document
+			.getElementById(sectionId)
+			?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	}
+
 	return (
 		<nav className='navigation'>
 			<div className='navigation-root'>
 				{/* Logo */}
-				<Logo href='#IntroSection' />
+				<Logo href='/' />
 
 				{/* Desktop navigation buttons */}
 				<ul className='desktop-button-list'>
@@ -32,7 +39,8 @@ export function Navigation(props: NavigationProps) {
 						<Button
 							className='contact-button'
 							size={'extra-small'}
-							variant={'flat'}>
+							variant={'flat'}
+							onClick={() => scrollToSection('ContactSection')}>
 							Contact
 						</Button>
 					</li>
@@ -40,7 +48,8 @@ export function Navigation(props: NavigationProps) {
 						<Button
 							className='projects-button'
 							size={'extra-small'}
-							variant={'flat'}>
+							variant={'flat'}
+							onClick={() => scrollToSection('ProjectsSection')}>
 							Projects
 						</Button>
 					</li>
@@ -48,7 +57,8 @@ export function Navigation(props: NavigationProps) {
 						<Button
 							className='timeline-button'
 							size={'extra-small'}
-							variant={'flat'}>
+							variant={'flat'}
+							onClick={() => scrollToSection('TimelineSection')}>
 							Timeline
 						</Button>
 					</li>
@@ -56,7 +66,8 @@ export function Navigation(props: NavigationProps) {
 						<Button
 							className='tech-and-skills-button'
 							size={'extra-small'}
-							variant={'flat'}>
+							variant={'flat'}
+							onClick={() => scrollToSection('Tech&SkillsSection')}>
 							Tech & Skills
 						</Button>
 					</li>
@@ -84,13 +95,23 @@ export function Navigation(props: NavigationProps) {
 				setOpen={setIsMobileMenuOpen}>
 				<MobileButton
 					key={0}
-					href='#Tech&SkillsSection'>
+					onClick={() => scrollToSection('Tech&SkillsSection')}>
 					Tech & Skills
 				</MobileButton>
 				<MobileButton
 					key={1}
-					href='#ProjectsSection'>
+					onClick={() => scrollToSection('TimelineSection')}>
+					Timeline
+				</MobileButton>
+				<MobileButton
+					key={1}
+					onClick={() => scrollToSection('ProjectsSection')}>
 					Projects
+				</MobileButton>
+				<MobileButton
+					key={1}
+					onClick={() => scrollToSection('ContactSection')}>
+					Contact
 				</MobileButton>
 			</MobileNavigationList>
 		</nav>
