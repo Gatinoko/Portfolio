@@ -9,6 +9,7 @@ import { cva } from 'class-variance-authority';
  */
 type MobileNavigationListProps = {
 	open: boolean;
+	setOpen: (value: boolean) => void;
 	children: ReactElement<MobileButtonProps>[];
 };
 
@@ -19,6 +20,7 @@ type MobileNavigationListProps = {
  */
 export function MobileNavigationList({
 	open = false,
+	setOpen,
 	children,
 }: MobileNavigationListProps) {
 	// Component CVA function
@@ -36,6 +38,13 @@ export function MobileNavigationList({
 
 	return (
 		<ul className={mobileNavigationList({ open })}>
+			{/* Overlay background */}
+			<div
+				className='dark-overlay'
+				onClick={() => setOpen(!open)}
+			/>
+
+			{/* Buttons */}
 			{children.map((mobileButton, index) => (
 				<li key={`mobileButton-${index}`}>{mobileButton}</li>
 			))}

@@ -30,10 +30,10 @@ export function Navigation(props: NavigationProps) {
 				<ul className='desktop-button-list'>
 					<li>
 						<Button
-							className='tech-and-skills-button'
+							className='contact-button'
 							size={'extra-small'}
 							variant={'flat'}>
-							Tech & Skills
+							Contact
 						</Button>
 					</li>
 					<li>
@@ -42,6 +42,22 @@ export function Navigation(props: NavigationProps) {
 							size={'extra-small'}
 							variant={'flat'}>
 							Projects
+						</Button>
+					</li>
+					<li>
+						<Button
+							className='timeline-button'
+							size={'extra-small'}
+							variant={'flat'}>
+							Timeline
+						</Button>
+					</li>
+					<li>
+						<Button
+							className='tech-and-skills-button'
+							size={'extra-small'}
+							variant={'flat'}>
+							Tech & Skills
 						</Button>
 					</li>
 				</ul>
@@ -55,7 +71,7 @@ export function Navigation(props: NavigationProps) {
 					variant={'flat'}
 					icon={
 						<Icon
-							name={'right-chevron'}
+							name={'hamburger'}
 							size={'extra-large'}
 						/>
 					}
@@ -63,7 +79,9 @@ export function Navigation(props: NavigationProps) {
 			</div>
 
 			{/* Mobile navigation buttons */}
-			<MobileNavigationList open={isMobileMenuOpen}>
+			<MobileNavigationList
+				open={isMobileMenuOpen}
+				setOpen={setIsMobileMenuOpen}>
 				<MobileButton
 					key={0}
 					href='#Tech&SkillsSection'>
