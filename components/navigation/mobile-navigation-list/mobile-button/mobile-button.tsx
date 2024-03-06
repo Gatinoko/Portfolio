@@ -17,7 +17,6 @@ export type MobileButtonSizes =
  */
 export type MobileButtonProps = {
 	size?: MobileButtonSizes;
-	href: string;
 	children: string;
 	onClick?: () => void;
 };
@@ -29,7 +28,6 @@ export type MobileButtonProps = {
  */
 export function MobileButton({
 	size = 'regular',
-	href,
 	children,
 	onClick = () => {},
 }: MobileButtonProps) {
@@ -56,11 +54,10 @@ export function MobileButton({
 	}
 
 	return (
-		<a
-			href={href}
+		<button
 			className={mobileButton({ size })}
 			onClick={buttonClick}>
 			<span className={'text'}>{children}</span>
-		</a>
+		</button>
 	);
 }

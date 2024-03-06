@@ -37,7 +37,7 @@
 		}
 
 		li:last-child {
-			a {
+			button {
 				border-radius: 0 0 13px 13px;
 			}
 		}
@@ -55,6 +55,6 @@
 		}
 	}
 	&.closed {
-		top: -200%;
+		top: -300%;
 	}
 }
