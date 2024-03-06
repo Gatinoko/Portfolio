@@ -1,4 +1,5 @@
 import { BannerArt } from '@/components/banner-art/banner-art';
+import { Button } from '@/components/button/button';
 import { ChipCloud } from '@/components/chip-cloud/chip-cloud';
 import { Chip } from '@/components/chip-cloud/chip/chip';
 import { ColumnGrid } from '@/components/column-grid/column-grid';
@@ -6,6 +7,7 @@ import { Icon } from '@/components/icon/icon';
 import { PageSection } from '@/components/page-section/page-section';
 import { ProjectBox } from '@/components/project-box/project-box';
 import { ProjectItem } from '@/components/project-box/project-item/project-item';
+import { Tooltip } from '@/components/tooltip/tooltip';
 import { TimelineItem } from '@/components/work-timeline/timeline-item/timeline-item';
 import { TimelineSubitem } from '@/components/work-timeline/timeline-subitem/timeline-subitem';
 import { WorkTimeline } from '@/components/work-timeline/work-timeline';
@@ -368,11 +370,55 @@ export default function Home() {
 						LinkedIn! I'm a very friendly guy, so coffee chats (even virtual
 						ones) are more than welcome.
 					</p>
-					<h4
-						style={{ textAlign: 'center' }}
-						className='h-xs'>
-						gabriel.dias.tinoco@gmail.com
-					</h4>
+					<div className='contact-buttons'>
+						{/*  Copy email button */}
+						<Tooltip
+							text='Copy email'
+							size='extra-small'>
+							<Button
+								aria-label={'Copy email address'}
+								size={'small'}
+								icon={
+									<Icon
+										name={'email'}
+										size={'extra-large'}
+									/>
+								}
+							/>
+						</Tooltip>
+
+						{/*  LinkedIn profile button */}
+						<Tooltip
+							text='LinkedIn profile'
+							size='extra-small'>
+							<Button
+								aria-label={'LinkedIn profile'}
+								size={'small'}
+								icon={
+									<Icon
+										name={'linkedIn'}
+										size={'extra-large'}
+									/>
+								}
+							/>
+						</Tooltip>
+
+						{/*  Resume link button */}
+						<Tooltip
+							text='Resume link'
+							size='extra-small'>
+							<Button
+								aria-label={'Resume link'}
+								size={'small'}
+								icon={
+									<Icon
+										name={'resume'}
+										size={'extra-large'}
+									/>
+								}
+							/>
+						</Tooltip>
+					</div>
 				</PageSection>
 			</div>
 		</main>
