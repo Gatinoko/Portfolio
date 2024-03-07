@@ -400,6 +400,7 @@ export default function Home() {
 										size={'extra-large'}
 									/>
 								}
+								externalLinkIndicator
 							/>
 						</Tooltip>
 
@@ -416,6 +417,7 @@ export default function Home() {
 										size={'extra-large'}
 									/>
 								}
+								externalLinkIndicator
 							/>
 						</Tooltip>
 					</div>

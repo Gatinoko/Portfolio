@@ -6,6 +6,7 @@
 	& {
 		@include base-border;
 		display: flex;
+		position: relative;
 		justify-items: center;
 		align-items: center;
 		text-transform: uppercase;
@@ -17,24 +18,51 @@
 		transition: background-color 50ms, color 50ms;
 	}
 
+	.external-link-indicator {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 0.75rem;
+		height: 0.75rem;
+		padding: 0.25rem;
+		fill: var(--TEXT-DEFAULT);
+		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+		transition: fill 50ms;
+	}
+
 	.icon {
 		filter: none;
+		fill: var(--TEXT-DEFAULT);
+		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+		transition: fill 50ms;
 	}
 
 	/*
 		Sizes
 	*/
 	&.extra-large {
-		@include interface-xl;
-		gap: 2rem;
-		padding: 1rem 1.5rem;
-		border-radius: $RADIUS-13;
+		& {
+			@include interface-xl;
+			gap: 2rem;
+			padding: 1rem 1.5rem;
+			border-radius: $RADIUS-13;
+		}
+
+		.external-link-indicator {
+			padding: 0.5rem;
+		}
 	}
 	&.large {
-		@include interface-l;
-		gap: 1.5rem;
-		padding: 1rem 1.5rem;
-		border-radius: $RADIUS-13;
+		& {
+			@include interface-l;
+			gap: 1.5rem;
+			padding: 1rem 1.5rem;
+			border-radius: $RADIUS-13;
+		}
+
+		.external-link-indicator {
+			padding: 0.5rem;
+		}
 	}
 	&.regular {
 		@include interface-r;
@@ -69,9 +97,19 @@
 		*/
 		@media (hover: hover) {
 			&:hover {
-				@include base-border-color;
-				color: var(--TEXT-HOVER);
-				background-color: var(--BG-HOVER);
+				& {
+					@include base-border-color;
+					color: var(--TEXT-HOVER);
+					background-color: var(--BG-HOVER);
+				}
+
+				.icon {
+					fill: var(--TEXT-HOVER);
+				}
+
+				.external-link-indicator {
+					fill: var(--TEXT-HOVER);
+				}
 			}
 		}
 		&:active {
@@ -86,8 +124,18 @@
 	*/
 	@media (hover: hover) {
 		&:hover {
-			background-color: var(--BG-HOVER);
-			color: var(--TEXT-HOVER);
+			& {
+				background-color: var(--BG-HOVER);
+				fill: var(--TEXT-HOVER);
+			}
+
+			.icon {
+				fill: var(--TEXT-HOVER);
+			}
+
+			.external-link-indicator {
+				fill: var(--TEXT-HOVER);
+			}
 		}
 	}
 	&:active {
