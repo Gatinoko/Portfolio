@@ -1,3 +1,5 @@
+'use client';
+
 import { BannerArt } from '@/components/banner-art/banner-art';
 import { Button } from '@/components/button/button';
 import { ChipCloud } from '@/components/chip-cloud/chip-cloud';
@@ -13,6 +15,11 @@ import { TimelineSubitem } from '@/components/work-timeline/timeline-subitem/tim
 import { WorkTimeline } from '@/components/work-timeline/work-timeline';
 
 export default function Home() {
+	// Opens specified link in a new tab
+	function openUrlInNewTab(url: string) {
+		window.open(url, '_blank')?.focus();
+	}
+
 	return (
 		<main
 			className={'main'}
@@ -37,10 +44,10 @@ export default function Home() {
 					</h2>
 					<hr data-variant='animated-gradient' />
 					<p style={{ maxWidth: '75ch' }}>
-						Career statement goes here. Should be something like really
-						impactful. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Morbi non sapien ante. Suspendisse vel consectetur urna. Ut a dictum
-						sem. Praesent faucibus nisi ac fermentum posuere.
+						Skilled software engineer proficient in different languages and
+						frameworks. Experienced in full-stack development, adept at
+						problem-solving, and dedicated to the art of crafting high-quality
+						code.
 					</p>
 				</PageSection>
 			</div>
@@ -93,15 +100,15 @@ export default function Home() {
 					</ChipCloud>
 				</PageSection>
 
-				{/* Timeline section */}
-				<PageSection id='TimelineSection'>
-					<h3 className='section-title h-l'>Timeline</h3>
+				{/* Work timeline section */}
+				<PageSection id='CareerTimelineSection'>
+					<h3 className='section-title h-l'>Career</h3>
 					<hr />
 					<WorkTimeline>
 						<TimelineItem
-							key='whimtach'
+							key='WHIMTACH'
 							title={'WHIMTACH'}
-							date={'(6 months)'}>
+							date={'(4 months)'}>
 							<TimelineSubitem
 								key={'ux designer'}
 								startDate={'Feb 2022'}
@@ -120,10 +127,10 @@ export default function Home() {
 									/>,
 								]}>
 								Acted as the lead UX designer in the elaboration of a cosmetic
-								business’s website, creating multiple page designs in Figma and
-								conceptual designs in Photoshop, as well as having biweekly
-								meetings with the project’s stakeholders in order to gather
-								feedback and discuss requirements
+								business&apos;s website, creating multiple page designs in Figma
+								and conceptual designs in Photoshop, as well as having biweekly
+								meetings with the project&apos;s stakeholders in order to gather
+								feedback and discuss requirements.
 							</TimelineSubitem>
 						</TimelineItem>
 
@@ -183,13 +190,14 @@ export default function Home() {
 										size={'small'}
 									/>,
 								]}>
-								Worked on developing a MEAN stack application for a small team
-								of people in order to speed up data gathering and visualization
+								Worked on prototyping and developing a MEAN stack application
+								for a small team of individuals in order to speed up data
+								gathering and visualization.
 							</TimelineSubitem>
 							<TimelineSubitem
 								key={'Front-end Developer Co-op'}
 								startDate={'Sep 2022'}
-								endDate={'Ago 2023'}
+								endDate={'Dec 2022'}
 								subtitle={'Front-end Developer Co-op'}
 								icons={[
 									<Icon
@@ -200,6 +208,62 @@ export default function Home() {
 									<Icon
 										key={'angular'}
 										name={'angular'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'html5'}
+										name={'html5'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'css3'}
+										name={'css3'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'sass'}
+										name={'sass'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'storybook'}
+										name={'storybook'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'nx'}
+										name={'nx'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'jenkins'}
+										name={'jenkins'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'jest'}
+										name={'jest'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'figma'}
+										name={'figma'}
+										size={'small'}
+									/>,
+								]}>
+								Implemented, tested, reviewed, and shipped{' '}
+								<strong>Angular</strong> components as part of the core
+								front-end component library team within the company.
+							</TimelineSubitem>
+							<TimelineSubitem
+								key={'Front-end Developer Co-op'}
+								startDate={'May 2023'}
+								endDate={'Ago 2023'}
+								subtitle={'Front-end Developer Co-op'}
+								icons={[
+									<Icon
+										key={'nodejs'}
+										name={'nodejs'}
 										size={'small'}
 									/>,
 									<Icon
@@ -248,8 +312,44 @@ export default function Home() {
 										size={'small'}
 									/>,
 								]}>
-								Implemented, tested, and reviewed Angular/React components at
-								the company main front-end component library team
+								Implemented, tested, reviewed, and shipped{' '}
+								<strong>React</strong> components as part of the core front-end
+								component library team within the company.
+							</TimelineSubitem>
+						</TimelineItem>
+					</WorkTimeline>
+				</PageSection>
+
+				{/* Education timeline section */}
+				<PageSection id='EducationTimelineSection'>
+					<h3 className='section-title h-l'>Education</h3>
+					<hr />
+					<WorkTimeline>
+						<TimelineItem
+							key='Santa Maria Nova Suiça'
+							title={'Santa Maria Nova Suiça'}
+							date={'(3 years)'}>
+							<TimelineSubitem
+								key={'High School'}
+								startDate={'Jan 2017'}
+								endDate={'Dec 2019'}
+								subtitle={'High School, Brazil'}>
+								Successfully completed high school.
+							</TimelineSubitem>
+						</TimelineItem>
+						<TimelineItem
+							key='Centennial College'
+							title={'Centennial College'}
+							date={'(3 years)'}>
+							<TimelineSubitem
+								key={'Computer Software Engineering, Canada'}
+								startDate={'Jan 2020'}
+								endDate={'Dec 2023'}
+								subtitle={'Computer Software Engineering, Canada'}>
+								Attained an <strong>Ontario College Advanced Diploma</strong> in
+								Computer Software Engineering at Centennial College, mastering
+								diverse programming languages and industry-level methodologies
+								related to the creation of software at scale.
 							</TimelineSubitem>
 						</TimelineItem>
 					</WorkTimeline>
@@ -394,6 +494,11 @@ export default function Home() {
 							<Button
 								aria-label={'LinkedIn profile'}
 								size={'small'}
+								onClick={() =>
+									openUrlInNewTab(
+										'https://www.linkedin.com/in/gabriel-dias-tinoco/'
+									)
+								}
 								icon={
 									<Icon
 										name={'linkedIn'}
@@ -411,6 +516,11 @@ export default function Home() {
 							<Button
 								aria-label={'Resume link'}
 								size={'small'}
+								onClick={() =>
+									openUrlInNewTab(
+										'https://www.linkedin.com/in/gabriel-dias-tinoco/'
+									)
+								}
 								icon={
 									<Icon
 										name={'resume'}
