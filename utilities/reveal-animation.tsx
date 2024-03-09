@@ -32,11 +32,10 @@ export default function RevealAnimation({ children }: IRevealAnimation) {
 				initial='initialState'
 				animate={animateControls}
 				transition={{
-					duration: 0.5,
-					delay: 0.25,
+					duration: 0.4,
 				}}
 				variants={{
-					initialState: { opacity: 0, y: 75 },
+					initialState: { opacity: 0, y: 25 },
 					animateSate: { opacity: 1, y: 0 },
 				}}>
 				{children}
