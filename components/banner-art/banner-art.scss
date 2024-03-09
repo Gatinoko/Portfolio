@@ -7,7 +7,7 @@
 		width: 100%;
 		height: 100%;
 		background-color: transparent;
-		opacity: 75%;
+		opacity: 85%;
 	}
 
 	.gradient {
@@ -21,7 +21,7 @@
 			rgba(0, 0, 0, 1) 75%,
 			rgba(0, 0, 0, 0) 100%
 		);
-		filter: hue-rotate(45deg);
-		transform: scaleY(7);
+		filter: hue-rotate(30deg);
+		transform: scaleY(9);
 	}
 }
