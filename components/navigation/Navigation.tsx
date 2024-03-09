@@ -37,7 +37,6 @@ export function Navigation(props: NavigationProps) {
 				<ul className='desktop-button-list'>
 					<li>
 						<Button
-							className='contact-button'
 							size={'extra-small'}
 							variant={'flat'}
 							onClick={() => scrollToSection('ContactSection')}>
@@ -46,7 +45,6 @@ export function Navigation(props: NavigationProps) {
 					</li>
 					<li>
 						<Button
-							className='projects-button'
 							size={'extra-small'}
 							variant={'flat'}
 							onClick={() => scrollToSection('ProjectsSection')}>
@@ -55,16 +53,22 @@ export function Navigation(props: NavigationProps) {
 					</li>
 					<li>
 						<Button
-							className='timeline-button'
 							size={'extra-small'}
 							variant={'flat'}
-							onClick={() => scrollToSection('TimelineSection')}>
-							Timeline
+							onClick={() => scrollToSection('EducationTimelineSection')}>
+							Education
 						</Button>
 					</li>
 					<li>
 						<Button
-							className='tech-and-skills-button'
+							size={'extra-small'}
+							variant={'flat'}
+							onClick={() => scrollToSection('CareerTimelineSection')}>
+							Career
+						</Button>
+					</li>
+					<li>
+						<Button
 							size={'extra-small'}
 							variant={'flat'}
 							onClick={() => scrollToSection('Tech&SkillsSection')}>
