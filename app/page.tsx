@@ -195,7 +195,7 @@ export default function Home() {
 								gathering and visualization.
 							</TimelineSubitem>
 							<TimelineSubitem
-								key={'Front-end Developer Co-op'}
+								key={'Front-end Developer Co-op 1'}
 								startDate={'Sep 2022'}
 								endDate={'Dec 2022'}
 								subtitle={'Front-end Developer Co-op'}
@@ -236,11 +236,6 @@ export default function Home() {
 										size={'small'}
 									/>,
 									<Icon
-										key={'jenkins'}
-										name={'jenkins'}
-										size={'small'}
-									/>,
-									<Icon
 										key={'jest'}
 										name={'jest'}
 										size={'small'}
@@ -256,7 +251,7 @@ export default function Home() {
 								front-end component library team within the company.
 							</TimelineSubitem>
 							<TimelineSubitem
-								key={'Front-end Developer Co-op'}
+								key={'Front-end Developer Co-op 2'}
 								startDate={'May 2023'}
 								endDate={'Ago 2023'}
 								subtitle={'Front-end Developer Co-op'}
@@ -294,11 +289,6 @@ export default function Home() {
 									<Icon
 										key={'nx'}
 										name={'nx'}
-										size={'small'}
-									/>,
-									<Icon
-										key={'jenkins'}
-										name={'jenkins'}
 										size={'small'}
 									/>,
 									<Icon
@@ -361,9 +351,9 @@ export default function Home() {
 					<hr />
 					<ProjectBox>
 						<ProjectItem
-							key={'Bracketeams Tournament Website'}
-							githubProjectLink='https://github.com/Gatinoko/bracketeamsProject'
-							title='Bracketeams Tournament Website'
+							key={'Serverless Api Form Service'}
+							githubProjectLink='https://github.com/Gatinoko/ServerlessApiFormService'
+							title='Serverless Api Form Service'
 							icons={[
 								<Icon
 									key={'projectItemIcon-1'}
@@ -372,92 +362,58 @@ export default function Home() {
 								/>,
 								<Icon
 									key={'projectItemIcon-2'}
-									name={'angular'}
+									name={'typescript'}
 									size={'small'}
 								/>,
 								<Icon
 									key={'projectItemIcon-3'}
-									name={'html5'}
+									name={'react'}
 									size={'small'}
 								/>,
 								<Icon
 									key={'projectItemIcon-4'}
-									name={'css3'}
-									size={'small'}
-								/>,
-								<Icon
-									key={'projectItemIcon-5'}
-									name={'mongodb'}
-									size={'small'}
-								/>,
-								<Icon
-									key={'projectItemIcon-6'}
-									name={'express'}
-									size={'small'}
-								/>,
-							]}>
-							Collaborated in a group of 6 people as a lead software engineer in
-							order to create a functional brackets website, where the user
-							could create, read, edit, and delete game tournaments
-						</ProjectItem>
-						<ProjectItem
-							key={'Personal Website'}
-							title='Personal Website'
-							githubProjectLink='https://github.com/Gatinoko/GabrielTinocoWebsite'
-							icons={[
-								<Icon
-									key={'projectItemIcon-1'}
-									name={'nodejs'}
-									size={'small'}
-								/>,
-								<Icon
-									key={'projectItemIcon-2'}
 									name={'html5'}
 									size={'small'}
 								/>,
 								<Icon
-									key={'projectItemIcon-3'}
+									key={'projectItemIcon-5'}
 									name={'css3'}
 									size={'small'}
 								/>,
 								<Icon
-									key={'projectItemIcon-4'}
-									name={'mongodb'}
-									size={'small'}
-								/>,
-								<Icon
-									key={'projectItemIcon-5'}
-									name={'express'}
-									size={'small'}
-								/>,
-								<Icon
 									key={'projectItemIcon-6'}
-									name={'ejs'}
-									size={'small'}
-								/>,
-							]}>
-							Created a website with information about my projects, services,
-							contact information, and a login page
-						</ProjectItem>
-						<ProjectItem
-							key={'Mockup Music Player'}
-							title='Mockup Music Player'
-							githubProjectLink='https://github.com/Gatinoko/COMP123-Assignment4'
-							icons={[
-								<Icon
-									key={'projectItemIcon-1'}
-									name={'nodejs'}
+									name={'tailwind'}
 									size={'small'}
 								/>,
 								<Icon
-									key={'projectItemIcon-2'}
-									name={'angular'}
+									key={'projectItemIcon-7'}
+									name={'vercel'}
+									size={'small'}
+								/>,
+								<Icon
+									key={'projectItemIcon-8'}
+									name={'mySql'}
+									size={'small'}
+								/>,
+								<Icon
+									key={'projectItemIcon-9'}
+									name={'planetscale'}
+									size={'small'}
+								/>,
+								<Icon
+									key={'projectItemIcon-10'}
+									name={'zod'}
+									size={'small'}
+								/>,
+								<Icon
+									key={'projectItemIcon-11'}
+									name={'prisma'}
 									size={'small'}
 								/>,
 							]}>
-							Implemented the following features: add and delete artists, assign
-							music to specific artists, edit music information, delete music,
-							and play the user’s selected music
+							Created an api service, complete with its own front-end portal,
+							which lets users programatically create/consume generic units of
+							data called form items and business contacts.
 						</ProjectItem>
 					</ProjectBox>
 				</PageSection>
