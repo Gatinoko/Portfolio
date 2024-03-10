@@ -9,9 +9,9 @@ import { PageSection } from '@/components/page-section/page-section';
 import { ProjectBox } from '@/components/project-box/project-box';
 import { ProjectItem } from '@/components/project-box/project-item/project-item';
 import { Tooltip } from '@/components/tooltip/tooltip';
-import { TimelineItem } from '@/components/work-timeline/timeline-item/timeline-item';
-import { TimelineSubitem } from '@/components/work-timeline/timeline-subitem/timeline-subitem';
-import { WorkTimeline } from '@/components/work-timeline/work-timeline';
+import { TimelineItem } from '@/components/timeline/timeline-item/timeline-item';
+import { TimelineSubitem } from '@/components/timeline/timeline-subitem/timeline-subitem';
+import { Timeline } from '@/components/timeline/timeline';
 import RevealAnimation from '@/utilities/reveal-animation';
 
 export default function Home() {
@@ -109,7 +109,7 @@ export default function Home() {
 					<PageSection id='CareerTimelineSection'>
 						<h3 className='section-title h-l'>Career</h3>
 						<hr />
-						<WorkTimeline>
+						<Timeline>
 							<TimelineItem
 								key='WHIMTACH'
 								title={'WHIMTACH'}
@@ -312,7 +312,7 @@ export default function Home() {
 									front-end component library team within the company.
 								</TimelineSubitem>
 							</TimelineItem>
-						</WorkTimeline>
+						</Timeline>
 					</PageSection>
 				</RevealAnimation>
 
@@ -321,7 +321,7 @@ export default function Home() {
 					<PageSection id='EducationTimelineSection'>
 						<h3 className='section-title h-l'>Education</h3>
 						<hr />
-						<WorkTimeline>
+						<Timeline>
 							<TimelineItem
 								key='Santa Maria Nova Suiça'
 								title={'Santa Maria Nova Suiça'}
@@ -349,7 +349,7 @@ export default function Home() {
 									methodologies related to the creation of software at scale.
 								</TimelineSubitem>
 							</TimelineItem>
-						</WorkTimeline>
+						</Timeline>
 					</PageSection>
 				</RevealAnimation>
 
