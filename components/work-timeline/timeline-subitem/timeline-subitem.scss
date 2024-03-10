@@ -14,7 +14,7 @@
 	}
 
 	.date {
-		@include interface-xs;
+		@include interface-s;
 		width: 5rem;
 		font-weight: $WEIGHT-REGULAR;
 		letter-spacing: normal;
