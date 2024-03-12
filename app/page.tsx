@@ -446,6 +446,11 @@ export default function Home() {
 								<Button
 									aria-label={'Copy email address'}
 									size={'small'}
+									onClick={() =>
+										navigator.clipboard.writeText(
+											'gabriel.dias.tinoco@gmail.com'
+										)
+									}
 									icon={
 										<Icon
 											name={'email'}
