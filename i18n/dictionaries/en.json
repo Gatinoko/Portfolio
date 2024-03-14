@@ -1,0 +1,70 @@
+{
+	"page": {
+		"introSection": {
+			"text": "Skilled software engineer proficient in different languages and frameworks. Experienced in full-stack development, adept at problem-solving, and dedicated to the art of crafting high-quality code.",
+			"subtitle": "Software Engineer"
+		},
+		"tech&SkillsSection": {
+			"title": "Tech & Skills"
+		},
+		"careerTimelineSection": {
+			"title": "Career",
+			"whimtach": {
+				"date": "(4 months)",
+				"uxDesigner": {
+					"startDate": "Feb 2022",
+					"endDate": "May 2022",
+					"text": "Acted as the lead UX designer in the elaboration of a cosmetic business's website, creating multiple page designs in Figma and conceptual designs in Photoshop, as well as having biweekly meetings with the project&apos;s stakeholders in order to gather feedback and discuss requirements."
+				}
+			},
+			"rbc": {
+				"date": "(1 year)",
+				"fullStack": {
+					"subtitle": "Full-stack Developer Co-op",
+					"startDate": "May 2022",
+					"endDate": "Ago 2022",
+					"text": "Worked on prototyping and developing a MEAN stack application for a small team of individuals in order to speed up data gathering and visualization."
+				},
+				"frontEnd1": {
+					"subtitle": "Front-end Developer Co-op",
+					"startDate": "Sep 2022",
+					"endDate": "Dec 2022",
+					"text": "Implemented, tested, reviewed, and shipped Angular components as part of the core front-end component library team within the company."
+				},
+				"frontEnd2": {
+					"subtitle": "Front-end Developer Co-op",
+					"startDate": "May 2023",
+					"endDate": "Ago 2023",
+					"text": "Implemented, tested, reviewed, and shipped React components as part of the core front-end component library team within the company."
+				}
+			}
+		},
+		"educationTimelineSection": {
+			"title": "Education",
+			"santaMaria": {
+				"subtitle": "High School, Brazil",
+				"date": "(3 years)",
+				"startDate": "Jan 2017",
+				"endDate": "Dec 2019",
+				"text": "Successfully completed high school."
+			},
+			"centennialCollege": {
+				"subtitle": "Computer Software Engineering, Canada",
+				"date": "(3 years)",
+				"startDate": "Jan 2020",
+				"endDate": "Dec 2023",
+				"text": "Attained an Ontario College Advanced Diploma in Computer Software Engineering at Centennial College, mastering diverse programming languages and industry-level methodologies related to the creation of software at scale."
+			}
+		},
+		"projectsSection": {
+			"title": "Projects",
+			"serverlessApiFormService": {
+				"text": "Created an api service, complete with its own front-end portal, which lets users programatically create/consume generic units of data called form items and business contacts."
+			}
+		},
+		"contactSection": {
+			"title": "Contact",
+			"text": "Interested in any of my skills? Shoot me an email or a message on LinkedIn! I'm a very friendly guy, so coffee chats (even virtual ones) are more than welcome."
+		}
+	}
+}
