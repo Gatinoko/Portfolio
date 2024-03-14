@@ -1,24 +1,24 @@
-'use client';
-
 import { BannerArt } from '@/components/banner-art/banner-art';
-import { Button } from '@/components/button/button';
 import { ChipCloud } from '@/components/chip-cloud/chip-cloud';
 import { Chip } from '@/components/chip-cloud/chip/chip';
 import { Icon } from '@/components/icon/icon';
 import { PageSection } from '@/components/page-section/page-section';
 import { ProjectBox } from '@/components/project-box/project-box';
 import { ProjectItem } from '@/components/project-box/project-item/project-item';
-import { Tooltip } from '@/components/tooltip/tooltip';
 import { TimelineItem } from '@/components/timeline/timeline-item/timeline-item';
 import { TimelineSubitem } from '@/components/timeline/timeline-subitem/timeline-subitem';
 import { Timeline } from '@/components/timeline/timeline';
 import RevealAnimation from '@/utilities/reveal-animation';
+import { ContactButtons } from '@/components/contact-buttons/contact-buttons';
+import { getDictionary } from '@/i18n/get-dictionary';
+import { Locale } from '@/i18n/i18nConfig';
 
-export default function Home() {
-	// Opens specified link in a new tab
-	function openUrlInNewTab(url: string) {
-		window.open(url, '_blank')?.focus();
-	}
+export default async function Home({
+	params: { lang },
+}: {
+	params: { lang: Locale };
+}) {
+	const dictionary = await getDictionary(lang);
 
 	return (
 		<main
@@ -41,14 +41,11 @@ export default function Home() {
 						<h2
 							style={{ maxWidth: '20ch' }}
 							className='h-r'>
-							Software Engineer
+							{dictionary['page'].introSection.subtitle}
 						</h2>
 						<hr data-variant='animated-gradient' />
 						<p style={{ maxWidth: '75ch' }}>
-							Skilled software engineer proficient in different languages and
-							frameworks. Experienced in full-stack development, adept at
-							problem-solving, and dedicated to the art of crafting high-quality
-							code.
+							{dictionary['page'].introSection.text}
 						</p>
 					</PageSection>
 				</RevealAnimation>
@@ -58,7 +55,9 @@ export default function Home() {
 				{/* Tech & skills section */}
 				<RevealAnimation>
 					<PageSection id='Tech&SkillsSection'>
-						<h3 className='section-title h-l'>Tech & Skills</h3>
+						<h3 className='section-title h-l'>
+							{dictionary['page']['tech&SkillsSection'].title}
+						</h3>
 						<hr data-variant='solid-gradient' />
 						<ChipCloud>
 							<Chip size='extra-large'>Typescript</Chip>
@@ -104,20 +103,28 @@ export default function Home() {
 					</PageSection>
 				</RevealAnimation>
 
-				{/* Work timeline section */}
+				{/* Career timeline section */}
 				<RevealAnimation>
 					<PageSection id='CareerTimelineSection'>
-						<h3 className='section-title h-l'>Career</h3>
+						<h3 className='section-title h-l'>
+							{dictionary['page'].careerTimelineSection.title}
+						</h3>
 						<hr />
 						<Timeline>
 							<TimelineItem
 								key='WHIMTACH'
 								title={'WHIMTACH'}
-								date={'(4 months)'}>
+								date={dictionary['page'].careerTimelineSection.whimtach.date}>
 								<TimelineSubitem
 									key={'ux designer'}
-									startDate={'Feb 2022'}
-									endDate={'May 2022'}
+									startDate={
+										dictionary['page'].careerTimelineSection.whimtach.uxDesigner
+											.startDate
+									}
+									endDate={
+										dictionary['page'].careerTimelineSection.whimtach.uxDesigner
+											.endDate
+									}
 									subtitle={'UX Designer'}
 									icons={[
 										<Icon
@@ -131,23 +138,31 @@ export default function Home() {
 											size={'small'}
 										/>,
 									]}>
-									Acted as the lead UX designer in the elaboration of a cosmetic
-									business&apos;s website, creating multiple page designs in
-									Figma and conceptual designs in Photoshop, as well as having
-									biweekly meetings with the project&apos;s stakeholders in
-									order to gather feedback and discuss requirements.
+									{
+										dictionary['page'].careerTimelineSection.whimtach.uxDesigner
+											.text
+									}
 								</TimelineSubitem>
 							</TimelineItem>
 
 							<TimelineItem
 								key='RBC (Royal Bank of Canada)'
-								date={'(1 year)'}
+								date={dictionary['page'].careerTimelineSection.rbc.date}
 								title={'RBC (Royal Bank of Canada)'}>
 								<TimelineSubitem
 									key={'Full-stack Developer Co-op'}
-									startDate={'May 2022'}
-									endDate={'Ago 2022'}
-									subtitle={'Full-stack Developer Co-op'}
+									startDate={
+										dictionary['page'].careerTimelineSection.rbc.fullStack
+											.startDate
+									}
+									endDate={
+										dictionary['page'].careerTimelineSection.rbc.fullStack
+											.endDate
+									}
+									subtitle={
+										dictionary['page'].careerTimelineSection.rbc.fullStack
+											.subtitle
+									}
 									icons={[
 										<Icon
 											key={'nodejs'}
@@ -195,15 +210,22 @@ export default function Home() {
 											size={'small'}
 										/>,
 									]}>
-									Worked on prototyping and developing a MEAN stack application
-									for a small team of individuals in order to speed up data
-									gathering and visualization.
+									{dictionary['page'].careerTimelineSection.rbc.fullStack.text}
 								</TimelineSubitem>
 								<TimelineSubitem
-									key={'Front-end Developer Co-op 1'}
-									startDate={'Sep 2022'}
-									endDate={'Dec 2022'}
-									subtitle={'Front-end Developer Co-op'}
+									key={'Front-end Developer Co-op'}
+									startDate={
+										dictionary['page'].careerTimelineSection.rbc.frontEnd1
+											.startDate
+									}
+									endDate={
+										dictionary['page'].careerTimelineSection.rbc.frontEnd1
+											.endDate
+									}
+									subtitle={
+										dictionary['page'].careerTimelineSection.rbc.frontEnd1
+											.subtitle
+									}
 									icons={[
 										<Icon
 											key={'nodejs'}
@@ -251,15 +273,22 @@ export default function Home() {
 											size={'small'}
 										/>,
 									]}>
-									Implemented, tested, reviewed, and shipped{' '}
-									<strong>Angular</strong> components as part of the core
-									front-end component library team within the company.
+									{dictionary['page'].careerTimelineSection.rbc.frontEnd1.text}
 								</TimelineSubitem>
 								<TimelineSubitem
 									key={'Front-end Developer Co-op 2'}
-									startDate={'May 2023'}
-									endDate={'Ago 2023'}
-									subtitle={'Front-end Developer Co-op'}
+									startDate={
+										dictionary['page'].careerTimelineSection.rbc.frontEnd2
+											.startDate
+									}
+									endDate={
+										dictionary['page'].careerTimelineSection.rbc.frontEnd2
+											.endDate
+									}
+									subtitle={
+										dictionary['page'].careerTimelineSection.rbc.frontEnd2
+											.subtitle
+									}
 									icons={[
 										<Icon
 											key={'nodejs'}
@@ -307,9 +336,7 @@ export default function Home() {
 											size={'small'}
 										/>,
 									]}>
-									Implemented, tested, reviewed, and shipped{' '}
-									<strong>React</strong> components as part of the core
-									front-end component library team within the company.
+									{dictionary['page'].careerTimelineSection.rbc.frontEnd2.text}
 								</TimelineSubitem>
 							</TimelineItem>
 						</Timeline>
@@ -319,19 +346,32 @@ export default function Home() {
 				{/* Education timeline section */}
 				<RevealAnimation>
 					<PageSection id='EducationTimelineSection'>
-						<h3 className='section-title h-l'>Education</h3>
+						<h3 className='section-title h-l'>
+							{dictionary['page'].educationTimelineSection.title}
+						</h3>
 						<hr />
 						<Timeline>
 							<TimelineItem
 								key='Santa Maria Nova Suiça'
 								title={'Santa Maria Nova Suiça'}
-								date={'(3 years)'}>
+								date={
+									dictionary['page'].educationTimelineSection.santaMaria.date
+								}>
 								<TimelineSubitem
 									key={'High School'}
-									startDate={'Jan 2017'}
-									endDate={'Dec 2019'}
-									subtitle={'High School, Brazil'}>
-									Successfully completed high school.
+									startDate={
+										dictionary['page'].educationTimelineSection.santaMaria
+											.startDate
+									}
+									endDate={
+										dictionary['page'].educationTimelineSection.santaMaria
+											.endDate
+									}
+									subtitle={
+										dictionary['page'].educationTimelineSection.santaMaria
+											.subtitle
+									}>
+									{dictionary['page'].educationTimelineSection.santaMaria.text}
 								</TimelineSubitem>
 							</TimelineItem>
 							<TimelineItem
@@ -340,13 +380,22 @@ export default function Home() {
 								date={'(3 years)'}>
 								<TimelineSubitem
 									key={'Computer Software Engineering, Canada'}
-									startDate={'Jan 2020'}
-									endDate={'Dec 2023'}
-									subtitle={'Computer Software Engineering, Canada'}>
-									Attained an <strong>Ontario College Advanced Diploma</strong>{' '}
-									in Computer Software Engineering at Centennial College,
-									mastering diverse programming languages and industry-level
-									methodologies related to the creation of software at scale.
+									startDate={
+										dictionary['page'].educationTimelineSection
+											.centennialCollege.startDate
+									}
+									endDate={
+										dictionary['page'].educationTimelineSection
+											.centennialCollege.endDate
+									}
+									subtitle={
+										dictionary['page'].educationTimelineSection
+											.centennialCollege.subtitle
+									}>
+									{
+										dictionary['page'].educationTimelineSection
+											.centennialCollege.text
+									}
 								</TimelineSubitem>
 							</TimelineItem>
 						</Timeline>
@@ -356,7 +405,9 @@ export default function Home() {
 				{/* Projects section */}
 				<RevealAnimation>
 					<PageSection id='ProjectsSection'>
-						<h3 className='section-title h-l'>Projects</h3>
+						<h3 className='section-title h-l'>
+							{dictionary['page'].projectsSection.title}
+						</h3>
 						<hr />
 						<ProjectBox>
 							<ProjectItem
@@ -420,9 +471,10 @@ export default function Home() {
 										size={'small'}
 									/>,
 								]}>
-								Created an api service, complete with its own front-end portal,
-								which lets users programatically create/consume generic units of
-								data called form items and business contacts.
+								{
+									dictionary['page'].projectsSection.serverlessApiFormService
+										.text
+								}
 							</ProjectItem>
 						</ProjectBox>
 					</PageSection>
@@ -431,79 +483,14 @@ export default function Home() {
 				{/* Contact section */}
 				<RevealAnimation>
 					<PageSection id='ContactSection'>
-						<h3 className='section-title h-l'>Contact</h3>
+						<h3 className='section-title h-l'>
+							{dictionary['page'].contactSection.title}
+						</h3>
 						<hr />
 						<p style={{ maxWidth: '75ch', textAlign: 'center' }}>
-							Interested in any of my skills? Shoot me an email or a message on
-							LinkedIn! I'm a very friendly guy, so coffee chats (even virtual
-							ones) are more than welcome.
+							{dictionary['page'].contactSection.text}
 						</p>
-						<div className='contact-buttons'>
-							{/*  Copy email button */}
-							<Tooltip
-								text='Copy email'
-								size='extra-small'>
-								<Button
-									aria-label={'Copy email address'}
-									size={'small'}
-									onClick={() =>
-										navigator.clipboard.writeText(
-											'gabriel.dias.tinoco@gmail.com'
-										)
-									}
-									icon={
-										<Icon
-											name={'email'}
-											size={'extra-large'}
-										/>
-									}
-								/>
-							</Tooltip>
-
-							{/*  LinkedIn profile button */}
-							<Tooltip
-								text='LinkedIn profile'
-								size='extra-small'>
-								<Button
-									aria-label={'LinkedIn profile'}
-									size={'small'}
-									onClick={() =>
-										openUrlInNewTab(
-											'https://www.linkedin.com/in/gabriel-dias-tinoco/'
-										)
-									}
-									icon={
-										<Icon
-											name={'linkedIn'}
-											size={'extra-large'}
-										/>
-									}
-									externalLinkIndicator
-								/>
-							</Tooltip>
-
-							{/*  Resume link button */}
-							<Tooltip
-								text='Resume link'
-								size='extra-small'>
-								<Button
-									aria-label={'Resume link'}
-									size={'small'}
-									onClick={() =>
-										openUrlInNewTab(
-											'https://www.linkedin.com/in/gabriel-dias-tinoco/'
-										)
-									}
-									icon={
-										<Icon
-											name={'resume'}
-											size={'extra-large'}
-										/>
-									}
-									externalLinkIndicator
-								/>
-							</Tooltip>
-						</div>
+						<ContactButtons />
 					</PageSection>
 				</RevealAnimation>
 			</div>

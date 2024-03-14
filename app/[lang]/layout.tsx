@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import '../styles/globals.scss';
+import '../../styles/globals.scss';
 import { Footer } from '@/components/footer/footer';
 import { Navigation } from '@/components/navigation/Navigation';
 import { PropsWithChildren } from 'react';
