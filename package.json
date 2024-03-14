@@ -9,18 +9,21 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@formatjs/intl-localematcher": "^0.5.4",
 		"class-variance-authority": "^0.7.0",
+		"negotiator": "^0.6.3",
 		"next": "^14.0.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
-		"framer-motion": "^11.0.8",
+		"@types/negotiator": "^0.6.3",
 		"@types/node": "^20.10.6",
 		"@types/react": "^18.2.46",
 		"@types/react-dom": "^18.2.18",
 		"eslint": "8.39.0",
 		"eslint-config-next": "^14.0.4",
+		"framer-motion": "^11.0.8",
 		"sass": "^1.62.0",
 		"typescript": "^5.3.3"
 	}
