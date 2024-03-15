@@ -83,6 +83,34 @@ hr {
 		width: 100%;
 		animation: none;
 		background-color: var(--FG-PRIMARY-SHADE);
+		background-image: none;
+
+		&::after {
+			animation: none;
+		}
+	}
+	&[data-variant='solid-small'] {
+		position: relative;
+		margin: 0px;
+		height: 1px;
+		border: 0px;
+		width: 100%;
+		animation: none;
+		background-color: var(--BORDER-PRIMARY);
+		background-image: none;
+
+		&::after {
+			animation: none;
+		}
+	}
+	&[data-variant='solid-small-gradient'] {
+		position: relative;
+		margin: 0px;
+		height: 1px;
+		border: 0px;
+		width: 100%;
+		animation: none;
+		background-color: var(--BORDER-PRIMARY);
 
 		&::after {
 			animation: none;
