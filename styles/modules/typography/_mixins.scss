@@ -88,28 +88,28 @@
 @mixin interface-xl {
 	@include font-opensans;
 	white-space: nowrap;
-	letter-spacing: 3.2px;
+	letter-spacing: 2.75px;
 	font-size: clamp(0.9844rem, 0.6645rem + 1.5993vi, 1.8rem);
 	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin interface-l {
 	@include font-opensans;
 	white-space: nowrap;
-	letter-spacing: 3.2px;
+	letter-spacing: 2.75px;
 	font-size: clamp(0.875rem, 0.6299rem + 1.2255vi, 1.5rem);
 	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin interface-r {
 	@include font-opensans;
 	white-space: nowrap;
-	letter-spacing: 3.2px;
+	letter-spacing: 2.75px;
 	font-size: clamp(0.7778rem, 0.5926rem + 0.9259vi, 1.25rem);
 	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin interface-s {
 	@include font-opensans;
 	white-space: nowrap;
-	letter-spacing: 3.2px;
+	letter-spacing: 2.75px;
 	font-size: clamp(0.6914rem, 0.554rem + 0.6869vi, 1.0417rem);
 	font-weight: $WEIGHT-BOLD;
 }
