@@ -1,5 +1,6 @@
 'use client';
 
+import { getDictionary } from '@/i18n/get-dictionary';
 import { Button } from '../button/button';
 import { Icon } from '../icon/icon';
 import { Tooltip } from '../tooltip/tooltip';
@@ -7,14 +8,16 @@ import { Tooltip } from '../tooltip/tooltip';
 /**
  * Custom type declaration for the `ContactButtons` React component properties.
  */
-export type ContactButtonsProps = {};
+export type ContactButtonsProps = {
+	dictionary: Awaited<ReturnType<typeof getDictionary>>['contactButtons'];
+};
 
 /**
  * React component.
  *
  * @param {ContactButtonsProps} props - Component properties.
  */
-export function ContactButtons() {
+export function ContactButtons({ dictionary }: ContactButtonsProps) {
 	// Opens specified link in a new tab
 	function openUrlInNewTab(url: string) {
 		window.open(url, '_blank')?.focus();
@@ -24,10 +27,10 @@ export function ContactButtons() {
 		<div className='contact-buttons'>
 			{/*  Copy email button */}
 			<Tooltip
-				text='Copy email'
+				text={dictionary.email.text}
 				size='extra-small'>
 				<Button
-					aria-label={'Copy email address'}
+					aria-label={dictionary.email.ariaLabel}
 					size={'small'}
 					onClick={() =>
 						navigator.clipboard.writeText('gabriel.dias.tinoco@gmail.com')
@@ -43,10 +46,10 @@ export function ContactButtons() {
 
 			{/*  LinkedIn profile button */}
 			<Tooltip
-				text='LinkedIn profile'
+				text={dictionary.linkedIn.text}
 				size='extra-small'>
 				<Button
-					aria-label={'LinkedIn profile'}
+					aria-label={dictionary.linkedIn.ariaLabel}
 					size={'small'}
 					onClick={() =>
 						openUrlInNewTab('https://www.linkedin.com/in/gabriel-dias-tinoco/')
@@ -63,10 +66,10 @@ export function ContactButtons() {
 
 			{/*  Resume link button */}
 			<Tooltip
-				text='Resume link'
+				text={dictionary.resume.text}
 				size='extra-small'>
 				<Button
-					aria-label={'Resume link'}
+					aria-label={dictionary.resume.ariaLabel}
 					size={'small'}
 					onClick={() =>
 						openUrlInNewTab('https://www.linkedin.com/in/gabriel-dias-tinoco/')
