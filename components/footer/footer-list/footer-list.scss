@@ -1,0 +1,40 @@
+@use '../../../styles/modules/shadow.module.scss' as *;
+@use '../../../styles/modules/typography/typography.module.scss' as *;
+@use '../../../styles/modules/shadow.module.scss' as *;
+
+.footer-list {
+	& {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.header {
+		@include interface-xs;
+		text-transform: uppercase;
+		color: var(--TEXT-DEFAULT);
+	}
+
+	.list {
+		& {
+			display: flex;
+			flex-direction: column;
+			gap: 0.25rem;
+		}
+
+		a {
+			& {
+				@include body-xs;
+				@include shadow-black(text-shadow);
+				text-decoration: none;
+				color: var(--TEXT-DEFAULT);
+				transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
+				transition: color 50ms;
+			}
+
+			&:hover {
+				color: var(--FG-PRIMARY);
+			}
+		}
+	}
+}
