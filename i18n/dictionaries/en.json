@@ -66,5 +66,33 @@
 			"title": "Contact",
 			"text": "Interested in any of my skills? Shoot me an email or a message on LinkedIn! I'm a very friendly guy, so coffee chats (even virtual ones) are more than welcome."
 		}
+	},
+	"navigation": {
+		"buttons": {
+			"contact": "Contact",
+			"projects": "Projects",
+			"education": "Education",
+			"career": "Career",
+			"tech&Skills": "Tech & Skills",
+			"hamburgerAria": "Toggle mobile"
+		}
+	},
+	"contactButtons": {
+		"email": {
+			"text": "Copy email",
+			"ariaLabel": "Copy email address"
+		},
+		"linkedIn": {
+			"text": "LinkedIn profile",
+			"ariaLabel": "LinkedIn profile (opens in a new tab)"
+		},
+		"resume": {
+			"text": "Resume link",
+			"ariaLabel": "Resume link (opens in a new tab) "
+		}
+	},
+	"footer": {
+		"localeSwitcherHeaderText": "Language",
+		"linksHeaderText": "Links"
 	}
 }

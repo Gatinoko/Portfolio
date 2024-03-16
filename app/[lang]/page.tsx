@@ -377,7 +377,10 @@ export default async function Home({
 							<TimelineItem
 								key='Centennial College'
 								title={'Centennial College'}
-								date={'(3 years)'}>
+								date={
+									dictionary['page'].educationTimelineSection.centennialCollege
+										.date
+								}>
 								<TimelineSubitem
 									key={'Computer Software Engineering, Canada'}
 									startDate={
@@ -446,11 +449,6 @@ export default async function Home({
 										size={'small'}
 									/>,
 									<Icon
-										key={'projectItemIcon-7'}
-										name={'vercel'}
-										size={'small'}
-									/>,
-									<Icon
 										key={'projectItemIcon-8'}
 										name={'mySql'}
 										size={'small'}
@@ -490,7 +488,7 @@ export default async function Home({
 						<p style={{ maxWidth: '75ch', textAlign: 'center' }}>
 							{dictionary['page'].contactSection.text}
 						</p>
-						<ContactButtons />
+						<ContactButtons dictionary={dictionary.contactButtons} />
 					</PageSection>
 				</RevealAnimation>
 			</div>

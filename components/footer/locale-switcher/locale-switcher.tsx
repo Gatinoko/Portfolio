@@ -4,9 +4,16 @@ import { usePathname } from 'next/navigation';
 import { FooterList } from '../footer-list/footer-list';
 
 /**
+ * Custom type declaration for the `LocaleSwitcher` React component properties.
+ */
+export type LocaleSwitcherProps = {
+	headerText: string;
+};
+
+/**
  * React component.
  */
-export function LocaleSwitcher() {
+export function LocaleSwitcher({ headerText }: LocaleSwitcherProps) {
 	const pathName = usePathname();
 
 	// Function for redirecting user to selected locale
@@ -30,7 +37,7 @@ export function LocaleSwitcher() {
 	}
 
 	return (
-		<FooterList headerText='Languages'>
+		<FooterList headerText={headerText}>
 			{i18n.locales.map((locale, index) => {
 				return (
 					<Link
