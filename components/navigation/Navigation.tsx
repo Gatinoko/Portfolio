@@ -40,7 +40,6 @@ export function Navigation({ dictionary }: NavigationProps) {
 				<ul className='desktop-button-list'>
 					<li>
 						<Button
-							size={'extra-small'}
 							variant={'flat'}
 							onClick={() => scrollToSection('ContactSection')}>
 							{dictionary.buttons.contact}
@@ -48,7 +47,6 @@ export function Navigation({ dictionary }: NavigationProps) {
 					</li>
 					<li>
 						<Button
-							size={'extra-small'}
 							variant={'flat'}
 							onClick={() => scrollToSection('ProjectsSection')}>
 							{dictionary.buttons.projects}
@@ -56,7 +54,6 @@ export function Navigation({ dictionary }: NavigationProps) {
 					</li>
 					<li>
 						<Button
-							size={'extra-small'}
 							variant={'flat'}
 							onClick={() => scrollToSection('EducationTimelineSection')}>
 							{dictionary.buttons.education}
@@ -64,7 +61,6 @@ export function Navigation({ dictionary }: NavigationProps) {
 					</li>
 					<li>
 						<Button
-							size={'extra-small'}
 							variant={'flat'}
 							onClick={() => scrollToSection('CareerTimelineSection')}>
 							{dictionary.buttons.career}
@@ -72,7 +68,6 @@ export function Navigation({ dictionary }: NavigationProps) {
 					</li>
 					<li>
 						<Button
-							size={'extra-small'}
 							variant={'flat'}
 							onClick={() => scrollToSection('Tech&SkillsSection')}>
 							{dictionary.buttons['tech&Skills']}

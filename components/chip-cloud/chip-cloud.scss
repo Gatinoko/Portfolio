@@ -14,27 +14,22 @@
 	}
 
 	& li .chip.extra-small {
-		@include interface-xs;
 		padding: 0.5rem;
 		opacity: 45%;
 	}
 	& li .chip.small {
-		@include interface-s;
 		padding: 0.5rem;
 		opacity: 55%;
 	}
 	& li .chip.regular {
-		@include interface-r;
 		padding: 0.5rem;
 		opacity: 70%;
 	}
 	& li .chip.large {
-		@include interface-l;
 		padding: 0.5rem;
 		opacity: 85%;
 	}
 	& li .chip.extra-large {
-		@include interface-xl;
 		padding: 0.5rem;
 		opacity: 100%;
 	}

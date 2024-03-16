@@ -10,7 +10,7 @@
 	}
 
 	.header {
-		@include interface-xs;
+		@include interface-r;
 		text-transform: uppercase;
 		color: var(--TEXT-DEFAULT);
 	}
