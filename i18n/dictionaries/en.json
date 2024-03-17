@@ -2,7 +2,7 @@
 	"page": {
 		"introSection": {
 			"text": "Skilled software engineer proficient in different languages and frameworks. Experienced in full-stack development, adept at problem-solving, and dedicated to the art of crafting high-quality code.",
-			"subtitle": "Software Engineer"
+			"subtitle": "Developer"
 		},
 		"tech&SkillsSection": {
 			"title": "Tech & Skills"
@@ -35,7 +35,7 @@
 					"subtitle": "Front-end Developer Co-op",
 					"startDate": "May 2023",
 					"endDate": "Ago 2023",
-					"text": "Implemented, tested, reviewed, and shipped React components as part of the core front-end component library team within the company."
+					"text": "Got a return offer to once again be part of the company's main front-end component library team, this time implementing, testing, reviewing, and shipping React components."
 				}
 			}
 		},

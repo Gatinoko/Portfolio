@@ -5,7 +5,7 @@
 			"subtitle": "Developer"
 		},
 		"tech&SkillsSection": {
-			"title": "Tecnologia e habilidades"
+			"title": "Habilidades"
 		},
 		"careerTimelineSection": {
 			"title": "Carreira",
@@ -20,22 +20,22 @@
 			"rbc": {
 				"date": "(1 ano)",
 				"fullStack": {
-					"subtitle": "Developer Full-stack Co-op",
+					"subtitle": "Developer Full-stack Co-op (Estágio)",
 					"startDate": "Mai 2022",
 					"endDate": "Ago 2022",
 					"text": "Prototipei e desenvolvi uma aplicação feita com stack MEAN para um pequeno time de indivíduos com o intuito de acelerar aquisição e visualização de dados referentes ao trabalho da equipe."
 				},
 				"frontEnd1": {
-					"subtitle": "Developer Front-end Co-op",
+					"subtitle": "Developer Front-end Co-op (Estágio)",
 					"startDate": "Set 2022",
 					"endDate": "Dez 2022",
 					"text": "Trabalhei implementando, testando, revisando e entregando componentes Angular como parte da equipe responsável pela biblioteca de componentes front-end principal da empresa."
 				},
 				"frontEnd2": {
-					"subtitle": "Developer Front-end Co-op",
+					"subtitle": "Developer Front-end Co-op (Estágio)",
 					"startDate": "Mai 2023",
 					"endDate": "Ago 2023",
-					"text": "Fui novamente parte da equipe responsável pela biblioteca de componentes principal da empresa, dessa vez testando, implementando, revisando e entregando componentes React."
+					"text": "Fui convidado participar da equipe responsável pela biblioteca de componentes principal da empresa novamente, dessa vez implementando, testando, revisando e entregando componentes React."
 				}
 			}
 		},
