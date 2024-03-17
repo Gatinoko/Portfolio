@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
-import '../styles/globals.scss';
+import '../../styles/globals.scss';
 import { Footer } from '@/components/footer/footer';
 import { Navigation } from '@/components/navigation/Navigation';
 import { PropsWithChildren } from 'react';
 import { Syne, Major_Mono_Display, Open_Sans } from 'next/font/google';
+import { getDictionary } from '@/i18n/get-dictionary';
+import { Locale } from '@/i18n/i18nConfig';
 
 const syne = Syne({
 	subsets: ['latin'],
@@ -29,16 +31,23 @@ export const metadata: Metadata = {
 	description: 'Welcome to Next.js',
 };
 
-export default async function RootLayout({ children }: PropsWithChildren) {
+export default async function RootLayout({
+	children,
+	params,
+}: PropsWithChildren & {
+	params: { lang: Locale };
+}) {
+	const dictionary = await getDictionary(params.lang);
+
 	return (
 		<html
-			lang='en'
+			lang={params.lang}
 			className='dark-theme'>
 			<body
 				className={`${syne.variable} ${majorMonoDisplay.variable} ${openSans.variable}`}>
-				<Navigation />
+				<Navigation dictionary={dictionary.navigation} />
 				{children}
-				<Footer />
+				<Footer dictionary={dictionary.footer} />
 			</body>
 		</html>
 	);

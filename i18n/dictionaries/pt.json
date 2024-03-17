@@ -1,0 +1,98 @@
+{
+	"page": {
+		"introSection": {
+			"text": "Engenheiro de software qualificado com proficiência em diferentes linguagens e frameworks. Experiente em desenvolvimento full-stack, adepto da resolução de problemas e dedicado a arte de criar código de alta qualidade.",
+			"subtitle": "Developer"
+		},
+		"tech&SkillsSection": {
+			"title": "Habilidades"
+		},
+		"careerTimelineSection": {
+			"title": "Carreira",
+			"whimtach": {
+				"date": "(4 meses)",
+				"uxDesigner": {
+					"startDate": "Fev 2022",
+					"endDate": "Mai 2022",
+					"text": "Atuei como UX designer na elaboração de um site para uma empresa de cosméticos, criando multiplos designs de páginas, componentes, e gráficos usando Figma e Photoshop, além de realizar reuniões quinzenais com os stakeholders do projeto para coletar feedback e discutir requerimentos."
+				}
+			},
+			"rbc": {
+				"date": "(1 ano)",
+				"fullStack": {
+					"subtitle": "Developer Full-stack Co-op (Estágio)",
+					"startDate": "Mai 2022",
+					"endDate": "Ago 2022",
+					"text": "Prototipei e desenvolvi uma aplicação feita com stack MEAN para um pequeno time de indivíduos com o intuito de acelerar aquisição e visualização de dados referentes ao trabalho da equipe."
+				},
+				"frontEnd1": {
+					"subtitle": "Developer Front-end Co-op (Estágio)",
+					"startDate": "Set 2022",
+					"endDate": "Dez 2022",
+					"text": "Trabalhei implementando, testando, revisando e entregando componentes Angular como parte da equipe responsável pela biblioteca de componentes front-end principal da empresa."
+				},
+				"frontEnd2": {
+					"subtitle": "Developer Front-end Co-op (Estágio)",
+					"startDate": "Mai 2023",
+					"endDate": "Ago 2023",
+					"text": "Fui convidado participar da equipe responsável pela biblioteca de componentes principal da empresa novamente, dessa vez implementando, testando, revisando e entregando componentes React."
+				}
+			}
+		},
+		"educationTimelineSection": {
+			"title": "Educação",
+			"santaMaria": {
+				"subtitle": "Ensino Médio, Brasil",
+				"date": "(3 anos)",
+				"startDate": "Jan 2017",
+				"endDate": "Dez 2019",
+				"text": "Ensino médio concluído com sucesso."
+			},
+			"centennialCollege": {
+				"subtitle": "Engenharia de Software, Canada",
+				"date": "(3 anos)",
+				"startDate": "Jan 2020",
+				"endDate": "Dez 2023",
+				"text": "Obtive um \"Ontario College Advanced Diploma\" (diploma avançado de faculdade em Ontario) em engenharia de software na Centennial College, onde dominei diversas linguagens de programação, estudei e coloquei em prática metodologias da indústria relacionadas a criação de software em pequena, média e larga escala."
+			}
+		},
+		"projectsSection": {
+			"title": "Projetos",
+			"serverlessApiFormService": {
+				"text": "Criei um serviço de API, com seu próprio portal front-end, que permite usuários a criar/consumir programaticamente unidades genéricas de dados chamadas \"form items\" (itens de formulário) e \"business contacts\" (contatos comerciais)."
+			}
+		},
+		"contactSection": {
+			"title": "Contato",
+			"text": "Interessado em alguma das minhas habilidades? Envie-me um e-mail ou uma mensagem no LinkedIn! Sou um cara muito simpático, então bate-papos (mesmo virtuais) são mais que bem vindos."
+		}
+	},
+	"navigation": {
+		"buttons": {
+			"contact": "Contato",
+			"projects": "Projetos",
+			"education": "Educação",
+			"career": "Carreira",
+			"tech&Skills": "Habilidades",
+			"hamburgerAria": "Toggle mobile"
+		}
+	},
+	"contactButtons": {
+		"email": {
+			"text": "Copiar email",
+			"ariaLabel": "Copiar endereço de email"
+		},
+		"linkedIn": {
+			"text": "Perfil do LinkedIn",
+			"ariaLabel": "Perfil do LinkedIn (abre em uma nova aba)"
+		},
+		"resume": {
+			"text": "Currículo",
+			"ariaLabel": "Link do currículo (abre em uma nova aba) "
+		}
+	},
+	"footer": {
+		"localeSwitcherHeaderText": "Idioma",
+		"linksHeaderText": "Links"
+	}
+}

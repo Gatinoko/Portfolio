@@ -5,6 +5,7 @@
 		"components",
 		"pages",
 		"utilities",
-		"assets"
+		"assets",
+		"i18n"
 	]
 }

@@ -6,18 +6,21 @@ import { Logo } from './logo/logo';
 import { MobileButton } from './mobile-navigation-list/mobile-button/mobile-button';
 import { MobileNavigationList } from './mobile-navigation-list/mobile-navigation-list';
 import { Icon } from '../icon/icon';
+import { type getDictionary } from '../../i18n/get-dictionary';
 
 /**
  * Custom type declaration for the `Navigation` React component properties.
  */
-type NavigationProps = {};
+type NavigationProps = {
+	dictionary: Awaited<ReturnType<typeof getDictionary>>['navigation'];
+};
 
 /**
  * React component.
  *
  * @param {NavigationProps} props - Component properties.
  */
-export function Navigation(props: NavigationProps) {
+export function Navigation({ dictionary }: NavigationProps) {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 	// Function for scrolling the page to a designated section
@@ -37,49 +40,44 @@ export function Navigation(props: NavigationProps) {
 				<ul className='desktop-button-list'>
 					<li>
 						<Button
-							size={'extra-small'}
 							variant={'flat'}
 							onClick={() => scrollToSection('ContactSection')}>
-							Contact
+							{dictionary.buttons.contact}
 						</Button>
 					</li>
 					<li>
 						<Button
-							size={'extra-small'}
 							variant={'flat'}
 							onClick={() => scrollToSection('ProjectsSection')}>
-							Projects
+							{dictionary.buttons.projects}
 						</Button>
 					</li>
 					<li>
 						<Button
-							size={'extra-small'}
 							variant={'flat'}
 							onClick={() => scrollToSection('EducationTimelineSection')}>
-							Education
+							{dictionary.buttons.education}
 						</Button>
 					</li>
 					<li>
 						<Button
-							size={'extra-small'}
 							variant={'flat'}
 							onClick={() => scrollToSection('CareerTimelineSection')}>
-							Career
+							{dictionary.buttons.career}
 						</Button>
 					</li>
 					<li>
 						<Button
-							size={'extra-small'}
 							variant={'flat'}
 							onClick={() => scrollToSection('Tech&SkillsSection')}>
-							Tech & Skills
+							{dictionary.buttons['tech&Skills']}
 						</Button>
 					</li>
 				</ul>
 
 				{/* Mobile navigation hamburguer button */}
 				<Button
-					aria-label={'Toggle mobile '}
+					aria-label={dictionary.buttons.hamburgerAria}
 					className='mobile-hamburguer-button'
 					size={'small'}
 					onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -100,22 +98,27 @@ export function Navigation(props: NavigationProps) {
 				<MobileButton
 					key={0}
 					onClick={() => scrollToSection('Tech&SkillsSection')}>
-					Tech & Skills
+					{dictionary.buttons['tech&Skills']}
 				</MobileButton>
 				<MobileButton
 					key={1}
-					onClick={() => scrollToSection('TimelineSection')}>
-					Timeline
+					onClick={() => scrollToSection('CareerTimelineSection')}>
+					{dictionary.buttons.career}
 				</MobileButton>
 				<MobileButton
-					key={1}
+					key={2}
+					onClick={() => scrollToSection('EducationTimelineSection')}>
+					{dictionary.buttons.education}
+				</MobileButton>
+				<MobileButton
+					key={3}
 					onClick={() => scrollToSection('ProjectsSection')}>
-					Projects
+					{dictionary.buttons.projects}
 				</MobileButton>
 				<MobileButton
-					key={1}
+					key={4}
 					onClick={() => scrollToSection('ContactSection')}>
-					Contact
+					{dictionary.buttons.contact}
 				</MobileButton>
 			</MobileNavigationList>
 		</nav>

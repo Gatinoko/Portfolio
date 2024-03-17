@@ -1,18 +1,13 @@
 @use '../../styles/modules/color/color.module.scss' as *;
 @use '../../styles/modules/spacing.module.scss' as *;
+@use '../../styles/modules/typography/typography.module.scss' as *;
 
 .footer {
 	& {
 		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		padding: 1rem $SPACING-S-2XL 1rem $SPACING-S-2XL;
-		background-color: var(--BG-PRIMARY);
+		gap: 2rem;
+		background-color: var(--BG-DEFAULT);
+		padding: 2rem $SPACING-S-2XL 2rem $SPACING-S-2XL;
 		border-top: 1px solid var(--BORDER-PRIMARY);
-	}
-
-	p {
-		opacity: 50%;
-		text-shadow: none;
 	}
 }

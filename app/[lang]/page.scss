@@ -1,5 +1,5 @@
-@use '../styles/modules/spacing.module.scss' as *;
-@use '../styles/modules/color/color.module.scss' as *;
+@use '../../styles/modules/spacing.module.scss' as *;
+@use '../../styles/modules/color/color.module.scss' as *;
 
 .main {
 	z-index: 0;
@@ -20,11 +20,6 @@
 		.intro-section {
 			text-align: center;
 		}
-	}
-
-	.contact-buttons {
-		display: flex;
-		gap: 0.5rem;
 	}
 
 	.page-content {

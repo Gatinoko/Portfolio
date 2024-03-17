@@ -1,5 +1,5 @@
 @use '../components/components' as *;
-@use '../app/page.scss' as *;
+@use '../app/[lang]/page.scss' as *;
 @use 'elements';
 
 :root {

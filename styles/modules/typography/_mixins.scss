@@ -83,40 +83,40 @@
 /*
 	Interface text mixins
 
-	@link https://utopia.fyi/type/calculator?c=320,14,1.125,1136,24,1.2,1,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+	@link https://utopia.fyi/type/calculator?c=320,14,1.125,1136,24,1.333,0,4,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
 */
 @mixin interface-xl {
 	@include font-opensans;
 	white-space: nowrap;
-	letter-spacing: 3.2px;
-	font-size: clamp(0.9844rem, 0.6645rem + 1.5993vi, 1.8rem);
+	letter-spacing: 2.75px;
+	font-size: clamp(0.875rem, 0.6299rem + 1.2255vi, 1.5rem);
 	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin interface-l {
 	@include font-opensans;
 	white-space: nowrap;
-	letter-spacing: 3.2px;
-	font-size: clamp(0.875rem, 0.6299rem + 1.2255vi, 1.5rem);
+	letter-spacing: 2.75px;
+	font-size: clamp(0.7778rem, 0.6415rem + 0.6814vi, 1.1253rem);
 	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin interface-r {
 	@include font-opensans;
 	white-space: nowrap;
-	letter-spacing: 3.2px;
-	font-size: clamp(0.7778rem, 0.5926rem + 0.9259vi, 1.25rem);
+	letter-spacing: 2.75px;
+	font-size: clamp(0.6914rem, 0.6314rem + 0.2996vi, 0.8442rem);
 	font-weight: $WEIGHT-SEMIBOLD;
 }
 @mixin interface-s {
 	@include font-opensans;
 	white-space: nowrap;
-	letter-spacing: 3.2px;
-	font-size: clamp(0.6914rem, 0.554rem + 0.6869vi, 1.0417rem);
+	letter-spacing: 2.75px;
+	font-size: clamp(0.6145rem, 0.6072rem + 0.0368vi, 0.6333rem);
 	font-weight: $WEIGHT-BOLD;
 }
 @mixin interface-xs {
 	@include font-opensans;
 	white-space: nowrap;
 	letter-spacing: 3.2px;
-	font-size: clamp(0.6145rem, 0.5151rem + 0.4971vi, 0.8681rem);
+	font-size: clamp(0.4751rem, 0.5742rem + -0.1396vi, 0.5463rem);
 	font-weight: $WEIGHT-BOLD;
 }
