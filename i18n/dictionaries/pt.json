@@ -91,7 +91,8 @@
 		},
 		"resume": {
 			"text": "Currículo",
-			"ariaLabel": "Link do currículo (abre em uma nova aba) "
+			"ariaLabel": "Link do currículo (abre em uma nova aba)",
+			"link": "https://docs.google.com/document/d/1WW4nyXzlDmPZzZTd7Dmxer9YWhWvFugb8XfgTA7tlkk/edit?usp=sharing"
 		}
 	},
 	"footer": {

@@ -71,9 +71,7 @@ export function ContactButtons({ dictionary }: ContactButtonsProps) {
 				<Button
 					aria-label={dictionary.resume.ariaLabel}
 					size={'small'}
-					onClick={() =>
-						openUrlInNewTab('https://www.linkedin.com/in/gabriel-dias-tinoco/')
-					}
+					onClick={() => openUrlInNewTab(dictionary.resume.link)}
 					icon={
 						<Icon
 							name={'resume'}

@@ -91,7 +91,8 @@
 		},
 		"resume": {
 			"text": "Resume link",
-			"ariaLabel": "Resume link (opens in a new tab) "
+			"ariaLabel": "Resume link (opens in a new tab)",
+			"link": "https://docs.google.com/document/d/1rZpKyU2k4WkQl9WKdsora435RxuCBe8kOjDx_2R6IPI/edit?usp=sharing"
 		}
 	},
 	"footer": {
