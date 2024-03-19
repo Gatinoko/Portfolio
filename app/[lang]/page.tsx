@@ -449,22 +449,22 @@ export default async function Home({
 										size={'small'}
 									/>,
 									<Icon
-										key={'projectItemIcon-8'}
+										key={'projectItemIcon-7'}
 										name={'mySql'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'projectItemIcon-9'}
-										name={'planetscale'}
+										key={'projectItemIcon-8'}
+										name={'nextjs'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'projectItemIcon-10'}
+										key={'projectItemIcon-9'}
 										name={'zod'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'projectItemIcon-11'}
+										key={'projectItemIcon-10'}
 										name={'prisma'}
 										size={'small'}
 									/>,
@@ -510,7 +510,7 @@ export default async function Home({
 										size={'small'}
 									/>,
 									<Icon
-										key={'projectItemIcon-8'}
+										key={'projectItemIcon-7'}
 										name={'mySql'}
 										size={'small'}
 									/>,
@@ -520,22 +520,22 @@ export default async function Home({
 										size={'small'}
 									/>,
 									<Icon
-										key={'projectItemIcon-8'}
+										key={'projectItemIcon-9'}
 										name={'dynamodb'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'projectItemIcon-9'}
+										key={'projectItemIcon-10'}
 										name={'nextjs'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'projectItemIcon-10'}
+										key={'projectItemIcon-11'}
 										name={'zod'}
 										size={'small'}
 									/>,
 									<Icon
-										key={'projectItemIcon-11'}
+										key={'projectItemIcon-12'}
 										name={'prisma'}
 										size={'small'}
 									/>,
