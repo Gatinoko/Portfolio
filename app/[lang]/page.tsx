@@ -474,6 +474,74 @@ export default async function Home({
 										.text
 								}
 							</ProjectItem>
+							<ProjectItem
+								key={'S3 Dynamodb Videoplayer'}
+								githubProjectLink='https://github.com/Gatinoko/S3DynamodbVideoplayer'
+								title='S3 Dynamodb Videoplayer'
+								icons={[
+									<Icon
+										key={'projectItemIcon-1'}
+										name={'nodejs'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'projectItemIcon-2'}
+										name={'typescript'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'projectItemIcon-3'}
+										name={'react'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'projectItemIcon-4'}
+										name={'html5'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'projectItemIcon-5'}
+										name={'css3'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'projectItemIcon-6'}
+										name={'tailwind'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'projectItemIcon-8'}
+										name={'mySql'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'projectItemIcon-8'}
+										name={'s3'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'projectItemIcon-8'}
+										name={'dynamodb'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'projectItemIcon-9'}
+										name={'nextjs'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'projectItemIcon-10'}
+										name={'zod'}
+										size={'small'}
+									/>,
+									<Icon
+										key={'projectItemIcon-11'}
+										name={'prisma'}
+										size={'small'}
+									/>,
+								]}>
+								{dictionary['page'].projectsSection.s3DynamodbVideoplayer.text}
+							</ProjectItem>
 						</ProjectBox>
 					</PageSection>
 				</RevealAnimation>
