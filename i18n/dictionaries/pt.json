@@ -14,7 +14,7 @@
 				"uxDesigner": {
 					"startDate": "Fev 2022",
 					"endDate": "Mai 2022",
-					"text": "Atuei como UX designer na elaboração de um site para uma empresa de cosméticos, criando multiplos designs de páginas, componentes, e gráficos usando Figma e Photoshop, além de realizar reuniões quinzenais com os stakeholders do projeto para coletar feedback e discutir requerimentos."
+					"text": "Atuei como UX designer principal na elaboração de um site para uma empresa de cosméticos, criando múltiplos designs de páginas, componentes, e gráficos usando Figma e Photoshop, além de realizar reuniões bissemanais com os stakeholders do projeto para coletar feedback e discutir requerimentos."
 				}
 			},
 			"rbc": {
@@ -23,7 +23,7 @@
 					"subtitle": "Developer Full-stack Co-op (Estágio)",
 					"startDate": "Mai 2022",
 					"endDate": "Ago 2022",
-					"text": "Prototipei e desenvolvi uma aplicação feita com stack MEAN para um pequeno time de indivíduos com o intuito de acelerar aquisição e visualização de dados referentes ao trabalho da equipe."
+					"text": "Criei um programa em Python, com interface gráfica Tkinter, que usa a biblioteca Pandas para filtrar e gerar um arquivo .CSV de acordo com certos requerimentos. Também desenvolvi uma aplicação web feita em stack MEAN que expande nas funcionalidades do programa em Python, com ferramentas de visualização de dados e coleta automática de informação."
 				},
 				"frontEnd1": {
 					"subtitle": "Developer Front-end Co-op (Estágio)",
@@ -35,7 +35,7 @@
 					"subtitle": "Developer Front-end Co-op (Estágio)",
 					"startDate": "Mai 2023",
 					"endDate": "Ago 2023",
-					"text": "Fui convidado participar da equipe responsável pela biblioteca de componentes principal da empresa novamente, dessa vez implementando, testando, revisando e entregando componentes React."
+					"text": "Fui convidado novamente a participar da equipe responsável pela biblioteca de componentes principal da empresa, dessa vez implementando, testando, revisando e entregando componentes React. Além disso atuei como um mentor para estudantes do ensino médio participantes do programa “Summer Tech Labs” oferecido pelo RBC, onde os instrui a usar tecnologias web como React e Jest para criar componentes de alta qualidade."
 				}
 			}
 		},
@@ -60,6 +60,9 @@
 			"title": "Projetos",
 			"serverlessApiFormService": {
 				"text": "Criei um serviço de API, com seu próprio portal front-end, que permite usuários a criar/consumir programaticamente unidades genéricas de dados chamadas \"form items\" (itens de formulário) e \"business contacts\" (contatos comerciais)."
+			},
+			"s3DynamodbVideoplayer": {
+				"text": "Programei um site de envio e reprodução de conteúdo audiovisual, que permite usuários enviarem, assistirem, comentarem, e avaliarem vídeos."
 			}
 		},
 		"contactSection": {
