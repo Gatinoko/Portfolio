@@ -62,7 +62,7 @@
 				"text": "Created an api service, complete with its own front-end portal, which lets users programmatically create/consume generic units of data called form items and business contacts."
 			},
 			"s3DynamodbVideoplayer": {
-				"text": "Coded a video upload and visualization platform which allows users to upload, watch, comment and rate videos."
+				"text": "Coded a website for uploading and playing audiovisual content, which allows users to upload, watch, comment and rate videos."
 			}
 		},
 		"contactSection": {
