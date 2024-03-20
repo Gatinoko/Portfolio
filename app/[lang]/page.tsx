@@ -80,12 +80,13 @@ export default async function Home({
 							<Chip size='regular'>Prettier</Chip>
 							<Chip size='large'>NextUI</Chip>
 							<Chip size='small'>ESLint</Chip>
-							<Chip size='extra-large'>Sass</Chip>
+							<Chip size='extra-large'>SCSS</Chip>
 							<Chip size='extra-large'>Next.js</Chip>
 							<Chip size='regular'>CVA</Chip>
 							<Chip size='extra-large'>HTML</Chip>
 							<Chip size='large'>Jira</Chip>
 							<Chip size='regular'>Express.js</Chip>
+							<Chip size='large'>Vim</Chip>
 							<Chip size='extra-small'>CSHARP</Chip>
 							<Chip size='small'>XML</Chip>
 							<Chip size='large'>JSON</Chip>
