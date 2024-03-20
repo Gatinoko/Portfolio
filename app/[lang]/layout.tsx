@@ -27,8 +27,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-	title: 'Home',
-	description: 'Welcome to Next.js',
+	title: "Gabriel's Portfolio",
 };
 
 export default async function RootLayout({
