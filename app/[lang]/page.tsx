@@ -43,7 +43,7 @@ export default async function Home({
 							className='h-r'>
 							{dictionary['page'].introSection.subtitle}
 						</h2>
-						<hr data-variant='animated-gradient' />
+						<hr />
 						<p style={{ maxWidth: '75ch' }}>
 							{dictionary['page'].introSection.text}
 						</p>
