@@ -9,6 +9,7 @@
 		margin: 0;
 		padding: 0;
 		transition: top 150ms;
+		will-change: top;
 		border-bottom: 1px solid var(--BORDER-SECONDARY);
 	}
 
