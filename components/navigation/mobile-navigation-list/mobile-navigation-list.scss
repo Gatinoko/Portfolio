@@ -20,8 +20,9 @@
 		left: 0;
 		z-index: -1;
 		width: 100%;
-		background-color: transparent;
-		transition: background-color 150ms;
+		height: 100dvh;
+		background-color: $BLACK-50;
+		transition: opacity 150ms;
 		transition-timing-function: cubic-bezier(0, 0, 0.25, 1);
 		transform: scaleY(2);
 	}
@@ -51,11 +52,14 @@
 		top: 100%;
 
 		.dark-overlay {
-			height: 100dvh;
-			background-color: $BLACK-50;
+			opacity: 100%;
 		}
 	}
 	&.closed {
 		top: -355%;
+
+		.dark-overlay {
+			opacity: 0%;
+		}
 	}
 }
