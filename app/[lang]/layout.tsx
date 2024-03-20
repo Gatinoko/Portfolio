@@ -28,6 +28,8 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
 	title: "Gabriel's Portfolio",
+	description:
+		'Coding portfolio detailing all of my skills, experiences, and knowledge as a full-stack programmer.',
 };
 
 export default async function RootLayout({
