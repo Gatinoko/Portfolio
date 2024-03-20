@@ -29,24 +29,26 @@ export default async function Home({
 				<BannerArt />
 
 				{/* Intro section */}
-				<PageSection
-					id='IntroSection'
-					className='intro-section'>
-					<h1
-						style={{ width: '6ch' }}
-						className='h-xl'>
-						Gabriel Dias Tinoco
-					</h1>
-					<h2
-						style={{ maxWidth: '20ch' }}
-						className='h-r'>
-						{dictionary['page'].introSection.subtitle}
-					</h2>
-					<hr data-variant='animated-gradient' />
-					<p style={{ maxWidth: '75ch' }}>
-						{dictionary['page'].introSection.text}
-					</p>
-				</PageSection>
+				<RevealAnimation>
+					<PageSection
+						id='IntroSection'
+						className='intro-section'>
+						<h1
+							style={{ width: '6ch' }}
+							className='h-xl'>
+							Gabriel Dias Tinoco
+						</h1>
+						<h2
+							style={{ maxWidth: '20ch' }}
+							className='h-r'>
+							{dictionary['page'].introSection.subtitle}
+						</h2>
+						<hr data-variant='animated-gradient' />
+						<p style={{ maxWidth: '75ch' }}>
+							{dictionary['page'].introSection.text}
+						</p>
+					</PageSection>
+				</RevealAnimation>
 			</div>
 
 			<div className='page-content'>
