@@ -48,38 +48,42 @@ export function ContactButtons({ dictionary }: ContactButtonsProps) {
 			<Tooltip
 				text={dictionary.linkedIn.text}
 				size='extra-small'>
-				<Button
-					aria-label={dictionary.linkedIn.ariaLabel}
-					size={'small'}
-					onClick={() =>
-						openUrlInNewTab('https://www.linkedin.com/in/gabriel-dias-tinoco/')
-					}
-					icon={
-						<Icon
-							name={'linkedIn'}
-							size={'extra-large'}
-						/>
-					}
-					externalLinkIndicator
-				/>
+				<a
+					href='https://www.linkedin.com/in/gabriel-dias-tinoco/'
+					target='_blank'>
+					<Button
+						aria-label={dictionary.linkedIn.ariaLabel}
+						size={'small'}
+						icon={
+							<Icon
+								name={'linkedIn'}
+								size={'extra-large'}
+							/>
+						}
+						externalLinkIndicator
+					/>
+				</a>
 			</Tooltip>
 
 			{/*  Resume link button */}
 			<Tooltip
 				text={dictionary.resume.text}
 				size='extra-small'>
-				<Button
-					aria-label={dictionary.resume.ariaLabel}
-					size={'small'}
-					onClick={() => openUrlInNewTab(dictionary.resume.link)}
-					icon={
-						<Icon
-							name={'resume'}
-							size={'extra-large'}
-						/>
-					}
-					externalLinkIndicator
-				/>
+				<a
+					href={dictionary.resume.link}
+					target='_blank'>
+					<Button
+						aria-label={dictionary.resume.ariaLabel}
+						size={'small'}
+						icon={
+							<Icon
+								name={'resume'}
+								size={'extra-large'}
+							/>
+						}
+						externalLinkIndicator
+					/>
+				</a>
 			</Tooltip>
 		</div>
 	);
