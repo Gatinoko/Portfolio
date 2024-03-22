@@ -33,6 +33,7 @@ export function FooterList(props: FooterListProps) {
 					<FooterListItem
 						key={`footerListItem-${index}`}
 						text={item.text}
+						onClick={item.onClick}
 						href={item.href}
 					/>
 				))}

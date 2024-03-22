@@ -1,6 +1,6 @@
 @use './variables' as *;
 
-.dark-theme {
+@mixin dark-theme {
 	// Color variables
 	--BG-PRIMARY: #{$BLACK1-181818};
 	--BG-SECONDARY: black;
@@ -23,7 +23,7 @@
 	--ICON-DISABLED: #{$WHITE-25};
 }
 
-.light-theme {
+@mixin light-theme {
 	// Color variables
 	--BG-PRIMARY: #{$WHITE1-EEEEEE};
 	--BG-SECONDARY: #ffffff;
@@ -32,7 +32,7 @@
 	--FG-PRIMARY-SHADE: #{$BLACK-50};
 	--BORDER-PRIMARY: #{$BLACK-5};
 	--BORDER-SECONDARY: #{$BLACK-15};
-	--GRADIENT: #{$GRADIENT1};
+	--GRADIENT: #{$GRADIENT2};
 
 	// Component variables
 	--TEXT-ACTIVE: black;
@@ -44,4 +44,29 @@
 	--BG-DEFAULT: #{$BLACK-5};
 	--BG-DISABLED: #{$BLACK-15};
 	--ICON-DISABLED: #{$BLACK-25};
+}
+
+html {
+	color-scheme: dark light;
+}
+
+:root[data-theme='system'] {
+	@media (prefers-color-scheme: dark) {
+		@include dark-theme;
+		color-scheme: dark;
+	}
+	@media (prefers-color-scheme: light) {
+		@include light-theme;
+		color-scheme: light;
+	}
+}
+
+:root[data-theme='dark'] {
+	@include dark-theme;
+	color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+	@include light-theme;
+	color-scheme: light;
 }

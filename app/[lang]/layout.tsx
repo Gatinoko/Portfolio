@@ -43,7 +43,7 @@ export default async function RootLayout({
 	return (
 		<html
 			lang={params.lang}
-			className='dark-theme'>
+			data-theme={'system'}>
 			<body
 				className={`${syne.variable} ${majorMonoDisplay.variable} ${openSans.variable}`}>
 				<Navigation dictionary={dictionary.navigation} />

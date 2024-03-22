@@ -97,6 +97,13 @@
 	},
 	"footer": {
 		"localeSwitcherHeaderText": "Language",
-		"linksHeaderText": "Links"
+		"linksHeaderText": "Links",
+		"themesHeaderText": "Themes",
+		"themesList": {
+			"header": "Themes",
+			"systemThemeText": "System",
+			"darkThemeText": "Dark",
+			"lightThemeText": "light"
+		}
 	}
 }

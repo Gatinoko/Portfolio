@@ -45,13 +45,38 @@ export function Footer({ dictionary }: FooterProps) {
 		<footer className='footer'>
 			{/* Locale switcher */}
 			<FooterList
-				header={dictionary.linksHeaderText}
+				header={dictionary.localeSwitcherHeaderText}
 				items={i18n.locales.map((locale, index) => {
 					return {
 						text: `${assignLocaleLabels(locale)}`,
 						href: `${redirectedPathname(locale)}`,
 					};
 				})}
+			/>
+
+			{/* Themes */}
+			<FooterList
+				header={dictionary.themesList.header}
+				items={[
+					{
+						text: dictionary.themesList.systemThemeText,
+						onClick: () => {
+							document.documentElement.setAttribute('data-theme', 'system');
+						},
+					},
+					{
+						text: dictionary.themesList.darkThemeText,
+						onClick: () => {
+							document.documentElement.setAttribute('data-theme', 'dark');
+						},
+					},
+					{
+						text: dictionary.themesList.lightThemeText,
+						onClick: () => {
+							document.documentElement.setAttribute('data-theme', 'light');
+						},
+					},
+				]}
 			/>
 
 			{/* Links */}
