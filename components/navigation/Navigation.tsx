@@ -97,26 +97,31 @@ export function Navigation({ dictionary }: NavigationProps) {
 				setOpen={setIsMobileMenuOpen}>
 				<MobileButton
 					key={0}
+					size='large'
 					onClick={() => scrollToSection('Tech&SkillsSection')}>
 					{dictionary.buttons['tech&Skills']}
 				</MobileButton>
 				<MobileButton
 					key={1}
+					size='large'
 					onClick={() => scrollToSection('CareerTimelineSection')}>
 					{dictionary.buttons.career}
 				</MobileButton>
 				<MobileButton
 					key={2}
+					size='large'
 					onClick={() => scrollToSection('EducationTimelineSection')}>
 					{dictionary.buttons.education}
 				</MobileButton>
 				<MobileButton
 					key={3}
+					size='large'
 					onClick={() => scrollToSection('ProjectsSection')}>
 					{dictionary.buttons.projects}
 				</MobileButton>
 				<MobileButton
 					key={4}
+					size='large'
 					onClick={() => scrollToSection('ContactSection')}>
 					{dictionary.buttons.contact}
 				</MobileButton>
