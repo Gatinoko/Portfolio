@@ -90,12 +90,14 @@ export default async function Home({
 							<Chip size='extra-small'>CSHARP</Chip>
 							<Chip size='small'>XML</Chip>
 							<Chip size='large'>JSON</Chip>
+							<Chip size='regular'>A11Y</Chip>
 							<Chip size='small'>Passport.js</Chip>
 							<Chip size='regular'>Adobe Premiere</Chip>
 							<Chip size='extra-large'>Prisma</Chip>
 							<Chip size='regular'>Vercel</Chip>
 							<Chip size='regular'>AWS</Chip>
 							<Chip size='extra-large'>Figma</Chip>
+							<Chip size='regular'>I18N</Chip>
 							<Chip size='small'>Planetscale</Chip>
 							<Chip size='large'>Tailwindcss</Chip>
 							<Chip size='extra-large'>Adobe Photoshop</Chip>
